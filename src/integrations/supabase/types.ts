@@ -267,65 +267,140 @@ export type Database = {
         Row: {
           created_at: string
           description_ar: string
+          description_bn: string | null
           description_de: string | null
           description_en: string
           description_es: string | null
           description_fr: string | null
+          description_hi: string | null
+          description_it: string | null
+          description_nl: string | null
+          description_pl: string | null
+          description_pt: string | null
+          description_ru: string | null
+          description_tr: string | null
+          description_ur: string | null
+          description_zh: string | null
           display_order: number
+          features: Json | null
           icon: string | null
           id: string
           image_url: string | null
           is_active: boolean
           price: number | null
+          price_max: number | null
+          price_min: number | null
+          pricing_type: string | null
           slug: string
           title_ar: string
+          title_bn: string | null
           title_de: string | null
           title_en: string
           title_es: string | null
           title_fr: string | null
+          title_hi: string | null
+          title_it: string | null
+          title_nl: string | null
+          title_pl: string | null
+          title_pt: string | null
+          title_ru: string | null
+          title_tr: string | null
+          title_ur: string | null
+          title_zh: string | null
           updated_at: string
+          video_url: string | null
         }
         Insert: {
           created_at?: string
           description_ar: string
+          description_bn?: string | null
           description_de?: string | null
           description_en: string
           description_es?: string | null
           description_fr?: string | null
+          description_hi?: string | null
+          description_it?: string | null
+          description_nl?: string | null
+          description_pl?: string | null
+          description_pt?: string | null
+          description_ru?: string | null
+          description_tr?: string | null
+          description_ur?: string | null
+          description_zh?: string | null
           display_order?: number
+          features?: Json | null
           icon?: string | null
           id?: string
           image_url?: string | null
           is_active?: boolean
           price?: number | null
+          price_max?: number | null
+          price_min?: number | null
+          pricing_type?: string | null
           slug: string
           title_ar: string
+          title_bn?: string | null
           title_de?: string | null
           title_en: string
           title_es?: string | null
           title_fr?: string | null
+          title_hi?: string | null
+          title_it?: string | null
+          title_nl?: string | null
+          title_pl?: string | null
+          title_pt?: string | null
+          title_ru?: string | null
+          title_tr?: string | null
+          title_ur?: string | null
+          title_zh?: string | null
           updated_at?: string
+          video_url?: string | null
         }
         Update: {
           created_at?: string
           description_ar?: string
+          description_bn?: string | null
           description_de?: string | null
           description_en?: string
           description_es?: string | null
           description_fr?: string | null
+          description_hi?: string | null
+          description_it?: string | null
+          description_nl?: string | null
+          description_pl?: string | null
+          description_pt?: string | null
+          description_ru?: string | null
+          description_tr?: string | null
+          description_ur?: string | null
+          description_zh?: string | null
           display_order?: number
+          features?: Json | null
           icon?: string | null
           id?: string
           image_url?: string | null
           is_active?: boolean
           price?: number | null
+          price_max?: number | null
+          price_min?: number | null
+          pricing_type?: string | null
           slug?: string
           title_ar?: string
+          title_bn?: string | null
           title_de?: string | null
           title_en?: string
           title_es?: string | null
           title_fr?: string | null
+          title_hi?: string | null
+          title_it?: string | null
+          title_nl?: string | null
+          title_pl?: string | null
+          title_pt?: string | null
+          title_ru?: string | null
+          title_tr?: string | null
+          title_ur?: string | null
+          title_zh?: string | null
           updated_at?: string
+          video_url?: string | null
         }
         Relationships: []
       }

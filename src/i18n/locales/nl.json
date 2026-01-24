@@ -5,33 +5,158 @@
     "services": "Diensten",
     "blog": "Blog",
     "gallery": "Galerij",
-    "contact": "Contact"
+    "contact": "Contact",
+    "franchise": "Franchise"
   },
   "hero": {
-    "title": "Groppi Gold Standard",
+    "title": "GROPPI: Digitale Creativiteit Voorbij Grenzen",
     "subtitle": "Excellentie in elk detail",
-    "description": "Sinds 1891 de standaard voor luxe en kwaliteit. Ervaar het fijnste vakmanschap en ongeëvenaarde service.",
-    "cta": "Ontdek meer",
-    "ctaSecondary": "Neem contact op"
+    "description": "We benutten AI-gestuurde oplossingen om uw digitale aanwezigheid te transformeren. Ervaar innovatieve contentcreatie en marketingdiensten die resultaten opleveren.",
+    "cta": "Boek gratis consultatie",
+    "ctaSecondary": "Bekijk ons werk"
   },
   "about": {
     "title": "Over ons",
     "subtitle": "Ons verhaal",
-    "description": "Al meer dan een eeuw staat Groppi synoniem voor excellentie en luxe. Onze toewijding aan kwaliteit en traditie heeft ons tot een vertrouwde naam in de industrie gemaakt.",
+    "description": "GROPPI is een digitaal marketingbureau dat pioniert in het gebruik van AI bij contentcreatie en marketingdiensten. Onze toewijding aan innovatie en kwaliteit heeft ons tot een vertrouwde partner gemaakt voor bedrijven in heel Europa.",
     "mission": "Onze missie",
-    "missionText": "Uitzonderlijke producten en diensten leveren die verwachtingen overtreffen en blijvende herinneringen creëren.",
+    "missionText": "Uitzonderlijke digitale oplossingen leveren die verwachtingen overtreffen en meetbare bedrijfsgroei stimuleren.",
     "vision": "Onze visie",
-    "visionText": "De wereldleider zijn in luxe en premium kwaliteitservaringen.",
+    "visionText": "Het toonaangevende digitale marketingbureau zijn dat AI inzet voor creatieve excellentie.",
     "values": "Onze waarden",
-    "valuesText": "Excellentie, integriteit, innovatie en klanttevredenheid."
+    "valuesText": "Innovatie, transparantie, kwaliteit en klantsucces."
   },
   "services": {
     "title": "Onze diensten",
     "subtitle": "Wat wij bieden",
-    "description": "Ontdek ons uitgebreide aanbod van premium diensten ontworpen om aan uw hoogste verwachtingen te voldoen."
+    "description": "Uitgebreide digitale marketingoplossingen aangedreven door AI om uw merk te verheffen en groei te stimuleren.",
+    "monthly": "Maandelijks",
+    "oneTime": "Eenmalig",
+    "customQuote": "Op maat",
+    "startingFrom": "Vanaf",
+    "requestQuote": "Vraag offerte aan",
+    "getQuote": "Vraag offerte op maat aan",
+    "noResults": "Geen diensten voldoen aan uw filtercriteria.",
+    "filters": {
+      "all": "Alle diensten",
+      "monthly": "Abonnement",
+      "oneTime": "Eenmalig",
+      "custom": "Op maat projecten"
+    },
+    "items": {
+      "aiContent": {
+        "title": "AI Visuele Content & Branding",
+        "description": "Creëer verbluffende visuele content en merkidentiteit met geavanceerde AI-technologie. Van logo's tot complete visuele campagnes.",
+        "features": {
+          "0": "AI-gegenereerde visuele assets",
+          "1": "Merkidentiteit ontwerp",
+          "2": "Social media contentpakketten",
+          "3": "Productfotografie verbetering"
+        }
+      },
+      "webDev": {
+        "title": "Website Ontwerp & Ontwikkeling",
+        "description": "Op maat gemaakte, responsieve websites die bezoekers omzetten in klanten. Moderne ontwerpen met optimale prestaties.",
+        "features": {
+          "0": "Aangepast responsief ontwerp",
+          "1": "SEO-geoptimaliseerde structuur",
+          "2": "Snelle laadtijd",
+          "3": "CMS-integratie"
+        }
+      },
+      "ecommerce": {
+        "title": "E-Commerce Oplossingen",
+        "description": "Complete webshop setup met betalingsintegratie, voorraadbeheer en conversie-optimalisatie.",
+        "features": {
+          "0": "Volledige webshop setup",
+          "1": "Betaalgateway integratie",
+          "2": "Productbeheersysteem",
+          "3": "Conversie-optimalisatie"
+        }
+      },
+      "ads": {
+        "title": "Advertentiebeheer",
+        "description": "Strategische advertentiecampagnes via Google, Meta en andere platforms. Data-gedreven optimalisatie voor maximale ROI.",
+        "features": {
+          "0": "Google Ads beheer",
+          "1": "Meta adverteren",
+          "2": "Campagne-analyse",
+          "3": "A/B testen & optimalisatie"
+        }
+      },
+      "seo": {
+        "title": "Zoekmachineoptimalisatie",
+        "description": "Verbeter uw organische zichtbaarheid en scoor hoger in zoekmachines. Technische SEO, contentstrategie en linkbuilding.",
+        "features": {
+          "0": "Technische SEO-audit",
+          "1": "Zoekwoordonderzoek & strategie",
+          "2": "Content optimalisatie",
+          "3": "Linkbuilding"
+        }
+      },
+      "social": {
+        "title": "Social Media Beheer",
+        "description": "Volledig beheer van uw social media aanwezigheid. Contentcreatie, planning, engagement en groeistrategieën.",
+        "features": {
+          "0": "Contentkalender & planning",
+          "1": "Community management",
+          "2": "Engagement & groei",
+          "3": "Analytics & rapportage"
+        }
+      },
+      "reputation": {
+        "title": "Reputatie & Reviewbeheer",
+        "description": "Bouw en bescherm uw online reputatie. Reviewbeheer, responsstrategieën en merkmonitoring.",
+        "features": {
+          "0": "Review monitoring",
+          "1": "Responsbeheer",
+          "2": "Reputatieherstel",
+          "3": "Merksentiment analyse"
+        }
+      },
+      "dataSync": {
+        "title": "Data Synchronisatie",
+        "description": "Houd uw bedrijfsgegevens gesynchroniseerd over alle platforms. Voorraad, prijzen en productinformatiebeheer.",
+        "features": {
+          "0": "Multi-platform sync",
+          "1": "Realtime updates",
+          "2": "Voorraadbeheer",
+          "3": "API-integraties"
+        }
+      }
+    },
+    "ai": {
+      "title": "Aangedreven door AI",
+      "description": "We benutten geavanceerde kunstmatige intelligentie om snellere, slimmere en effectievere marketingoplossingen te leveren. Onze AI-verbeterde workflows zorgen voor consistentie en kwaliteit op schaal.",
+      "cta": "Aan de slag",
+      "learnMore": "Meer informatie"
+    },
+    "process": {
+      "subtitle": "Hoe wij werken",
+      "title": "Ons proces",
+      "steps": {
+        "0": {
+          "title": "Consultatie",
+          "description": "We beginnen met een gratis consultatie om uw bedrijf, doelen en uitdagingen te begrijpen."
+        },
+        "1": {
+          "title": "Op maat voorstel",
+          "description": "Op basis van uw behoeften maken we een gedetailleerd voorstel met transparante prijzen en tijdlijnen."
+        },
+        "2": {
+          "title": "Uitvoering & Optimalisatie",
+          "description": "We implementeren de oplossing en optimaliseren continu op basis van prestatiegegevens."
+        }
+      }
+    },
+    "cta": {
+      "title": "Klaar om uw digitale aanwezigheid te transformeren?",
+      "description": "Neem vandaag nog contact met ons op om te bespreken hoe we u kunnen helpen uw bedrijfsdoelen te bereiken met onze AI-gestuurde oplossingen.",
+      "button": "Vraag uw offerte op maat aan"
+    }
   },
   "blog": {
-    "title": "Laatste nieuws",
+    "title": "Inzichten & Tips",
     "subtitle": "Blijf op de hoogte",
     "readMore": "Lees meer",
     "publishedOn": "Gepubliceerd op",
