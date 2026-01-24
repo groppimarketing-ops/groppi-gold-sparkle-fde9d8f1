@@ -5,33 +5,158 @@
     "services": "Services",
     "blog": "Blog",
     "gallery": "Galerie",
-    "contact": "Contact"
+    "contact": "Contact",
+    "franchise": "Franchise"
   },
   "hero": {
-    "title": "Groppi Gold Standard",
+    "title": "GROPPI: Créativité Numérique Sans Frontières",
     "subtitle": "L'excellence dans chaque détail",
-    "description": "Établissant la référence du luxe et de la qualité depuis 1891. Découvrez l'artisanat le plus fin et un service inégalé.",
-    "cta": "Découvrir plus",
-    "ctaSecondary": "Contactez-nous"
+    "description": "Nous utilisons des solutions alimentées par l'IA pour transformer votre présence numérique. Découvrez des services innovants de création de contenu et de marketing qui génèrent des résultats.",
+    "cta": "Réserver une consultation gratuite",
+    "ctaSecondary": "Voir nos réalisations"
   },
   "about": {
     "title": "À propos",
     "subtitle": "Notre histoire",
-    "description": "Depuis plus d'un siècle, Groppi est synonyme d'excellence et de luxe. Notre engagement envers la qualité et la tradition a fait de nous un nom de confiance dans l'industrie.",
+    "description": "GROPPI est une agence de marketing digital pionnière dans l'utilisation de l'IA pour la création de contenu et les services marketing. Notre engagement envers l'innovation et la qualité fait de nous un partenaire de confiance pour les entreprises à travers l'Europe.",
     "mission": "Notre mission",
-    "missionText": "Offrir des produits et services exceptionnels qui dépassent les attentes et créent des souvenirs durables.",
+    "missionText": "Offrir des solutions numériques exceptionnelles qui dépassent les attentes et stimulent une croissance commerciale mesurable.",
     "vision": "Notre vision",
-    "visionText": "Être le leader mondial des expériences de luxe et de qualité premium.",
+    "visionText": "Être l'agence de marketing digital leader utilisant l'IA pour l'excellence créative.",
     "values": "Nos valeurs",
-    "valuesText": "Excellence, intégrité, innovation et satisfaction client."
+    "valuesText": "Innovation, transparence, qualité et succès client."
   },
   "services": {
     "title": "Nos services",
     "subtitle": "Ce que nous offrons",
-    "description": "Explorez notre gamme complète de services premium conçus pour répondre à vos plus hautes attentes."
+    "description": "Solutions de marketing digital complètes alimentées par l'IA pour élever votre marque et stimuler la croissance.",
+    "monthly": "Mensuel",
+    "oneTime": "Unique",
+    "customQuote": "Sur mesure",
+    "startingFrom": "À partir de",
+    "requestQuote": "Demander un devis",
+    "getQuote": "Obtenir un devis personnalisé",
+    "noResults": "Aucun service ne correspond à vos critères de filtrage.",
+    "filters": {
+      "all": "Tous les services",
+      "monthly": "Abonnement",
+      "oneTime": "Paiement unique",
+      "custom": "Projets sur mesure"
+    },
+    "items": {
+      "aiContent": {
+        "title": "Contenu Visuel & Branding IA",
+        "description": "Créez du contenu visuel époustouflant et une identité de marque grâce à la technologie IA de pointe. Des logos aux campagnes visuelles complètes.",
+        "features": {
+          "0": "Assets visuels générés par IA",
+          "1": "Design d'identité de marque",
+          "2": "Packs de contenu social media",
+          "3": "Amélioration de photos produits"
+        }
+      },
+      "webDev": {
+        "title": "Conception & Développement Web",
+        "description": "Sites web sur mesure et responsives qui convertissent les visiteurs en clients. Designs modernes avec performances optimales.",
+        "features": {
+          "0": "Design responsive personnalisé",
+          "1": "Structure optimisée SEO",
+          "2": "Vitesse de chargement rapide",
+          "3": "Intégration CMS"
+        }
+      },
+      "ecommerce": {
+        "title": "Solutions E-Commerce",
+        "description": "Configuration complète de boutique en ligne avec intégration de paiement, gestion des stocks et optimisation des conversions.",
+        "features": {
+          "0": "Configuration complète de boutique",
+          "1": "Intégration passerelle de paiement",
+          "2": "Système de gestion produits",
+          "3": "Optimisation des conversions"
+        }
+      },
+      "ads": {
+        "title": "Gestion Publicitaire",
+        "description": "Campagnes publicitaires stratégiques sur Google, Meta et autres plateformes. Optimisation basée sur les données pour un ROI maximum.",
+        "features": {
+          "0": "Gestion Google Ads",
+          "1": "Publicité Meta",
+          "2": "Analyse de campagnes",
+          "3": "Tests A/B & optimisation"
+        }
+      },
+      "seo": {
+        "title": "Référencement Naturel",
+        "description": "Améliorez votre visibilité organique et classez-vous mieux dans les moteurs de recherche. SEO technique, stratégie de contenu et netlinking.",
+        "features": {
+          "0": "Audit SEO technique",
+          "1": "Recherche & stratégie mots-clés",
+          "2": "Optimisation de contenu",
+          "3": "Netlinking"
+        }
+      },
+      "social": {
+        "title": "Gestion Réseaux Sociaux",
+        "description": "Gestion complète de votre présence sur les réseaux sociaux. Création de contenu, planification, engagement et stratégies de croissance.",
+        "features": {
+          "0": "Calendrier & planification contenu",
+          "1": "Gestion de communauté",
+          "2": "Engagement & croissance",
+          "3": "Analytics & reporting"
+        }
+      },
+      "reputation": {
+        "title": "Gestion Réputation & Avis",
+        "description": "Construisez et protégez votre réputation en ligne. Gestion des avis, stratégies de réponse et surveillance de marque.",
+        "features": {
+          "0": "Surveillance des avis",
+          "1": "Gestion des réponses",
+          "2": "Récupération de réputation",
+          "3": "Analyse du sentiment de marque"
+        }
+      },
+      "dataSync": {
+        "title": "Synchronisation de Données",
+        "description": "Gardez vos données d'entreprise synchronisées sur toutes les plateformes. Gestion des stocks, prix et informations produits.",
+        "features": {
+          "0": "Sync multi-plateformes",
+          "1": "Mises à jour en temps réel",
+          "2": "Gestion des stocks",
+          "3": "Intégrations API"
+        }
+      }
+    },
+    "ai": {
+      "title": "Propulsé par l'IA",
+      "description": "Nous exploitons l'intelligence artificielle de pointe pour offrir des solutions marketing plus rapides, plus intelligentes et plus efficaces. Nos workflows améliorés par l'IA garantissent cohérence et qualité à grande échelle.",
+      "cta": "Commencer",
+      "learnMore": "En savoir plus"
+    },
+    "process": {
+      "subtitle": "Notre façon de travailler",
+      "title": "Notre processus",
+      "steps": {
+        "0": {
+          "title": "Consultation",
+          "description": "Nous commençons par une consultation gratuite pour comprendre votre entreprise, vos objectifs et vos défis."
+        },
+        "1": {
+          "title": "Proposition personnalisée",
+          "description": "Selon vos besoins, nous créons une proposition détaillée avec des prix transparents et des délais."
+        },
+        "2": {
+          "title": "Exécution & Optimisation",
+          "description": "Nous mettons en œuvre la solution et optimisons continuellement en fonction des données de performance."
+        }
+      }
+    },
+    "cta": {
+      "title": "Prêt à transformer votre présence numérique ?",
+      "description": "Contactez-nous aujourd'hui pour discuter de la façon dont nous pouvons vous aider à atteindre vos objectifs commerciaux avec nos solutions alimentées par l'IA.",
+      "button": "Obtenez votre devis personnalisé"
+    }
   },
   "blog": {
-    "title": "Dernières nouvelles",
+    "title": "Conseils & Insights",
     "subtitle": "Restez informé",
     "readMore": "Lire la suite",
     "publishedOn": "Publié le",

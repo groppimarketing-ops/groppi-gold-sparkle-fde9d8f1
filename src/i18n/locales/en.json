@@ -9,30 +9,154 @@
     "franchise": "Franchise"
   },
   "hero": {
-    "title": "Groppi Gold Standard",
+    "title": "GROPPI: Digital Creativity Beyond Borders",
     "subtitle": "Excellence in Every Detail",
-    "description": "Setting the benchmark for luxury and quality since 1891. Experience the finest craftsmanship and unparalleled service.",
-    "cta": "Discover More",
-    "ctaSecondary": "Contact Us"
+    "description": "Leveraging AI-powered solutions to transform your digital presence. Experience innovative content creation and marketing services that drive results.",
+    "cta": "Book Free Consultation",
+    "ctaSecondary": "View Our Work"
   },
   "about": {
     "title": "About Us",
     "subtitle": "Our Story",
-    "description": "For over a century, Groppi has been synonymous with excellence and luxury. Our commitment to quality and tradition has made us a trusted name in the industry.",
+    "description": "GROPPI is a digital marketing bureau pioneering the use of AI in content creation and marketing services. Our commitment to innovation and quality has made us a trusted partner for businesses across Europe.",
     "mission": "Our Mission",
-    "missionText": "To deliver exceptional products and services that exceed expectations and create lasting memories.",
+    "missionText": "To deliver exceptional digital solutions that exceed expectations and drive measurable business growth.",
     "vision": "Our Vision",
-    "visionText": "To be the global leader in luxury and premium quality experiences.",
+    "visionText": "To be the leading digital marketing agency leveraging AI for creative excellence.",
     "values": "Our Values",
-    "valuesText": "Excellence, Integrity, Innovation, and Customer Satisfaction."
+    "valuesText": "Innovation, Transparency, Quality, and Client Success."
   },
   "services": {
     "title": "Our Services",
     "subtitle": "What We Offer",
-    "description": "Explore our comprehensive range of premium services designed to meet your highest expectations."
+    "description": "Comprehensive digital marketing solutions powered by AI to elevate your brand and drive growth.",
+    "monthly": "Monthly",
+    "oneTime": "One-time",
+    "customQuote": "Custom Quote",
+    "startingFrom": "Starting from",
+    "requestQuote": "Request Quote",
+    "getQuote": "Get Custom Quote",
+    "noResults": "No services match your filter criteria.",
+    "filters": {
+      "all": "All Services",
+      "monthly": "Subscription",
+      "oneTime": "One-time",
+      "custom": "Custom Projects"
+    },
+    "items": {
+      "aiContent": {
+        "title": "AI Visual Content & Branding",
+        "description": "Create stunning visual content and brand identity using cutting-edge AI technology. From logos to complete visual campaigns.",
+        "features": {
+          "0": "AI-Generated Visual Assets",
+          "1": "Brand Identity Design",
+          "2": "Social Media Content Packs",
+          "3": "Product Photography Enhancement"
+        }
+      },
+      "webDev": {
+        "title": "Website Design & Development",
+        "description": "Custom-built, responsive websites that convert visitors into customers. Modern designs with optimal performance.",
+        "features": {
+          "0": "Custom Responsive Design",
+          "1": "SEO-Optimized Structure",
+          "2": "Fast Loading Speed",
+          "3": "CMS Integration"
+        }
+      },
+      "ecommerce": {
+        "title": "E-Commerce Solutions",
+        "description": "Complete online store setup with payment integration, inventory management, and conversion optimization.",
+        "features": {
+          "0": "Full Store Setup",
+          "1": "Payment Gateway Integration",
+          "2": "Product Management System",
+          "3": "Conversion Optimization"
+        }
+      },
+      "ads": {
+        "title": "Advertising Management",
+        "description": "Strategic ad campaigns across Google, Meta, and other platforms. Data-driven optimization for maximum ROI.",
+        "features": {
+          "0": "Google Ads Management",
+          "1": "Meta Advertising",
+          "2": "Campaign Analytics",
+          "3": "A/B Testing & Optimization"
+        }
+      },
+      "seo": {
+        "title": "Search Engine Optimization",
+        "description": "Improve your organic visibility and rank higher on search engines. Technical SEO, content strategy, and link building.",
+        "features": {
+          "0": "Technical SEO Audit",
+          "1": "Keyword Research & Strategy",
+          "2": "Content Optimization",
+          "3": "Link Building"
+        }
+      },
+      "social": {
+        "title": "Social Media Management",
+        "description": "Complete social media presence management. Content creation, scheduling, engagement, and growth strategies.",
+        "features": {
+          "0": "Content Calendar & Planning",
+          "1": "Community Management",
+          "2": "Engagement & Growth",
+          "3": "Analytics & Reporting"
+        }
+      },
+      "reputation": {
+        "title": "Reputation & Review Management",
+        "description": "Build and protect your online reputation. Review management, response strategies, and brand monitoring.",
+        "features": {
+          "0": "Review Monitoring",
+          "1": "Response Management",
+          "2": "Reputation Recovery",
+          "3": "Brand Sentiment Analysis"
+        }
+      },
+      "dataSync": {
+        "title": "Data Synchronization",
+        "description": "Keep your business data synchronized across all platforms. Inventory, pricing, and product information management.",
+        "features": {
+          "0": "Multi-Platform Sync",
+          "1": "Real-time Updates",
+          "2": "Inventory Management",
+          "3": "API Integrations"
+        }
+      }
+    },
+    "ai": {
+      "title": "Powered by AI",
+      "description": "We leverage cutting-edge artificial intelligence to deliver faster, smarter, and more effective marketing solutions. Our AI-enhanced workflows ensure consistency and quality at scale.",
+      "cta": "Get Started",
+      "learnMore": "Learn More"
+    },
+    "process": {
+      "subtitle": "How We Work",
+      "title": "Our Process",
+      "steps": {
+        "0": {
+          "title": "Consultation",
+          "description": "We start with a free consultation to understand your business, goals, and challenges."
+        },
+        "1": {
+          "title": "Custom Proposal",
+          "description": "Based on your needs, we create a detailed proposal with transparent pricing and timelines."
+        },
+        "2": {
+          "title": "Execution & Optimization",
+          "description": "We implement the solution and continuously optimize based on performance data."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Transform Your Digital Presence?",
+      "description": "Contact us today to discuss how we can help you achieve your business goals with our AI-powered solutions.",
+      "button": "Get Your Custom Quote"
+    }
   },
   "blog": {
-    "title": "Latest News",
+    "title": "Insights & Tips",
     "subtitle": "Stay Updated",
     "readMore": "Read More",
     "publishedOn": "Published on",
