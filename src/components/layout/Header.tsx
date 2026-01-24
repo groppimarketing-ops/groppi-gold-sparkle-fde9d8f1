@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X, Globe, Sparkles } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { languages, type LanguageCode } from '@/i18n/config';
@@ -15,9 +15,18 @@ import {
 const Header = () => {
   const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const currentLang = languages.find(l => l.code === i18n.language) || languages[1];
   const isRtl = currentLang.dir === 'rtl';
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navItems = [
     { path: '/', label: t('nav.home') },
@@ -37,46 +46,75 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 glass">
+    <motion.header 
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled 
+          ? 'glass-card !rounded-none border-x-0 border-t-0' 
+          : 'bg-transparent'
+      }`}
+    >
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <span className="text-2xl font-display font-bold gold-gradient-text">
-              Groppi
+          <Link to="/" className="flex items-center gap-2 group">
+            <motion.div
+              whileHover={{ rotate: 180 }}
+              transition={{ duration: 0.5 }}
+              className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center gold-border-glow"
+            >
+              <Sparkles className="w-4 h-4 text-primary" />
+            </motion.div>
+            <span className="text-2xl font-bold gold-gradient-text group-hover:gold-shimmer-text transition-all">
+              GROPPI
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  location.pathname === item.path ? 'text-primary' : 'text-foreground/80'
+                className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg ${
+                  location.pathname === item.path 
+                    ? 'text-primary' 
+                    : 'text-foreground/70 hover:text-foreground'
                 }`}
               >
                 {item.label}
+                {location.pathname === item.path && (
+                  <motion.div
+                    layoutId="activeNav"
+                    className="absolute inset-0 glass-card -z-10"
+                    transition={{ type: 'spring', duration: 0.5 }}
+                  />
+                )}
               </Link>
             ))}
           </div>
 
-          {/* Language Switcher & Mobile Menu */}
-          <div className="flex items-center gap-4">
+          {/* Language Switcher & CTA */}
+          <div className="flex items-center gap-3">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="sm" className="gap-2">
-                  <Globe className="h-4 w-4" />
-                  <span className="hidden sm:inline">{currentLang.flag} {currentLang.name}</span>
+                <Button variant="ghost" size="sm" className="gap-2 glass-button !px-3 !py-2">
+                  <Globe className="h-4 w-4 text-primary" />
+                  <span className="hidden sm:inline text-sm">{currentLang.flag}</span>
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align={isRtl ? 'start' : 'end'} className="max-h-80 overflow-y-auto">
+              <DropdownMenuContent 
+                align={isRtl ? 'start' : 'end'} 
+                className="glass-card max-h-80 overflow-y-auto border-primary/20"
+              >
                 {languages.map((lang) => (
                   <DropdownMenuItem
                     key={lang.code}
                     onClick={() => changeLanguage(lang.code)}
-                    className={i18n.language === lang.code ? 'bg-primary/10' : ''}
+                    className={`cursor-pointer hover:bg-primary/10 ${
+                      i18n.language === lang.code ? 'bg-primary/20 text-primary' : ''
+                    }`}
                   >
                     {lang.flag} {lang.name}
                   </DropdownMenuItem>
@@ -85,12 +123,20 @@ const Header = () => {
             </DropdownMenu>
 
             <Button
+              asChild
+              size="sm"
+              className="hidden sm:flex luxury-button text-primary-foreground"
+            >
+              <Link to="/contact">{t('nav.contact')}</Link>
+            </Button>
+
+            <Button
               variant="ghost"
               size="icon"
-              className="lg:hidden"
+              className="lg:hidden glass-button !p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? <X /> : <Menu />}
+              {isMenuOpen ? <X className="text-primary" /> : <Menu className="text-primary" />}
             </Button>
           </div>
         </div>
@@ -104,25 +150,33 @@ const Header = () => {
               exit={{ opacity: 0, height: 0 }}
               className="lg:hidden mt-4 pb-4"
             >
-              <div className="flex flex-col gap-4">
-                {navItems.map((item) => (
-                  <Link
+              <div className="glass-card p-4 flex flex-col gap-2">
+                {navItems.map((item, index) => (
+                  <motion.div
                     key={item.path}
-                    to={item.path}
-                    onClick={() => setIsMenuOpen(false)}
-                    className={`text-sm font-medium transition-colors hover:text-primary ${
-                      location.pathname === item.path ? 'text-primary' : 'text-foreground/80'
-                    }`}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.05 }}
                   >
-                    {item.label}
-                  </Link>
+                    <Link
+                      to={item.path}
+                      onClick={() => setIsMenuOpen(false)}
+                      className={`block px-4 py-3 rounded-lg transition-all ${
+                        location.pathname === item.path 
+                          ? 'bg-primary/20 text-primary' 
+                          : 'hover:bg-primary/10'
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
           )}
         </AnimatePresence>
       </nav>
-    </header>
+    </motion.header>
   );
 };
 

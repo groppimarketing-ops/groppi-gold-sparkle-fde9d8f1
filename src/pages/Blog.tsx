@@ -1,16 +1,16 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Calendar, User, ArrowRight, Clock } from 'lucide-react';
+import { Calendar, User, ArrowRight, Clock, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import PageLayout from '@/components/layout/PageLayout';
 import SectionHeader from '@/components/ui/SectionHeader';
+import GlassCard from '@/components/ui/GlassCard';
 import { Button } from '@/components/ui/button';
 
 const Blog = () => {
   const { t, i18n } = useTranslation();
   const isRtl = i18n.language === 'ar' || i18n.language === 'ur';
 
-  // Placeholder blog posts (in production, these would come from Supabase)
   const blogPosts = [
     {
       id: '1',
@@ -23,9 +23,23 @@ const Blog = () => {
       author: 'Groppi Team',
       date: '2024-01-15',
       readTime: '5 min',
+      gradient: 'from-amber-500/20 to-orange-500/20',
     },
     {
       id: '2',
+      slug: 'ai-innovation',
+      title: 'AI & Innovation',
+      titleAr: 'الذكاء الاصطناعي والابتكار',
+      excerpt: 'How we leverage AI technology to deliver cutting-edge solutions.',
+      excerptAr: 'كيف نستفيد من تقنية الذكاء الاصطناعي لتقديم حلول متطورة.',
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800',
+      author: 'Innovation Team',
+      date: '2024-01-12',
+      readTime: '7 min',
+      gradient: 'from-purple-500/20 to-blue-500/20',
+    },
+    {
+      id: '3',
       slug: 'luxury-redefined',
       title: 'Luxury Redefined',
       titleAr: 'إعادة تعريف الفخامة',
@@ -34,10 +48,11 @@ const Blog = () => {
       image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800',
       author: 'Editorial Team',
       date: '2024-01-10',
-      readTime: '7 min',
+      readTime: '6 min',
+      gradient: 'from-cyan-500/20 to-teal-500/20',
     },
     {
-      id: '3',
+      id: '4',
       slug: 'tradition-meets-innovation',
       title: 'Tradition Meets Innovation',
       titleAr: 'التقاليد تلتقي بالابتكار',
@@ -46,19 +61,8 @@ const Blog = () => {
       image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800',
       author: 'Innovation Team',
       date: '2024-01-05',
-      readTime: '6 min',
-    },
-    {
-      id: '4',
-      slug: 'customer-first-approach',
-      title: 'Customer First Approach',
-      titleAr: 'نهج العميل أولاً',
-      excerpt: 'Understanding our philosophy of putting customers at the heart of everything.',
-      excerptAr: 'فهم فلسفتنا في وضع العملاء في صميم كل شيء.',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800',
-      author: 'Customer Success',
-      date: '2024-01-01',
-      readTime: '4 min',
+      readTime: '5 min',
+      gradient: 'from-pink-500/20 to-rose-500/20',
     },
     {
       id: '5',
@@ -71,30 +75,22 @@ const Blog = () => {
       author: 'Sustainability Team',
       date: '2023-12-28',
       readTime: '8 min',
-    },
-    {
-      id: '6',
-      slug: 'global-expansion',
-      title: 'Global Expansion Journey',
-      titleAr: 'رحلة التوسع العالمي',
-      excerpt: 'Follow our journey as we expand our presence across the globe.',
-      excerptAr: 'تابع رحلتنا أثناء توسيع تواجدنا في جميع أنحاء العالم.',
-      image: 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=800',
-      author: 'Global Team',
-      date: '2023-12-20',
-      readTime: '5 min',
+      gradient: 'from-green-500/20 to-emerald-500/20',
     },
   ];
 
   return (
     <PageLayout>
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent" />
+      <section className="relative py-24 md:py-36 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
+        <div className="neural-lines opacity-30" />
+        
         <div className="container mx-auto px-4 relative z-10">
           <SectionHeader
             subtitle={t('blog.subtitle')}
             title={t('blog.title')}
+            showSparkle
           />
         </div>
       </section>
@@ -102,49 +98,58 @@ const Blog = () => {
       {/* Featured Post */}
       <section className="py-12">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <GlassCard
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="grid lg:grid-cols-2 gap-8 items-center"
+            className="grid lg:grid-cols-2 gap-0 overflow-hidden !p-0"
           >
-            <div className="relative aspect-[16/10] rounded-2xl overflow-hidden">
+            <div className="relative aspect-[16/10] lg:aspect-auto overflow-hidden">
               <img
                 src={blogPosts[0].image}
                 alt={isRtl ? blogPosts[0].titleAr : blogPosts[0].title}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-transparent to-transparent lg:block hidden" />
             </div>
-            <div>
+            <div className="p-8 lg:p-12 flex flex-col justify-center">
+              <motion.div 
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="flex items-center gap-2 mb-4"
+              >
+                <Sparkles className="w-4 h-4 text-primary" />
+                <span className="text-primary text-sm font-medium">Featured</span>
+              </motion.div>
+              
               <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
                 <span className="flex items-center gap-1">
-                  <Calendar className="h-4 w-4" />
+                  <Calendar className="h-4 w-4 text-primary" />
                   {blogPosts[0].date}
                 </span>
                 <span className="flex items-center gap-1">
-                  <User className="h-4 w-4" />
-                  {blogPosts[0].author}
-                </span>
-                <span className="flex items-center gap-1">
-                  <Clock className="h-4 w-4" />
+                  <Clock className="h-4 w-4 text-primary" />
                   {blogPosts[0].readTime}
                 </span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 gold-gradient-text">
+              
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 gold-shimmer-text">
                 {isRtl ? blogPosts[0].titleAr : blogPosts[0].title}
               </h2>
+              
               <p className="text-muted-foreground text-lg mb-6">
                 {isRtl ? blogPosts[0].excerptAr : blogPosts[0].excerpt}
               </p>
-              <Button asChild className="luxury-button">
+              
+              <Button asChild className="luxury-button w-fit">
                 <Link to={`/blog/${blogPosts[0].slug}`}>
                   {t('blog.readMore')}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>
-          </motion.div>
+          </GlassCard>
         </div>
       </section>
 
@@ -153,38 +158,43 @@ const Blog = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.slice(1).map((post, index) => (
-              <motion.article
+              <GlassCard
                 key={post.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="group rounded-2xl border border-border bg-card overflow-hidden hover:border-primary/50 transition-colors"
+                className="group overflow-hidden !p-0"
               >
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <img
                     src={post.image}
                     alt={isRtl ? post.titleAr : post.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
+                  <div className={`absolute inset-0 bg-gradient-to-br ${post.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
                 </div>
+                
                 <div className="p-6">
                   <div className="flex items-center gap-4 text-xs text-muted-foreground mb-3">
                     <span className="flex items-center gap-1">
-                      <Calendar className="h-3 w-3" />
+                      <Calendar className="h-3 w-3 text-primary" />
                       {post.date}
                     </span>
                     <span className="flex items-center gap-1">
-                      <Clock className="h-3 w-3" />
+                      <Clock className="h-3 w-3 text-primary" />
                       {post.readTime}
                     </span>
                   </div>
-                  <h3 className="text-xl font-display font-bold mb-3 group-hover:text-primary transition-colors">
+                  
+                  <h3 className="text-xl font-bold mb-3 group-hover:gold-gradient-text transition-all duration-300">
                     {isRtl ? post.titleAr : post.title}
                   </h3>
+                  
                   <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
                     {isRtl ? post.excerptAr : post.excerpt}
                   </p>
+                  
                   <Link
                     to={`/blog/${post.slug}`}
                     className="inline-flex items-center text-primary text-sm font-medium group/link"
@@ -193,7 +203,7 @@ const Blog = () => {
                     <ArrowRight className="ml-1 h-4 w-4 group-hover/link:translate-x-1 transition-transform" />
                   </Link>
                 </div>
-              </motion.article>
+              </GlassCard>
             ))}
           </div>
         </div>

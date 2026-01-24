@@ -6,6 +6,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import HeroSection from '@/components/home/HeroSection';
 import SectionHeader from '@/components/ui/SectionHeader';
+import GlassCard from '@/components/ui/GlassCard';
 import { Button } from '@/components/ui/button';
 
 const Index = () => {
@@ -13,10 +14,10 @@ const Index = () => {
   const isRtl = i18n.language === 'ar' || i18n.language === 'ur';
 
   const services = [
-    { icon: Crown, title: 'Premium Consulting', titleAr: 'استشارات متميزة' },
-    { icon: Diamond, title: 'Luxury Products', titleAr: 'منتجات فاخرة' },
-    { icon: Sparkles, title: 'Custom Solutions', titleAr: 'حلول مخصصة' },
-    { icon: Star, title: 'VIP Experience', titleAr: 'تجربة VIP' },
+    { icon: Crown, title: 'Premium Consulting', titleAr: 'استشارات متميزة', gradient: 'from-amber-500/20 to-orange-500/20' },
+    { icon: Diamond, title: 'Luxury Products', titleAr: 'منتجات فاخرة', gradient: 'from-cyan-500/20 to-teal-500/20' },
+    { icon: Sparkles, title: 'AI Solutions', titleAr: 'حلول الذكاء الاصطناعي', gradient: 'from-purple-500/20 to-blue-500/20' },
+    { icon: Star, title: 'VIP Experience', titleAr: 'تجربة VIP', gradient: 'from-yellow-500/20 to-amber-500/20' },
   ];
 
   const stats = [
@@ -33,23 +34,34 @@ const Index = () => {
         <HeroSection />
 
         {/* Stats Section */}
-        <section className="py-16 border-y border-border bg-card">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <section className="py-20 relative overflow-hidden">
+          <div className="absolute inset-0 neural-lines opacity-30" />
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {stats.map((stat, index) => (
-                <motion.div
+                <GlassCard
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="text-center"
+                  className="text-center py-8"
                 >
-                  <div className="text-4xl md:text-5xl font-display font-bold gold-gradient-text mb-2">
+                  <motion.div 
+                    className="text-4xl md:text-5xl font-bold gold-shimmer-text mb-2"
+                    animate={{ 
+                      textShadow: [
+                        '0 0 10px hsl(43 100% 50% / 0.3)',
+                        '0 0 30px hsl(43 100% 50% / 0.5)',
+                        '0 0 10px hsl(43 100% 50% / 0.3)',
+                      ],
+                    }}
+                    transition={{ duration: 2, repeat: Infinity, delay: index * 0.2 }}
+                  >
                     {stat.value}
-                  </div>
-                  <div className="text-muted-foreground">{stat.label}</div>
-                </motion.div>
+                  </motion.div>
+                  <div className="text-muted-foreground text-sm">{stat.label}</div>
+                </GlassCard>
               ))}
             </div>
           </div>
@@ -62,29 +74,37 @@ const Index = () => {
               subtitle={t('services.subtitle')}
               title={t('services.title')}
               description={t('services.description')}
+              showSparkle
             />
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {services.map((service, index) => (
-                <motion.div
+                <GlassCard
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="p-6 rounded-xl border border-border bg-card hover:border-primary/50 transition-colors group cursor-pointer"
+                  className="group relative overflow-hidden cursor-pointer"
                 >
-                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                  <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                  
+                  <motion.div 
+                    className="relative w-14 h-14 rounded-xl glass-card flex items-center justify-center mb-4"
+                    whileHover={{ rotate: 5, scale: 1.1 }}
+                  >
                     <service.icon className="w-7 h-7 text-primary" />
-                  </div>
-                  <h3 className="font-display font-bold text-lg mb-2 group-hover:text-primary transition-colors">
+                  </motion.div>
+                  
+                  <h3 className="relative font-bold text-lg mb-2 group-hover:gold-gradient-text transition-all">
                     {isRtl ? service.titleAr : service.title}
                   </h3>
-                  <ChevronRight className="w-5 h-5 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
-                </motion.div>
+                  
+                  <ChevronRight className="relative w-5 h-5 text-primary opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                </GlassCard>
               ))}
             </div>
-            <div className="text-center mt-10">
-              <Button asChild variant="outline" className="border-primary/50">
+            <div className="text-center mt-12">
+              <Button asChild className="glass-button">
                 <Link to="/services">
                   {t('hero.cta')}
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -95,21 +115,24 @@ const Index = () => {
         </section>
 
         {/* About Preview */}
-        <section className="py-20 bg-card">
-          <div className="container mx-auto px-4">
+        <section className="py-20 relative overflow-hidden">
+          <div className="absolute inset-0 neural-bg" />
+          
+          <div className="container mx-auto px-4 relative z-10">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
               >
-                <span className="text-primary font-medium text-sm uppercase tracking-wider mb-2 block">
+                <span className="inline-flex items-center gap-2 text-primary font-medium text-sm uppercase tracking-[0.2em] mb-4">
+                  <Sparkles className="w-4 h-4" />
                   {t('about.subtitle')}
                 </span>
-                <h2 className="text-3xl md:text-4xl font-display font-bold gold-gradient-text mb-6">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold gold-shimmer-text mb-6">
                   {t('about.title')}
                 </h2>
-                <p className="text-muted-foreground text-lg mb-6">
+                <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
                   {t('about.description')}
                 </p>
                 <Button asChild className="luxury-button">
@@ -119,59 +142,81 @@ const Index = () => {
                   </Link>
                 </Button>
               </motion.div>
+              
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
+                initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 className="relative"
               >
-                <div className="aspect-square rounded-2xl overflow-hidden border border-border">
+                <GlassCard className="aspect-square overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800"
                     alt="About Groppi"
                     className="w-full h-full object-cover"
                   />
-                </div>
-                <div className="absolute -bottom-6 -left-6 p-6 rounded-xl bg-primary text-primary-foreground">
-                  <div className="text-4xl font-display font-bold">130+</div>
-                  <div className="text-sm opacity-90">{isRtl ? 'سنة من التميز' : 'Years of Excellence'}</div>
-                </div>
+                </GlassCard>
+                
+                {/* Floating Badge */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.3 }}
+                  className="absolute -bottom-6 -left-6"
+                >
+                  <GlassCard className="!p-4 gold-glow">
+                    <div className="text-3xl font-bold gold-gradient-text">130+</div>
+                    <div className="text-sm text-muted-foreground">
+                      {isRtl ? 'سنة من التميز' : 'Years of Excellence'}
+                    </div>
+                  </GlassCard>
+                </motion.div>
               </motion.div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20">
+        <section className="py-24">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="max-w-3xl mx-auto text-center"
             >
-              <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 gold-gradient-text">
-                {isRtl ? 'هل أنت مستعد لتجربة التميز؟' : 'Ready to Experience Excellence?'}
-              </h2>
-              <p className="text-muted-foreground text-lg mb-8">
-                {isRtl 
-                  ? 'تواصل معنا اليوم لمناقشة كيف يمكننا مساعدتك في تحقيق أهدافك.'
-                  : 'Contact us today to discuss how we can help you achieve your goals.'
-                }
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="luxury-button">
-                  <Link to="/contact">
-                    {t('hero.ctaSecondary')}
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" size="lg" className="border-primary/50">
-                  <Link to="/franchise">
-                    {t('nav.franchise')}
-                  </Link>
-                </Button>
-              </div>
+              <GlassCard className="max-w-4xl mx-auto text-center p-8 md:p-12">
+                <motion.div
+                  animate={{ rotate: [0, 360] }}
+                  transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+                  className="w-16 h-16 rounded-full glass-card flex items-center justify-center mx-auto mb-8"
+                >
+                  <Sparkles className="w-8 h-8 text-primary" />
+                </motion.div>
+                
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 gold-shimmer-text">
+                  {isRtl ? 'هل أنت مستعد لتجربة التميز؟' : 'Ready to Experience Excellence?'}
+                </h2>
+                <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
+                  {isRtl 
+                    ? 'تواصل معنا اليوم لمناقشة كيف يمكننا مساعدتك في تحقيق أهدافك.'
+                    : 'Contact us today to discuss how we can help you achieve your goals.'
+                  }
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button asChild size="lg" className="luxury-button">
+                    <Link to="/contact">
+                      {t('hero.ctaSecondary')}
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Link>
+                  </Button>
+                  <Button asChild size="lg" className="glass-button">
+                    <Link to="/franchise">
+                      {t('nav.franchise')}
+                    </Link>
+                  </Button>
+                </div>
+              </GlassCard>
             </motion.div>
           </div>
         </section>
