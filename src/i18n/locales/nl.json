@@ -647,5 +647,105 @@
     "followFacebook": "Volg ons op Facebook",
     "followTiktok": "Volg ons op TikTok",
     "followLinkedin": "Volg ons op LinkedIn"
+  },
+  "planBuilder": {
+    "tab": "Plan samenstellen",
+    "title": "Plan Builder",
+    "subtitle": "Stel je social media plan samen en krijg meteen een richtprijs.",
+    "disclaimer": "Dit is een richtprijs. De finale prijs hangt af van scope, merkcomplexiteit en contentbehoefte.",
+    "vatNote": "excl. btw",
+    "adsBudgetDisclaimer": "Advertentiebudget wordt rechtstreeks betaald aan Meta/Google en is niet inbegrepen in de beheerkost.",
+    "adsBudgetNote": "Advertentiebudget wordt rechtstreeks betaald aan Meta/Google.",
+    "pauseNote": "Je kan pauzeren of stoppen wanneer je wil.",
+    "included": "Inbegrepen",
+    "next": "Volgende",
+    "back": "Terug",
+    "quantity": "Aantal",
+    "viewSummary": "Bekijk samenvatting",
+    "validation": {
+      "minChannel": "Kies minstens 1 kanaal."
+    },
+    "steps": {
+      "channels": "Kies je kanalen",
+      "frequency": "Postfrequentie",
+      "campaigns": "Betaalde campagnes",
+      "addons": "Optionele add-ons"
+    },
+    "channels": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "tiktok": "TikTok",
+      "youtube": "YouTube",
+      "googleBusiness": "Google Business",
+      "pinterest": "Pinterest",
+      "xTwitter": "X (Twitter)"
+    },
+    "frequency": {
+      "2month": "2 posts per maand",
+      "1week": "1 post per week",
+      "2week": "2 posts per week",
+      "3week": "3 posts per week",
+      "4week": "4 posts per week",
+      "5week": "5 posts per week"
+    },
+    "adsBudget": {
+      "none": "Geen betaalde campagnes",
+      "100": "€100 / maand",
+      "250": "€250 / maand",
+      "500": "€500 / maand",
+      "1000": "€1000 / maand"
+    },
+    "addons": {
+      "productPhotos": {
+        "label": "Extra productfoto's",
+        "unit": "foto"
+      },
+      "googleReviews": {
+        "label": "Google Review Management"
+      },
+      "contentWriting": {
+        "label": "Content writing",
+        "unit": "uur"
+      },
+      "emailMarketing": {
+        "label": "E-mail marketingcampagnes"
+      },
+      "postsPack": {
+        "label": "Social media posts (10-pack)"
+      },
+      "analyticsDashboard": {
+        "label": "Advanced Analytics Dashboard"
+      }
+    },
+    "summary": {
+      "title": "Samenvatting",
+      "managementFee": "Geschatte beheerkost",
+      "channels": "Kanalen",
+      "frequency": "Postfrequentie",
+      "addons": "Add-ons",
+      "adsBudget": "Advertentiebudget (rechtstreeks betaald)",
+      "total": "Totaal per maand",
+      "included": "inbegrepen"
+    },
+    "cta": {
+      "primary": "Vraag een voorstel op maat aan",
+      "secondary": "Plan opslaan"
+    },
+    "faq": {
+      "title": "Veelgestelde vragen",
+      "adjustLater": {
+        "question": "Kan ik mijn plan later aanpassen?",
+        "answer": "Ja. Je kan op elk moment aanpassen. Wij stemmen alles af op jouw doelen en evolutie."
+      },
+      "setupCost": {
+        "question": "Is er een opstartkost?",
+        "answer": "De opstart zit inbegrepen in de beheerkost. Extra's ontstaan enkel bij extra scope of uitzonderlijke setup."
+      },
+      "adBudgetIncluded": {
+        "question": "Is advertentiebudget inbegrepen?",
+        "answer": "Nee. Advertentiebudget betaal je rechtstreeks aan Meta/Google. Onze kost is voor beheer en optimalisatie."
+      }
+    }
   }
 }

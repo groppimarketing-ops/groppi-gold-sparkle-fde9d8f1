@@ -10,7 +10,13 @@ type TrackingEvent =
   | 'instagram_click'
   | 'facebook_click'
   | 'tiktok_click'
-  | 'linkedin_click';
+  | 'linkedin_click'
+  | 'planbuilder_social_channels'
+  | 'planbuilder_social_frequency'
+  | 'planbuilder_social_ads_budget'
+  | 'planbuilder_social_addons'
+  | 'planbuilder_social_cta_custom_offer'
+  | 'planbuilder_social_cta_save_plan';
 
 interface TrackingParams {
   event: TrackingEvent;
