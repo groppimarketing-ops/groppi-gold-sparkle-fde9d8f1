@@ -1,12 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Play, Clock, ArrowRight, Check, Package, CreditCard, Info, Megaphone } from 'lucide-react';
+import { X, Play, Clock, ArrowRight, Check, Package, CreditCard, Info, Megaphone, Calculator } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import type { ServiceData } from './ServiceCard';
 import AdsServiceContent from './AdsServiceContent';
+import PlanBuilderSocial from './PlanBuilderSocial';
 
 interface ServiceDetailModalProps {
   isOpen: boolean;
@@ -171,12 +172,18 @@ const ServiceDetailModal = ({
               </div>
 
               {/* Tabbed Content */}
-              <Tabs defaultValue={service.id === 'ads-management' ? 'ads-framework' : 'deliverables'} className="w-full">
-                <TabsList className={`grid w-full mb-6 bg-muted/30 ${service.id === 'ads-management' ? 'grid-cols-4' : 'grid-cols-3'}`}>
+              <Tabs defaultValue={service.id === 'ads-management' ? 'ads-framework' : service.id === 'social-media' ? 'plan-builder' : 'deliverables'} className="w-full">
+                <TabsList className={`grid w-full mb-6 bg-muted/30 ${service.id === 'ads-management' || service.id === 'social-media' ? 'grid-cols-4' : 'grid-cols-3'}`}>
                   {service.id === 'ads-management' && (
                     <TabsTrigger value="ads-framework" className="gap-2 data-[state=active]:bg-primary/20">
                       <Megaphone className="w-4 h-4" />
                       <span className="hidden sm:inline">{t('services.ads.tab.framework')}</span>
+                    </TabsTrigger>
+                  )}
+                  {service.id === 'social-media' && (
+                    <TabsTrigger value="plan-builder" className="gap-2 data-[state=active]:bg-primary/20">
+                      <Calculator className="w-4 h-4" />
+                      <span className="hidden sm:inline">{t('planBuilder.tab')}</span>
                     </TabsTrigger>
                   )}
                   <TabsTrigger value="deliverables" className="gap-2 data-[state=active]:bg-primary/20">
@@ -197,6 +204,13 @@ const ServiceDetailModal = ({
                 {service.id === 'ads-management' && (
                   <TabsContent value="ads-framework" className="mt-0">
                     <AdsServiceContent />
+                  </TabsContent>
+                )}
+
+                {/* Social Media Plan Builder Tab */}
+                {service.id === 'social-media' && (
+                  <TabsContent value="plan-builder" className="mt-0">
+                    <PlanBuilderSocial />
                   </TabsContent>
                 )}
 

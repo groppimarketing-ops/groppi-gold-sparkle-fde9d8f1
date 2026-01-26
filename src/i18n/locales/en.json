@@ -642,6 +642,110 @@
       "chat": "Start a conversation via WhatsApp",
       "call": "Call +32 494 31 11 19",
       "email": "Email info@groppi.be"
+    },
+    "followInstagram": "Follow us on Instagram",
+    "followFacebook": "Follow us on Facebook",
+    "followTiktok": "Follow us on TikTok",
+    "followLinkedin": "Follow us on LinkedIn"
+  },
+  "planBuilder": {
+    "tab": "Build Your Plan",
+    "title": "Plan Builder",
+    "subtitle": "Build your social media plan and get an instant estimate.",
+    "disclaimer": "This is an indicative price. Final pricing depends on scope, brand complexity, and content needs.",
+    "vatNote": "excl. VAT",
+    "adsBudgetDisclaimer": "Advertising budget is paid directly to Meta/Google and is not included in management costs.",
+    "adsBudgetNote": "Advertising budget is paid directly to Meta/Google.",
+    "pauseNote": "You can pause or stop whenever you want.",
+    "included": "Included",
+    "next": "Next",
+    "back": "Back",
+    "quantity": "Quantity",
+    "viewSummary": "View summary",
+    "validation": {
+      "minChannel": "Select at least 1 channel."
+    },
+    "steps": {
+      "channels": "Choose your channels",
+      "frequency": "Post frequency",
+      "campaigns": "Paid campaigns",
+      "addons": "Optional add-ons"
+    },
+    "channels": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "tiktok": "TikTok",
+      "youtube": "YouTube",
+      "googleBusiness": "Google Business",
+      "pinterest": "Pinterest",
+      "xTwitter": "X (Twitter)"
+    },
+    "frequency": {
+      "2month": "2 posts per month",
+      "1week": "1 post per week",
+      "2week": "2 posts per week",
+      "3week": "3 posts per week",
+      "4week": "4 posts per week",
+      "5week": "5 posts per week"
+    },
+    "adsBudget": {
+      "none": "No paid campaigns",
+      "100": "€100 / month",
+      "250": "€250 / month",
+      "500": "€500 / month",
+      "1000": "€1000 / month"
+    },
+    "addons": {
+      "productPhotos": {
+        "label": "Extra product photos",
+        "unit": "photo"
+      },
+      "googleReviews": {
+        "label": "Google Review Management"
+      },
+      "contentWriting": {
+        "label": "Content writing",
+        "unit": "hour"
+      },
+      "emailMarketing": {
+        "label": "Email marketing campaigns"
+      },
+      "postsPack": {
+        "label": "Social media posts (10-pack)"
+      },
+      "analyticsDashboard": {
+        "label": "Advanced Analytics Dashboard"
+      }
+    },
+    "summary": {
+      "title": "Summary",
+      "managementFee": "Estimated management fee",
+      "channels": "Channels",
+      "frequency": "Post frequency",
+      "addons": "Add-ons",
+      "adsBudget": "Ad budget (paid directly)",
+      "total": "Total per month",
+      "included": "included"
+    },
+    "cta": {
+      "primary": "Request a custom proposal",
+      "secondary": "Save plan"
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "adjustLater": {
+        "question": "Can I adjust my plan later?",
+        "answer": "Yes. You can adjust at any time. We align everything with your goals and evolution."
+      },
+      "setupCost": {
+        "question": "Is there a setup cost?",
+        "answer": "Setup is included in the management fee. Extras only arise with additional scope or exceptional setup."
+      },
+      "adBudgetIncluded": {
+        "question": "Is advertising budget included?",
+        "answer": "No. Advertising budget is paid directly to Meta/Google. Our cost is for management and optimization."
+      }
     }
   }
 }
