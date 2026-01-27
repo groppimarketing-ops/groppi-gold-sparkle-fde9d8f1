@@ -1,17 +1,26 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, Camera, Globe, ShoppingCart, Megaphone, Search, Share2, Star, RefreshCw, Brain, Rocket, Filter, FileText, Layout, Store } from 'lucide-react';
+import { ArrowRight, Sparkles, Camera, Globe, ShoppingCart, Megaphone, Search, Share2, Star, RefreshCw, Brain, Rocket, Filter, FileText, Layout, Store, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import PageLayout from '@/components/layout/PageLayout';
 import SectionHeader from '@/components/ui/SectionHeader';
 import GlassCard from '@/components/ui/GlassCard';
 import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import ServiceCard, { ServiceData } from '@/components/services/ServiceCard';
+import ServicesGuidedEntry from '@/components/services/ServicesGuidedEntry';
+import ServiceDetailModal from '@/components/services/ServiceDetailModal';
 
 const Services = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [filter, setFilter] = useState<'all' | 'monthly' | 'one_time' | 'custom'>('all');
+  const [selectedService, setSelectedService] = useState<ServiceData | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const isRTL = i18n.language === 'ar' || i18n.language === 'ur';
+
+  // Featured service ID for the "Most chosen by growing businesses" badge
+  const featuredServiceId = 'social-media';
 
   // Enhanced GROPPI services with full deliverables and pricing clarity
   const services: ServiceData[] = [
@@ -226,10 +235,19 @@ const Services = () => {
     { key: 'custom', labelKey: 'services.filters.custom' },
   ];
 
+  // Handle recommendation from wizard
+  const handleRecommendationSelect = (serviceId: string) => {
+    const service = services.find(s => s.id === serviceId);
+    if (service) {
+      setSelectedService(service);
+      setIsModalOpen(true);
+    }
+  };
+
   return (
     <PageLayout>
       {/* Hero Section */}
-      <section className="relative py-24 md:py-36 overflow-hidden">
+      <section className="relative py-24 md:py-32 overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
         <div className="neural-lines opacity-30" />
@@ -243,6 +261,9 @@ const Services = () => {
           />
         </div>
       </section>
+
+      {/* Guided Entry Section */}
+      <ServicesGuidedEntry onRecommendationSelect={handleRecommendationSelect} />
 
       {/* Filter Tabs */}
       <section className="py-8 border-b border-primary/10">
@@ -269,14 +290,34 @@ const Services = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20">
+      <section id="services-grid" className="py-24">
         <div className="container mx-auto px-4">
+          {/* Grid with enhanced spacing */}
           <motion.div 
-            className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+            className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
             layout
           >
             {filteredServices.map((service, index) => (
-              <ServiceCard key={service.id} service={service} index={index} />
+              <div key={service.id} className="relative">
+                {/* Featured Badge */}
+                {service.id === featuredServiceId && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="absolute -top-3 left-1/2 -translate-x-1/2 z-10"
+                  >
+                    <Badge className="bg-primary/90 text-primary-foreground gap-1.5 px-3 py-1 shadow-lg whitespace-nowrap">
+                      <Award className="w-3.5 h-3.5" />
+                      {t('services.featuredBadge')}
+                    </Badge>
+                  </motion.div>
+                )}
+                <ServiceCard 
+                  service={service} 
+                  index={index} 
+                  isFeatured={service.id === featuredServiceId}
+                />
+              </div>
             ))}
           </motion.div>
 
@@ -291,8 +332,29 @@ const Services = () => {
               </p>
             </motion.div>
           )}
+
+          {/* Decorative divider */}
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="mt-16 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"
+          />
         </div>
       </section>
+
+      {/* Service Detail Modal (for wizard recommendations) */}
+      {selectedService && (
+        <ServiceDetailModal
+          isOpen={isModalOpen}
+          onClose={() => {
+            setIsModalOpen(false);
+            setSelectedService(null);
+          }}
+          service={selectedService}
+        />
+      )}
 
       {/* AI Section */}
       <section className="py-20 relative overflow-hidden">
