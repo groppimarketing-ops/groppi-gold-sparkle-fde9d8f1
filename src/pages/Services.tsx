@@ -334,17 +334,33 @@ const Services = () => {
           >
             {filteredServices.map((service, index) => (
               <div key={service.id} className="relative">
-                {/* Featured Badge */}
+                {/* Featured Badge with gold pulse animation */}
                 {service.id === featuredServiceId && (
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     className="absolute -top-3 left-1/2 -translate-x-1/2 z-10"
                   >
-                    <Badge className="bg-primary/90 text-primary-foreground gap-1.5 px-3 py-1 shadow-lg whitespace-nowrap">
-                      <Award className="w-3.5 h-3.5" />
-                      {t('services.featuredBadge')}
-                    </Badge>
+                    <motion.div
+                      animate={{
+                        boxShadow: [
+                          '0 0 10px hsl(43 100% 50% / 0.3)',
+                          '0 0 20px hsl(43 100% 50% / 0.5)',
+                          '0 0 10px hsl(43 100% 50% / 0.3)',
+                        ],
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: 'easeInOut',
+                      }}
+                      className="rounded-full"
+                    >
+                      <Badge className="bg-primary/90 text-primary-foreground gap-1.5 px-3 py-1 shadow-lg whitespace-nowrap">
+                        <Award className="w-3.5 h-3.5" />
+                        {t('services.featuredBadge')}
+                      </Badge>
+                    </motion.div>
                   </motion.div>
                 )}
                 <ServiceCard 
