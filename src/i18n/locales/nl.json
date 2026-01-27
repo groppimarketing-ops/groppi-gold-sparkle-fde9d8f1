@@ -246,6 +246,58 @@
     "keyInclusions": "Wat inbegrepen is",
     "videoPlaceholder": "Bekijk korte uitlegvideo",
     "noResults": "Geen diensten voldoen aan uw filtercriteria.",
+    "featuredBadge": "Meest gekozen",
+    "guidedEntry": {
+      "title": "Niet zeker waar te beginnen?",
+      "subtitle": "Vertel ons je doel, wij helpen je kiezen.",
+      "ctaPrimary": "Help mij kiezen",
+      "ctaSecondary": "Ik wil alles zelf bekijken"
+    },
+    "wizard": {
+      "goal": {
+        "title": "Wat is je doel?",
+        "subtitle": "Kies het doel dat het beste bij je past.",
+        "options": {
+          "visibility": "Meer zichtbaarheid",
+          "leads": "Meer leads",
+          "sales": "Meer verkoop"
+        }
+      },
+      "size": {
+        "title": "Wat is de grootte van je bedrijf?",
+        "subtitle": "Dit helpt ons het juiste niveau aan te bevelen.",
+        "options": {
+          "starter": "Starter",
+          "growing": "Groeiende onderneming",
+          "established": "Gevestigd bedrijf"
+        }
+      },
+      "team": {
+        "title": "Heb je al een marketingteam?",
+        "subtitle": "Dit bepaalt hoeveel ondersteuning je nodig hebt.",
+        "options": {
+          "yes": "Ja, we hebben een team",
+          "no": "Nee, we doen alles zelf"
+        }
+      },
+      "result": {
+        "title": "Onze aanbeveling",
+        "subtitle": "Op basis van je antwoorden raden we aan:",
+        "recommendation": "Aanbevolen dienst",
+        "cta": "Bekijk aanbevolen dienst"
+      }
+    },
+    "microGuidance": {
+      "content_production": "Ideaal als je content nodig hebt die opvalt.",
+      "one_page_website": "Perfect voor een snelle online start.",
+      "business_website": "De basis voor een professionele aanwezigheid.",
+      "ecommerce_website": "Klaar om online te verkopen.",
+      "ads_management": "Laat je budget werken met data-gedreven campagnes.",
+      "seo": "Groei organisch en duurzaam.",
+      "social_media": "Bouw een betrokken community op.",
+      "reputation": "Bescherm en versterk je online reputatie.",
+      "data_sync": "Houd al je data gesynchroniseerd."
+    },
     "audience": {
       "business": "Bedrijven",
       "individual": "Particulieren",

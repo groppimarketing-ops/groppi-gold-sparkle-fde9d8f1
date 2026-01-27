@@ -246,6 +246,58 @@
     "keyInclusions": "What's included",
     "videoPlaceholder": "Watch short explainer video",
     "noResults": "No services match your filter criteria.",
+    "featuredBadge": "Most chosen",
+    "guidedEntry": {
+      "title": "Not sure where to start?",
+      "subtitle": "Tell us your goal, we'll help you choose.",
+      "ctaPrimary": "Help me choose",
+      "ctaSecondary": "I'll browse everything myself"
+    },
+    "wizard": {
+      "goal": {
+        "title": "What's your goal?",
+        "subtitle": "Choose the goal that best fits your needs.",
+        "options": {
+          "visibility": "More visibility",
+          "leads": "More leads",
+          "sales": "More sales"
+        }
+      },
+      "size": {
+        "title": "What's your company size?",
+        "subtitle": "This helps us recommend the right level.",
+        "options": {
+          "starter": "Starter",
+          "growing": "Growing business",
+          "established": "Established company"
+        }
+      },
+      "team": {
+        "title": "Do you have a marketing team?",
+        "subtitle": "This determines how much support you need.",
+        "options": {
+          "yes": "Yes, we have a team",
+          "no": "No, we do everything ourselves"
+        }
+      },
+      "result": {
+        "title": "Our recommendation",
+        "subtitle": "Based on your answers, we recommend:",
+        "recommendation": "Recommended service",
+        "cta": "View recommended service"
+      }
+    },
+    "microGuidance": {
+      "content_production": "Ideal when you need content that stands out.",
+      "one_page_website": "Perfect for a quick online start.",
+      "business_website": "The foundation for a professional presence.",
+      "ecommerce_website": "Ready to sell online.",
+      "ads_management": "Make your budget work with data-driven campaigns.",
+      "seo": "Grow organically and sustainably.",
+      "social_media": "Build an engaged community.",
+      "reputation": "Protect and strengthen your online reputation.",
+      "data_sync": "Keep all your data synchronized."
+    },
     "audience": {
       "business": "Businesses",
       "individual": "Individuals",

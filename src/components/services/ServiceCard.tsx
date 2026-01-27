@@ -41,9 +41,10 @@ export interface ServiceData {
 interface ServiceCardProps {
   service: ServiceData;
   index: number;
+  isFeatured?: boolean;
 }
 
-const ServiceCard = forwardRef<HTMLDivElement, ServiceCardProps>(({ service, index }, ref) => {
+const ServiceCard = forwardRef<HTMLDivElement, ServiceCardProps>(({ service, index, isFeatured = false }, ref) => {
   const { t, i18n } = useTranslation();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const isRTL = i18n.language === 'ar' || i18n.language === 'ur';
@@ -164,6 +165,14 @@ const ServiceCard = forwardRef<HTMLDivElement, ServiceCardProps>(({ service, ind
     setIsModalOpen(true);
   };
 
+  // Get micro-guidance helper text for the service
+  const getMicroGuidance = (): string => {
+    const guidanceKey = `services.microGuidance.${service.id.replace(/-/g, '_')}`;
+    const guidance = t(guidanceKey);
+    // Return empty if the key doesn't exist (returns the key itself)
+    return guidance !== guidanceKey ? guidance : '';
+  };
+
   return (
     <>
       <GlassCard
@@ -172,7 +181,9 @@ const ServiceCard = forwardRef<HTMLDivElement, ServiceCardProps>(({ service, ind
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: index * 0.1 }}
-        className="group relative overflow-hidden flex flex-col h-full cursor-pointer"
+        className={`group relative overflow-hidden flex flex-col h-full cursor-pointer transition-all duration-500 ${
+          isFeatured ? 'ring-2 ring-primary/40 shadow-[0_0_30px_hsl(var(--primary)/0.15)]' : ''
+        }`}
         onClick={handleViewDetails}
       >
         {/* Gradient Background */}
@@ -213,9 +224,16 @@ const ServiceCard = forwardRef<HTMLDivElement, ServiceCardProps>(({ service, ind
         </motion.div>
         
         {/* Title */}
-        <h3 className="relative text-xl font-bold mb-3 group-hover:gold-gradient-text transition-all duration-300">
+        <h3 className="relative text-xl font-bold mb-2 group-hover:gold-gradient-text transition-all duration-300">
           {t(service.titleKey)}
         </h3>
+
+        {/* Micro-guidance helper line */}
+        {getMicroGuidance() && (
+          <p className="relative text-xs text-primary/80 mb-3 italic">
+            {getMicroGuidance()}
+          </p>
+        )}
         
         {/* Description */}
         <p className="relative text-muted-foreground mb-5 text-sm leading-relaxed line-clamp-3">
