@@ -3,7 +3,7 @@ import { useRef, useState } from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import HeroSection from '@/components/home/HeroSection';
-import HomeClientMarquee from '@/components/home/HomeClientMarquee';
+import HomeTrustSectors from '@/components/home/HomeTrustSectors';
 import HomeQuickChoice from '@/components/home/HomeQuickChoice';
 import HomeServicesGrid from '@/components/home/HomeServicesGrid';
 import HomePortfolioGrid from '@/components/home/HomePortfolioGrid';
@@ -53,8 +53,8 @@ const Index = () => {
       {/* Hero with Video Background */}
       <HeroSection />
 
-      {/* Client Marquee - Trust logos */}
-      <HomeClientMarquee />
+      {/* Trust Sectors - Premium credibility section */}
+      <HomeTrustSectors />
 
       {/* Quick Choice - For non-expert visitors */}
       <HomeQuickChoice onGoalSelect={handleGoalSelect} />

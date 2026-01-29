@@ -223,6 +223,53 @@
       "ndaNote": "*Sommige projecten vallen onder NDA en kunnen niet publiek worden getoond.*",
       "logoPlaceholder": "LOGO"
     },
+    "trustSectors": {
+      "eyebrow": "Onze sectoren",
+      "headline": "Vertrouwd door groeiende bedrijven in België & Europa",
+      "subheadline": "We werken met ambitieuze teams die helderheid, structuur en meetbare groei willen — zonder marketing-ruis.",
+      "proofPoints": {
+        "experience": "10+ jaar ervaring",
+        "pricing": "Transparante prijzen & duidelijke deliverables",
+        "system": "System-driven aanpak (niet alleen design)",
+        "leads": "Focus op kwalitatieve leads"
+      },
+      "note": "*Omwille van NDA's tonen we niet alle bedrijfsnamen publiek.",
+      "cta": "Bekijk diensten & prijzen",
+      "sectors": {
+        "restaurant": {
+          "title": "Restaurants & horeca",
+          "subtitle": "Meer reservaties, meer zichtbaarheid."
+        },
+        "interior": {
+          "title": "Interieur & renovatie",
+          "subtitle": "Leads voor high-intent klanten."
+        },
+        "retail": {
+          "title": "Retail & lokale shops",
+          "subtitle": "Online presence die verkoopt."
+        },
+        "ecommerce": {
+          "title": "E-commerce",
+          "subtitle": "Conversie, content en performance."
+        },
+        "realEstate": {
+          "title": "Vastgoed",
+          "subtitle": "Premium branding + lead flow."
+        },
+        "health": {
+          "title": "Health & beauty",
+          "subtitle": "Meer boekingen, sterkere merkwaarde."
+        },
+        "services": {
+          "title": "Lokale diensten",
+          "subtitle": "Van Google naar klant — sneller."
+        },
+        "sme": {
+          "title": "SME's & startups",
+          "subtitle": "Structuur voor groei zonder chaos."
+        }
+      }
+    },
     "portfolio": {
       "subtitle": "Ons werk",
       "title": "Portfolio highlights",
