@@ -18,13 +18,17 @@
   "home": {
     "heroNew": {
       "badge": "Structure. Contenu. Croissance.",
-      "headline": "Plus de clients. Moins de temps perdu.",
-      "subtitle": "Groppi aide votre entreprise à croître avec une approche claire: site web professionnel, contenu solide et marketing qui fonctionne vraiment — sans blabla.",
-      "proof1": "Services clairs (pas de confusion)",
-      "proof2": "Prix transparents (pas de surprises)",
-      "proof3": "Décisions rapides = meilleurs prospects",
+      "headline": "Nous construisons votre base digitale — et accélérons votre croissance.",
+      "subtitle": "Nous aidons les entreprises belges à croître avec une approche claire: stratégie, branding et performance — sans budgets gaspillés ni promesses vagues.",
+      "proof1": "Structure de services claire",
+      "proof2": "Prix transparents & livrables",
+      "proof3": "Plus de leads, moins de temps perdu",
       "ctaPrimary": "Voir les services et prix",
-      "ctaSecondary": "Demander un devis personnalisé"
+      "ctaSecondary": "Demander un devis"
+    },
+    "postHeroTrust": {
+      "title": "Conçu pour la croissance en Belgique & Europe",
+      "subtitle": "Pas de bruit. Pas de promesses vides. Juste un système qui génère des leads et du chiffre d'affaires."
     },
     "trustBar": {
       "item1": {
