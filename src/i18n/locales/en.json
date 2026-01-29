@@ -65,13 +65,17 @@
     "heroNew": {
       "badge": "Structure. Content. Growth.",
       "headline": "We build your digital foundation — and scale your growth.",
-      "subtitle": "Website, branding, content and marketing that don't just look good… but sell.",
+      "subtitle": "We help Belgian businesses grow with a clear approach: strategy, branding and performance — without wasted budgets or vague promises.",
       "proof1": "Clear service structure",
-      "proof2": "Transparent pricing",
-      "proof3": "Better leads, less wasted time",
+      "proof2": "Transparent pricing & deliverables",
+      "proof3": "More leads, less wasted time",
       "ctaPrimary": "View services & pricing",
-      "ctaSecondary": "Request a custom quote",
+      "ctaSecondary": "Request a quote",
       "scrollHint": "Scroll"
+    },
+    "postHeroTrust": {
+      "title": "Built for growth in Belgium & Europe",
+      "subtitle": "No noise. No empty promises. Just a system that delivers leads and revenue."
     },
     "trustBar": {
       "item1": {

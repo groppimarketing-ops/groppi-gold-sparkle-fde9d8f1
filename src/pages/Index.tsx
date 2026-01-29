@@ -3,6 +3,7 @@ import { useRef, useState } from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import HeroSection from '@/components/home/HeroSection';
+import PostHeroTrust from '@/components/home/PostHeroTrust';
 import HomeTrustSectors from '@/components/home/HomeTrustSectors';
 import HomeTrustedBelgium from '@/components/home/HomeTrustedBelgium';
 import HomeQuickChoice from '@/components/home/HomeQuickChoice';
@@ -53,6 +54,9 @@ const Index = () => {
     <>
       {/* Hero with Video Background */}
       <HeroSection />
+
+      {/* Post-Hero Trust Line */}
+      <PostHeroTrust />
 
       {/* Trusted across Belgium - Social proof (directly after Hero) */}
       <HomeTrustedBelgium />
