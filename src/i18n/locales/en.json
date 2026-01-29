@@ -228,32 +228,49 @@
       "logoPlaceholder": "LOGO"
     },
     "clientLogoMarquee": {
-      "subtitle": "Trusted by teams in Belgium & Europe",
+      "eyebrow": "OUR CLIENTS",
+      "subtitle": "We work with ambitious companies that want structure, quality, and measurable growth — without marketing noise.",
       "title": "Trusted by teams in Belgium & Europe",
-      "ndaNote": "Due to NDAs, some brands are displayed as anonymized references.",
+      "ndaNote": "Due to NDAs, we cannot publicly display all brand names. Some references are therefore shown anonymized.",
+      "marqueeLabel": "Teams growing with us",
+      "benefits": {
+        "benefit1": "Clear service structure",
+        "benefit2": "Transparent pricing logic",
+        "benefit3": "Focus on quality & sustainable growth"
+      },
       "clients": {
-        "restaurant": "Belgian Restaurant Group",
-        "interior": "Antwerp Interiors",
+        "restaurant": "Antwerp Restaurant Group",
+        "interior": "Interior & Renovation Team",
         "retail": "Local Retail Chain",
-        "ecommerce": "E-commerce Brand",
+        "ecommerce": "E-commerce Brand (BE)",
         "beauty": "Beauty Clinic Belgium",
-        "realEstate": "Real Estate Belgium",
-        "construction": "Brussels Construction",
-        "startup": "Tech Startup EU"
+        "realEstate": "Real Estate Office (BE)",
+        "construction": "Brussels Construction Studio",
+        "startup": "Tech Startup (EU)",
+        "logistics": "Logistics Company (BE)",
+        "professional": "Professional Services Firm",
+        "hospitality": "Hospitality Team",
+        "b2b": "B2B Platform (EU)"
       },
       "testimonials": {
         "testimonial1": {
-          "quote": "Finally structure in our marketing. The team knows exactly what they're doing.",
-          "role": "Owner, Antwerp"
+          "quote": "Finally a team that brings structure. Clear agreements, fast switching, and above all: quality.",
+          "role": "Business Owner, Antwerp"
         },
         "testimonial2": {
-          "quote": "Professional approach, fast communication and measurable results.",
-          "role": "Manager, Brussels"
+          "quote": "Transparent in approach and pricing. No empty promises — just work that delivers results.",
+          "role": "Marketing Manager, Brussels"
         },
         "testimonial3": {
-          "quote": "No empty promises, just a clear strategy that works.",
-          "role": "Director, Ghent"
+          "quote": "Professional, fast and premium finish. You can feel they have experience in the Belgian market.",
+          "role": "Owner, Flemish SME"
         }
+      },
+      "cta": {
+        "title": "Ready to grow with clarity?",
+        "subtitle": "Schedule a short call or send us your situation. We'll give you a clear plan right away — no fuss.",
+        "primaryButton": "Request a quote →",
+        "secondaryButton": "Chat via WhatsApp"
       }
     },
     "trustSectors": {

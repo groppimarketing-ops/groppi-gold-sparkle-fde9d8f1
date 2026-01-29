@@ -228,32 +228,49 @@
       "logoPlaceholder": "LOGO"
     },
     "clientLogoMarquee": {
-      "subtitle": "Vertrouwd door teams in België & Europa",
+      "eyebrow": "ONZE KLANTEN",
+      "subtitle": "We werken met ambitieuze bedrijven die structuur, kwaliteit en meetbare groei willen — zonder marketingruis.",
       "title": "Vertrouwd door teams in België & Europa",
-      "ndaNote": "Wegens NDA's worden sommige merken als geanonimiseerde referenties weergegeven.",
+      "ndaNote": "Door NDA's kunnen we niet alle merknamen publiek tonen. Sommige referenties worden daarom geanonimiseerd weergegeven.",
+      "marqueeLabel": "Teams die met ons groeien",
+      "benefits": {
+        "benefit1": "Duidelijke service-structuur",
+        "benefit2": "Transparante prijslogica",
+        "benefit3": "Focus op kwaliteit & duurzame groei"
+      },
       "clients": {
-        "restaurant": "Belgisch Restaurant Groep",
-        "interior": "Antwerpen Interieurs",
-        "retail": "Lokale Retailketen",
-        "ecommerce": "E-commerce Merk",
-        "beauty": "Beauty Clinic België",
-        "realEstate": "Vastgoed België",
-        "construction": "Brussel Bouw",
-        "startup": "Tech Startup EU"
+        "restaurant": "Antwerp Restaurant Group",
+        "interior": "Interior & Renovation Team",
+        "retail": "Local Retail Chain",
+        "ecommerce": "E-commerce Brand (BE)",
+        "beauty": "Beauty Clinic Belgium",
+        "realEstate": "Real Estate Office (BE)",
+        "construction": "Brussels Construction Studio",
+        "startup": "Tech Startup (EU)",
+        "logistics": "Logistics Company (BE)",
+        "professional": "Professional Services Firm",
+        "hospitality": "Hospitality Team",
+        "b2b": "B2B Platform (EU)"
       },
       "testimonials": {
         "testimonial1": {
-          "quote": "Eindelijk structuur in onze marketing. Het team weet precies wat ze doen.",
-          "role": "Eigenaar, Antwerpen"
+          "quote": "Eindelijk een team dat structuur brengt. Duidelijke afspraken, snel schakelen en vooral: kwaliteit.",
+          "role": "Zaakvoerder, Antwerpen"
         },
         "testimonial2": {
-          "quote": "Professionele aanpak, snelle communicatie en meetbare resultaten.",
-          "role": "Manager, Brussel"
+          "quote": "Transparant in aanpak en pricing. Geen loze beloftes — gewoon werk dat resultaten oplevert.",
+          "role": "Marketing Manager, Brussel"
         },
         "testimonial3": {
-          "quote": "Geen loze beloftes, alleen duidelijke strategie die werkt.",
-          "role": "Directeur, Gent"
+          "quote": "Professioneel, snel en premium afwerking. Je voelt dat ze ervaring hebben in de Belgische markt.",
+          "role": "Eigenaar, Vlaamse KMO"
         }
+      },
+      "cta": {
+        "title": "Klaar om te groeien met helderheid?",
+        "subtitle": "Plan een korte call of stuur ons je situatie. We geven je meteen een duidelijk plan — zonder gedoe.",
+        "primaryButton": "Vraag een offerte aan →",
+        "secondaryButton": "Chat via WhatsApp"
       }
     },
     "trustSectors": {
