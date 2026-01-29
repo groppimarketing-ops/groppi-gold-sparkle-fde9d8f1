@@ -171,8 +171,90 @@
         "whatsapp": "WhatsApp us"
       }
     },
+    "clientMarquee": {
+      "subtitle": "Trusted by businesses",
+      "title": "Trusted by businesses in Belgium & Europe",
+      "ndaNote": "*Some projects are under NDA and cannot be publicly displayed.*"
+    },
+    "portfolio": {
+      "subtitle": "Our work",
+      "title": "Portfolio highlights",
+      "thumbnailPlaceholder": "Project image",
+      "viewCase": "View case study",
+      "viewAll": "View full portfolio",
+      "tags": {
+        "website": "Website",
+        "branding": "Branding",
+        "ads": "Ads",
+        "social": "Social",
+        "ecommerce": "E-commerce",
+        "seo": "SEO",
+        "content": "Content"
+      },
+      "projects": {
+        "project1": {
+          "title": "Restaurant Branding",
+          "metric": "+180% online reservations"
+        },
+        "project2": {
+          "title": "Fashion Webshop",
+          "metric": "€85K revenue in 3 months"
+        },
+        "project3": {
+          "title": "B2B Platform",
+          "metric": "+320% qualified leads"
+        },
+        "project4": {
+          "title": "Construction Company Website",
+          "metric": "#1 on Google locally"
+        },
+        "project5": {
+          "title": "Influencer Campaign",
+          "metric": "2.4M reach"
+        },
+        "project6": {
+          "title": "Tech Startup Branding",
+          "metric": "Complete brand identity"
+        },
+        "project7": {
+          "title": "E-commerce Growth",
+          "metric": "+240% ROAS"
+        },
+        "project8": {
+          "title": "Content Strategy",
+          "metric": "50+ videos per month"
+        }
+      }
+    },
+    "caseStudies": {
+      "subtitle": "Proven results",
+      "title": "Results that speak",
+      "challengeLabel": "Challenge",
+      "solutionLabel": "Our approach",
+      "cta": "Request a custom quote",
+      "industries": {
+        "restaurant": "Restaurant",
+        "ecommerce": "E-commerce",
+        "construction": "Construction"
+      },
+      "case1": {
+        "challenge": "Low online visibility and few reservations.",
+        "solution": "New website + Google Ads + social media strategy.",
+        "metric": "+180% reservations in 6 months"
+      },
+      "case2": {
+        "challenge": "High ad costs with low conversion.",
+        "solution": "Campaign optimization + retargeting + UX improvements.",
+        "metric": "+340% ROAS within 90 days"
+      },
+      "case3": {
+        "challenge": "No online presence, only word-of-mouth.",
+        "solution": "Professional website + local SEO + Google My Business.",
+        "metric": "#1 local ranking + 45 leads/month"
+      }
+    },
     "trustSection": {
-      "subtitle": "Why Groppi",
+      "subtitle": "10+ years of experience",
       "title": "Trust built on facts.",
       "items": {
         "founded": {
@@ -184,8 +266,8 @@
           "desc": "A multidisciplinary team of experts"
         },
         "reach": {
-          "title": "Europe & Middle East",
-          "desc": "International collaborations and partnerships"
+          "title": "Belgium & Europe",
+          "desc": "Focus on local and European markets"
         },
         "partnerships": {
           "title": "Long-term Relationships",

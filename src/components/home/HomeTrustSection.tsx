@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Calendar, Users, MapPin, Handshake } from 'lucide-react';
+import { Calendar, Users, MapPin, Handshake, Award, Building } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import SectionHeader from '@/components/ui/SectionHeader';
 import GlassCard from '@/components/ui/GlassCard';
@@ -12,21 +12,25 @@ const HomeTrustSection = () => {
       icon: Calendar,
       titleKey: 'home.trustSection.items.founded.title',
       descKey: 'home.trustSection.items.founded.desc',
+      highlight: '2016',
     },
     {
       icon: Users,
       titleKey: 'home.trustSection.items.team.title',
       descKey: 'home.trustSection.items.team.desc',
+      highlight: '9+',
     },
     {
       icon: MapPin,
       titleKey: 'home.trustSection.items.reach.title',
       descKey: 'home.trustSection.items.reach.desc',
+      highlight: null,
     },
     {
       icon: Handshake,
       titleKey: 'home.trustSection.items.partnerships.title',
       descKey: 'home.trustSection.items.partnerships.desc',
+      highlight: null,
     },
   ];
 
@@ -51,28 +55,29 @@ const HomeTrustSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.15 }}
-              className="group text-center py-8 px-6 hover:border-primary/40 transition-all duration-500"
+              className="group text-center py-8 px-6 hover:border-primary/40 hover:shadow-[0_0_25px_hsl(43_100%_50%/0.15)] transition-all duration-500"
+              hover3D={false}
             >
-              {/* Hover glow - gold only */}
+              {/* Icon container with subtle animation */}
               <motion.div
-                className="absolute inset-0 rounded-xl pointer-events-none"
-                whileHover={{
-                  boxShadow: '0 0 40px hsl(43 100% 50% / 0.15)',
-                }}
-              />
-              
-              <motion.div
-                className="w-16 h-16 rounded-full glass-card flex items-center justify-center mx-auto mb-4 border border-primary/30"
-                whileHover={{ scale: 1.1 }}
+                className="w-16 h-16 rounded-full glass-card flex items-center justify-center mx-auto mb-4 border border-primary/30 group-hover:border-primary/50 transition-colors"
+                whileHover={{ scale: 1.05 }}
               >
-                <item.icon className="w-8 h-8 text-primary" />
+                <item.icon className="w-7 h-7 text-primary" />
               </motion.div>
+
+              {/* Highlight number if exists */}
+              {item.highlight && (
+                <p className="text-3xl font-bold text-primary mb-1">
+                  {item.highlight}
+                </p>
+              )}
               
               <h3 className="font-bold text-lg mb-2 group-hover:text-primary transition-colors">
                 {t(item.titleKey)}
               </h3>
               
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 {t(item.descKey)}
               </p>
             </GlassCard>

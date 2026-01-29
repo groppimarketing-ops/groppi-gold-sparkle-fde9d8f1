@@ -3,8 +3,11 @@ import { useRef, useState } from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import HeroSection from '@/components/home/HeroSection';
+import HomeClientMarquee from '@/components/home/HomeClientMarquee';
 import HomeQuickChoice from '@/components/home/HomeQuickChoice';
 import HomeServicesGrid from '@/components/home/HomeServicesGrid';
+import HomePortfolioGrid from '@/components/home/HomePortfolioGrid';
+import HomeCaseStudies from '@/components/home/HomeCaseStudies';
 import HomeTrustSection from '@/components/home/HomeTrustSection';
 import HomeFinalCTA from '@/components/home/HomeFinalCTA';
 import DynamicSection from '@/components/sections/DynamicSection';
@@ -50,6 +53,9 @@ const Index = () => {
       {/* Hero with Video Background */}
       <HeroSection />
 
+      {/* Client Marquee - Trust logos */}
+      <HomeClientMarquee />
+
       {/* Quick Choice - For non-expert visitors */}
       <HomeQuickChoice onGoalSelect={handleGoalSelect} />
 
@@ -59,7 +65,13 @@ const Index = () => {
         highlightedServices={highlightedServices}
       />
 
-      {/* Trust Section */}
+      {/* Portfolio Highlights */}
+      <HomePortfolioGrid />
+
+      {/* Case Studies - Proof-based */}
+      <HomeCaseStudies />
+
+      {/* Trust Section - 10+ years credibility */}
       <HomeTrustSection />
 
       {/* Final CTA */}

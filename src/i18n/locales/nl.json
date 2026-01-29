@@ -171,8 +171,90 @@
         "whatsapp": "WhatsApp ons"
       }
     },
+    "clientMarquee": {
+      "subtitle": "Vertrouwd door bedrijven",
+      "title": "Vertrouwd door bedrijven in België & Europa",
+      "ndaNote": "*Sommige projecten vallen onder NDA en kunnen niet publiek worden getoond.*"
+    },
+    "portfolio": {
+      "subtitle": "Ons werk",
+      "title": "Portfolio highlights",
+      "thumbnailPlaceholder": "Project afbeelding",
+      "viewCase": "Bekijk case study",
+      "viewAll": "Bekijk volledig portfolio",
+      "tags": {
+        "website": "Website",
+        "branding": "Branding",
+        "ads": "Advertenties",
+        "social": "Social",
+        "ecommerce": "E-commerce",
+        "seo": "SEO",
+        "content": "Content"
+      },
+      "projects": {
+        "project1": {
+          "title": "Restaurant Branding",
+          "metric": "+180% online reserveringen"
+        },
+        "project2": {
+          "title": "Mode Webshop",
+          "metric": "€85K omzet in 3 maanden"
+        },
+        "project3": {
+          "title": "B2B Platform",
+          "metric": "+320% gekwalificeerde leads"
+        },
+        "project4": {
+          "title": "Bouwbedrijf Website",
+          "metric": "#1 op Google lokaal"
+        },
+        "project5": {
+          "title": "Influencer Campagne",
+          "metric": "2.4M bereik"
+        },
+        "project6": {
+          "title": "Tech Startup Branding",
+          "metric": "Complete merkidentiteit"
+        },
+        "project7": {
+          "title": "E-commerce Groei",
+          "metric": "+240% ROAS"
+        },
+        "project8": {
+          "title": "Content Strategie",
+          "metric": "50+ video's per maand"
+        }
+      }
+    },
+    "caseStudies": {
+      "subtitle": "Bewezen resultaten",
+      "title": "Resultaten die spreken",
+      "challengeLabel": "Uitdaging",
+      "solutionLabel": "Onze aanpak",
+      "cta": "Vraag een voorstel op maat",
+      "industries": {
+        "restaurant": "Restaurant",
+        "ecommerce": "E-commerce",
+        "construction": "Bouw"
+      },
+      "case1": {
+        "challenge": "Lage online zichtbaarheid en weinig reserveringen.",
+        "solution": "Nieuwe website + Google Ads + social media strategie.",
+        "metric": "+180% reserveringen in 6 maanden"
+      },
+      "case2": {
+        "challenge": "Hoge advertentiekosten met lage conversie.",
+        "solution": "Campagne-optimalisatie + retargeting + UX verbeteringen.",
+        "metric": "+340% ROAS binnen 90 dagen"
+      },
+      "case3": {
+        "challenge": "Geen online aanwezigheid, alleen mond-tot-mondreclame.",
+        "solution": "Professionele website + lokale SEO + Google My Business.",
+        "metric": "#1 lokale ranking + 45 leads/maand"
+      }
+    },
     "trustSection": {
-      "subtitle": "Waarom Groppi",
+      "subtitle": "10+ jaar ervaring",
       "title": "Vertrouwen gebouwd op feiten.",
       "items": {
         "founded": {
@@ -184,8 +266,8 @@
           "desc": "Een multidisciplinair team van experts"
         },
         "reach": {
-          "title": "Europa & Midden-Oosten",
-          "desc": "Internationale samenwerkingen en partnerships"
+          "title": "België & Europa",
+          "desc": "Focus op lokale en Europese markten"
         },
         "partnerships": {
           "title": "Langetermijnrelaties",
