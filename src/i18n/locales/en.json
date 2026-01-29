@@ -268,7 +268,14 @@
           "title": "SMEs & startups",
           "subtitle": "Structure for growth without chaos."
         }
-      }
+      },
+      "stats": {
+        "experience": "years experience",
+        "focus": "Belgium & Europe focus",
+        "system": "structure over chaos",
+        "premium": "branding + performance"
+      },
+      "microNote": "*Results vary by industry and budget. We build scalable systems."
     },
     "portfolio": {
       "subtitle": "Our work",
