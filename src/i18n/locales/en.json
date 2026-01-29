@@ -223,6 +223,53 @@
       "ndaNote": "*Some projects are under NDA and cannot be publicly displayed.*",
       "logoPlaceholder": "LOGO"
     },
+    "trustSectors": {
+      "eyebrow": "Our sectors",
+      "headline": "Trusted by growing businesses in Belgium & Europe",
+      "subheadline": "We work with ambitious teams that want clarity, structure and measurable growth — without the marketing noise.",
+      "proofPoints": {
+        "experience": "10+ years of experience",
+        "pricing": "Transparent pricing & clear deliverables",
+        "system": "System-driven approach (not just design)",
+        "leads": "Focus on quality leads"
+      },
+      "note": "*Due to NDAs, we can't publicly display all business names.",
+      "cta": "View services & pricing",
+      "sectors": {
+        "restaurant": {
+          "title": "Restaurants & hospitality",
+          "subtitle": "More reservations, more visibility."
+        },
+        "interior": {
+          "title": "Interior & renovation",
+          "subtitle": "Leads from high-intent clients."
+        },
+        "retail": {
+          "title": "Retail & local shops",
+          "subtitle": "Online presence that sells."
+        },
+        "ecommerce": {
+          "title": "E-commerce",
+          "subtitle": "Conversion, content and performance."
+        },
+        "realEstate": {
+          "title": "Real estate",
+          "subtitle": "Premium branding + lead flow."
+        },
+        "health": {
+          "title": "Health & beauty",
+          "subtitle": "More bookings, stronger brand value."
+        },
+        "services": {
+          "title": "Local services",
+          "subtitle": "From Google to client — faster."
+        },
+        "sme": {
+          "title": "SMEs & startups",
+          "subtitle": "Structure for growth without chaos."
+        }
+      }
+    },
     "portfolio": {
       "subtitle": "Our work",
       "title": "Portfolio highlights",
