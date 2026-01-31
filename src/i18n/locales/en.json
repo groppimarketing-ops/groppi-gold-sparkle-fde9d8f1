@@ -77,6 +77,53 @@
       "title": "Built for growth in Belgium & Europe",
       "subtitle": "No noise. No empty promises. Just a system that delivers leads and revenue."
     },
+    "serviceMap": {
+      "label": "What We Do",
+      "title": "Our services at a glance",
+      "subtitle": "Clear services. Transparent pricing. No marketing noise.",
+      "columns": {
+        "online": {
+          "title": "Get your business online",
+          "services": {
+            "businessWebsite": "Business website",
+            "onePage": "One-page website",
+            "webshop": "Webshop",
+            "visualContent": "Visual content & video"
+          }
+        },
+        "findable": {
+          "title": "Make your business findable",
+          "services": {
+            "seo": "SEO (local & technical SEO)",
+            "googleBusiness": "Google Business optimization",
+            "sea": "Search engine advertising (SEA)",
+            "dataTracking": "Data & tracking setup"
+          }
+        },
+        "standout": {
+          "title": "Make your business stand out",
+          "services": {
+            "branding": "Branding & visual identity",
+            "socialContent": "Social media content",
+            "videoAds": "Video advertising",
+            "creativeCampaigns": "Creative campaigns"
+          }
+        },
+        "attract": {
+          "title": "Attract customers",
+          "services": {
+            "adManagement": "Advertising management",
+            "socialManagement": "Social media management",
+            "leadGen": "Lead generation funnels",
+            "conversionOptimization": "Conversion optimization"
+          }
+        }
+      },
+      "cta": {
+        "viewServices": "View services & pricing",
+        "calculatePrice": "Calculate your price in 60 sec"
+      }
+    },
     "trustBar": {
       "item1": {
         "title": "Transparent Pricing",
