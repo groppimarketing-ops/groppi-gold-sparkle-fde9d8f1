@@ -61,6 +61,24 @@
     "cta": "Book a Free Consultation",
     "ctaSecondary": "View Our Services"
   },
+  "launchDiscount": {
+    "badge": "LIMITED DEAL",
+    "headline": "Start now with 30% launch discount.",
+    "subheadline": "Only for new clients — valid for 10 days. No fine print, just faster growth.",
+    "codeLabel": "Your discount code",
+    "codeCopied": "Code copied!",
+    "copyFailed": "Copy failed",
+    "trustLine": "Applied to your first invoice. New clients only.",
+    "disclaimer": "Offer expires when the timer reaches zero.",
+    "ctaPrimary": "Request a quote",
+    "ctaSecondary": "Chat via WhatsApp",
+    "ctaExpired": "Request a quote",
+    "expired": "Offer expired",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Min",
+    "seconds": "Sec"
+  },
   "home": {
     "heroNew": {
       "badge": "Structure. Content. Growth.",
