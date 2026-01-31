@@ -61,6 +61,24 @@
     "cta": "Book a Free Consultation",
     "ctaSecondary": "View Our Services"
   },
+  "launchDiscount": {
+    "badge": "LIMITED DEAL",
+    "headline": "Start nu met 30% lanceringskorting.",
+    "subheadline": "Alleen voor nieuwe klanten — geldig gedurende 10 dagen. Geen kleine lettertjes, gewoon sneller groeien.",
+    "codeLabel": "Jouw kortingscode",
+    "codeCopied": "Code gekopieerd!",
+    "copyFailed": "Kopiëren mislukt",
+    "trustLine": "Toegepast op je eerste factuur. Enkel voor nieuwe klanten.",
+    "disclaimer": "Aanbod vervalt zodra de timer op nul staat.",
+    "ctaPrimary": "Vraag een offerte aan",
+    "ctaSecondary": "Chat via WhatsApp",
+    "ctaExpired": "Vraag een offerte aan",
+    "expired": "Aanbieding verlopen",
+    "days": "Dagen",
+    "hours": "Uren",
+    "minutes": "Min",
+    "seconds": "Sec"
+  },
   "home": {
     "heroNew": {
       "badge": "Structuur. Content. Groei.",

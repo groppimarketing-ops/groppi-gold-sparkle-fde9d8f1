@@ -14,6 +14,7 @@ import HomeClientLogoMarquee from '@/components/home/HomeClientLogoMarquee';
 import HomeTrustSection from '@/components/home/HomeTrustSection';
 import HomeFinalCTA from '@/components/home/HomeFinalCTA';
 import HomeAfterHeroWrapper from '@/components/home/HomeAfterHeroWrapper';
+import LaunchDiscountSection from '@/components/home/LaunchDiscountSection';
 import DynamicSection from '@/components/sections/DynamicSection';
 import usePageContent from '@/hooks/usePageContent';
 
@@ -62,6 +63,9 @@ const Index = () => {
       <HomeAfterHeroWrapper>
         {/* Post-Hero Trust Line - Immediate positioning */}
         <PostHeroTrust />
+
+        {/* Launch Discount - Limited time offer section */}
+        <LaunchDiscountSection />
 
         {/* Social Proof - Trusted across Belgium & Europe (RIGHT AFTER HERO) */}
         <HomeTrustedBelgium />
