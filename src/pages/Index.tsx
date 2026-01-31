@@ -3,6 +3,7 @@ import { useRef, useState } from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import HeroSection from '@/components/home/HeroSection';
+import HomeServiceMap from '@/components/home/HomeServiceMap';
 import PostHeroTrust from '@/components/home/PostHeroTrust';
 import HomeTrustSectors from '@/components/home/HomeTrustSectors';
 import HomeTrustedBelgium from '@/components/home/HomeTrustedBelgium';
@@ -56,6 +57,9 @@ const Index = () => {
     <>
       {/* Hero with Video Background - keeps its own background */}
       <HeroSection />
+
+      {/* Service Map - Immediately after Hero for clarity */}
+      <HomeServiceMap />
 
       {/* All sections after Hero wrapped with continuous gold animated background */}
       <HomeAfterHeroWrapper>

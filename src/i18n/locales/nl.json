@@ -77,6 +77,53 @@
       "title": "Gebouwd voor groei in België & Europa",
       "subtitle": "Geen ruis. Geen loze beloftes. Alleen een systeem dat leads en omzet oplevert."
     },
+    "serviceMap": {
+      "label": "Wat we doen",
+      "title": "Onze diensten in één oogopslag",
+      "subtitle": "Duidelijke diensten. Transparante prijzen. Geen marketing-ruis.",
+      "columns": {
+        "online": {
+          "title": "Zet je zaak online",
+          "services": {
+            "businessWebsite": "Business website",
+            "onePage": "One-page website",
+            "webshop": "Webshop",
+            "visualContent": "Visual content & video"
+          }
+        },
+        "findable": {
+          "title": "Maak je zaak vindbaar",
+          "services": {
+            "seo": "SEO (lokale & technische SEO)",
+            "googleBusiness": "Google Business optimalisatie",
+            "sea": "Zoekmachine advertenties (SEA)",
+            "dataTracking": "Data & tracking setup"
+          }
+        },
+        "standout": {
+          "title": "Laat je zaak opvallen",
+          "services": {
+            "branding": "Branding & visuele identiteit",
+            "socialContent": "Social media content",
+            "videoAds": "Video advertenties",
+            "creativeCampaigns": "Creatieve campagnes"
+          }
+        },
+        "attract": {
+          "title": "Trek klanten aan",
+          "services": {
+            "adManagement": "Advertising management",
+            "socialManagement": "Social media management",
+            "leadGen": "Lead generation funnels",
+            "conversionOptimization": "Conversie-optimalisatie"
+          }
+        }
+      },
+      "cta": {
+        "viewServices": "Bekijk diensten & prijzen",
+        "calculatePrice": "Bereken je prijs in 60 sec"
+      }
+    },
     "trustBar": {
       "item1": {
         "title": "Transparante prijzen",
