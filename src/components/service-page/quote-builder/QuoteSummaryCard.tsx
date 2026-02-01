@@ -19,6 +19,7 @@ interface QuoteSummaryCardProps {
   currentEstimate: EstimatePayload | null;
   onReservePrice: () => void;
   isValid: boolean;
+  hasExplicitPricing?: boolean; // Only contentProduction has explicit pricing
 }
 
 const QuoteSummaryCard = memo(({
@@ -34,14 +35,22 @@ const QuoteSummaryCard = memo(({
   currentEstimate,
   onReservePrice,
   isValid,
+  hasExplicitPricing = false,
 }: QuoteSummaryCardProps) => {
   const { t } = useTranslation();
   const [copied, setCopied] = useState(false);
 
-  // Calculate discount
-  const discountAmount = isPromoActive ? Math.round((priceMin + priceMax) / 2 * (DISCOUNT_PERCENTAGE / 100)) : 0;
-  const discountedMin = isPromoActive ? Math.round(priceMin * (1 - DISCOUNT_PERCENTAGE / 100)) : priceMin;
-  const discountedMax = isPromoActive ? Math.round(priceMax * (1 - DISCOUNT_PERCENTAGE / 100)) : priceMax;
+  // Calculate discount - only for one-time fees (explicit pricing)
+  // Monthly subscriptions have ZERO discounts
+  const discountAmount = (isPromoActive && hasExplicitPricing) 
+    ? Math.round(priceMin * (DISCOUNT_PERCENTAGE / 100)) 
+    : 0;
+  const discountedMin = (isPromoActive && hasExplicitPricing) 
+    ? Math.round(priceMin * (1 - DISCOUNT_PERCENTAGE / 100)) 
+    : priceMin;
+  const discountedMax = (isPromoActive && hasExplicitPricing) 
+    ? Math.round(priceMax * (1 - DISCOUNT_PERCENTAGE / 100)) 
+    : priceMax;
 
   const handleCopyEstimateId = async () => {
     if (!currentEstimate) return;
@@ -66,8 +75,14 @@ const QuoteSummaryCard = memo(({
     const serviceName = t(`servicePage.${serviceKey}.title`);
     const tierName = tierKey ? t(`servicePage.calculator.packages.${tierKey}`) : '';
     const optionsList = selectedOptions.map(opt => t(`servicePage.calculator.addons.${opt}`)).join(', ');
-    const priceRange = `€${discountedMin}–€${discountedMax}`;
-    const discountLine = isPromoActive ? `(-${DISCOUNT_PERCENTAGE}% lanceringskorting)` : '';
+    
+    // Only show price if we have explicit pricing
+    const priceRange = hasExplicitPricing && priceMin > 0 
+      ? `€${discountedMin}${discountedMin !== discountedMax ? `–€${discountedMax}` : ''}`
+      : 'Offerte op maat';
+    const discountLine = (isPromoActive && hasExplicitPricing && priceMin > 0) 
+      ? `(-${DISCOUNT_PERCENTAGE}% lanceringskorting)` 
+      : '';
     const estimateId = currentEstimate?.id || 'Nog niet gereserveerd';
 
     const message = `Hey GROPPI 👋 Ik wil een korte intake boeken.
@@ -75,8 +90,8 @@ const QuoteSummaryCard = memo(({
 Service: ${serviceName}${tierName ? ` (${tierName})` : ''}
 ${adBudget ? `Budget: €${adBudget}/maand` : ''}
 ${optionsList ? `Opties: ${optionsList}` : ''}
-Schatting: ${priceRange} ${discountLine}
-Offerte-ID: ${estimateId}
+${hasExplicitPricing && priceMin > 0 ? `Schatting: ${priceRange} ${discountLine}` : 'Prijs: Offerte op maat'}
+${currentEstimate ? `Offerte-ID: ${estimateId}` : ''}
 
 Wanneer kan ik bellen?`;
 
@@ -150,49 +165,66 @@ Wanneer kan ik bellen?`;
         )}
       </div>
 
-      {/* Price Breakdown */}
-      <div className="border-t border-primary/10 pt-4 mb-4 space-y-2">
-        {isPromoActive && (
-          <>
-            <div className="flex justify-between text-sm">
-              <span className="text-muted-foreground line-through">
-                {t('quoteBuilder.originalPrice')}
-              </span>
-              <span className="text-muted-foreground line-through">
-                €{priceMin}–€{priceMax}
-              </span>
-            </div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="flex justify-between text-sm"
-            >
-              <span className="text-primary flex items-center gap-1">
-                <Sparkles className="w-3 h-3" />
-                {t('quoteBuilder.promoDiscount', { percent: DISCOUNT_PERCENTAGE })}
-                <span className="text-xs text-muted-foreground">— nog {promoTimeRemaining}</span>
-              </span>
-              <span className="text-primary font-medium">-€{discountAmount}</span>
-            </motion.div>
-          </>
-        )}
+      {/* Price Breakdown - Only show for services with explicit pricing */}
+      {hasExplicitPricing && priceMin > 0 ? (
+        <div className="border-t border-primary/10 pt-4 mb-4 space-y-2">
+          {isPromoActive && (
+            <>
+              <div className="flex justify-between text-sm">
+                <span className="text-muted-foreground line-through">
+                  {t('quoteBuilder.originalPrice')}
+                </span>
+                <span className="text-muted-foreground line-through">
+                  €{priceMin}
+                </span>
+              </div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="flex justify-between text-sm"
+              >
+                <span className="text-primary flex items-center gap-1">
+                  <Sparkles className="w-3 h-3" />
+                  {t('quoteBuilder.promoDiscount', { percent: DISCOUNT_PERCENTAGE })}
+                  <span className="text-xs text-muted-foreground">— nog {promoTimeRemaining}</span>
+                </span>
+                <span className="text-primary font-medium">-€{discountAmount}</span>
+              </motion.div>
+            </>
+          )}
 
-        <div className="flex justify-between items-baseline pt-2 border-t border-primary/10">
-          <span className="text-foreground font-semibold">
-            {t('quoteBuilder.estimatedMonthly')}
-          </span>
-          <span className="text-2xl font-bold gold-gradient-text">
-            €{discountedMin}–€{discountedMax}
-          </span>
-        </div>
-
-        {setupFee > 0 && (
-          <div className="flex justify-between text-sm text-muted-foreground">
-            <span>{t('quoteBuilder.setupFee')}</span>
-            <span>€{setupFee} {t('quoteBuilder.oneTime')}</span>
+          <div className="flex justify-between items-baseline pt-2 border-t border-primary/10">
+            <span className="text-foreground font-semibold">
+              {t('quoteBuilder.estimatedTotal')}
+            </span>
+            <span className="text-2xl font-bold gold-gradient-text">
+              €{discountedMin}
+            </span>
           </div>
-        )}
-      </div>
+
+          {setupFee > 0 && (
+            <div className="flex justify-between text-sm text-muted-foreground">
+              <span>{t('quoteBuilder.setupFee')}</span>
+              <span>€{setupFee} {t('quoteBuilder.oneTime')}</span>
+            </div>
+          )}
+        </div>
+      ) : (
+        // For services without explicit pricing: show "Offerte op maat"
+        <div className="border-t border-primary/10 pt-4 mb-4">
+          <div className="flex justify-between items-baseline">
+            <span className="text-foreground font-semibold">
+              {t('quoteBuilder.priceLabel')}
+            </span>
+            <span className="text-xl font-bold text-primary">
+              {t('services.requestQuote')}
+            </span>
+          </div>
+          <p className="text-xs text-muted-foreground mt-2">
+            {t('quoteBuilder.customQuoteNote')}
+          </p>
+        </div>
+      )}
 
       {/* Estimate ID Section */}
       <AnimatePresence>
@@ -226,15 +258,30 @@ Wanneer kan ik bellen?`;
 
       {/* CTAs */}
       <div className="space-y-3">
-        <Button
-          onClick={onReservePrice}
-          disabled={!isValid}
-          className="w-full luxury-button group"
-          size="lg"
-        >
-          <Calendar className="w-4 h-4 mr-2" />
-          {t('quoteBuilder.reservePrice')}
-        </Button>
+        {hasExplicitPricing && priceMin > 0 ? (
+          // For services with explicit pricing: show reserve price button
+          <Button
+            onClick={onReservePrice}
+            disabled={!isValid}
+            className="w-full luxury-button group"
+            size="lg"
+          >
+            <Calendar className="w-4 h-4 mr-2" />
+            {t('quoteBuilder.reservePrice')}
+          </Button>
+        ) : (
+          // For services without pricing: show request quote button (links to contact/WhatsApp)
+          <Button
+            asChild
+            className="w-full luxury-button group"
+            size="lg"
+          >
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <Calendar className="w-4 h-4 mr-2" />
+              {t('quoteBuilder.requestCustomQuote')}
+            </a>
+          </Button>
+        )}
 
         <Button
           asChild

@@ -2332,6 +2332,10 @@
     "proofLine": "You'll get a clear plan + deliverables before you decide.",
     "selectRequired": "Select a package to continue.",
     "promoBadge": "Launch deal (-{{percent}}%)",
+    "priceLabel": "Price",
+    "estimatedTotal": "Estimated total",
+    "customQuoteNote": "The exact price depends on your specific needs and project scope. Request a custom quote for a personalized price estimate.",
+    "requestCustomQuote": "Request custom quote",
     "optionPrices": {
       "extraContent4": "120",
       "extraContent12": "280",
@@ -2354,7 +2358,15 @@
       "emailAutomation": "250",
       "analyticsSetup": "200",
       "photoshoot": "400",
-      "branding": "350"
+      "branding": "350",
+      "posterAI": "25",
+      "posterEdit": "200",
+      "posterShoot": "250",
+      "reelAI": "150",
+      "reelEdit": "200",
+      "reelShoot": "250",
+      "video1Min": "250",
+      "article600Words": "99"
     }
   }
 }

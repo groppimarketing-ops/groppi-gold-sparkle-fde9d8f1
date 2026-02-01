@@ -14,8 +14,7 @@ export interface HomeServiceData {
   icon: typeof Camera;
   titleKey: string;
   descKey: string;
-  priceMin: number;
-  priceMax?: number;
+  priceMin?: number; // Optional - only for services with explicit pricing
   pricingType: 'monthly' | 'one_time' | 'custom';
   deliverables: string[];
   videoUrl?: string;
@@ -41,8 +40,8 @@ const HomeServicesGrid = forwardRef<HTMLElement, HomeServicesGridProps>(({ highl
       icon: Camera,
       titleKey: 'home.servicesGrid.items.contentProduction.title',
       descKey: 'home.servicesGrid.items.contentProduction.desc',
-      priceMin: 500,
-      pricingType: 'custom',
+      priceMin: 25, // Fixed: Vanaf €25 (eenmalig) - only service with explicit pricing
+      pricingType: 'one_time',
       deliverables: [
         'home.servicesGrid.items.contentProduction.deliverables.0',
         'home.servicesGrid.items.contentProduction.deliverables.1',
@@ -54,9 +53,8 @@ const HomeServicesGrid = forwardRef<HTMLElement, HomeServicesGridProps>(({ highl
       icon: Globe,
       titleKey: 'home.servicesGrid.items.businessWebsite.title',
       descKey: 'home.servicesGrid.items.businessWebsite.desc',
-      priceMin: 1500,
-      priceMax: 8000,
-      pricingType: 'one_time',
+      // No priceMin = "Offerte op maat"
+      pricingType: 'custom',
       deliverables: [
         'home.servicesGrid.items.businessWebsite.deliverables.0',
         'home.servicesGrid.items.businessWebsite.deliverables.1',
@@ -68,9 +66,8 @@ const HomeServicesGrid = forwardRef<HTMLElement, HomeServicesGridProps>(({ highl
       icon: ShoppingCart,
       titleKey: 'home.servicesGrid.items.ecommerce.title',
       descKey: 'home.servicesGrid.items.ecommerce.desc',
-      priceMin: 3000,
-      priceMax: 25000,
-      pricingType: 'one_time',
+      // No priceMin = "Offerte op maat"
+      pricingType: 'custom',
       deliverables: [
         'home.servicesGrid.items.ecommerce.deliverables.0',
         'home.servicesGrid.items.ecommerce.deliverables.1',
@@ -82,9 +79,8 @@ const HomeServicesGrid = forwardRef<HTMLElement, HomeServicesGridProps>(({ highl
       icon: Megaphone,
       titleKey: 'home.servicesGrid.items.ads.title',
       descKey: 'home.servicesGrid.items.ads.desc',
-      priceMin: 500,
-      priceMax: 5000,
-      pricingType: 'monthly',
+      // No priceMin = "Offerte op maat"
+      pricingType: 'custom',
       deliverables: [
         'home.servicesGrid.items.ads.deliverables.0',
         'home.servicesGrid.items.ads.deliverables.1',
@@ -97,9 +93,8 @@ const HomeServicesGrid = forwardRef<HTMLElement, HomeServicesGridProps>(({ highl
       icon: Search,
       titleKey: 'home.servicesGrid.items.seo.title',
       descKey: 'home.servicesGrid.items.seo.desc',
-      priceMin: 300,
-      priceMax: 2000,
-      pricingType: 'monthly',
+      // No priceMin = "Offerte op maat"
+      pricingType: 'custom',
       deliverables: [
         'home.servicesGrid.items.seo.deliverables.0',
         'home.servicesGrid.items.seo.deliverables.1',
@@ -111,9 +106,8 @@ const HomeServicesGrid = forwardRef<HTMLElement, HomeServicesGridProps>(({ highl
       icon: Share2,
       titleKey: 'home.servicesGrid.items.social.title',
       descKey: 'home.servicesGrid.items.social.desc',
-      priceMin: 400,
-      priceMax: 3000,
-      pricingType: 'monthly',
+      // No priceMin = "Offerte op maat"
+      pricingType: 'custom',
       deliverables: [
         'home.servicesGrid.items.social.deliverables.0',
         'home.servicesGrid.items.social.deliverables.1',
@@ -130,19 +124,25 @@ const HomeServicesGrid = forwardRef<HTMLElement, HomeServicesGridProps>(({ highl
   };
 
   const getPriceDisplay = (service: HomeServiceData) => {
-    if (service.pricingType === 'custom') {
-      return t('home.servicesGrid.customQuote');
+    // Pricing lock: only show numeric price if priceMin exists
+    if (!service.priceMin) {
+      return t('home.servicesGrid.customQuote'); // "Offerte op maat"
     }
-    if (service.priceMin && service.priceMax) {
-      return `€${service.priceMin.toLocaleString()} - €${service.priceMax.toLocaleString()}`;
-    }
-    return `€${service.priceMin.toLocaleString()}+`;
+    // Single price display: "Vanaf €X"
+    return `€${service.priceMin}`;
   };
 
   const getPricingSuffix = (service: HomeServiceData) => {
+    // Only show suffix if there's a numeric price
+    if (!service.priceMin) return '';
     if (service.pricingType === 'monthly') return t('home.servicesGrid.perMonth');
     if (service.pricingType === 'one_time') return t('home.servicesGrid.oneTime');
     return '';
+  };
+  
+  const getStartingFromLabel = (service: HomeServiceData) => {
+    // Show "Vanaf" only when there's a numeric price
+    return service.priceMin ? t('services.startingFrom') : null;
   };
 
   return (
@@ -223,6 +223,9 @@ const HomeServicesGrid = forwardRef<HTMLElement, HomeServicesGridProps>(({ highl
 
                 {/* Price */}
                 <div className="relative mb-4 p-3 rounded-lg bg-primary/5 border border-primary/10">
+                  {getStartingFromLabel(service) && (
+                    <span className="text-xs text-muted-foreground block mb-1">{getStartingFromLabel(service)}</span>
+                  )}
                   <div className="flex items-baseline gap-2">
                     <span className="text-2xl font-bold text-primary">{getPriceDisplay(service)}</span>
                     {getPricingSuffix(service) && (

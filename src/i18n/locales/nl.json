@@ -2332,6 +2332,10 @@
     "proofLine": "Je krijgt een helder plan + deliverables vóór je beslist.",
     "selectRequired": "Selecteer een pakket om verder te gaan.",
     "promoBadge": "Lanceringsdeal (-{{percent}}%)",
+    "priceLabel": "Prijs",
+    "estimatedTotal": "Geschatte totaal",
+    "customQuoteNote": "De exacte prijs hangt af van je specifieke wensen en projectomvang. Vraag een offerte op maat aan voor een persoonlijke prijsindicatie.",
+    "requestCustomQuote": "Vraag offerte op maat aan",
     "optionPrices": {
       "extraContent4": "120",
       "extraContent12": "280",
@@ -2354,7 +2358,15 @@
       "emailAutomation": "250",
       "analyticsSetup": "200",
       "photoshoot": "400",
-      "branding": "350"
+      "branding": "350",
+      "posterAI": "25",
+      "posterEdit": "200",
+      "posterShoot": "250",
+      "reelAI": "150",
+      "reelEdit": "200",
+      "reelShoot": "250",
+      "video1Min": "250",
+      "article600Words": "99"
     }
   }
 }
