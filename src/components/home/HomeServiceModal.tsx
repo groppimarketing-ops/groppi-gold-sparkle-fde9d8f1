@@ -50,11 +50,13 @@ const HomeServiceModal = ({ isOpen, onClose, service, initialTab = 'overview' }:
   };
 
   const getPriceDisplay = () => {
-    if (service.pricingType === 'custom') return t('home.servicesGrid.customQuote');
-    if (service.priceMin && service.priceMax) {
-      return `€${service.priceMin.toLocaleString()} - €${service.priceMax.toLocaleString()}`;
-    }
-    return `€${service.priceMin.toLocaleString()}+`;
+    // Pricing lock: only show numeric price if priceMin exists
+    if (!service.priceMin) return t('home.servicesGrid.customQuote');
+    return `€${service.priceMin}`;
+  };
+  
+  const getStartingFromLabel = () => {
+    return service.priceMin ? t('services.startingFrom') : null;
   };
 
   const tabs = [

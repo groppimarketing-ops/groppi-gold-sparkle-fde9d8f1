@@ -12,134 +12,86 @@ interface ConsultationQuoteBuilderProps {
   serviceKey: string;
 }
 
-// Pricing configuration per service (can be extended)
+// Pricing configuration per service
+// PRICING LOCK: Only contentProduction has explicit prices
+// All other services show "Offerte op maat"
 const SERVICE_PRICING: Record<string, {
-  base: Record<TierKey, { min: number; max: number }>;
+  base: Record<TierKey, { min: number; max: number }> | null;
   setup: Record<TierKey, number>;
   options: Record<string, number>;
   showAdBudget: boolean;
   adBudgetModifier: Record<string, number>;
+  hasExplicitPricing: boolean;
 }> = {
-  socialMedia: {
-    base: {
-      starter: { min: 350, max: 450 },
-      growth: { min: 550, max: 750 },
-      pro: { min: 950, max: 1350 },
-    },
-    setup: { starter: 150, growth: 250, pro: 450 },
+  contentProduction: {
+    base: null, // Content production uses item-based pricing, not tier-based
+    setup: { starter: 0, growth: 0, pro: 0 },
     options: {
-      extraContent4: 120,
-      extraContent12: 280,
-      extraVideo2: 180,
-      extraVideo6: 450,
+      // Fixed prices as provided
+      posterAI: 25,           // €25 (AI-generated)
+      posterEdit: 200,        // €200 (client footage, we edit + branding)
+      posterShoot: 250,       // €250 (we shoot on-location)
+      reelAI: 150,            // €150 (AI-generated)
+      reelEdit: 200,          // €200 (client footage, we edit + branding)
+      reelShoot: 250,         // €250 (we shoot on-location)
+      video1Min: 250,         // €250 (1 minute video)
+      article600Words: 99,    // vanaf €99 (600 words article)
     },
     showAdBudget: false,
     adBudgetModifier: {},
+    hasExplicitPricing: true,
+  },
+  // All other services: Offerte op maat (no explicit pricing)
+  socialMedia: {
+    base: null,
+    setup: { starter: 0, growth: 0, pro: 0 },
+    options: {},
+    showAdBudget: false,
+    adBudgetModifier: {},
+    hasExplicitPricing: false,
   },
   adsManagement: {
-    base: {
-      starter: { min: 300, max: 400 },
-      growth: { min: 500, max: 700 },
-      pro: { min: 900, max: 1200 },
-    },
-    setup: { starter: 200, growth: 350, pro: 500 },
-    options: {
-      extraLandingPage: 350,
-      extraTracking: 200,
-      remarketing: 150,
-      abTesting: 100,
-    },
+    base: null,
+    setup: { starter: 0, growth: 0, pro: 0 },
+    options: {},
     showAdBudget: true,
-    adBudgetModifier: {
-      '300': 0,
-      '500': 50,
-      '1000': 100,
-      '3000': 200,
-    },
+    adBudgetModifier: {},
+    hasExplicitPricing: false,
   },
   seo: {
-    base: {
-      starter: { min: 350, max: 450 },
-      growth: { min: 600, max: 800 },
-      pro: { min: 1000, max: 1500 },
-    },
-    setup: { starter: 200, growth: 300, pro: 500 },
-    options: {
-      localSeo: 150,
-      contentWriting: 200,
-      linkBuilding: 250,
-      competitorAnalysis: 180,
-    },
+    base: null,
+    setup: { starter: 0, growth: 0, pro: 0 },
+    options: {},
     showAdBudget: false,
     adBudgetModifier: {},
+    hasExplicitPricing: false,
   },
   businessWebsite: {
-    base: {
-      starter: { min: 1500, max: 2000 },
-      growth: { min: 2500, max: 3500 },
-      pro: { min: 4000, max: 6000 },
-    },
+    base: null,
     setup: { starter: 0, growth: 0, pro: 0 },
-    options: {
-      extraPages: 150,
-      blogSetup: 300,
-      multiLanguage: 500,
-      animations: 400,
-    },
+    options: {},
     showAdBudget: false,
     adBudgetModifier: {},
+    hasExplicitPricing: false,
   },
   ecommerceWebsite: {
-    base: {
-      starter: { min: 2000, max: 3000 },
-      growth: { min: 3500, max: 5000 },
-      pro: { min: 6000, max: 10000 },
-    },
+    base: null,
     setup: { starter: 0, growth: 0, pro: 0 },
-    options: {
-      paymentIntegration: 300,
-      inventoryManagement: 400,
-      emailAutomation: 250,
-      analyticsSetup: 200,
-    },
+    options: {},
     showAdBudget: false,
     adBudgetModifier: {},
-  },
-  contentProduction: {
-    base: {
-      starter: { min: 25, max: 250 },
-      growth: { min: 150, max: 500 },
-      pro: { min: 250, max: 1000 },
-    },
-    setup: { starter: 0, growth: 0, pro: 0 },
-    options: {
-      posterAI: 25,
-      posterClientFootage: 200,
-      posterOnLocation: 250,
-      reelAI: 150,
-      reelClientFootage: 200,
-      reelOnLocation: 250,
-      video1Min: 250,
-      article600Words: 99,
-      photoshoot: 400,
-      branding: 350,
-    },
-    showAdBudget: false,
-    adBudgetModifier: {},
+    hasExplicitPricing: false,
   },
 };
 
-// Default pricing for unknown services
+// Default for unknown services: Offerte op maat
 const DEFAULT_PRICING = {
-  base: {
-    starter: { min: 400, max: 600 },
-    growth: { min: 700, max: 1000 },
-    pro: { min: 1200, max: 1800 },
-  },
-  setup: { starter: 150, growth: 250, pro: 400 },
+  base: null,
+  setup: { starter: 0, growth: 0, pro: 0 },
   options: {},
   showAdBudget: false,
   adBudgetModifier: {},
+  hasExplicitPricing: false,
 };
 
 const ConsultationQuoteBuilder = memo(({ serviceKey }: ConsultationQuoteBuilderProps) => {
@@ -155,30 +107,29 @@ const ConsultationQuoteBuilder = memo(({ serviceKey }: ConsultationQuoteBuilderP
 
   // Get pricing config for this service
   const pricingConfig = SERVICE_PRICING[serviceKey] || DEFAULT_PRICING;
+  
+  // Check if service has explicit pricing (only contentProduction does)
+  const hasExplicitPricing = pricingConfig.hasExplicitPricing;
 
-  // Calculate price
+  // Calculate price - only for services with explicit pricing (contentProduction)
   const { priceMin, priceMax, setupFee } = useMemo(() => {
-    if (!tierKey) {
+    // For services without explicit pricing, return 0s (we'll show "Offerte op maat")
+    if (!hasExplicitPricing) {
       return { priceMin: 0, priceMax: 0, setupFee: 0 };
     }
 
-    const base = pricingConfig.base[tierKey];
-    const setup = pricingConfig.setup[tierKey];
-    const adModifier = adBudget 
-      ? (pricingConfig.adBudgetModifier[adBudget] || 0)
-      : 0;
-
+    // For contentProduction: calculate based on selected items only
     let optionsTotal = 0;
     selectedOptions.forEach(opt => {
       optionsTotal += pricingConfig.options[opt] || 0;
     });
 
     return {
-      priceMin: base.min + adModifier + optionsTotal,
-      priceMax: base.max + adModifier + optionsTotal,
-      setupFee: setup,
+      priceMin: optionsTotal, // Total of selected items
+      priceMax: optionsTotal, // Same for content production (fixed prices)
+      setupFee: 0,
     };
-  }, [tierKey, selectedOptions, adBudget, pricingConfig]);
+  }, [selectedOptions, pricingConfig, hasExplicitPricing]);
 
   // Toggle option
   const toggleOption = useCallback((option: string) => {
@@ -204,20 +155,26 @@ const ConsultationQuoteBuilder = memo(({ serviceKey }: ConsultationQuoteBuilderP
   }, []);
 
   // Check if form is valid
-  const isValid = tierKey !== null;
+  // For contentProduction: valid if at least one option selected
+  // For other services: always valid (shows custom quote CTA)
+  const isValid = hasExplicitPricing 
+    ? selectedOptions.length > 0 
+    : true;
 
-  // Reserve price (create estimate)
+  // Reserve price (create estimate) - only for services with explicit pricing
   const handleReservePrice = useCallback(() => {
-    if (!isValid || !tierKey) return;
+    if (!hasExplicitPricing) return; // Should not happen - button won't show
+    if (!isValid) return;
 
+    // 20% discount applies ONLY to one-time fees (contentProduction is one-time)
     const discountApplied = promoState.isActive;
     const discountAmount = discountApplied 
-      ? Math.round((priceMin + priceMax) / 2 * (DISCOUNT_PERCENTAGE / 100))
+      ? Math.round(priceMin * (DISCOUNT_PERCENTAGE / 100))
       : 0;
 
     const estimate = saveEstimate({
       serviceKey,
-      tierKey,
+      tierKey: tierKey || 'custom',
       options: selectedOptions,
       adBudget,
       priceMin: discountApplied ? Math.round(priceMin * (1 - DISCOUNT_PERCENTAGE / 100)) : priceMin,
@@ -233,7 +190,7 @@ const ConsultationQuoteBuilder = memo(({ serviceKey }: ConsultationQuoteBuilderP
     if (summaryElement && window.innerWidth < 1024) {
       summaryElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-  }, [isValid, tierKey, selectedOptions, adBudget, priceMin, priceMax, promoState.isActive, serviceKey, saveEstimate]);
+  }, [isValid, hasExplicitPricing, tierKey, selectedOptions, adBudget, priceMin, priceMax, promoState.isActive, serviceKey, saveEstimate]);
 
   return (
     <section id="opties-prijzen" className="relative py-16 lg:py-24 bg-background scroll-mt-20">
@@ -328,6 +285,7 @@ const ConsultationQuoteBuilder = memo(({ serviceKey }: ConsultationQuoteBuilderP
                 currentEstimate={currentEstimate}
                 onReservePrice={handleReservePrice}
                 isValid={isValid}
+                hasExplicitPricing={hasExplicitPricing}
               />
             </div>
           </motion.div>
