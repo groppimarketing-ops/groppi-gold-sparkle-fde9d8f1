@@ -61,24 +61,6 @@
     "cta": "Book a Free Consultation",
     "ctaSecondary": "View Our Services"
   },
-  "launchDiscount": {
-    "badge": "LIMITED DEAL",
-    "headline": "Start nu met 20% lanceringskorting.",
-    "subheadline": "Alleen voor nieuwe klanten — geldig gedurende 10 dagen. Korting geldt enkel op eenmalige kosten, niet op abonnementen.",
-    "codeLabel": "Jouw kortingscode",
-    "codeCopied": "Code gekopieerd!",
-    "copyFailed": "Kopiëren mislukt",
-    "trustLine": "Toegepast op je eerste factuur. Enkel voor nieuwe klanten.",
-    "disclaimer": "Aanbod vervalt zodra de timer op nul staat.",
-    "ctaPrimary": "Vraag een offerte aan",
-    "ctaSecondary": "Chat via WhatsApp",
-    "ctaExpired": "Vraag een offerte aan",
-    "expired": "Aanbieding verlopen",
-    "days": "Dagen",
-    "hours": "Uren",
-    "minutes": "Min",
-    "seconds": "Sec"
-  },
   "home": {
     "heroNew": {
       "badge": "Structuur. Content. Groei.",
@@ -745,14 +727,13 @@
     "title": "Onze diensten",
     "subtitle": "Wat wij bieden",
     "description": "Wij werken niet met vaste pakketten. Elke dienst wordt afgestemd op de doelstellingen van de klant en uitgevoerd door een gespecialiseerd team, ondersteund door slimme technologie waar dat waarde toevoegt.",
-  "monthly": "Maandelijks",
+    "monthly": "Maandelijks",
     "oneTime": "Eenmalig",
-    "oneTimeLabel": "eenmalig",
     "customQuote": "Op maat",
     "startingFrom": "Vanaf",
     "perMonth": "/ maand",
     "oneTimePayment": "eenmalige betaling",
-    "requestQuote": "Offerte op maat",
+    "requestQuote": "Offerte aanvragen",
     "getQuote": "Vraag een offerte aan",
     "keyInclusions": "Wat inbegrepen is",
     "videoPlaceholder": "Bekijk korte uitlegvideo",
@@ -1142,9 +1123,7 @@
     "cta": {
       "title": "Klaar om uw digitale aanwezigheid te versterken?",
       "description": "Neem vandaag nog contact met ons op voor een vrijblijvend gesprek over hoe we u kunnen helpen uw bedrijfsdoelen te bereiken.",
-      "button": "Vraag een vrijblijvende offerte aan",
-      "whatsapp": "Chat via WhatsApp",
-      "contact": "Vraag offerte aan"
+      "button": "Vraag een vrijblijvende offerte aan"
     }
   },
   "blog": {
@@ -1628,13 +1607,6 @@
     }
   },
   "servicePage": {
-    "tabs": {
-      "why": "Waarom?",
-      "howItWorks": "Hoe werkt het?",
-      "approach": "Aanpak",
-      "pricing": "Opties & prijzen",
-      "faq": "FAQ"
-    },
     "cta": {
       "requestQuote": "Vraag een offerte aan",
       "whatsapp": "Chat via WhatsApp"
@@ -1644,9 +1616,6 @@
     "whatsapp": {
       "template": "Hallo! Ik wil graag meer info over {{service}}. Kan je me helpen?"
     },
-    "why": {
-      "label": "Waarom deze dienst"
-    },
     "deliverables": {
       "label": "Wat je krijgt",
       "title": "Wat zit er in?"
@@ -1655,48 +1624,9 @@
       "label": "Hoe het werkt",
       "title": "Ons proces"
     },
-    "approach": {
-      "label": "Onze aanpak",
-      "title": "Hoe wij werken",
-      "cards": {
-        "strategy": {
-          "title": "Strategie",
-          "description": "We beginnen met een grondige analyse van je markt, doelgroep en concurrentie om een effectieve strategie te ontwikkelen."
-        },
-        "execution": {
-          "title": "Uitvoering",
-          "description": "Ons team voert de strategie uit met aandacht voor detail, kwaliteit en deadlines."
-        },
-        "reporting": {
-          "title": "Rapportage",
-          "description": "Maandelijkse rapportages met duidelijke KPI's en concrete inzichten voor verbetering."
-        }
-      }
-    },
-    "packages": {
-      "label": "Pakketten & prijzen",
-      "title": "Kies je pakket",
-      "subtitle": "Transparante prijzen. Geen verrassingen.",
-      "perMonth": "maand",
-      "setupFee": "Setup fee",
-      "choosePlan": "Kies dit pakket",
-      "popular": "Meest gekozen",
-      "customNote": "Geen passend pakket? We maken graag een voorstel op maat.",
-      "customCta": "Vraag een offerte op maat aan",
-      "starter": {
-        "name": "Starter"
-      },
-      "growth": {
-        "name": "Growth"
-      },
-      "pro": {
-        "name": "Pro"
-      }
-    },
     "calculator": {
       "label": "Prijscalculator",
       "title": "Bereken je prijs in 60 sec",
-      "subtitle": "Kies je voorkeuren en krijg direct een indicatieve prijs.",
       "businessTypeLabel": "Type onderneming",
       "goalLabel": "Jouw doel",
       "packageLabel": "Pakket",
@@ -1712,8 +1642,6 @@
       "sendCalculation": "Stuur mij deze berekening",
       "sendWhatsapp": "Stuur via WhatsApp",
       "noAddons": "Geen extra opties",
-      "recommendation": "Onze aanbeveling",
-      "recommendationText": "Op basis van je keuzes raden we {{package}} aan.",
       "businessTypes": {
         "restaurant": "Restaurant / horeca",
         "retail": "Retail & lokale shops",
@@ -1738,57 +1666,25 @@
         "extraVideo2": "Extra video ads (2/maand)",
         "extraVideo6": "Extra video ads (6/maand)",
         "extraLandingPage": "Extra landing page",
-        "extraTracking": "Extra tracking setup",
-        "remarketing": "Remarketing campagnes",
-        "abTesting": "A/B testing setup",
-        "localSeo": "Lokale SEO optimalisatie",
-        "contentWriting": "SEO content schrijven",
-        "linkBuilding": "Linkbuilding campagne",
-        "competitorAnalysis": "Concurrentieanalyse",
-        "extraPages": "Extra pagina's (per 5)",
-        "blogSetup": "Blog functionaliteit",
-        "multiLanguage": "Meertalige website",
-        "animations": "Premium animaties",
-        "paymentIntegration": "Betaalintegratie",
-        "inventoryManagement": "Voorraadbeheer",
-        "emailAutomation": "E-mail automatisatie",
-        "analyticsSetup": "Analytics setup",
-        "photoshoot": "Fotoshoot",
-        "branding": "Branding pakket",
-        "posterAI": "Poster (AI-gegenereerd)",
-        "posterClientFootage": "Poster (klantmateriaal, wij editen)",
-        "posterOnLocation": "Poster (opname op locatie)",
-        "reelAI": "Reel/korte video (AI-gegenereerd)",
-        "reelClientFootage": "Reel/korte video (klantmateriaal)",
-        "reelOnLocation": "Reel/korte video (opname op locatie)",
-        "video1Min": "Video (1 minuut, standaard)",
-        "article600Words": "Artikel (600 woorden)"
+        "extraTracking": "Extra tracking setup"
       },
       "whatsappTemplate": "Hallo! Mijn berekening voor {{service}}:\n\n• Bedrijfstype: {{businessType}}\n• Doel: {{goal}}\n• Pakket: {{package}}\n• Advertentiebudget: {{adBudget}}\n• Extra opties: {{addons}}\n\n💰 Geschatte prijs: {{monthlyRange}} / maand\n📋 Setup: {{setup}}\n\nKan je me een offerte op maat sturen?"
     },
     "faq": {
       "label": "Veelgestelde vragen",
       "title": "FAQ",
-      "q1": "Wat is inbegrepen en wat niet?",
-      "a1": "Elk pakket heeft duidelijk gedefinieerde deliverables. Content, strategie en rapportage zijn inbegrepen. Advertentiebudget betaal je rechtstreeks aan de platformen (Meta, Google). Zie het prijsoverzicht voor details.",
-      "q2": "Hoe lang duurt het om te starten?",
-      "a2": "Na goedkeuring van je offerte starten we binnen 5-7 werkdagen. Een korte intake van 30 min is voldoende om alles door te spreken.",
-      "q3": "Gebruiken jullie AI of echte opnames?",
-      "a3": "Beide! We bieden AI-gegenereerde content (sneller en goedkoper) én professionele opnames op locatie. Je kiest wat past bij je budget en doelen.",
-      "q4": "Wat hebben jullie van mij nodig?",
-      "a4": "Toegang tot je social accounts, merkrichtlijnen (indien beschikbaar) en een korte intake. Wij doen de rest.",
-      "q5": "Geldt de korting ook voor maandelijkse abonnementen?",
-      "a5": "Nee. De 20% korting geldt alleen voor eenmalige fees (setup, productie). Maandelijkse abonnementen hebben geen korting.",
-      "q6": "Wat met advertentiebudget?",
-      "a6": "Je advertentiebudget betaal je rechtstreeks aan Meta/Google. Onze management fee is apart en staat los van je advertentie-uitgaven.",
-      "q7": "Kan ik maandelijks opzeggen?",
-      "a7": "Ja, met 30 dagen opzegtermijn. Geen verborgen clausules of jaarcontracten verplicht.",
-      "q8": "Wie is eigenaar van de content?",
-      "a8": "Jij bent eigenaar van alle geproduceerde content. Na volledige betaling draag je alle rechten over.",
-      "q9": "Hoe werkt de prijscalculator?",
-      "a9": "De calculator geeft een indicatieve schatting op basis van je keuzes. Na een korte intake krijg je een exacte offerte op maat.",
-      "q10": "Werken jullie ook internationaal?",
-      "a10": "Ja, we werken met klanten in België, Nederland, Duitsland en het Midden-Oosten. Onze diensten zijn meertalig beschikbaar."
+      "q1": "Is dit een contract per maand?",
+      "a1": "Ja, je betaalt maandelijks. Geen jaarcontract verplicht.",
+      "q2": "Kan ik stoppen wanneer ik wil?",
+      "a2": "Ja, met 30 dagen opzegtermijn. Geen verborgen clausules.",
+      "q3": "Werken jullie met vaste prijzen?",
+      "a3": "We werken met prijsranges. Na de intake krijg je een exacte offerte.",
+      "q4": "Wat als ik nog geen content heb?",
+      "a4": "Geen probleem. We produceren content voor je of begeleiden je team.",
+      "q5": "Hoe snel zie ik resultaat?",
+      "a5": "Eerste resultaten binnen 2-4 weken. Significante groei na 2-3 maanden.",
+      "q6": "Wat als ik een klein budget heb?",
+      "a6": "We hebben Starter-pakketten voor kleine budgetten. Vraag advies aan."
     },
     "finalCTA": {
       "title": "Klaar om te groeien met duidelijkheid?",
@@ -1803,47 +1699,6 @@
         "1": "Professionele content op al je kanalen",
         "2": "Meer engagement en bereik",
         "3": "Tijdsbesparing voor jouw team"
-      },
-      "why": {
-        "title": "Waarom social media uitbesteden?",
-        "subtitle": "Focus op je core business terwijl wij je online aanwezigheid laten groeien.",
-        "benefit1": "Consistent posten zonder zelf tijd te verliezen",
-        "benefit2": "Professionele content die converteert",
-        "benefit3": "Community beheer en engagement",
-        "metric1": { "value": "+180%", "label": "Gemiddelde bereik groei" },
-        "metric2": { "value": "12u", "label": "Tijdsbesparing per week" }
-      },
-      "packages": {
-        "starter": {
-          "description": "Perfect voor kleine bedrijven die willen starten.",
-          "price": "€350–€450",
-          "setup": "€150",
-          "feature1": "1 platform beheer",
-          "feature2": "8 posts per maand",
-          "feature3": "Community management",
-          "feature4": "Maandelijkse rapportage",
-          "feature5": "E-mail support"
-        },
-        "growth": {
-          "description": "Voor bedrijven die serieus willen groeien.",
-          "price": "€550–€750",
-          "setup": "€250",
-          "feature1": "Tot 3 platforms",
-          "feature2": "16 posts per maand",
-          "feature3": "Stories & reels",
-          "feature4": "Wekelijkse rapportage",
-          "feature5": "Dedicated account manager"
-        },
-        "pro": {
-          "description": "Volledig beheer voor maximale impact.",
-          "price": "€950–€1.350",
-          "setup": "€450",
-          "feature1": "Alle platforms",
-          "feature2": "30+ posts per maand",
-          "feature3": "Video content inclusief",
-          "feature4": "Influencer outreach",
-          "feature5": "24/7 community beheer"
-        }
       },
       "deliverables": {
         "1": { "title": "Strategie & planning", "desc": "Content kalender op maat van jouw doelen." },
@@ -1867,47 +1722,6 @@
         "2": "Gerichte campagnes voor jouw doelgroep",
         "3": "Transparante rapportage elke maand"
       },
-      "why": {
-        "title": "Waarom advertentiebeheer uitbesteden?",
-        "subtitle": "Laat je budget werken met experts die weten wat converteert.",
-        "benefit1": "Geen verspild budget op slechte campagnes",
-        "benefit2": "Data-gedreven optimalisatie voor maximale ROI",
-        "benefit3": "Focus op leads die echt converteren",
-        "metric1": { "value": "+240%", "label": "Gemiddelde ROAS verbetering" },
-        "metric2": { "value": "3x", "label": "Meer gekwalificeerde leads" }
-      },
-      "packages": {
-        "starter": {
-          "description": "Voor bedrijven die willen starten met ads.",
-          "price": "€400–€500",
-          "setup": "€200",
-          "feature1": "1 platform (Google of Meta)",
-          "feature2": "Tot €500 ad spend beheer",
-          "feature3": "Maandelijkse rapportage",
-          "feature4": "A/B testing basis",
-          "feature5": "E-mail support"
-        },
-        "growth": {
-          "description": "Voor serieuze groei met meerdere kanalen.",
-          "price": "€650–€850",
-          "setup": "€350",
-          "feature1": "Tot 3 platforms",
-          "feature2": "Tot €2.000 ad spend beheer",
-          "feature3": "Wekelijkse rapportage",
-          "feature4": "Retargeting campagnes",
-          "feature5": "Dedicated account manager"
-        },
-        "pro": {
-          "description": "Full-service advertising voor maximale impact.",
-          "price": "€1.100–€1.500",
-          "setup": "€500",
-          "feature1": "Onbeperkt platforms",
-          "feature2": "Onbeperkt ad spend beheer",
-          "feature3": "Real-time dashboard",
-          "feature4": "Video ad creatie",
-          "feature5": "Wekelijkse strategie calls"
-        }
-      },
       "deliverables": {
         "1": { "title": "Campagne strategie", "desc": "Doelgerichte aanpak per platform." },
         "2": { "title": "Advertentie creatie", "desc": "Visuals en copy die converteren." },
@@ -1929,47 +1743,6 @@
         "1": "Professionele video's en foto's",
         "2": "Content die past bij elk platform",
         "3": "Snelle levering en revisies"
-      },
-      "why": {
-        "title": "Waarom professionele content?",
-        "subtitle": "Kwalitatieve content onderscheidt je van de concurrentie.",
-        "benefit1": "Professionele uitstraling die vertrouwen wekt",
-        "benefit2": "Content geoptimaliseerd voor elk platform",
-        "benefit3": "Consistente branding in alles wat je deelt",
-        "metric1": { "value": "50+", "label": "Video's per maand mogelijk" },
-        "metric2": { "value": "48u", "label": "Gemiddelde levertijd" }
-      },
-      "packages": {
-        "starter": {
-          "description": "Basis content voor je online aanwezigheid.",
-          "price": "€500–€700",
-          "setup": "€0",
-          "feature1": "4 social media posts",
-          "feature2": "2 korte video's",
-          "feature3": "Basis editing",
-          "feature4": "1 revisieronde",
-          "feature5": "Digitale levering"
-        },
-        "growth": {
-          "description": "Meer content voor consistente aanwezigheid.",
-          "price": "€900–€1.200",
-          "setup": "€0",
-          "feature1": "12 social media posts",
-          "feature2": "4 korte video's",
-          "feature3": "Geavanceerde editing",
-          "feature4": "2 revisierondes",
-          "feature5": "Platform-specifieke formats"
-        },
-        "pro": {
-          "description": "Premium content productie op schaal.",
-          "price": "€1.500–€2.500",
-          "setup": "€0",
-          "feature1": "30+ posts per maand",
-          "feature2": "8+ video's",
-          "feature3": "Fotoshoots inclusief",
-          "feature4": "Onbeperkte revisies",
-          "feature5": "Dedicated creatief team"
-        }
       },
       "deliverables": {
         "1": { "title": "Concept & planning", "desc": "Creatieve ideeën afgestemd op je merk." },
@@ -1993,47 +1766,6 @@
         "2": "Meer kwalitatief verkeer naar je site",
         "3": "Langetermijn groei zonder advertentiekosten"
       },
-      "why": {
-        "title": "Waarom investeren in SEO?",
-        "subtitle": "Organisch verkeer is de meest duurzame bron van leads.",
-        "benefit1": "Gratis verkeer dat blijft groeien",
-        "benefit2": "Hogere autoriteit in je markt",
-        "benefit3": "Bezoekers met hoge koopintentie",
-        "metric1": { "value": "#1", "label": "Rankings voor lokale zoektermen" },
-        "metric2": { "value": "+320%", "label": "Organisch verkeer groei" }
-      },
-      "packages": {
-        "starter": {
-          "description": "Basis SEO voor lokale vindbaarheid.",
-          "price": "€350–€450",
-          "setup": "€200",
-          "feature1": "Technische audit",
-          "feature2": "5 keywords optimalisatie",
-          "feature3": "Google My Business setup",
-          "feature4": "Maandelijkse rapportage",
-          "feature5": "E-mail support"
-        },
-        "growth": {
-          "description": "Uitgebreide SEO voor regionale groei.",
-          "price": "€600–€800",
-          "setup": "€300",
-          "feature1": "Volledige technische optimalisatie",
-          "feature2": "15 keywords",
-          "feature3": "2 SEO-artikelen per maand",
-          "feature4": "Linkbuilding basis",
-          "feature5": "Wekelijkse rapportage"
-        },
-        "pro": {
-          "description": "Enterprise SEO voor nationale dominantie.",
-          "price": "€1.000–€1.500",
-          "setup": "€500",
-          "feature1": "Onbeperkt keywords",
-          "feature2": "4+ artikelen per maand",
-          "feature3": "Actieve linkbuilding",
-          "feature4": "Competitor analyse",
-          "feature5": "Dedicated SEO specialist"
-        }
-      },
       "deliverables": {
         "1": { "title": "Technische audit", "desc": "We checken snelheid, structuur en indexatie." },
         "2": { "title": "Keyword research", "desc": "De juiste zoekwoorden voor jouw markt." },
@@ -2055,47 +1787,6 @@
         "1": "Modern design dat vertrouwen wekt",
         "2": "Geoptimaliseerd voor conversies",
         "3": "Mobiel-vriendelijk en snel"
-      },
-      "why": {
-        "title": "Waarom een professionele website?",
-        "subtitle": "Je website is je digitale visitekaartje en verkoopkanaal.",
-        "benefit1": "Eerste indruk die vertrouwen wekt",
-        "benefit2": "24/7 bereikbaar voor potentiële klanten",
-        "benefit3": "Fundament voor al je online marketing",
-        "metric1": { "value": "75%", "label": "Besluit op basis van website" },
-        "metric2": { "value": "+180%", "label": "Meer leads met pro website" }
-      },
-      "packages": {
-        "starter": {
-          "description": "Eenvoudige professionele website.",
-          "price": "€1.500–€2.000",
-          "setup": "Eenmalig",
-          "feature1": "Tot 5 pagina's",
-          "feature2": "Responsive design",
-          "feature3": "Contact formulier",
-          "feature4": "Basis SEO",
-          "feature5": "CMS training"
-        },
-        "growth": {
-          "description": "Complete bedrijfswebsite met extra's.",
-          "price": "€2.500–€3.500",
-          "setup": "Eenmalig",
-          "feature1": "Tot 10 pagina's",
-          "feature2": "Custom design",
-          "feature3": "Blog functionaliteit",
-          "feature4": "Uitgebreide SEO",
-          "feature5": "3 maanden support"
-        },
-        "pro": {
-          "description": "Premium website met alle toeters.",
-          "price": "€4.000–€6.000",
-          "setup": "Eenmalig",
-          "feature1": "Onbeperkt pagina's",
-          "feature2": "Premium animaties",
-          "feature3": "Multilingual support",
-          "feature4": "Geavanceerde integraties",
-          "feature5": "12 maanden support"
-        }
       },
       "deliverables": {
         "1": { "title": "Design & UX", "desc": "Custom ontwerp passend bij je merk." },
@@ -2119,47 +1810,6 @@
         "2": "Perfect voor lancering of campagnes",
         "3": "Betaalbaar en effectief"
       },
-      "why": {
-        "title": "Waarom een one-page website?",
-        "subtitle": "Snel online met maximale impact.",
-        "benefit1": "Live binnen 1-2 weken",
-        "benefit2": "Perfect voor campagnes en launches",
-        "benefit3": "Betaalbaar instappunt",
-        "metric1": { "value": "1-2", "label": "Weken tot live" },
-        "metric2": { "value": "€", "label": "Budget-vriendelijk" }
-      },
-      "packages": {
-        "starter": {
-          "description": "Eenvoudige landingspagina.",
-          "price": "€500–€750",
-          "setup": "Eenmalig",
-          "feature1": "1 pagina",
-          "feature2": "Responsive design",
-          "feature3": "Contact formulier",
-          "feature4": "Basis analytics",
-          "feature5": "1 revisieronde"
-        },
-        "growth": {
-          "description": "Landingspagina met extra functies.",
-          "price": "€900–€1.200",
-          "setup": "Eenmalig",
-          "feature1": "1 pagina met secties",
-          "feature2": "Custom design",
-          "feature3": "Leadcapture formulier",
-          "feature4": "A/B testing ready",
-          "feature5": "2 revisierondes"
-        },
-        "pro": {
-          "description": "Premium landingspagina.",
-          "price": "€1.500–€2.000",
-          "setup": "Eenmalig",
-          "feature1": "Premium animaties",
-          "feature2": "Video integratie",
-          "feature3": "CRM integratie",
-          "feature4": "Conversion tracking",
-          "feature5": "Onbeperkte revisies"
-        }
-      },
       "deliverables": {
         "1": { "title": "Design", "desc": "Aantrekkelijk en on-brand ontwerp." },
         "2": { "title": "Development", "desc": "Snelle en responsive pagina." },
@@ -2181,47 +1831,6 @@
         "1": "Gebruiksvriendelijke winkelervaring",
         "2": "Veilige betalingen geïntegreerd",
         "3": "Schaalbaar voor groei"
-      },
-      "why": {
-        "title": "Waarom een webshop?",
-        "subtitle": "Verkoop 24/7 zonder grenzen.",
-        "benefit1": "Verkoop terwijl je slaapt",
-        "benefit2": "Bereik klanten in heel België en verder",
-        "benefit3": "Schaalbaar zonder extra personeel",
-        "metric1": { "value": "24/7", "label": "Online verkoop" },
-        "metric2": { "value": "∞", "label": "Schaalbaarheid" }
-      },
-      "packages": {
-        "starter": {
-          "description": "Eenvoudige webshop om te starten.",
-          "price": "€2.500–€3.500",
-          "setup": "Eenmalig",
-          "feature1": "Tot 50 producten",
-          "feature2": "Basis betalingen",
-          "feature3": "Standaard template",
-          "feature4": "Voorraadbeheer",
-          "feature5": "CMS training"
-        },
-        "growth": {
-          "description": "Professionele webshop voor groei.",
-          "price": "€4.000–€6.000",
-          "setup": "Eenmalig",
-          "feature1": "Tot 500 producten",
-          "feature2": "Alle betaalmethodes",
-          "feature3": "Custom design",
-          "feature4": "Kortingscodes",
-          "feature5": "3 maanden support"
-        },
-        "pro": {
-          "description": "Enterprise e-commerce oplossing.",
-          "price": "€7.000–€12.000",
-          "setup": "Eenmalig",
-          "feature1": "Onbeperkt producten",
-          "feature2": "ERP/CRM integratie",
-          "feature3": "Multi-currency",
-          "feature4": "Geavanceerde filtering",
-          "feature5": "12 maanden support"
-        }
       },
       "deliverables": {
         "1": { "title": "Shop design", "desc": "Conversiegerichte productpagina's." },
@@ -2245,47 +1854,6 @@
         "2": "Consistentie over alle kanalen",
         "3": "Onderscheidend van concurrenten"
       },
-      "why": {
-        "title": "Waarom investeren in branding?",
-        "subtitle": "Een sterk merk is de basis van al je marketing.",
-        "benefit1": "Direct herkenbaar door je doelgroep",
-        "benefit2": "Consistentie in alle communicatie",
-        "benefit3": "Hogere perceived value",
-        "metric1": { "value": "∞", "label": "Merkwaarde impact" },
-        "metric2": { "value": "100%", "label": "Consistentie" }
-      },
-      "packages": {
-        "starter": {
-          "description": "Basis merkidentiteit.",
-          "price": "€800–€1.200",
-          "setup": "Eenmalig",
-          "feature1": "Logo ontwerp",
-          "feature2": "Kleurenpalet",
-          "feature3": "2 lettertypen",
-          "feature4": "Basis guidelines",
-          "feature5": "Digitale bestanden"
-        },
-        "growth": {
-          "description": "Complete merkidentiteit.",
-          "price": "€1.500–€2.500",
-          "setup": "Eenmalig",
-          "feature1": "Logo met variaties",
-          "feature2": "Uitgebreid kleurenpalet",
-          "feature3": "Typografie systeem",
-          "feature4": "Social media templates",
-          "feature5": "Brand guidelines PDF"
-        },
-        "pro": {
-          "description": "Premium brand package.",
-          "price": "€3.000–€5.000",
-          "setup": "Eenmalig",
-          "feature1": "Volledige merkstrategie",
-          "feature2": "Logo animatie",
-          "feature3": "Print templates",
-          "feature4": "Presentatie templates",
-          "feature5": "Brand book + workshop"
-        }
-      },
       "deliverables": {
         "1": { "title": "Logo ontwerp", "desc": "Uniek logo met variaties." },
         "2": { "title": "Kleurenpalet", "desc": "Strategische kleurkeuzes." },
@@ -2299,74 +1867,6 @@
         "2": { "title": "Uitvoering", "desc": "Concepten, feedback en finalisatie." },
         "3": { "title": "Groei & optimalisatie", "desc": "Doorontwikkeling waar nodig." }
       }
-    }
-  },
-  "quoteBuilder": {
-    "label": "Offerte bouwer",
-    "title": "Bouw je offerte",
-    "subtitle": "Selecteer je opties en reserveer je prijs — vrijblijvend.",
-    "summaryTitle": "Jouw offerte",
-    "service": "Service",
-    "tier": "Pakket",
-    "options": "Opties",
-    "adBudget": "Advertentiebudget",
-    "selectTier": "Kies je pakket",
-    "selectOptions": "Extra opties (optioneel)",
-    "selectAdBudget": "Maandelijks advertentiebudget",
-    "adBudgetNote": "Dit bedrag gaat rechtstreeks naar Google/Meta. Niet inbegrepen in onze fee.",
-    "mostChosen": "Populairste",
-    "originalPrice": "Standaardprijs",
-    "promoDiscount": "Lanceringskorting (-{{percent}}%)",
-    "estimatedMonthly": "Geschat maandelijks",
-    "setupFee": "Eenmalige setup",
-    "oneTime": "eenmalig",
-    "estimateId": "Offerte-ID",
-    "validUntil": "Geldig tot",
-    "copy": "Kopieer",
-    "copied": "Gekopieerd!",
-    "estimateCopied": "Offerte-ID gekopieerd",
-    "copyFailed": "Kopiëren mislukt",
-    "reservePrice": "Reserveer je prijs (gratis 10 min call)",
-    "chatWhatsApp": "Chat via WhatsApp",
-    "urgencyLine": "We maken maar een beperkt aantal nieuwe dossiers per week.",
-    "proofLine": "Je krijgt een helder plan + deliverables vóór je beslist.",
-    "selectRequired": "Selecteer een pakket om verder te gaan.",
-    "promoBadge": "Lanceringsdeal (-{{percent}}%)",
-    "priceLabel": "Prijs",
-    "estimatedTotal": "Geschatte totaal",
-    "customQuoteNote": "De exacte prijs hangt af van je specifieke wensen en projectomvang. Vraag een offerte op maat aan voor een persoonlijke prijsindicatie.",
-    "requestCustomQuote": "Vraag offerte op maat aan",
-    "optionPrices": {
-      "extraContent4": "120",
-      "extraContent12": "280",
-      "extraVideo2": "180",
-      "extraVideo6": "450",
-      "extraLandingPage": "350",
-      "extraTracking": "200",
-      "remarketing": "150",
-      "abTesting": "100",
-      "localSeo": "150",
-      "contentWriting": "200",
-      "linkBuilding": "250",
-      "competitorAnalysis": "180",
-      "extraPages": "150",
-      "blogSetup": "300",
-      "multiLanguage": "500",
-      "animations": "400",
-      "paymentIntegration": "300",
-      "inventoryManagement": "400",
-      "emailAutomation": "250",
-      "analyticsSetup": "200",
-      "photoshoot": "400",
-      "branding": "350",
-      "posterAI": "25",
-      "posterEdit": "200",
-      "posterShoot": "250",
-      "reelAI": "150",
-      "reelEdit": "200",
-      "reelShoot": "250",
-      "video1Min": "250",
-      "article600Words": "99"
     }
   }
 }

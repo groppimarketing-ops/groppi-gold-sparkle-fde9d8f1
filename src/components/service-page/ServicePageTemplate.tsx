@@ -2,12 +2,9 @@ import { memo } from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import ServicePageHero from './ServicePageHero';
-import ServiceStickyTabs from './ServiceStickyTabs';
-import ServiceWhySection from './ServiceWhySection';
+import ServiceDeliverables from './ServiceDeliverables';
 import ServiceProcess from './ServiceProcess';
-import ServiceApproach from './ServiceApproach';
-import ServicePackages from './ServicePackages';
-import { ConsultationQuoteBuilder } from './quote-builder';
+import ServicePriceCalculator from './ServicePriceCalculator';
 import ServiceFAQ from './ServiceFAQ';
 import ServiceFinalCTA from './ServiceFinalCTA';
 
@@ -21,50 +18,27 @@ interface ServicePageTemplateProps {
  * ServicePageTemplate - Reusable template for ALL service detail pages
  * 
  * Sections:
- * 1. Hero (split layout: left text + right video)
- * 2. Sticky Tabs Navigation
- * 3. Why This Service (benefits + metrics)
- * 4. How It Works (3-step process)
- * 5. Our Approach (3 cards)
- * 6. Packages & Pricing (Starter, Growth, Pro)
- * 7. Consultation Quote Builder (replaces simple calculator)
- * 8. FAQ (6 questions)
- * 9. Final CTA
+ * 1. Hero (split layout with video)
+ * 2. Deliverables (6 cards grid)
+ * 3. Process (3 steps timeline)
+ * 4. Price Calculator (interactive)
+ * 5. FAQ (6 questions)
+ * 6. Final CTA
  */
 const ServicePageTemplate = memo(({ serviceKey, videoUrl, posterImage }: ServicePageTemplateProps) => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        {/* Hero Section */}
         <ServicePageHero 
           serviceKey={serviceKey} 
           videoUrl={videoUrl}
           posterImage={posterImage}
         />
-        
-        {/* Sticky Tab Navigation */}
-        <ServiceStickyTabs serviceKey={serviceKey} />
-        
-        {/* Section: Why This Service */}
-        <ServiceWhySection serviceKey={serviceKey} />
-        
-        {/* Section: How It Works (3 steps) */}
+        <ServiceDeliverables serviceKey={serviceKey} />
         <ServiceProcess serviceKey={serviceKey} />
-        
-        {/* Section: Our Approach */}
-        <ServiceApproach serviceKey={serviceKey} />
-        
-        {/* Section: Packages Overview */}
-        <ServicePackages serviceKey={serviceKey} />
-        
-        {/* Section: Consultation Quote Builder (with Estimate ID + promo) */}
-        <ConsultationQuoteBuilder serviceKey={serviceKey} />
-        
-        {/* Section: FAQ */}
+        <ServicePriceCalculator serviceKey={serviceKey} />
         <ServiceFAQ serviceKey={serviceKey} />
-        
-        {/* Final CTA */}
         <ServiceFinalCTA serviceKey={serviceKey} />
       </main>
       <Footer />

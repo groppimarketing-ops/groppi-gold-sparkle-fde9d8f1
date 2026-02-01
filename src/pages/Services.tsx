@@ -1,80 +1,124 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Filter, Award } from 'lucide-react';
+import { ArrowRight, Sparkles, Camera, Globe, ShoppingCart, Megaphone, Search, Share2, Star, RefreshCw, Brain, Rocket, Filter, FileText, Award } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useState, useRef } from 'react';
 import PageLayout from '@/components/layout/PageLayout';
 import SectionHeader from '@/components/ui/SectionHeader';
+import GlassCard from '@/components/ui/GlassCard';
+import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import ServiceCard, { ServiceData } from '@/components/services/ServiceCard';
-import { Camera, Globe, ShoppingCart, Megaphone, Search, Share2 } from 'lucide-react';
+import GoalBasedEntry from '@/components/services/GoalBasedEntry';
+import ServiceDetailModal from '@/components/services/ServiceDetailModal';
+import HomeServiceMap from '@/components/home/HomeServiceMap';
 
 const Services = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation(); // rebuilt
   const [filter, setFilter] = useState<'all' | 'monthly' | 'one_time' | 'custom'>('all');
+  const [selectedService, setSelectedService] = useState<ServiceData | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [highlightedServices, setHighlightedServices] = useState<string[]>([]);
   const servicesGridRef = useRef<HTMLElement>(null);
   const isRTL = i18n.language === 'ar' || i18n.language === 'ur';
 
-  // Featured service ID for the "Most chosen" badge
+  // Handle goal selection from goal-based entry
+  const handleGoalSelect = (goal: 'visibility' | 'leads' | 'sales') => {
+    const goalToServicesMap: Record<string, string[]> = {
+      visibility: ['social-media', 'content-production'],
+      leads: ['ads-management', 'seo'],
+      sales: ['ecommerce-website', 'ads-management'],
+    };
+    
+    setHighlightedServices(goalToServicesMap[goal]);
+    
+    // Scroll to services grid
+    setTimeout(() => {
+      servicesGridRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+    
+    // Clear highlights after a few seconds
+    setTimeout(() => {
+      setHighlightedServices([]);
+    }, 5000);
+  };
+
+  // Featured service ID for the "Most chosen by growing businesses" badge
   const featuredServiceId = 'social-media';
 
-  // Clean service list - only 6 core services with canonical slugs
-  // PRICING LOCK: Only content-production has fixed prices (€25–€250)
-  // All other services show "Offerte op maat" (no numeric prices)
+  // Enhanced GROPPI services with full deliverables and pricing clarity
+  // All services use unified gold styling - no colored gradients
   const services: ServiceData[] = [
-    // Social Media Management - NO PRICE (custom quote)
+    // Content Production - Core Service with Packages
     {
-      id: 'social-media',
-      icon: Share2,
-      titleKey: 'services.items.social.title',
-      descriptionKey: 'services.items.social.description',
+      id: 'content-production',
+      icon: Camera,
+      titleKey: 'services.items.contentProduction.title',
+      descriptionKey: 'services.items.contentProduction.description',
       features: [
-        'services.items.social.features.0',
-        'services.items.social.features.1',
-        'services.items.social.features.2',
-        'services.items.social.features.3',
+        'services.items.contentProduction.features.0',
+        'services.items.contentProduction.features.1',
+        'services.items.contentProduction.features.2',
+        'services.items.contentProduction.features.3',
+        'services.items.contentProduction.features.4',
       ],
       gradient: 'from-primary/5 to-primary/15',
-      pricingType: 'monthly',
-      // No priceMin/priceMax - shows "Offerte op maat"
+      pricingType: 'custom',
+      priceMin: 500,
       targetAudience: ['business', 'creator'],
-      videoUrl: '/videos/portfolio/lebanon-promo-1.mp4',
+      packages: [
+        {
+          id: 'starter',
+          titleKey: 'services.packages.starter',
+          features: [
+            'services.items.contentProduction.packages.starter.0',
+            'services.items.contentProduction.packages.starter.1',
+            'services.items.contentProduction.packages.starter.2',
+            'services.items.contentProduction.packages.starter.3',
+          ],
+        },
+        {
+          id: 'growth',
+          titleKey: 'services.packages.growth',
+          features: [
+            'services.items.contentProduction.packages.growth.0',
+            'services.items.contentProduction.packages.growth.1',
+            'services.items.contentProduction.packages.growth.2',
+            'services.items.contentProduction.packages.growth.3',
+          ],
+        },
+        {
+          id: 'pro',
+          titleKey: 'services.packages.pro',
+          features: [
+            'services.items.contentProduction.packages.pro.0',
+            'services.items.contentProduction.packages.pro.1',
+            'services.items.contentProduction.packages.pro.2',
+            'services.items.contentProduction.packages.pro.3',
+          ],
+        },
+      ],
     },
-    // Ads Management - NO PRICE (custom quote)
+    // One-Page Website
     {
-      id: 'ads-management',
-      icon: Megaphone,
-      titleKey: 'services.items.ads.title',
-      descriptionKey: 'services.items.ads.description',
+      id: 'one-page-website',
+      icon: FileText,
+      titleKey: 'services.items.onePage.title',
+      descriptionKey: 'services.items.onePage.description',
       features: [
-        'services.items.ads.features.0',
-        'services.items.ads.features.1',
-        'services.items.ads.features.2',
-        'services.items.ads.features.3',
+        'services.items.onePage.features.0',
+        'services.items.onePage.features.1',
+        'services.items.onePage.features.2',
+        'services.items.onePage.features.3',
       ],
       gradient: 'from-primary/5 to-primary/15',
-      pricingType: 'monthly',
-      // No priceMin/priceMax - shows "Offerte op maat"
-      targetAudience: ['business'],
-      videoUrl: '/videos/portfolio/lebanon-promo-2.mp4',
+      pricingType: 'one_time',
+      priceMin: 500,
+      priceMax: 1500,
+      targetAudience: ['individual', 'business'],
+      packageTier: 'starter',
     },
-    // SEO - NO PRICE (custom quote)
-    {
-      id: 'seo',
-      icon: Search,
-      titleKey: 'services.items.seo.title',
-      descriptionKey: 'services.items.seo.description',
-      features: [
-        'services.items.seo.features.0',
-        'services.items.seo.features.1',
-        'services.items.seo.features.2',
-        'services.items.seo.features.3',
-      ],
-      gradient: 'from-primary/5 to-primary/15',
-      pricingType: 'monthly',
-      // No priceMin/priceMax - shows "Offerte op maat"
-      targetAudience: ['business'],
-    },
-    // Business Website - NO PRICE (custom quote)
+    // Business Website
     {
       id: 'business-website',
       icon: Globe,
@@ -89,10 +133,12 @@ const Services = () => {
       ],
       gradient: 'from-primary/5 to-primary/15',
       pricingType: 'one_time',
-      // No priceMin/priceMax - shows "Offerte op maat"
+      priceMin: 1500,
+      priceMax: 8000,
       targetAudience: ['business'],
+      packageTier: 'growth',
     },
-    // E-commerce / Webshop - NO PRICE (custom quote)
+    // E-commerce Website
     {
       id: 'ecommerce-website',
       icon: ShoppingCart,
@@ -107,28 +153,98 @@ const Services = () => {
       ],
       gradient: 'from-primary/5 to-primary/15',
       pricingType: 'one_time',
-      // No priceMin/priceMax - shows "Offerte op maat"
+      priceMin: 3000,
+      priceMax: 25000,
       targetAudience: ['business'],
+      packageTier: 'pro',
     },
-    // Content Production - FIXED PRICES: €25 (poster AI), €99 (article), €150 (reel AI), €250 (video/shoot)
+    // Ads Management
     {
-      id: 'content-production',
-      icon: Camera,
-      titleKey: 'services.items.contentProduction.title',
-      descriptionKey: 'services.items.contentProduction.description',
+      id: 'ads-management',
+      icon: Megaphone,
+      titleKey: 'services.items.ads.title',
+      descriptionKey: 'services.items.ads.description',
       features: [
-        'services.items.contentProduction.features.0',
-        'services.items.contentProduction.features.1',
-        'services.items.contentProduction.features.2',
-        'services.items.contentProduction.features.3',
-        'services.items.contentProduction.features.4',
+        'services.items.ads.features.0',
+        'services.items.ads.features.1',
+        'services.items.ads.features.2',
+        'services.items.ads.features.3',
       ],
       gradient: 'from-primary/5 to-primary/15',
-      pricingType: 'one_time',
-      priceMin: 25, // Lowest price: AI-generated poster
-      // No priceMax - only show "Vanaf €25"
+      pricingType: 'monthly',
+      priceMin: 500,
+      priceMax: 5000,
+      targetAudience: ['business'],
+    },
+    // SEO
+    {
+      id: 'seo',
+      icon: Search,
+      titleKey: 'services.items.seo.title',
+      descriptionKey: 'services.items.seo.description',
+      features: [
+        'services.items.seo.features.0',
+        'services.items.seo.features.1',
+        'services.items.seo.features.2',
+        'services.items.seo.features.3',
+      ],
+      gradient: 'from-primary/5 to-primary/15',
+      pricingType: 'monthly',
+      priceMin: 300,
+      priceMax: 2000,
+      targetAudience: ['business'],
+    },
+    // Social Media Management
+    {
+      id: 'social-media',
+      icon: Share2,
+      titleKey: 'services.items.social.title',
+      descriptionKey: 'services.items.social.description',
+      features: [
+        'services.items.social.features.0',
+        'services.items.social.features.1',
+        'services.items.social.features.2',
+        'services.items.social.features.3',
+      ],
+      gradient: 'from-primary/5 to-primary/15',
+      pricingType: 'monthly',
+      priceMin: 400,
+      priceMax: 3000,
       targetAudience: ['business', 'creator'],
-      videoUrl: '/videos/portfolio/il-fuoco-promo.mp4',
+    },
+    // Reputation Management
+    {
+      id: 'reputation',
+      icon: Star,
+      titleKey: 'services.items.reputation.title',
+      descriptionKey: 'services.items.reputation.description',
+      features: [
+        'services.items.reputation.features.0',
+        'services.items.reputation.features.1',
+        'services.items.reputation.features.2',
+        'services.items.reputation.features.3',
+      ],
+      gradient: 'from-primary/5 to-primary/15',
+      pricingType: 'monthly',
+      priceMin: 200,
+      priceMax: 1000,
+      targetAudience: ['business'],
+    },
+    // Data Sync
+    {
+      id: 'data-sync',
+      icon: RefreshCw,
+      titleKey: 'services.items.dataSync.title',
+      descriptionKey: 'services.items.dataSync.description',
+      features: [
+        'services.items.dataSync.features.0',
+        'services.items.dataSync.features.1',
+        'services.items.dataSync.features.2',
+        'services.items.dataSync.features.3',
+      ],
+      gradient: 'from-primary/5 to-primary/15',
+      pricingType: 'custom',
+      targetAudience: ['business'],
     },
   ];
 
@@ -144,10 +260,19 @@ const Services = () => {
     { key: 'custom', labelKey: 'services.filters.custom' },
   ];
 
+  // Handle recommendation from wizard
+  const handleRecommendationSelect = (serviceId: string) => {
+    const service = services.find(s => s.id === serviceId);
+    if (service) {
+      setSelectedService(service);
+      setIsModalOpen(true);
+    }
+  };
+
   return (
     <PageLayout>
-      {/* Hero Section - Clean and minimal */}
-      <section className="relative py-20 md:py-28 overflow-hidden">
+      {/* Hero Section */}
+      <section className="relative py-24 md:py-32 overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
         <div className="neural-lines opacity-30" />
@@ -162,8 +287,14 @@ const Services = () => {
         </div>
       </section>
 
+      {/* Service Map - What We Do (moved from homepage) */}
+      <HomeServiceMap />
+
+      {/* Goal-Based Entry Section */}
+      <GoalBasedEntry onGoalSelect={handleGoalSelect} />
+
       {/* Filter Tabs */}
-      <section className="py-6 border-b border-primary/10">
+      <section className="py-8 border-b border-primary/10">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap items-center justify-center gap-3">
             <Filter className="w-5 h-5 text-muted-foreground" />
@@ -187,7 +318,7 @@ const Services = () => {
       </section>
 
       {/* Services Grid */}
-      <section id="services-grid" ref={servicesGridRef} className="py-20">
+      <section id="services-grid" ref={servicesGridRef} className="py-24">
         <div className="container mx-auto px-4">
           {/* Section Header */}
           <motion.div
@@ -200,9 +331,9 @@ const Services = () => {
             <p className="text-muted-foreground max-w-2xl mx-auto">{t('services.gridSubtitle')}</p>
           </motion.div>
 
-          {/* Grid */}
+          {/* Grid with enhanced spacing */}
           <motion.div 
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-10"
             layout
           >
             {filteredServices.map((service, index) => (
@@ -240,6 +371,7 @@ const Services = () => {
                   service={service} 
                   index={index} 
                   isFeatured={service.id === featuredServiceId}
+                  isHighlighted={highlightedServices.includes(service.id)}
                 />
               </div>
             ))}
@@ -256,40 +388,148 @@ const Services = () => {
               </p>
             </motion.div>
           )}
+
+          {/* Decorative divider */}
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="mt-16 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"
+          />
+        </div>
+      </section>
+
+      {/* Service Detail Modal (for wizard recommendations) */}
+      {selectedService && (
+        <ServiceDetailModal
+          isOpen={isModalOpen}
+          onClose={() => {
+            setIsModalOpen(false);
+            setSelectedService(null);
+          }}
+          service={selectedService}
+        />
+      )}
+
+      {/* AI Section */}
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0 neural-bg" />
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <GlassCard className="p-8 md:p-12 text-center">
+              <motion.div
+                animate={{ 
+                  boxShadow: [
+                    '0 0 30px hsl(var(--primary) / 0.2)',
+                    '0 0 60px hsl(var(--primary) / 0.4)',
+                    '0 0 30px hsl(var(--primary) / 0.2)',
+                  ],
+                }}
+                transition={{ duration: 2, repeat: Infinity }}
+                className="w-20 h-20 rounded-full glass-card flex items-center justify-center mx-auto mb-8"
+              >
+                <Brain className="w-10 h-10 text-primary" />
+              </motion.div>
+              
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 gold-shimmer-text">
+                {t('services.ai.title')}
+              </h2>
+              
+              <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
+                {t('services.ai.description')}
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild size="lg" className="luxury-button">
+                  <Link to="/contact">
+                    {t('services.ai.cta')}
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+                <Button asChild size="lg" className="glass-button">
+                  <Link to="/about">
+                    {t('services.ai.learnMore')}
+                  </Link>
+                </Button>
+              </div>
+            </GlassCard>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <SectionHeader
+            subtitle={t('services.process.subtitle')}
+            title={t('services.process.title')}
+            centered
+          />
+          
+          <div className="grid md:grid-cols-3 gap-8 mt-12">
+            {[
+              { icon: '01', titleKey: 'services.process.steps.0.title', descKey: 'services.process.steps.0.description' },
+              { icon: '02', titleKey: 'services.process.steps.1.title', descKey: 'services.process.steps.1.description' },
+              { icon: '03', titleKey: 'services.process.steps.2.title', descKey: 'services.process.steps.2.description' },
+            ].map((step, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.15 }}
+              >
+                <GlassCard className="text-center h-full">
+                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
+                    <span className="text-2xl font-bold gold-gradient-text">{step.icon}</span>
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">{t(step.titleKey)}</h3>
+                  <p className="text-muted-foreground">{t(step.descKey)}</p>
+                </GlassCard>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-b from-transparent via-primary/[0.03] to-transparent">
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass-card p-8 md:p-12 rounded-2xl text-center max-w-3xl mx-auto"
+            className="max-w-3xl mx-auto text-center"
           >
-            <h2 className="text-2xl md:text-3xl font-bold mb-4 gold-gradient-text">
-              {t('services.cta.title')}
-            </h2>
-            <p className="text-muted-foreground mb-6">
-              {t('services.cta.description')}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://wa.me/32471234567?text=Hey%20GROPPi%20%F0%9F%91%8B%20Ik%20wil%20graag%20meer%20info%20over%20jullie%20diensten."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="luxury-button inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium"
-              >
-                {t('services.cta.whatsapp')}
-              </a>
-              <a
-                href="/contact"
-                className="glass-button inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium"
-              >
-                {t('services.cta.contact')}
-              </a>
-            </div>
+            <GlassCard className="p-8 md:p-12">
+              <Rocket className="w-12 h-12 text-primary mx-auto mb-6" />
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 gold-shimmer-text">
+                {t('services.cta.title')}
+              </h2>
+              <p className="text-muted-foreground text-lg mb-8">
+                {t('services.cta.description')}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild size="lg" className="luxury-button">
+                  <Link to="/contact">
+                    {t('services.cta.button')}
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+                <Button asChild size="lg" className="glass-button">
+                  <Link to="/franchise">
+                    {t('nav.franchise')}
+                  </Link>
+                </Button>
+              </div>
+            </GlassCard>
           </motion.div>
         </div>
       </section>
