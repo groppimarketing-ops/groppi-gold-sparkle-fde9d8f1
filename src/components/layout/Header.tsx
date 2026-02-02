@@ -131,11 +131,13 @@ const mobileHiddenIconsData = socialIconsData.filter(s =>
   !['Instagram', 'Facebook', 'TikTok', 'LinkedIn'].includes(s.label)
 );
 
-// Language options with flags
-const languageOptions = [
-  { code: 'nl' as LanguageCode, flag: '🇧🇪', label: 'NL' },
-  { code: 'en' as LanguageCode, flag: '🇬🇧', label: 'EN' },
-];
+// Language options derived from i18n config (all languages)
+const languageOptions = languages.map(lang => ({
+  code: lang.code as LanguageCode,
+  flag: lang.flag,
+  label: lang.code.toUpperCase(),
+  name: lang.name,
+}));
 
 const Header = () => {
   const { t, i18n } = useTranslation();
@@ -216,33 +218,44 @@ const Header = () => {
               ))}
             </div>
 
-            {/* Right side: Language + Social + CTA */}
+            {/* Right side: Language Dropdown + Social Pill + CTA */}
             <div className="flex items-center gap-2 md:gap-3">
-              {/* Language Switcher (Flags) */}
-              <div className="hidden sm:flex items-center gap-1">
-                {languageOptions.map((lang) => {
-                  const isActive = i18n.language === lang.code || 
-                    (lang.code === 'nl' && i18n.language.startsWith('nl'));
-                  
-                  return (
-                    <motion.button
-                      key={lang.code}
-                      onClick={() => changeLanguage(lang.code)}
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className={`flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium transition-all duration-200 ${
-                        isActive 
-                          ? 'bg-primary/20 text-primary ring-1 ring-primary/50' 
-                          : 'text-muted-foreground hover:text-foreground hover:bg-white/5'
-                      }`}
-                      aria-label={`Switch to ${lang.label}`}
-                    >
-                      <span className="text-sm">{lang.flag}</span>
-                      <span>{lang.label}</span>
-                    </motion.button>
-                  );
-                })}
-              </div>
+              {/* Language Switcher - Dropdown with all languages */}
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="hidden sm:flex items-center gap-1.5 px-2 py-1 text-xs font-medium text-foreground/80 hover:text-foreground hover:bg-white/5"
+                  >
+                    <span className="text-sm">{currentLang.flag}</span>
+                    <span>{currentLang.code.toUpperCase()}</span>
+                    <ChevronDown className="h-3 w-3 opacity-60" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent 
+                  align={isRtl ? 'start' : 'end'} 
+                  className="z-50 bg-background/95 backdrop-blur-md border-primary/20 shadow-lg max-h-80 overflow-y-auto"
+                >
+                  {languageOptions.map((lang) => {
+                    const isActive = i18n.language === lang.code || 
+                      (lang.code === 'nl' && i18n.language.startsWith('nl'));
+                    
+                    return (
+                      <DropdownMenuItem
+                        key={lang.code}
+                        onClick={() => changeLanguage(lang.code)}
+                        className={`flex items-center gap-2 cursor-pointer ${
+                          isActive ? 'bg-primary/20 text-primary' : ''
+                        }`}
+                      >
+                        <span className="text-sm">{lang.flag}</span>
+                        <span>{lang.name}</span>
+                      </DropdownMenuItem>
+                    );
+                  })}
+                </DropdownMenuContent>
+              </DropdownMenu>
 
               {/* Social Icons - Desktop (all icons) - Glassy Pill */}
               <div 
@@ -387,9 +400,9 @@ const Header = () => {
                     </motion.div>
                   ))}
                   
-                  {/* Mobile Language Switcher */}
-                  <div className="flex items-center gap-2 px-4 py-3 border-t border-white/10 mt-2">
-                    <span className="text-xs text-muted-foreground mr-2">Language:</span>
+                  {/* Mobile Language Switcher - All languages */}
+                  <div className="flex flex-wrap items-center gap-2 px-4 py-3 border-t border-white/10 mt-2">
+                    <span className="text-xs text-muted-foreground mr-2 w-full mb-2">Language:</span>
                     {languageOptions.map((lang) => {
                       const isActive = i18n.language === lang.code || 
                         (lang.code === 'nl' && i18n.language.startsWith('nl'));
@@ -397,7 +410,10 @@ const Header = () => {
                       return (
                         <button
                           key={lang.code}
-                          onClick={() => changeLanguage(lang.code)}
+                          onClick={() => {
+                            changeLanguage(lang.code);
+                            setIsMenuOpen(false);
+                          }}
                           className={`flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium transition-all duration-200 ${
                             isActive 
                               ? 'bg-primary/20 text-primary ring-1 ring-primary/50' 
