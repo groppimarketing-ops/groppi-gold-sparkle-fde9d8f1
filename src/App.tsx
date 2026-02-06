@@ -4,6 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import { applyDocumentDirection } from "@/i18n/config";
 import { AuthProvider } from "@/contexts/AuthContext";
@@ -73,48 +74,50 @@ const FloatingWhatsAppHandler = () => {
 };
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <AuthProvider>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <RTLHandler>
-            <Suspense fallback={<PageLoader />}>
-              <Routes>
-              <Route path="/" element={<Index />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/services/:slug" element={<ServiceDetail />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/blog/:slug" element={<BlogArticle />} />
-                <Route path="/gallery" element={<Gallery />} />
-                <Route path="/portfolio" element={<Portfolio />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/franchise" element={<Franchise />} />
-                <Route path="/portfolio/:slug" element={<CaseStudy />} />
-                
-                {/* Admin Routes */}
-                <Route path="/admin/login" element={<AdminLogin />} />
-                <Route path="/admin" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
-                <Route path="/admin/pages" element={<ProtectedRoute><AdminPages /></ProtectedRoute>} />
-                <Route path="/admin/articles" element={<ProtectedRoute><AdminArticles /></ProtectedRoute>} />
-                <Route path="/admin/articles/new" element={<ProtectedRoute><AdminArticleEditor /></ProtectedRoute>} />
-                <Route path="/admin/articles/:id" element={<ProtectedRoute><AdminArticleEditor /></ProtectedRoute>} />
-                <Route path="/admin/services" element={<ProtectedRoute><AdminServices /></ProtectedRoute>} />
-                <Route path="/admin/media" element={<ProtectedRoute><AdminMedia /></ProtectedRoute>} />
-                <Route path="/admin/messages" element={<ProtectedRoute><AdminMessages /></ProtectedRoute>} />
-                <Route path="/admin/settings" element={<ProtectedRoute><AdminSettings /></ProtectedRoute>} />
-                
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </Suspense>
-            <FloatingWhatsAppHandler />
-          </RTLHandler>
-        </BrowserRouter>
-      </TooltipProvider>
-    </AuthProvider>
-  </QueryClientProvider>
+  <HelmetProvider>
+    <QueryClientProvider client={queryClient}>
+      <AuthProvider>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <RTLHandler>
+              <Suspense fallback={<PageLoader />}>
+                <Routes>
+                <Route path="/" element={<Index />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/services" element={<Services />} />
+                  <Route path="/services/:slug" element={<ServiceDetail />} />
+                  <Route path="/blog" element={<Blog />} />
+                  <Route path="/blog/:slug" element={<BlogArticle />} />
+                  <Route path="/gallery" element={<Gallery />} />
+                  <Route path="/portfolio" element={<Portfolio />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/franchise" element={<Franchise />} />
+                  <Route path="/portfolio/:slug" element={<CaseStudy />} />
+                  
+                  {/* Admin Routes */}
+                  <Route path="/admin/login" element={<AdminLogin />} />
+                  <Route path="/admin" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
+                  <Route path="/admin/pages" element={<ProtectedRoute><AdminPages /></ProtectedRoute>} />
+                  <Route path="/admin/articles" element={<ProtectedRoute><AdminArticles /></ProtectedRoute>} />
+                  <Route path="/admin/articles/new" element={<ProtectedRoute><AdminArticleEditor /></ProtectedRoute>} />
+                  <Route path="/admin/articles/:id" element={<ProtectedRoute><AdminArticleEditor /></ProtectedRoute>} />
+                  <Route path="/admin/services" element={<ProtectedRoute><AdminServices /></ProtectedRoute>} />
+                  <Route path="/admin/media" element={<ProtectedRoute><AdminMedia /></ProtectedRoute>} />
+                  <Route path="/admin/messages" element={<ProtectedRoute><AdminMessages /></ProtectedRoute>} />
+                  <Route path="/admin/settings" element={<ProtectedRoute><AdminSettings /></ProtectedRoute>} />
+                  
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </Suspense>
+              <FloatingWhatsAppHandler />
+            </RTLHandler>
+          </BrowserRouter>
+        </TooltipProvider>
+      </AuthProvider>
+    </QueryClientProvider>
+  </HelmetProvider>
 );
 
 export default App;
