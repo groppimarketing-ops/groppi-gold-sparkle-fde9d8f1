@@ -1,30 +1,30 @@
 import { useState, useMemo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Search, X } from 'lucide-react';
 import PageLayout from '@/components/layout/PageLayout';
 import SectionHeader from '@/components/ui/SectionHeader';
 import PortfolioCard from '@/components/portfolio/PortfolioCard';
-import PortfolioFilters from '@/components/portfolio/PortfolioFilters';
 import CaseStudyModal from '@/components/portfolio/CaseStudyModal';
-import { filterPortfolio } from '@/data/portfolioItems';
+import { filterPortfolio, portfolioItems } from '@/data/portfolioItems';
 import type { PortfolioItem } from '@/types/portfolio';
+import { Input } from '@/components/ui/input';
 
 const Portfolio = () => {
   const { t } = useTranslation();
   
-  // Filter state
-  const [selectedIndustry, setSelectedIndustry] = useState('all');
-  const [selectedService, setSelectedService] = useState('all');
+  // Simple search state only (matching Home simplicity)
   const [searchQuery, setSearchQuery] = useState('');
   
   // Modal state
   const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Filtered portfolio items
+  // Filtered portfolio items - show all by default
   const filteredItems = useMemo(() => {
-    return filterPortfolio(selectedIndustry, selectedService, searchQuery);
-  }, [selectedIndustry, selectedService, searchQuery]);
+    if (!searchQuery.trim()) return portfolioItems;
+    return filterPortfolio('all', 'all', searchQuery);
+  }, [searchQuery]);
 
   const handleCardClick = useCallback((item: PortfolioItem) => {
     setSelectedItem(item);
@@ -36,78 +36,72 @@ const Portfolio = () => {
     setTimeout(() => setSelectedItem(null), 300);
   }, []);
 
-  const handleClearFilters = useCallback(() => {
-    setSelectedIndustry('all');
-    setSelectedService('all');
-    setSearchQuery('');
-  }, []);
-
   return (
     <PageLayout>
-      {/* Hero Section */}
-      <section className="relative py-24 md:py-36 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
-        <div className="neural-lines opacity-30" />
+      {/* Portfolio Section - Matching Home "Our Work" exactly */}
+      <section className="section-spacing relative overflow-hidden">
+        {/* Background - Same as Home */}
+        <div className="absolute inset-0 neural-bg opacity-20" />
         
         <div className="container mx-auto px-4 relative z-10">
+          {/* Section Header - Same style as Home */}
           <SectionHeader
-            subtitle={t('portfolio.page.subtitle', 'Ons werk')}
+            subtitle={t('home.portfolio.subtitle', 'Ons werk')}
             title={t('portfolio.page.title', 'Portfolio')}
             description={t('portfolio.page.description', 'Ontdek onze projecten en de resultaten die we voor onze klanten hebben bereikt.')}
+            centered
             showSparkle
           />
-        </div>
-      </section>
 
-      {/* Filters */}
-      <section className="py-8">
-        <div className="container mx-auto px-4">
-          <PortfolioFilters
-            selectedIndustry={selectedIndustry}
-            selectedService={selectedService}
-            searchQuery={searchQuery}
-            onIndustryChange={setSelectedIndustry}
-            onServiceChange={setSelectedService}
-            onSearchChange={setSearchQuery}
-            onClearFilters={handleClearFilters}
-          />
-        </div>
-      </section>
+          {/* Optional Search - Minimal style */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="max-w-md mx-auto mt-8 mb-4"
+          >
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+              <Input
+                type="text"
+                placeholder={t('portfolio.filters.search', 'Zoek projecten...')}
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="pl-10 pr-10 glass-card border-primary/20 focus:border-primary/40"
+              />
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery('')}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              )}
+            </div>
+          </motion.div>
 
-      {/* Portfolio Grid */}
-      <section className="py-12 pb-24">
-        <div className="container mx-auto px-4">
           {/* Results count */}
-          <p className="text-center text-muted-foreground mb-8">
-            {filteredItems.length} {filteredItems.length === 1 
-              ? t('portfolio.page.resultSingle', 'project gevonden') 
-              : t('portfolio.page.resultPlural', 'projecten gevonden')
-            }
-          </p>
+          {searchQuery && (
+            <p className="text-center text-muted-foreground text-sm mb-8">
+              {filteredItems.length} {filteredItems.length === 1 
+                ? t('portfolio.page.resultSingle', 'project gevonden') 
+                : t('portfolio.page.resultPlural', 'projecten gevonden')
+              }
+            </p>
+          )}
 
+          {/* Projects Grid - Exact same as Home: 4 cols desktop, 2 tablet, 1 mobile */}
           <AnimatePresence mode="popLayout">
             {filteredItems.length > 0 ? (
-              <motion.div 
-                layout
-                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-              >
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
                 {filteredItems.map((item, index) => (
-                  <motion.div
+                  <PortfolioCard
                     key={item.id}
-                    layout
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.9 }}
-                    transition={{ delay: index * 0.05 }}
-                  >
-                    <PortfolioCard
-                      item={item}
-                      index={index}
-                      onClick={() => handleCardClick(item)}
-                    />
-                  </motion.div>
+                    item={item}
+                    index={index}
+                    onClick={() => handleCardClick(item)}
+                  />
                 ))}
-              </motion.div>
+              </div>
             ) : (
               <motion.div
                 initial={{ opacity: 0 }}
@@ -118,7 +112,7 @@ const Portfolio = () => {
                   {t('portfolio.page.noResults', 'Geen projecten gevonden met deze filters.')}
                 </p>
                 <button
-                  onClick={handleClearFilters}
+                  onClick={() => setSearchQuery('')}
                   className="mt-4 text-primary hover:text-primary/80 underline underline-offset-4"
                 >
                   {t('portfolio.filters.clearAll', 'Wis alle filters')}
