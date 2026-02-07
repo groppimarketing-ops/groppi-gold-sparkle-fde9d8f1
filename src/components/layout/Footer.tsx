@@ -2,7 +2,7 @@ import { forwardRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, MessageCircle, Calendar } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, MessageCircle, Calendar, Smartphone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import groppiLogo from '@/assets/groppi-logo.png';
 import { trackEvent, socialLinks as socialUrls, contactInfo } from '@/utils/tracking';
@@ -127,10 +127,23 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
                 </div>
                 <span className="pt-1">{contactInfo.address}</span>
               </li>
-              {/* Phone */}
+              {/* Landline */}
               <li className="flex items-start gap-3 text-sm text-muted-foreground group">
                 <div className="w-8 h-8 rounded-lg glass-card flex items-center justify-center shrink-0 group-hover:gold-glow transition-all">
                   <Phone className="h-4 w-4 text-primary" />
+                </div>
+                <a 
+                  href={socialUrls.landline}
+                  onClick={() => trackEvent({ event: 'phone_click', location: 'footer' })}
+                  className="pt-1 hover:text-primary transition-colors"
+                >
+                  {contactInfo.landline}
+                </a>
+              </li>
+              {/* Mobile */}
+              <li className="flex items-start gap-3 text-sm text-muted-foreground group">
+                <div className="w-8 h-8 rounded-lg glass-card flex items-center justify-center shrink-0 group-hover:gold-glow transition-all">
+                  <Smartphone className="h-4 w-4 text-primary" />
                 </div>
                 <a 
                   href={socialUrls.phone}

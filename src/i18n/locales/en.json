@@ -1318,7 +1318,9 @@
     "error": "Something went wrong. Please try again or contact us by phone.",
     "address": "Address",
     "phoneLabel": "Phone",
-    "emailLabel": "Email"
+    "emailLabel": "Email",
+    "landline": "Landline",
+    "mobile": "Mobile"
   },
   "franchise": {
     "title": "Partnership",
