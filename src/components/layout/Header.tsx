@@ -131,19 +131,13 @@ const mobileHiddenIconsData = socialIconsData.filter(s =>
   !['Instagram', 'Facebook', 'TikTok', 'LinkedIn'].includes(s.label)
 );
 
-// Language options with country codes derived from i18n config
-const countryCodeMap: Record<string, string> = {
-  nl: 'BE', en: 'GB', fr: 'FR', de: 'DE', ar: 'AE', es: 'ES',
-  it: 'IT', pt: 'PT', pl: 'PL', ru: 'RU', tr: 'TR', bn: 'BD',
-  hi: 'IN', ur: 'PK', zh: 'CN'
-};
-
+// Language options derived from i18n config - single source of truth
+// Each language appears only once with proper flag mapping
 const languageOptions = languages.map(lang => ({
   code: lang.code as LanguageCode,
   flag: lang.flag,
-  countryCode: countryCodeMap[lang.code] || lang.code.toUpperCase(),
-  langCode: lang.code.toUpperCase(),
   name: lang.name,
+  shortCode: lang.code.toUpperCase(),
 }));
 
 const Header = () => {
@@ -234,17 +228,16 @@ const Header = () => {
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="hidden sm:flex items-center gap-1.5 px-2 py-1 text-xs font-medium text-foreground/80 hover:text-foreground hover:bg-white/5"
+                    className="hidden sm:flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-medium text-foreground/80 hover:text-foreground hover:bg-white/5"
                   >
-                    <span className="text-sm">{currentLang.flag}</span>
-                    <span>{countryCodeMap[currentLang.code] || currentLang.code.toUpperCase()}</span>
-                    <span className="opacity-60">{currentLang.code.toUpperCase()}</span>
+                    <span className="text-base leading-none">{currentLang.flag}</span>
+                    <span className="font-medium">{currentLang.name}</span>
                     <ChevronDown className="h-3 w-3 opacity-60" />
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent 
                   align={isRtl ? 'start' : 'end'} 
-                  className="z-50 bg-background/95 backdrop-blur-md border-primary/20 shadow-lg max-h-80 overflow-y-auto"
+                  className="z-[100] bg-background/98 backdrop-blur-md border-primary/20 shadow-xl max-h-80 overflow-y-auto pr-1"
                 >
                   {languageOptions.map((lang) => {
                     const isActive = i18n.language === lang.code || 
@@ -254,12 +247,12 @@ const Header = () => {
                       <DropdownMenuItem
                         key={lang.code}
                         onClick={() => changeLanguage(lang.code)}
-                        className={`flex items-center gap-2 cursor-pointer ${
-                          isActive ? 'bg-primary/20 text-primary' : ''
+                        className={`flex items-center gap-2.5 cursor-pointer px-3 py-2 ${
+                          isActive ? 'bg-primary/20 text-primary font-medium' : 'hover:bg-primary/10'
                         }`}
                       >
-                        <span className="text-sm">{lang.flag}</span>
-                        <span>{lang.name}</span>
+                        <span className="text-base w-6 text-center leading-none">{lang.flag}</span>
+                        <span className="flex-1">{lang.name}</span>
                       </DropdownMenuItem>
                     );
                   })}
@@ -423,14 +416,14 @@ const Header = () => {
                             changeLanguage(lang.code);
                             setIsMenuOpen(false);
                           }}
-                          className={`flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium transition-all duration-200 ${
+                          className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ${
                             isActive 
                               ? 'bg-primary/20 text-primary ring-1 ring-primary/50' 
                               : 'text-muted-foreground hover:text-foreground hover:bg-white/5'
                           }`}
                         >
-                          <span>{lang.flag}</span>
-                          <span>{lang.countryCode} {lang.langCode}</span>
+                          <span className="text-sm leading-none">{lang.flag}</span>
+                          <span>{lang.shortCode}</span>
                         </button>
                       );
                     })}
