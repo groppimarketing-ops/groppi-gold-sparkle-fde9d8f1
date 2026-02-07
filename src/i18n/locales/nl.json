@@ -1318,7 +1318,9 @@
     "error": "Er ging iets mis. Probeer het opnieuw of neem telefonisch contact op.",
     "address": "Adres",
     "phoneLabel": "Telefoon",
-    "emailLabel": "E-mail"
+    "emailLabel": "E-mail",
+    "landline": "Vaste lijn",
+    "mobile": "Mobiel"
   },
   "franchise": {
     "title": "Samenwerking",

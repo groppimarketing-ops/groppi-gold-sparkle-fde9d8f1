@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Clock, Send, Loader2, Sparkles, MessageCircle, Instagram, Facebook, Linkedin } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, Loader2, Sparkles, MessageCircle, Smartphone } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -11,13 +11,7 @@ import GlassCard from '@/components/ui/GlassCard';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
 import { trackEvent, socialLinks as socialUrls, contactInfo } from '@/utils/tracking';
-
-// TikTok icon component
-const TikTokIcon = ({ className }: { className?: string }) => (
-  <svg className={className} fill="currentColor" viewBox="0 0 24 24">
-    <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
-  </svg>
-);
+import SocialIconsPill from '@/components/shared/SocialIconsPill';
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters').max(100),
@@ -104,8 +98,18 @@ const Contact = () => {
     },
     { 
       icon: Phone, 
-      title: t('social.callUs'),
-      action: t('social.actions.call'),
+      title: t('contact.landline'),
+      action: contactInfo.landline,
+      href: socialUrls.landline,
+      isExternal: false,
+      color: 'bg-primary/10',
+      iconColor: 'text-primary',
+      event: 'phone_click' as const,
+    },
+    { 
+      icon: Smartphone, 
+      title: t('contact.mobile'),
+      action: contactInfo.phone,
       href: socialUrls.phone,
       isExternal: false,
       color: 'bg-primary/10',
@@ -124,13 +128,6 @@ const Contact = () => {
     },
   ];
 
-  // Social media profiles
-  const socialProfiles = [
-    { icon: Instagram, href: socialUrls.instagram, label: 'Instagram', event: 'instagram_click' as const },
-    { icon: Facebook, href: socialUrls.facebook, label: 'Facebook', event: 'facebook_click' as const },
-    { icon: TikTokIcon, href: socialUrls.tiktok, label: 'TikTok', event: 'tiktok_click' as const },
-    { icon: Linkedin, href: socialUrls.linkedin, label: 'LinkedIn', event: 'linkedin_click' as const },
-  ];
 
   // Contact info items
   const contactInfoItems = [
@@ -319,29 +316,14 @@ const Contact = () => {
                 ))}
               </div>
 
-              {/* Social Media Profiles */}
+              {/* Social Media Profiles - Same as Header */}
               <GlassCard className="p-6 border border-primary/20">
                 <h4 className="font-semibold gold-gradient-text text-lg mb-4">{t('social.followUs')}</h4>
-                <div className="flex gap-3">
-                  {socialProfiles.map((social, index) => (
-                    <motion.a
-                      key={social.label}
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={() => trackEvent({ event: social.event, location: 'contact_page' })}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.05 }}
-                      whileHover={{ scale: 1.15, y: -2 }}
-                      className="w-12 h-12 rounded-xl glass-card flex items-center justify-center text-muted-foreground hover:text-primary hover:gold-glow transition-all"
-                      aria-label={social.label}
-                    >
-                      <social.icon className="h-5 w-5" />
-                    </motion.a>
-                  ))}
-                </div>
+                <SocialIconsPill 
+                  location="footer" 
+                  iconSize="h-5 w-5"
+                  showTooltips={true}
+                />
               </GlassCard>
 
               {/* Additional Contact Info */}

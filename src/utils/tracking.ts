@@ -99,12 +99,14 @@ export const socialLinks = {
   pinterest: 'https://nl.pinterest.com/GroppiMarketingBureau/',
   email: 'mailto:info@groppi.be',
   phone: 'tel:+32494311119',
+  landline: 'tel:+3233041119',
   calendly: 'https://calendly.com/groppimarketing/30min',
 } as const;
 
 // Contact info
 export const contactInfo = {
   phone: '+32 494 31 11 19',
+  landline: '+32 3 304 11 19',
   email: 'info@groppi.be',
   address: 'Het Steeke 5A, 2330 Merksplas, Belgium',
 } as const;
