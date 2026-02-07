@@ -11,7 +11,7 @@
 // Content Production - Add-on pricing (one-time per item)
 export const CONTENT_PRICING = {
   poster: {
-    ai: 25, // AI-generated poster
+    ai: 45, // AI-generated poster
   },
   reel: {
     ai: 150,           // AI-generated full reel (1 minute)
