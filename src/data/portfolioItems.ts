@@ -144,6 +144,14 @@ import guestResDashboard from '@/assets/portfolio/guest-reservations/dashboard.w
 import guestResMulti from '@/assets/portfolio/guest-reservations/multi-device.webp';
 import guestResBrand from '@/assets/portfolio/guest-reservations/brand-mood.webp';
 
+// EUROSTARS HOTELS assets
+import eurostarsHero from '@/assets/portfolio/eurostars/hero.webp';
+import eurostarsDesktop from '@/assets/portfolio/eurostars/desktop-mockup.webp';
+import eurostarsMobile from '@/assets/portfolio/eurostars/mobile-mockup.webp';
+import eurostarsExterior from '@/assets/portfolio/eurostars/exterior.webp';
+import eurostarsMulti from '@/assets/portfolio/eurostars/multi-device.webp';
+import eurostarsBrand from '@/assets/portfolio/eurostars/brand-mood.webp';
+
 // AI DEALS assets
 import aidealsCover from '@/assets/portfolio/aideals/cover.jpg';
 import aidealsDesktop from '@/assets/portfolio/aideals/desktop-mockup.webp';
@@ -1193,6 +1201,48 @@ export const portfolioItems: PortfolioItem[] = [
     externalUrl: 'https://www.guestreservations.com/',
     featured: true,
     createdAt: new Date('2025-07-01'),
+  },
+  {
+    id: '27',
+    clientName: 'Eurostars Hotels',
+    slug: 'eurostars-hotels',
+    industry: 'startup',
+    services: ['website', 'ecommerce', 'content'],
+    coverMedia: {
+      id: 'cover-27',
+      type: 'image',
+      url: eurostarsHero,
+      alt: 'Eurostars Hotels - European hotel group & booking platform',
+    },
+    galleryMedia: [
+      { id: 'gallery-27-1', type: 'image', url: eurostarsDesktop, alt: 'Eurostars Hotels - Desktop platform' },
+      { id: 'gallery-27-2', type: 'image', url: eurostarsMobile, alt: 'Eurostars Hotels - Mobile booking', aspectRatio: '9:16' as const },
+      { id: 'gallery-27-3', type: 'image', url: eurostarsExterior, alt: 'Eurostars Hotels - Hotel exterior' },
+      { id: 'gallery-27-4', type: 'image', url: eurostarsMulti, alt: 'Eurostars Hotels - Multi-device experience' },
+      { id: 'gallery-27-5', type: 'image', url: eurostarsBrand, alt: 'Eurostars Hotels - Brand identity' },
+      { id: 'gallery-27-6', type: 'image', url: eurostarsHero, alt: 'Eurostars Hotels - Lobby & hospitality' },
+    ],
+    shortResultLine: 'Digital platform support & performance optimization for a European hotel group.',
+    popupContent: {
+      challenge: 'Eurostars Hotels, een Europese hotelgroep met een uitgebreid boekingsplatform, had behoefte aan doorlopende digitale ondersteuning, websitebeheer en prestatie-optimalisatie om hun online aanwezigheid te versterken.',
+      approachPoints: [
+        'Doorlopende digitale platformondersteuning en technisch beheer',
+        'Websitebeheer en optimalisatie van het boekingsplatform',
+        'Prestatie-optimalisatie voor snellere laadtijden en betere conversie',
+        'Strategische ondersteuning voor Europese groei',
+      ],
+      resultPoints: [
+        'Geoptimaliseerde websiteprestaties en gebruikservaring',
+        'Verbeterde conversieratio op het boekingsplatform',
+        'Stabiel en betrouwbaar digitaal platform voor Europese gasten',
+        'Doorlopend technisch beheer en proactieve optimalisatie',
+      ],
+      resultDisclaimer: 'Doorlopend project actief beheerd door GROPPI.',
+      deliverables: ['website-dev', 'seo-optimization', 'website-design', 'copywriting'],
+    },
+    externalUrl: 'https://www.eurostarshotels.co.uk/',
+    featured: true,
+    createdAt: new Date('2025-07-05'),
   },
 ];
 
