@@ -55,7 +55,7 @@ import boothuisCover from '@/assets/portfolio/boothuis/cover.jpg';
 export const portfolioItems: PortfolioItem[] = [
   {
     id: '14',
-    clientName: 'Boothuis Turnhout',
+    clientName: 'Restaurant Boothuis',
     slug: 'boothuis-turnhout',
     industry: 'restaurant',
     services: ['website', 'content', 'branding'],
