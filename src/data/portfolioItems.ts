@@ -58,6 +58,9 @@ import fratelliRoselliCover from '@/assets/portfolio/fratelli-roselli/cover.jpg'
 import fratelliRoselliPizza from '@/assets/portfolio/fratelli-roselli/pizza-hero.jpg';
 import fratelliRoselliLogo from '@/assets/portfolio/fratelli-roselli/logo.png';
 import fratelliRoselliIngredienti from '@/assets/portfolio/fratelli-roselli/ingredienti.jpg';
+import fratelliRoselliHappyDiners from '@/assets/portfolio/fratelli-roselli/happy-diners.jpg';
+import fratelliRoselliPizzaCloseup from '@/assets/portfolio/fratelli-roselli/pizza-closeup.jpg';
+import fratelliRoselliFriendsEating from '@/assets/portfolio/fratelli-roselli/friends-eating.jpg';
 
 // PUMMARO PIZZERIA assets
 import pummaroCover from '@/assets/portfolio/pummaro/cover.jpg';
@@ -170,6 +173,9 @@ export const portfolioItems: PortfolioItem[] = [
     galleryMedia: [
       { id: 'gallery-15-1', type: 'image', url: fratelliRoselliPizza, alt: 'Fratelli Roselli - Pizza presentation' },
       { id: 'gallery-15-2', type: 'image', url: fratelliRoselliIngredienti, alt: 'Fratelli Roselli - Premium ingredients' },
+      { id: 'gallery-15-3', type: 'image', url: fratelliRoselliPizzaCloseup, alt: 'Fratelli Roselli - Neapolitan pizza closeup' },
+      { id: 'gallery-15-4', type: 'image', url: fratelliRoselliHappyDiners, alt: 'Fratelli Roselli - Happy family enjoying pizza' },
+      { id: 'gallery-15-5', type: 'image', url: fratelliRoselliFriendsEating, alt: 'Fratelli Roselli - Friends having fun with pizza' },
     ],
     shortResultLine: 'Authentic Italian restaurant website with strong food presentation and local branding.',
     popupContent: {
