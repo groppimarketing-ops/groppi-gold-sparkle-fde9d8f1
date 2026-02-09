@@ -393,7 +393,7 @@ const Header = () => {
                         onClick={() => setIsMenuOpen(false)}
                         className={`block px-4 py-3 rounded-lg transition-all ${
                           location.pathname === item.path 
-                            ? 'bg-primary/20 text-primary' 
+                            ? 'bg-primary/25 text-primary shadow-[0_0_12px_hsl(43_76%_52%/0.25)] drop-shadow-[0_0_6px_hsl(43_76%_52%/0.4)]' 
                             : 'hover:bg-primary/10'
                         }`}
                       >
