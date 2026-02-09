@@ -9,7 +9,7 @@ const countryData = [
   {
     key: 'belgium',
     flag: '🇧🇪',
-    clientCount: '30+',
+    clientCount: '50+',
     sectors: ['restaurants', 'localServices', 'beauty', 'retail', 'medical'],
   },
   {
