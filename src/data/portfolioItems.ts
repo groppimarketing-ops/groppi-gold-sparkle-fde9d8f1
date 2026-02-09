@@ -43,7 +43,47 @@ import kma6 from '@/assets/portfolio/kma/kma-6.jpg';
 import kma7 from '@/assets/portfolio/kma/kma-7.jpg';
 import kmaShowroom from '@/assets/portfolio/kma/kma-showroom.jpg';
 
+// MANGIARE 3840 assets
+import mangiareCover from '@/assets/portfolio/mangiare3840/cover.jpg';
+
 export const portfolioItems: PortfolioItem[] = [
+  {
+    id: '12',
+    clientName: 'Mangiare 3840',
+    slug: 'mangiare-3840',
+    industry: 'restaurant',
+    services: ['website', 'branding', 'content'],
+    coverMedia: {
+      id: 'cover-12',
+      type: 'image',
+      url: mangiareCover,
+      alt: 'Mangiare 3840 - Modern restaurant website',
+    },
+    galleryMedia: [
+      { id: 'gallery-12-1', type: 'image', url: mangiareCover, alt: 'Mangiare 3840 - Website mockup' },
+    ],
+    shortResultLine: 'Modern restaurant website with strong visual identity.',
+    popupContent: {
+      challenge: 'Mangiare 3840 had een sterke lokale reputatie, maar miste een professionele online aanwezigheid die de sfeer en kwaliteit van het restaurant weerspiegelde.',
+      approachPoints: [
+        'Volledig op maat ontworpen website met dark premium design',
+        'Visuele content en branding passend bij de restaurantsfeer',
+        'Doorlopende digitale ondersteuning en optimalisatie',
+        'Menukaart en reserveringssysteem geïntegreerd',
+      ],
+      resultPoints: [
+        'Professionele online aanwezigheid die de merkbeleving versterkt',
+        'Verbeterde gebruikservaring voor bezoekers',
+        'Sterke visuele identiteit over alle digitale kanalen',
+        'Doorlopend beheer en optimalisatie',
+      ],
+      resultDisclaimer: 'Project actief beheerd door GROPPI.',
+      deliverables: ['website-design', 'website-dev', 'brand-identity', 'content-calendar'],
+    },
+    externalUrl: 'https://www.mangiare3840.be/',
+    featured: true,
+    createdAt: new Date('2025-02-01'),
+  },
   {
     id: '11',
     clientName: 'KMA Wandpanelen',
