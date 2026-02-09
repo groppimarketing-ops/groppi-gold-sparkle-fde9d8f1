@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import ServiceDetailModal from './ServiceDetailModal';
 import ServiceVideoModal from './ServiceVideoModal';
+import ServiceVideoPreview from './ServiceVideoPreview';
 import { SERVICE_PRICING_CONFIG, getPriceDisplayString, getPriceSuffix } from '@/config/pricingConfig';
 
 export interface ServicePackage {
@@ -157,8 +158,8 @@ const ServiceCard = forwardRef<HTMLDivElement, ServiceCardProps>(({ service, ind
     }
   };
 
-  const handleWatchVideo = (e: React.MouseEvent) => {
-    e.stopPropagation();
+  const handleWatchVideo = (e?: React.MouseEvent) => {
+    e?.stopPropagation();
     setIsVideoModalOpen(true);
   };
 
@@ -227,7 +228,13 @@ const ServiceCard = forwardRef<HTMLDivElement, ServiceCardProps>(({ service, ind
           {getPriceDisplay()}
           <span className="text-[10px] text-muted-foreground">{t('pricing.vatExcluded')}</span>
         </div>
-        
+
+        {/* Video Preview — hover-to-play on desktop */}
+        <ServiceVideoPreview
+          serviceId={service.id}
+          onClickPlay={handleWatchVideo}
+        />
+
         {/* CTA Buttons - VIDEO FIRST */}
         <div className="relative space-y-3 mt-auto">
           {/* PRIMARY CTA - Watch Video */}
