@@ -97,7 +97,7 @@ import vicchiomaggioDigital from '@/assets/portfolio/vicchiomaggio/digital-prese
 import vicchiomaggioLogo from '@/assets/portfolio/vicchiomaggio/logo.png';
 
 // PILOTSCAREER assets
-import pilotscareerHero from '@/assets/portfolio/pilotscareer/hero.webp';
+import pilotscareerCover from '@/assets/portfolio/pilotscareer/cover.jpg';
 import pilotscareerDesktop from '@/assets/portfolio/pilotscareer/desktop-mockup.webp';
 import pilotscareerMobile from '@/assets/portfolio/pilotscareer/mobile-mockup.webp';
 import pilotscareerCockpit from '@/assets/portfolio/pilotscareer/cockpit.webp';
@@ -907,7 +907,7 @@ export const portfolioItems: PortfolioItem[] = [
     coverMedia: {
       id: 'cover-21',
       type: 'image',
-      url: pilotscareerHero,
+      url: pilotscareerCover,
       alt: 'PilotsCareer – Aviation recruitment platform',
     },
     galleryMedia: [
