@@ -76,7 +76,56 @@ import augustoAmbiance from '@/assets/portfolio/augusto-torino/ambiance.jpg';
 import augustoDoor from '@/assets/portfolio/augusto-torino/door.jpg';
 import augustoBar from '@/assets/portfolio/augusto-torino/bar.jpg';
 
+// COSE PAZZI TORINO assets
+import cosePazziDesktop from '@/assets/portfolio/cose-pazzi/website-desktop.webp';
+import cosePazziFoodHero from '@/assets/portfolio/cose-pazzi/food-hero.webp';
+import cosePazziInterior from '@/assets/portfolio/cose-pazzi/interior.webp';
+import cosePazziMobile from '@/assets/portfolio/cose-pazzi/website-mobile.webp';
+import cosePazziSocial from '@/assets/portfolio/cose-pazzi/social-mockup.webp';
+import cosePazziBrand from '@/assets/portfolio/cose-pazzi/brand-mood.webp';
+
 export const portfolioItems: PortfolioItem[] = [
+  {
+    id: '18',
+    clientName: 'Pizzeria Cose Pazzi Torino',
+    slug: 'cose-pazzi-torino',
+    industry: 'restaurant',
+    services: ['website', 'branding', 'content'],
+    coverMedia: {
+      id: 'cover-18',
+      type: 'image',
+      url: cosePazziDesktop,
+      alt: 'Pizzeria Cose Pazzi Torino - Premium restaurant website',
+    },
+    galleryMedia: [
+      { id: 'gallery-18-1', type: 'image', url: cosePazziMobile, alt: 'Cose Pazzi - Mobile menu experience', aspectRatio: '9:16' },
+      { id: 'gallery-18-2', type: 'image', url: cosePazziFoodHero, alt: 'Cose Pazzi - Premium pizza presentation' },
+      { id: 'gallery-18-3', type: 'image', url: cosePazziInterior, alt: 'Cose Pazzi - Warm restaurant ambiance' },
+      { id: 'gallery-18-4', type: 'image', url: cosePazziSocial, alt: 'Cose Pazzi - Social media visual identity', aspectRatio: '4:5' },
+      { id: 'gallery-18-5', type: 'image', url: cosePazziBrand, alt: 'Cose Pazzi - Brand mood and palette' },
+    ],
+    shortResultLine: 'Authentic Italian pizzeria website with strong food-focused visuals and local brand character.',
+    popupContent: {
+      challenge: 'Pizzeria Cose Pazzi in Torino needed a polished digital presence to reflect their authentic Italian cuisine and vibrant neighborhood character, attracting both locals and visitors to their pizzeria.',
+      approachPoints: [
+        'Website structure & optimization',
+        'Visual presentation & food-focused hierarchy',
+        'Mobile-first usability improvements',
+        'Local Italian brand feel and storytelling',
+      ],
+      resultPoints: [
+        'Premium restaurant branding online',
+        'Strong food visibility and appetite appeal',
+        'Clear and simple customer journey',
+        'Improved online visibility and local SEO',
+      ],
+      resultDisclaimer: 'Visuals are illustrative and created for presentation purposes.',
+      deliverables: ['website-design', 'website-dev', 'content-calendar', 'social-content'],
+    },
+    externalUrl: 'https://www.pizzeriacosepazztorino.it/',
+    featured: true,
+    createdAt: new Date('2025-02-10'),
+  },
   {
     id: '17',
     clientName: 'Augusto Torino',
