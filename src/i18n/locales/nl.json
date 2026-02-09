@@ -2113,6 +2113,50 @@
         "3": { "title": "Launch & onderhoud", "desc": "Publicatie + optioneel maandelijks onderhoud." }
       }
     },
+    "reputation": {
+      "title": "Reputatie & Review Management",
+      "subtitle": "Bescherm en versterk je online reputatie met proactief reviewbeheer.",
+      "benefits": {
+        "1": "Alle reviews op één plek monitoren",
+        "2": "Professionele reactiestrategieën",
+        "3": "Bouw vertrouwen en geloofwaardigheid online"
+      },
+      "deliverables": {
+        "1": { "title": "Review monitoring", "desc": "Volg reviews op Google, Facebook, Yelp en meer." },
+        "2": { "title": "Reactiebeheer", "desc": "Professionele antwoorden op positieve en negatieve reviews." },
+        "3": { "title": "Reputatiestrategie", "desc": "Proactief plan om je online imago te verbeteren." },
+        "4": { "title": "Review generatie", "desc": "Moedig tevreden klanten aan om reviews achter te laten." },
+        "5": { "title": "Merkmonitoring", "desc": "Volg vermeldingen van je merk online." },
+        "6": { "title": "Maandelijkse rapportage", "desc": "Overzicht van reputatiescore en trends." }
+      },
+      "process": {
+        "1": { "title": "Analyse", "desc": "We auditen je huidige online reputatie en reviews." },
+        "2": { "title": "Uitvoering", "desc": "Actief beheer en reactie op alle reviews." },
+        "3": { "title": "Groei & optimalisatie", "desc": "Continue verbetering van je reputatiescore." }
+      }
+    },
+    "dataSync": {
+      "title": "Data Synchronisatie",
+      "subtitle": "Houd al je bedrijfsdata gesynchroniseerd en up-to-date over alle platformen.",
+      "benefits": {
+        "1": "Elimineer handmatige invoerfouten",
+        "2": "Realtime synchronisatie over alle systemen",
+        "3": "Bespaar uren administratief werk"
+      },
+      "deliverables": {
+        "1": { "title": "Systeemaudit", "desc": "Breng al je databronnen en platformen in kaart." },
+        "2": { "title": "Integratie setup", "desc": "Koppel je CRM, POS, website en meer." },
+        "3": { "title": "Geautomatiseerde workflows", "desc": "Data stroomt automatisch tussen systemen." },
+        "4": { "title": "Foutafhandeling", "desc": "Slimme conflictoplossing en meldingen." },
+        "5": { "title": "Dashboard & monitoring", "desc": "Realtime overzicht van alle synchronisatiestatus." },
+        "6": { "title": "Doorlopende support", "desc": "Onderhoud en updates naarmate je systemen groeien." }
+      },
+      "process": {
+        "1": { "title": "Analyse", "desc": "We brengen je huidige datalandschap en pijnpunten in kaart." },
+        "2": { "title": "Uitvoering", "desc": "Bouw en test alle integraties en automatiseringen." },
+        "3": { "title": "Groei & optimalisatie", "desc": "Monitor, optimaliseer en breid koppelingen uit." }
+      }
+    },
     "contentCalculator": {
       "label": "Content Calculator",
       "title": "Bereken je prijs in 60 sec",

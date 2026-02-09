@@ -2113,6 +2113,50 @@
         "3": { "title": "Launch & maintenance", "desc": "Publication + optional monthly maintenance." }
       }
     },
+    "reputation": {
+      "title": "Reputation & Review Management",
+      "subtitle": "Protect and strengthen your online reputation with proactive review management.",
+      "benefits": {
+        "1": "Monitor all reviews in one place",
+        "2": "Professional response strategies",
+        "3": "Build trust and credibility online"
+      },
+      "deliverables": {
+        "1": { "title": "Review monitoring", "desc": "Track reviews across Google, Facebook, Yelp and more." },
+        "2": { "title": "Response management", "desc": "Professional replies to positive and negative reviews." },
+        "3": { "title": "Reputation strategy", "desc": "Proactive plan to improve your online image." },
+        "4": { "title": "Review generation", "desc": "Encourage happy customers to leave reviews." },
+        "5": { "title": "Brand monitoring", "desc": "Track mentions of your brand online." },
+        "6": { "title": "Monthly reporting", "desc": "Overview of reputation score and trends." }
+      },
+      "process": {
+        "1": { "title": "Analysis", "desc": "We audit your current online reputation and reviews." },
+        "2": { "title": "Execution", "desc": "Active management and response to all reviews." },
+        "3": { "title": "Growth & optimization", "desc": "Continuous improvement of your reputation score." }
+      }
+    },
+    "dataSync": {
+      "title": "Data Synchronization",
+      "subtitle": "Keep all your business data synchronized and up-to-date across platforms.",
+      "benefits": {
+        "1": "Eliminate manual data entry errors",
+        "2": "Real-time sync across all systems",
+        "3": "Save hours of administrative work"
+      },
+      "deliverables": {
+        "1": { "title": "System audit", "desc": "Map all your data sources and platforms." },
+        "2": { "title": "Integration setup", "desc": "Connect your CRM, POS, website and more." },
+        "3": { "title": "Automated workflows", "desc": "Data flows automatically between systems." },
+        "4": { "title": "Error handling", "desc": "Smart conflict resolution and alerts." },
+        "5": { "title": "Dashboard & monitoring", "desc": "Real-time overview of all sync status." },
+        "6": { "title": "Ongoing support", "desc": "Maintenance and updates as your systems evolve." }
+      },
+      "process": {
+        "1": { "title": "Analysis", "desc": "We map your current data landscape and pain points." },
+        "2": { "title": "Execution", "desc": "Build and test all integrations and automations." },
+        "3": { "title": "Growth & optimization", "desc": "Monitor, optimize and expand connections." }
+      }
+    },
     "contentCalculator": {
       "label": "Content Calculator",
       "title": "Calculate your price in 60 sec",
