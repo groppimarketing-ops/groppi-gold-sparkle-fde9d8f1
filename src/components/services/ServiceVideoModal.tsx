@@ -98,7 +98,7 @@ const ServiceVideoModal = ({
           {/* Modal */}
           <motion.div
             variants={modalVariants}
-            className="relative w-full max-w-[900px] max-h-[90vh] overflow-y-auto rounded-2xl border border-primary/20"
+            className="relative w-full max-w-[min(900px,90vw)] max-h-[90vh] overflow-y-auto rounded-2xl border border-primary/20"
             style={{
               background: 'linear-gradient(135deg, hsl(var(--background) / 0.98), hsl(var(--background) / 0.95))',
               backdropFilter: 'blur(20px)',
