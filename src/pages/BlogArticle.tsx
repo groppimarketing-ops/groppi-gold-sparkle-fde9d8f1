@@ -8,6 +8,7 @@ import { getArticleBySlug, blogArticles } from '@/data/blogArticles';
 import GlassCard from '@/components/ui/GlassCard';
 import PageSEO from '@/components/seo/PageSEO';
 import { BreadcrumbSchema } from '@/components/seo/StructuredData';
+import RelatedServices from '@/components/blog/RelatedServices';
 
 const BlogArticle = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -150,6 +151,11 @@ const BlogArticle = () => {
               dangerouslySetInnerHTML={{ __html: content }}
             />
           </motion.article>
+
+          {/* Related Services */}
+          <div className="max-w-3xl mx-auto">
+            <RelatedServices articleSlug={article.slug} />
+          </div>
 
           {/* Share & CTA */}
           <motion.div
