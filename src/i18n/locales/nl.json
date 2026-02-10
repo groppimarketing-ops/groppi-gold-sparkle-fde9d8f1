@@ -293,34 +293,34 @@
     },
     "trustBar": {
       "item1": {
-        "title": "Transparante prijzen",
-        "text": "Je weet waar je aan toe bent."
+        "title": "Duidelijke prijzen",
+        "text": "Geen verborgen kosten, geen verrassingen."
       },
       "item2": {
-        "title": "Snelle communicatie",
-        "text": "Antwoord binnen 24u."
+        "title": "Snelle opvolging",
+        "text": "Altijd antwoord binnen 24 uur."
       },
       "item3": {
-        "title": "Resultaatgericht",
-        "text": "Geen hype, alleen groei."
+        "title": "Gericht op resultaat",
+        "text": "We meten alles en sturen bij waar nodig."
       }
     },
     "quickChoice": {
       "badge": "Start hier",
-      "title": "Niet zeker wat je nodig hebt?",
-      "subtitle": "Kies je doel. Wij tonen de juiste diensten.",
+      "title": "Weet je nog niet precies wat je nodig hebt?",
+      "subtitle": "Kies je belangrijkste doel — wij tonen meteen welke diensten daarbij passen.",
       "cta": "Toon aanbevolen diensten",
       "visibility": {
         "title": "Meer zichtbaarheid",
-        "desc": "Bouw een sterke online aanwezigheid op met consistente content en social media."
+        "desc": "Zorg dat klanten je vinden via social media, content en een sterke online aanwezigheid."
       },
       "leads": {
         "title": "Meer leads",
-        "desc": "Trek gekwalificeerde bezoekers aan met advertenties en zoekmachine-optimalisatie."
+        "desc": "Trek serieuze geïnteresseerden aan via advertenties, SEO en slimme funnels."
       },
       "sales": {
         "title": "Meer verkoop",
-        "desc": "Zet bezoekers om in klanten met een professionele webshop en gerichte campagnes."
+        "desc": "Verkoop online met een sterke webshop, gerichte ads en conversiegerichte content."
       }
     },
     "servicesGrid": {
