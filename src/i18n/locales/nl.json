@@ -340,7 +340,7 @@
       "items": {
         "contentProduction": {
           "title": "Contentproductie",
-          "desc": "Professionele video's en foto's die je merk versterken.",
+          "desc": "Video's, foto's en visuals die je merk laten opvallen — op elk platform.",
           "deliverables": {
             "0": "Video productie (kort of lang formaat)",
             "1": "Professionele fotografie",
@@ -348,8 +348,8 @@
           }
         },
         "businessWebsite": {
-          "title": "Business Website",
-          "desc": "Een professionele website die vertrouwen opbouwt.",
+          "title": "Bedrijfswebsite",
+          "desc": "Een website die vertrouwen wekt en bezoekers omzet in klanten.",
           "deliverables": {
             "0": "Responsive design voor alle apparaten",
             "1": "SEO-geoptimaliseerde structuur",
@@ -358,7 +358,7 @@
         },
         "ecommerce": {
           "title": "Webshop",
-          "desc": "Online verkopen met een geoptimaliseerde e-commerce oplossing.",
+          "desc": "Verkoop online met een webshop die werkt — van product tot betaling.",
           "deliverables": {
             "0": "Volledige webshop setup",
             "1": "Betalings- en verzendintegratie",
@@ -366,8 +366,8 @@
           }
         },
         "ads": {
-          "title": "Advertentie Beheer",
-          "desc": "Data-gedreven campagnes die resultaat opleveren.",
+          "title": "Advertentiebeheer",
+          "desc": "Slimme campagnes op Google en Meta die leads en verkoop opleveren.",
           "deliverables": {
             "0": "Campagne strategie & setup",
             "1": "Targeting & optimalisatie",
@@ -376,7 +376,7 @@
         },
         "seo": {
           "title": "SEO",
-          "desc": "Groei organisch met zoekmachine-optimalisatie.",
+          "desc": "Word gevonden door klanten die actief naar jouw dienst zoeken.",
           "deliverables": {
             "0": "Technische SEO audit",
             "1": "Keyword strategie",
@@ -385,7 +385,7 @@
         },
         "social": {
           "title": "Social Media Beheer",
-          "desc": "Consistente aanwezigheid op alle sociale kanalen.",
+          "desc": "Professionele aanwezigheid op social media — zonder dat jij er tijd aan verliest.",
           "deliverables": {
             "0": "Content planning & creatie",
             "1": "Community management",
@@ -394,7 +394,7 @@
         },
         "mobileApp": {
           "title": "Mobiele App Ontwikkeling",
-          "desc": "Lanceer een eigen app voor iOS & Android.",
+          "desc": "Een eigen app voor iOS & Android — gebouwd op maat van jouw bedrijf.",
           "deliverables": {
             "0": "UX/UI design + development",
             "1": "Backend & integraties",
