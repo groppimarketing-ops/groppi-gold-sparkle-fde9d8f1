@@ -23,12 +23,31 @@ const ServiceDetailModal = ({
   service,
 }: ServiceDetailModalProps) => {
   const { t, i18n } = useTranslation();
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [videoLoaded, setVideoLoaded] = useState(false);
-  const [isYouTube, setIsYouTube] = useState(false);
-  const [isVimeo, setIsVimeo] = useState(false);
-  const [embedUrl, setEmbedUrl] = useState('');
+  const videoContainerRef = useRef<HTMLDivElement>(null);
+  const [isFullscreen, setIsFullscreen] = useState(false);
   const isRTL = i18n.language === 'ar' || i18n.language === 'ur';
+
+  // Centralized video mapping
+  const gdriveId = getVideoIdBySlug(service.id);
+  const hasVideo = !!gdriveId;
+
+  // Fullscreen handler
+  const handleFullscreen = () => {
+    const el = videoContainerRef.current;
+    if (!el) return;
+    if (document.fullscreenElement) {
+      document.exitFullscreen();
+    } else {
+      el.requestFullscreen();
+    }
+  };
+
+  // Track fullscreen state
+  useEffect(() => {
+    const onFsChange = () => setIsFullscreen(!!document.fullscreenElement);
+    document.addEventListener('fullscreenchange', onFsChange);
+    return () => document.removeEventListener('fullscreenchange', onFsChange);
+  }, []);
 
   // Detect video type and prepare embed URL
   useEffect(() => {
