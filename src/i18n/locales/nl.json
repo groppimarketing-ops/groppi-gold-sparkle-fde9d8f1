@@ -2795,5 +2795,44 @@
     "learnMore": "Meer info",
     "accept": "Accepteren",
     "reject": "Weigeren"
+  },
+  "home": {
+    "testimonials": {
+      "subtitle": "Wat klanten zeggen",
+      "title": "Beoordeeld door échte ondernemers",
+      "description": "Ontdek waarom Belgische KMO's en scale-ups kiezen voor GROPPI als hun groeipartner.",
+      "reviews": {
+        "1": {
+          "name": "Mehdi Vanden Berghe",
+          "role": "Zaakvoerder, Antwerpen",
+          "quote": "GROPPI heeft onze online zichtbaarheid volledig getransformeerd. Binnen 3 maanden zagen we 200% meer leads via Google."
+        },
+        "2": {
+          "name": "Sophie Baert",
+          "role": "Marketingmanager, Gent",
+          "quote": "Professioneel, creatief en altijd bereikbaar. Onze social media is eindelijk consistent en het levert echt klanten op."
+        },
+        "3": {
+          "name": "Kevin De Smet",
+          "role": "CEO, Brussel",
+          "quote": "De website die GROPPI voor ons bouwde converteert 3x beter dan onze vorige. Aanrader voor elke KMO."
+        },
+        "4": {
+          "name": "Jana Hermans",
+          "role": "Eigenaar schoonheidssalon, Leuven",
+          "quote": "Van strategie tot uitvoering, alles wordt tot in de puntjes verzorgd. Eindelijk een bureau dat doet wat het belooft."
+        },
+        "5": {
+          "name": "Luc Peeters",
+          "role": "E-commerce manager, Hasselt",
+          "quote": "Onze Google Ads campagnes werden volledig geoptimaliseerd. ROAS ging van 2x naar 6x in twee maanden."
+        },
+        "6": {
+          "name": "Amina Deboeck",
+          "role": "Directeur horeca, Mechelen",
+          "quote": "GROPPI denkt mee als partner, niet als leverancier. Ze snappen onze markt en leveren content die écht aanslaat."
+        }
+      }
+    }
   }
 }

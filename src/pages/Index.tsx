@@ -11,6 +11,7 @@ import HomeServicesGrid from '@/components/home/HomeServicesGrid';
 import HomePortfolioGrid from '@/components/home/HomePortfolioGrid';
 import HomeCaseStudies from '@/components/home/HomeCaseStudies';
 import HomeClientLogoMarquee from '@/components/home/HomeClientLogoMarquee';
+import HomeTestimonials from '@/components/home/HomeTestimonials';
 import HomeTrustSection from '@/components/home/HomeTrustSection';
 import HomeFinalCTA from '@/components/home/HomeFinalCTA';
 import HomeAfterHeroWrapper from '@/components/home/HomeAfterHeroWrapper';
@@ -60,6 +61,7 @@ const Index = () => {
         <HomePortfolioGrid />
         <HomeCaseStudies />
         <HomeClientLogoMarquee />
+        <HomeTestimonials />
         <HomeQuickChoice onGoalSelect={handleGoalSelect} />
         <HomeServicesGrid 
           ref={servicesGridRef}
