@@ -1,12 +1,13 @@
 import { useState, useRef, useEffect, useCallback, memo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { getVideoIdBySlug, buildDrivePreviewUrl } from '@/data/serviceVideos';
 
 interface ServiceVideoPreviewProps {
   serviceId: string;
-  /** Open the full video modal */
-  onClickPlay: () => void;
+  /** Open the full video modal — now unused, kept for backward compat */
+  onClickPlay?: () => void;
 }
 
 /**
