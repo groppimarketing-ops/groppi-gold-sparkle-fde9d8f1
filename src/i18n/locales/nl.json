@@ -198,7 +198,8 @@
     "requestQuote": "Vraag offerte aan",
     "required": "Verplicht",
     "optional": "Optioneel",
-    "brandName": "GROPPI"
+    "brandName": "GROPPI",
+    "fullscreen": "Volledig scherm"
   },
   "validation": {
     "required": "Dit veld is verplicht",
