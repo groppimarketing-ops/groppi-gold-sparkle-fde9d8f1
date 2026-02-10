@@ -392,12 +392,12 @@
           }
         },
         "mobileApp": {
-          "title": "Mobile App Development",
+          "title": "Mobiele App Ontwikkeling",
           "desc": "Lanceer een eigen app voor iOS & Android.",
           "deliverables": {
             "0": "UX/UI design + development",
             "1": "Backend & integraties",
-            "2": "App Store launch support"
+            "2": "App Store lancering support"
           }
         }
       }
