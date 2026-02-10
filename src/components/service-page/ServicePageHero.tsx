@@ -1,8 +1,8 @@
-import { memo, useEffect, useState } from 'react';
+import { memo, useEffect, useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Check, MessageCircle, ArrowRight, Calendar } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { trackEvent, socialLinks } from '@/utils/tracking';
 import { getVideoIdBySlug, buildDrivePreviewUrl } from '@/data/serviceVideos';
