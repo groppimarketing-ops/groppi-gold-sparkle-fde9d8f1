@@ -291,14 +291,6 @@ const ServiceCard = forwardRef<HTMLDivElement, ServiceCardProps>(({ service, ind
         </div>
       </GlassCard>
 
-      {/* Video Modal - Primary explanation layer */}
-      <ServiceVideoModal
-        isOpen={isVideoModalOpen}
-        onClose={() => setIsVideoModalOpen(false)}
-        onContinueToDetails={handleVideoModalContinue}
-        service={service}
-      />
-
       {/* Detail Modal */}
       <ServiceDetailModal
         isOpen={isModalOpen}
