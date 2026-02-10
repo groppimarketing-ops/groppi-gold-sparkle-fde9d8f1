@@ -2403,7 +2403,7 @@
       "deliverables": {
         "1": { "title": "Shop design", "desc": "Conversiegerichte productpagina's." },
         "2": { "title": "Development", "desc": "Robuust e-commerce platform." },
-        "3": { "title": "Payment integratie", "desc": "Alle gangbare betaalmethodes." },
+        "3": { "title": "Betalingsintegratie", "desc": "Alle gangbare betaalmethodes." },
         "4": { "title": "Voorraadbeheer", "desc": "Eenvoudig producten beheren." },
         "5": { "title": "Marketing tools", "desc": "Kortingscodes, upsells, etc." },
         "6": { "title": "Training & support", "desc": "Je leert alles zelf beheren." }
