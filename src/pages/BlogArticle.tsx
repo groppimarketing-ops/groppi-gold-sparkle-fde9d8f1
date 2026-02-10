@@ -152,6 +152,11 @@ const BlogArticle = () => {
             />
           </motion.article>
 
+          {/* Related Services */}
+          <div className="max-w-3xl mx-auto">
+            <RelatedServices articleSlug={article.slug} />
+          </div>
+
           {/* Share & CTA */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
