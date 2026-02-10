@@ -72,13 +72,13 @@ const Contact = () => {
 
       toast({
         title: t('contact.success'),
-        description: 'We will get back to you soon.',
+        description: t('forms.submitSuccess'),
       });
       reset();
     } catch (error: any) {
       toast({
         title: t('contact.error'),
-        description: error.message || 'Please try again later.',
+        description: error.message || t('forms.submitError'),
         variant: 'destructive',
       });
     } finally {
