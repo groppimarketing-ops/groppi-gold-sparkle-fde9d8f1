@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { Badge } from '@/components/ui/badge';
 import type { PortfolioItem } from '@/types/portfolio';
 import { serviceTagLabels } from '@/types/portfolio';
+import { getTranslatedPortfolio } from '@/utils/portfolioTranslation';
 
 interface PortfolioCardProps {
   item: PortfolioItem;
