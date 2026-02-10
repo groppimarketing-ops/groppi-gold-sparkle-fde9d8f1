@@ -641,5 +641,15 @@
   },
   "footer": {
     "quickLinks": "Enlaces rápidos"
+  },
+  "cookies": {
+    "title": "Usamos cookies",
+    "description": "Este sitio utiliza cookies para mejorar tu experiencia y medir nuestro rendimiento. Al hacer clic en \"Aceptar\", aceptas nuestra política de cookies.",
+    "learnMore": "Más información",
+    "accept": "Aceptar",
+    "reject": "Rechazar"
+  },
+  "servicePage": {
+    "defaultDescription": "{{service}} — Servicio profesional de GROPPI Marketing Bureau."
   }
 }

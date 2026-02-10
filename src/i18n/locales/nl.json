@@ -2174,6 +2174,7 @@
     }
   },
   "servicePage": {
+    "defaultDescription": "{{service}} — Professionele dienst door GROPPI Marketing Bureau.",
     "cta": {
       "requestQuote": "Vraag een offerte aan",
       "whatsapp": "Chat via WhatsApp",

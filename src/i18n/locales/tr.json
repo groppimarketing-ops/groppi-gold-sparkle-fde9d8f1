@@ -875,5 +875,15 @@
         "disclaimer": "Gösterge niteliğinde sonuç, dönem ve bütçeye bağlıdır."
       }
     }
+  },
+  "cookies": {
+    "title": "Çerez kullanıyoruz",
+    "description": "Bu web sitesi deneyiminizi iyileştirmek ve performansımızı ölçmek için çerezler kullanır. \"Kabul Et\"e tıklayarak çerez politikamızı kabul etmiş olursunuz.",
+    "learnMore": "Daha fazla bilgi",
+    "accept": "Kabul Et",
+    "reject": "Reddet"
+  },
+  "servicePage": {
+    "defaultDescription": "{{service}} — GROPPI Marketing Bureau'dan profesyonel hizmet."
   }
 }
