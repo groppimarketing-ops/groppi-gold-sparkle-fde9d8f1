@@ -47,6 +47,8 @@ const CaseStudyModal = memo(({ item, isOpen, onClose }: CaseStudyModalProps) => 
 
   if (!item) return null;
 
+  const translated = getTranslatedPortfolio(t, item);
+
   return (
     <AnimatePresence>
       {isOpen && (
