@@ -64,6 +64,50 @@ const OrganizationSchema = () => {
           longitude: 4.8547,
         },
         priceRange: '€€',
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '4.9',
+          reviewCount: '6',
+          bestRating: '5',
+        },
+        review: [
+          {
+            '@type': 'Review',
+            author: { '@type': 'Person', name: 'Mehdi Vanden Berghe' },
+            reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+            reviewBody: 'GROPPI heeft onze online zichtbaarheid volledig getransformeerd. Binnen 3 maanden zagen we 200% meer leads via Google.',
+          },
+          {
+            '@type': 'Review',
+            author: { '@type': 'Person', name: 'Sophie Baert' },
+            reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+            reviewBody: 'Professioneel, creatief en altijd bereikbaar. Onze social media is eindelijk consistent en het levert echt klanten op.',
+          },
+          {
+            '@type': 'Review',
+            author: { '@type': 'Person', name: 'Kevin De Smet' },
+            reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+            reviewBody: 'De website die GROPPI voor ons bouwde converteert 3x beter dan onze vorige. Aanrader voor elke KMO.',
+          },
+          {
+            '@type': 'Review',
+            author: { '@type': 'Person', name: 'Jana Hermans' },
+            reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+            reviewBody: 'Van strategie tot uitvoering, alles wordt tot in de puntjes verzorgd. Eindelijk een bureau dat doet wat het belooft.',
+          },
+          {
+            '@type': 'Review',
+            author: { '@type': 'Person', name: 'Luc Peeters' },
+            reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+            reviewBody: 'Onze Google Ads campagnes werden volledig geoptimaliseerd. ROAS ging van 2x naar 6x in twee maanden.',
+          },
+          {
+            '@type': 'Review',
+            author: { '@type': 'Person', name: 'Amina Deboeck' },
+            reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+            reviewBody: 'GROPPI denkt mee als partner, niet als leverancier. Ze snappen onze markt en leveren content die écht aanslaat.',
+          },
+        ],
         openingHoursSpecification: {
           '@type': 'OpeningHoursSpecification',
           dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],

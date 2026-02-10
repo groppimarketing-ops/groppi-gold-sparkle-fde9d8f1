@@ -61,6 +61,7 @@ const Index = () => {
         <HomePortfolioGrid />
         <HomeCaseStudies />
         <HomeClientLogoMarquee />
+        <HomeTestimonials />
         <HomeQuickChoice onGoalSelect={handleGoalSelect} />
         <HomeServicesGrid 
           ref={servicesGridRef}
