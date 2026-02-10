@@ -2084,15 +2084,15 @@
       }
     },
     "apply": {
-      "title": "Klaar om GROPPI-partner te worden?",
-      "subtitle": "Bekijk of jouw regio nog beschikbaar is.",
+      "title": "Wil je GROPPI-partner worden?",
+      "subtitle": "Check of jouw regio nog beschikbaar is.",
       "ctaPrimary": "Word partner",
-      "ctaSecondary": "Plan een gesprek"
+      "ctaSecondary": "Plan een kennismaking"
     },
     "booking": {
       "title": "Plan een korte kennismaking",
-      "subtitle": "15–20 minuten. We checken match en volgende stappen.",
-      "cta": "Plan call"
+      "subtitle": "15–20 minuten. We bekijken samen of het past en wat de volgende stappen zijn.",
+      "cta": "Plan gesprek"
     }
   },
   "caseStudy": {
