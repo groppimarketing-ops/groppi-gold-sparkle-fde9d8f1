@@ -631,5 +631,15 @@
       "nda-project-019": { "shortResult": "+28%展厅参观", "challenge": "向拥有更强在线形象的大型经销商失去市场份额的汽车经销商。", "approach": { "0": "带库存系统的新网站", "1": "Google Ads活动", "2": "再营销策略" }, "results": { "0": "+28%展厅参观", "1": "降低的获客成本" }, "disclaimer": "指示性结果，取决于时期和预算。" },
       "nda-project-020": { "shortResult": "+45%联系咨询", "challenge": "过时网站和最低在线可见度的律师事务所。", "approach": { "0": "专业网站重新设计", "1": "内容营销策略", "2": "本地SEO" }, "results": { "0": "+45%联系咨询", "1": "本地Google前5名" }, "disclaimer": "指示性结果，取决于时期和预算。" }
     }
+  },
+  "cookies": {
+    "title": "我们使用 Cookie",
+    "description": "本网站使用 Cookie 来改善您的体验并衡量我们的性能。点击\"接受\"即表示您同意我们的 Cookie 政策。",
+    "learnMore": "了解更多",
+    "accept": "接受",
+    "reject": "拒绝"
+  },
+  "servicePage": {
+    "defaultDescription": "{{service}} — GROPPI Marketing Bureau 的专业服务。"
   }
 }

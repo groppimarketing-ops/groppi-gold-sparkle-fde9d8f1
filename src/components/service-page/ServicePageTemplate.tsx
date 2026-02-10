@@ -42,7 +42,7 @@ const ServicePageTemplate = memo(({ serviceKey, posterImage }: ServicePageTempla
     <div className="min-h-screen bg-background">
       <PageSEO
         title={serviceTitle}
-        description={serviceDescription || `${serviceTitle} — Professionele dienst door GROPPI Marketing Bureau.`}
+        description={serviceDescription || t('servicePage.defaultDescription', { service: serviceTitle })}
         path={`/services/${slug}`}
       />
       <BreadcrumbSchema items={[

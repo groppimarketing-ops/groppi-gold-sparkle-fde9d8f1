@@ -1579,5 +1579,15 @@
       "governing": { "title": "Legge applicabile", "content": "Questi termini sono regolati dalla legge belga.\n\nLe controversie saranno sottoposte ai tribunali competenti del Belgio.\n\nSe una disposizione di questi termini è ritenuta invalida o inapplicabile, le restanti disposizioni rimarranno in pieno vigore." },
       "contact": { "title": "Contatto", "content": "Per domande su questi termini:\n\nGROPPI\nEmail: info@groppi.be\nTelefono: +32 456 19 87 21\n\nCi impegniamo a rispondere a tutte le richieste entro 48 ore." }
     }
+  },
+  "cookies": {
+    "title": "Utilizziamo i cookie",
+    "description": "Questo sito utilizza cookie per migliorare la tua esperienza e misurare le nostre prestazioni. Cliccando su \"Accetta\", accetti la nostra politica sui cookie.",
+    "learnMore": "Scopri di più",
+    "accept": "Accetta",
+    "reject": "Rifiuta"
+  },
+  "servicePage": {
+    "defaultDescription": "{{service}} — Servizio professionale di GROPPI Marketing Bureau."
   }
 }

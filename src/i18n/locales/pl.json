@@ -802,5 +802,15 @@
   },
   "footer": {
     "quickLinks": "Szybkie linki"
+  },
+  "cookies": {
+    "title": "Używamy plików cookie",
+    "description": "Ta strona używa plików cookie, aby poprawić Twoje doświadczenie i mierzyć naszą wydajność. Klikając 'Akceptuj', zgadzasz się na naszą politykę plików cookie.",
+    "learnMore": "Dowiedz się więcej",
+    "accept": "Akceptuj",
+    "reject": "Odrzuć"
+  },
+  "servicePage": {
+    "defaultDescription": "{{service}} — Profesjonalna usługa GROPPI Marketing Bureau."
   }
 }

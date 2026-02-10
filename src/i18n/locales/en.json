@@ -2175,6 +2175,7 @@
     }
   },
   "servicePage": {
+    "defaultDescription": "{{service}} — Professional service by GROPPI Marketing Bureau.",
     "cta": {
       "requestQuote": "Request a quote",
       "whatsapp": "Chat via WhatsApp",

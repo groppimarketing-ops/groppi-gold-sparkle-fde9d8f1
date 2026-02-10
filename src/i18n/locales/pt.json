@@ -1144,5 +1144,15 @@
   "notFound": {
     "message": "Esta página não existe ou foi movida.",
     "backHome": "Voltar à página inicial"
+  },
+  "cookies": {
+    "title": "Utilizamos cookies",
+    "description": "Este site utiliza cookies para melhorar a sua experiência e medir o nosso desempenho. Ao clicar em \"Aceitar\", concorda com a nossa política de cookies.",
+    "learnMore": "Saber mais",
+    "accept": "Aceitar",
+    "reject": "Rejeitar"
+  },
+  "servicePage": {
+    "defaultDescription": "{{service}} — Serviço profissional da GROPPI Marketing Bureau."
   }
 }
