@@ -2796,44 +2796,5 @@
     "learnMore": "Learn more",
     "accept": "Accept",
     "reject": "Reject"
-  },
-  "home": {
-    "testimonials": {
-      "subtitle": "What clients say",
-      "title": "Rated by real entrepreneurs",
-      "description": "Discover why Belgian SMEs and scale-ups choose GROPPI as their growth partner.",
-      "reviews": {
-        "1": {
-          "name": "Mehdi Vanden Berghe",
-          "role": "Business Owner, Antwerp",
-          "quote": "GROPPI completely transformed our online visibility. Within 3 months we saw 200% more leads through Google."
-        },
-        "2": {
-          "name": "Sophie Baert",
-          "role": "Marketing Manager, Ghent",
-          "quote": "Professional, creative and always available. Our social media is finally consistent and it actually brings in customers."
-        },
-        "3": {
-          "name": "Kevin De Smet",
-          "role": "CEO, Brussels",
-          "quote": "The website GROPPI built for us converts 3x better than our previous one. Highly recommended for any SME."
-        },
-        "4": {
-          "name": "Jana Hermans",
-          "role": "Beauty Salon Owner, Leuven",
-          "quote": "From strategy to execution, everything is handled with precision. Finally an agency that delivers on its promises."
-        },
-        "5": {
-          "name": "Luc Peeters",
-          "role": "E-commerce Manager, Hasselt",
-          "quote": "Our Google Ads campaigns were fully optimized. ROAS went from 2x to 6x in two months."
-        },
-        "6": {
-          "name": "Amina Deboeck",
-          "role": "Hospitality Director, Mechelen",
-          "quote": "GROPPI thinks along as a partner, not a supplier. They understand our market and deliver content that truly resonates."
-        }
-      }
-    }
   }
 }
