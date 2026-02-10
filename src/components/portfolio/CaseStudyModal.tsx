@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import MediaCarousel from './MediaCarousel';
 import type { PortfolioItem } from '@/types/portfolio';
 import { industryLabels, serviceTagLabels, deliverableLabels } from '@/types/portfolio';
+import { getTranslatedPortfolio } from '@/utils/portfolioTranslation';
 
 interface CaseStudyModalProps {
   item: PortfolioItem | null;
@@ -45,6 +46,8 @@ const CaseStudyModal = memo(({ item, isOpen, onClose }: CaseStudyModalProps) => 
   }, []);
 
   if (!item) return null;
+
+  const translated = getTranslatedPortfolio(t, item);
 
   return (
     <AnimatePresence>
@@ -121,7 +124,7 @@ const CaseStudyModal = memo(({ item, isOpen, onClose }: CaseStudyModalProps) => 
                 </h2>
                 
                 <p className="text-primary font-semibold text-xl">
-                  {item.shortResultLine}
+                  {translated.shortResultLine}
                 </p>
               </div>
 
@@ -131,7 +134,7 @@ const CaseStudyModal = memo(({ item, isOpen, onClose }: CaseStudyModalProps) => 
                   {t('portfolio.modal.challenge', 'Uitdaging')}
                 </h3>
                 <p className="text-foreground leading-relaxed">
-                  {item.popupContent.challenge}
+                  {translated.challenge}
                 </p>
               </div>
 
@@ -141,7 +144,7 @@ const CaseStudyModal = memo(({ item, isOpen, onClose }: CaseStudyModalProps) => 
                   {t('portfolio.modal.approach', 'Aanpak')}
                 </h3>
                 <ul className="space-y-2">
-                  {item.popupContent.approachPoints.map((point, index) => (
+                  {translated.approachPoints.map((point, index) => (
                     <li key={index} className="flex items-start gap-3 text-foreground">
                       <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                         <Check className="w-3 h-3 text-primary" />
@@ -158,7 +161,7 @@ const CaseStudyModal = memo(({ item, isOpen, onClose }: CaseStudyModalProps) => 
                   {t('portfolio.modal.results', 'Resultaten')}
                 </h3>
                 <ul className="space-y-2">
-                  {item.popupContent.resultPoints.map((point, index) => (
+                  {translated.resultPoints.map((point, index) => (
                     <li key={index} className="flex items-start gap-3 text-foreground">
                       <div className="w-5 h-5 rounded-full bg-primary/30 flex items-center justify-center flex-shrink-0 mt-0.5">
                         <Check className="w-3 h-3 text-primary" />
@@ -167,11 +170,11 @@ const CaseStudyModal = memo(({ item, isOpen, onClose }: CaseStudyModalProps) => 
                     </li>
                   ))}
                 </ul>
-                {item.popupContent.resultDisclaimer && (
+                {translated.resultDisclaimer && (
                   <div className="flex items-start gap-2 mt-3 p-3 rounded-lg bg-muted/30 border border-border/50">
                     <Info className="w-4 h-4 text-muted-foreground flex-shrink-0 mt-0.5" />
                     <p className="text-xs text-muted-foreground italic">
-                      {item.popupContent.resultDisclaimer}
+                      {translated.resultDisclaimer}
                     </p>
                   </div>
                 )}

@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { Badge } from '@/components/ui/badge';
 import type { PortfolioItem } from '@/types/portfolio';
 import { serviceTagLabels } from '@/types/portfolio';
+import { getTranslatedPortfolio } from '@/utils/portfolioTranslation';
 
 interface PortfolioCardProps {
   item: PortfolioItem;
@@ -19,6 +20,7 @@ const PortfolioCard = memo(({
 }: PortfolioCardProps) => {
   const { t, i18n } = useTranslation();
   const lang = i18n.language.startsWith('nl') ? 'nl' : 'en';
+  const translated = getTranslatedPortfolio(t, item);
   const [imageLoaded, setImageLoaded] = useState(false);
 
   const handleImageLoad = useCallback(() => {
@@ -93,7 +95,7 @@ const PortfolioCard = memo(({
 
           {/* Result metric */}
           <p className="text-primary font-medium text-sm">
-            {item.shortResultLine}
+            {translated.shortResultLine}
           </p>
         </div>
       </button>
