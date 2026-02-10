@@ -95,7 +95,7 @@ const PortfolioCard = memo(({
 
           {/* Result metric */}
           <p className="text-primary font-medium text-sm">
-            {item.shortResultLine}
+            {translated.shortResultLine}
           </p>
         </div>
       </button>
