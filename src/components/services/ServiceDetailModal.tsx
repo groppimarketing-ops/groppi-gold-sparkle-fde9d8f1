@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Play, Clock, ArrowRight, Check, Package, CreditCard, Info, Megaphone, Calculator } from 'lucide-react';
+import { X, Play, Clock, ArrowRight, Check, Package, CreditCard, Info, Megaphone, Calculator, Maximize, Minimize } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -9,6 +9,7 @@ import type { ServiceData } from './ServiceCard';
 import AdsServiceContent from './AdsServiceContent';
 import PlanBuilderSocial from './PlanBuilderSocial';
 import { SERVICE_PRICING_CONFIG, getPriceDisplayString, getPriceSuffix } from '@/config/pricingConfig';
+import { getVideoIdBySlug, buildDrivePreviewUrl } from '@/data/serviceVideos';
 
 interface ServiceDetailModalProps {
   isOpen: boolean;
