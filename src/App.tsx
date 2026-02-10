@@ -10,6 +10,7 @@ import { applyDocumentDirection } from "@/i18n/config";
 import { AuthProvider } from "@/contexts/AuthContext";
 import ProtectedRoute from "@/components/admin/ProtectedRoute";
 import FloatingWhatsApp from "@/components/layout/FloatingWhatsApp";
+import CookieConsent from "@/components/layout/CookieConsent";
 
 // Import i18n validation in dev mode
 if (import.meta.env.DEV) {
@@ -117,6 +118,7 @@ const App = () => (
                 </Routes>
               </Suspense>
               <FloatingWhatsAppHandler />
+              <CookieConsent />
             </RTLHandler>
           </BrowserRouter>
         </TooltipProvider>
