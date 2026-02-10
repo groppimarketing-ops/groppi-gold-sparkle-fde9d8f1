@@ -523,5 +523,357 @@
   },
   "footer": {
     "quickLinks": "Hızlı Bağlantılar"
+  },
+  "portfolio": {
+    "page": {
+      "subtitle": "Projelerimiz",
+      "title": "Portföy",
+      "description": "Müşterilerimiz için gerçekleştirdiğimiz projeleri ve elde ettiğimiz sonuçları keşfedin.",
+      "resultSingle": "proje bulundu",
+      "resultPlural": "proje bulundu",
+      "noResults": "Bu filtrelerle proje bulunamadı."
+    },
+    "nda": {
+      "disclaimer": "Bazı projeler gizlilik sözleşmeleri (NDA) ile korunmaktadır ve herkese açık gösterilememektedir."
+    },
+    "viewCase": "Projeyi görüntüle",
+    "filters": {
+      "all": "Tümü",
+      "searchPlaceholder": "Müşteri adına göre ara...",
+      "industryLabel": "Sektöre göre filtrele",
+      "serviceLabel": "Hizmete göre filtrele",
+      "clearAll": "Tüm filtreleri temizle"
+    },
+    "modal": {
+      "challenge": "Zorluk",
+      "approach": "Yaklaşımımız",
+      "results": "Sonuçlar",
+      "deliverables": "Teslim edilenler",
+      "ctaPrimary": "Teklif isteyin",
+      "ctaWhatsApp": "WhatsApp ile sohbet"
+    },
+    "items": {
+      "castello-vicchiomaggio": {
+        "shortResult": "Tarihi Toskana şarap evi için dijital sunum ve görsel yönetim.",
+        "challenge": "Castello Vicchiomaggio, Toskana Chianti bölgesinde tarihi bir şarap ve konaklama tesisi olarak, yüzyıllık mirasının prestijine uygun, uluslararası müşterileri çekecek rafine bir dijital varlığa ihtiyaç duyuyordu.",
+        "approach": { "0": "Lüks konaklama odaklı premium web tasarımı", "1": "Tesis atmosferini yansıtan görsel içerik yönetimi", "2": "Mobil öncelikli rezervasyon deneyimi optimizasyonu", "3": "Tarihi mirasa uyumlu dijital marka kimliği", "4": "Çoklu cihaz uyumlu responsive sunum" },
+        "results": { "0": "Tesisin prestijini yansıtan yükseltilmiş dijital varlık", "1": "Tüm temas noktalarında sürükleyici görsel hikaye anlatımı", "2": "Optimize edilmiş müşteri rezervasyon deneyimi", "3": "Tüm cihazlarda tutarlı marka sunumu", "4": "Artırılmış uluslararası görünürlük ve çekicilik" },
+        "disclaimer": "Görseller portföy sunum amaçlı yeniden oluşturulmuştur."
+      },
+      "cose-pazzi-torino": {
+        "shortResult": "Güçlü yemek görselleri ve yerel marka karakteriyle otantik İtalyan pizzacı web sitesi.",
+        "challenge": "Torino'daki Pizzeria Cose Pazzi, otantik İtalyan mutfağını ve mahallesinin canlı karakterini yansıtan profesyonel bir dijital varlığa ihtiyaç duyuyordu.",
+        "approach": { "0": "Web sitesi yapısı ve optimizasyon", "1": "Görsel sunum ve yemek öncelikli hiyerarşi", "2": "Mobil öncelikli kullanılabilirlik iyileştirmeleri", "3": "Yerel İtalyan marka kimliği ve hikaye anlatımı" },
+        "results": { "0": "Çevrimiçi premium restoran markalaşması", "1": "Güçlü yemek görünürlüğü ve iştah çekiciliği", "2": "Net ve basit müşteri yolculuğu", "3": "İyileştirilmiş çevrimiçi görünürlük ve yerel SEO" },
+        "disclaimer": "Görseller illüstratif olup sunum amaçlı oluşturulmuştur."
+      },
+      "augusto-torino": {
+        "shortResult": "Güçlü görsel kimlik ve rafine yemek sunumuyla şık restoran web sitesi.",
+        "challenge": "Torino'daki Ristorante Pizzeria Augusto, rafine İtalyan mutfağını ve sıcak atmosferini çevrimiçi yansıtan profesyonel bir dijital varlığa ihtiyaç duyuyordu.",
+        "approach": { "0": "Web sitesi yapısı ve optimizasyon", "1": "Görsel hiyerarşi ve yemek öncelikli düzen", "2": "Mobil performans ve kullanılabilirlik", "3": "Etkinlik ve rezervasyon entegrasyonu" },
+        "results": { "0": "Çevrimiçi premium restoran markalaşması", "1": "Menüden rezervasyona net müşteri yolculuğu", "2": "Tüm sayfalarda güçlü görsel hikaye anlatımı", "3": "İyileştirilmiş çevrimiçi görünürlük ve yerel SEO" },
+        "disclaimer": "Proje GROPPI tarafından aktif olarak yönetilmektedir."
+      },
+      "pummaro-torino": {
+        "shortResult": "Güçlü yemek sunumu ve net müşteri akışıyla modern restoran web sitesi.",
+        "challenge": "Torino'daki Pizzeria Pummarò, küçük İtalyan üreticilerinden premium malzemelerle otantik İtalyan mutfağına olan bağlılığını yansıtan profesyonel bir dijital varlığa ihtiyaç duyuyordu.",
+        "approach": { "0": "Web sitesi yapısı ve optimizasyon", "1": "Görsel hiyerarşi ve yemek sunumu", "2": "Mobil kullanılabilirlik iyileştirmeleri", "3": "Çevrimiçi rezervasyon ve teslimat entegrasyonu" },
+        "results": { "0": "Net navigasyonla dönüşüm odaklı düzen", "1": "Çevrimiçi güçlü yerel restoran markalaşması", "2": "Profesyonel yemek görünürlüğü ve malzeme hikayesi", "3": "Menüden rezervasyona sorunsuz müşteri yolculuğu" },
+        "disclaimer": "Proje GROPPI tarafından aktif olarak yönetilmektedir."
+      },
+      "fratelli-roselli": {
+        "shortResult": "Güçlü yemek sunumu ve yerel markalaşmayla otantik İtalyan restoran web sitesi.",
+        "challenge": "Torino'daki Pizzeria Fratelli Roselli, 20 yılı aşkın sadık müşteri kitlesine sahipti ancak kaliteli malzemelerini ve otantik pizza yapımını sergileyecek profesyonel bir dijital varlığa ihtiyaç duyuyordu.",
+        "approach": { "0": "Web sitesi yapısı ve optimizasyon", "1": "Görsel sunum ve içerik düzeni", "2": "Performans ve kullanılabilirlik iyileştirmeleri", "3": "Çevrimiçi rezervasyon sistemi entegrasyonu" },
+        "results": { "0": "Marka kalitesini yansıtan profesyonel ve temiz web sitesi", "1": "Premium malzeme odaklı güçlü yemek görünürlüğü", "2": "Menüden rezervasyona net müşteri yolculuğu", "3": "İyileştirilmiş çevrimiçi yerel restoran markalaşması" },
+        "disclaimer": "Proje GROPPI tarafından aktif olarak yönetilmektedir."
+      },
+      "boothuis-turnhout": {
+        "shortResult": "Yerel konaklama işletmesi için temiz restoran web sitesi ve görsel sunum.",
+        "challenge": "Restaurant Boothuis Turnhout, restoranın atmosferini ve kalitesini çevrimiçi yansıtan profesyonel bir dijital varlığa ihtiyaç duyuyordu.",
+        "approach": { "0": "Web sitesi yönetimi ve sürekli optimizasyon", "1": "Görsel içerik ve profesyonel sunum", "2": "Dijital varlık oluşturma ve bakım", "3": "Tüm çevrimiçi kanallarda tutarlı marka deneyimi" },
+        "results": { "0": "Profesyonel ve temiz web sitesi", "1": "Restoranın güçlü görsel sunumu", "2": "İyileştirilmiş çevrimiçi görünürlük", "3": "Sürekli yönetim ve optimizasyon" },
+        "disclaimer": "Proje GROPPI tarafından aktif olarak yönetilmektedir."
+      },
+      "sanremo-pizzeria": {
+        "shortResult": "Yerel restoran için güçlü sosyal medya varlığı ve görsel içerik.",
+        "challenge": "Sanremo Pizzeria Restaurant sadık bir yerel müşteri kitlesine sahipti ancak yeni müşteriler çekmek ve restoranın atmosferini çevrimiçi aktarmak için profesyonel bir dijital varlıktan yoksundu.",
+        "approach": { "0": "Facebook sayfası yönetimi ve optimizasyonu", "1": "Profesyonel görsel içerik oluşturma", "2": "Sosyal medya stratejisi ve düzenli paylaşım", "3": "Dijital varlık oluşturma ve bakım" },
+        "results": { "0": "Profesyonel ve tutarlı çevrimiçi varlık", "1": "Görsel olarak güçlü sosyal medya içeriği", "2": "İyileştirilmiş çevrimiçi görünürlük ve bulunabilirlik", "3": "Sürekli yönetim ve optimizasyon" },
+        "disclaimer": "Proje GROPPI tarafından aktif olarak yönetilmektedir."
+      },
+      "mangiare-3840": {
+        "shortResult": "Güçlü görsel kimlikle modern restoran web sitesi.",
+        "challenge": "Mangiare 3840 güçlü bir yerel itibara sahipti ancak restoranın atmosferini ve kalitesini yansıtan profesyonel bir çevrimiçi varlıktan yoksundu.",
+        "approach": { "0": "Premium koyu tasarımlı tamamen özel web sitesi", "1": "Restoran atmosferine uygun görsel içerik ve markalaşma", "2": "Sürekli dijital destek ve optimizasyon", "3": "Entegre menü ve rezervasyon sistemi" },
+        "results": { "0": "Marka deneyimini güçlendiren profesyonel çevrimiçi varlık", "1": "Ziyaretçiler için iyileştirilmiş kullanıcı deneyimi", "2": "Tüm dijital kanallarda güçlü görsel kimlik", "3": "Sürekli yönetim ve optimizasyon" },
+        "disclaimer": "Proje GROPPI tarafından aktif olarak yönetilmektedir."
+      },
+      "kma-wandpanelen": {
+        "shortResult": "+%85 showroom ziyaretçisi",
+        "challenge": "Anvers'teki KMA Wandpanelen, premium ahşap ve mermer alternatifi panel yelpazesine sahipti ancak çevrimiçi görünürlükten yoksundu. Güçlü yönleri (neme dayanıklılık, çizilme direnci, kolay bakım) net iletilmiyordu.",
+        "approach": { "0": "Tüm varyantların profesyonel ürün fotoğrafçılığı", "1": "Instagram ve Facebook için sosyal içerik stratejisi", "2": "Görsel karşılaştırma: WPC vs. geleneksel ahşap", "3": "USP odağı: kolay bakım ve dayanıklılık" },
+        "results": { "0": "+%85 showroom ziyaretçisi", "1": "Sosyal medya üzerinden güçlü çevrimiçi ürün ilgisi", "2": "İç mimarlardan daha fazla hedefli talep", "3": "Premium alternatif olarak net konumlandırma" },
+        "disclaimer": "Gösterge niteliğinde sonuç, dönem ve bütçeye bağlıdır."
+      },
+      "lebanon-restaurant": {
+        "shortResult": "+%120 sosyal medya erişimi",
+        "challenge": "Brüksel'deki otantik yemeklere sahip Lübnan restoranı, sınırlı çevrimiçi varlığa sahipti. Sıcak atmosfer ve geleneksel mutfak sosyal medyada sergilenmiyordu.",
+        "approach": { "0": "Instagram ve Facebook için kapsamlı sosyal medya stratejisi", "1": "Profesyonel yemek fotoğrafçılığı ve stilizasyon", "2": "Etkileşim için kısa tanıtım videoları ve Reels", "3": "Düzenli paylaşımla haftalık içerik planlaması", "4": "Sosyal kanıt için yorum ve referans içeriği" },
+        "results": { "0": "+%120 sosyal medya erişimi", "1": "Instagram üzerinden belirgin yeni müşteri artışı", "2": "Paylaşımlarda daha yüksek etkileşim oranı", "3": "Brüksel bölgesinde güçlenmiş marka bilinirliği", "4": "DM üzerinden daha fazla masa rezervasyonu" },
+        "disclaimer": "Gösterge niteliğinde sonuç, dönem ve bütçeye bağlıdır."
+      },
+      "il-fuoco-pizza": {
+        "shortResult": "+%65 çevrimiçi rezervasyon",
+        "challenge": "Zanaatkâr yaklaşıma sahip otantik İtalyan pizzacısı, güncelliğini yitirmiş çevrimiçi varlığa sahipti. Sıcak atmosfer ve pizza kalitesi dijital görünümlerine yansımıyordu.",
+        "approach": { "0": "Kapsamlı görsel kimlik yenileme", "1": "Profesyonel yemek ve ortam fotoğrafçılığı", "2": "QR entegrasyonlu dijital menü sistemi", "3": "Instagram ve Facebook için sosyal medya içeriği", "4": "Yorum ve referans stratejisi" },
+        "results": { "0": "+%65 çevrimiçi rezervasyon", "1": "Bölgede güçlü marka bilinirliği", "2": "Daha yüksek ortalama sipariş değeri", "3": "Sadakat içeriğiyle daha fazla düzenli ziyaretçi", "4": "İyileştirilmiş çevrimiçi yorumlar ve değerlendirmeler" },
+        "disclaimer": "Gösterge niteliğinde sonuç, dönem ve bütçeye bağlıdır."
+      },
+      "restaurant-branding": {
+        "shortResult": "+%180 rezervasyon",
+        "challenge": "Az çevrimiçi görünürlüğe sahip premium restoran. Güncel olmayan markalaşma, özel teklifle uyuşmuyordu ve hedef kitleye ulaşılamıyordu.",
+        "approach": { "0": "Lüks görünüm ve hissiyatla kapsamlı yeniden markalaşma", "1": "Rezervasyon sistemli yeni web sitesi", "2": "İç mekân ve yemek profesyonel fotoğraf çekimi", "3": "Yerel aramalara hedeflenmiş Google Ads kampanyası" },
+        "results": { "0": "6 ayda +%180 rezervasyon", "1": "Masa başına daha yüksek ortalama harcama", "2": "Daha iyi çevrimiçi yorumlar ve değerlendirmeler", "3": "Yerel aramalar için Google'da ilk 3" }
+      },
+      "mode-webshop": {
+        "shortResult": "3 ayda 85K€ ciro",
+        "challenge": "Dijital varlığı olmayan yeni başlayan çevrimiçi moda mağazası. Sınırlı pazarlama bütçesi ancak Belçika pazarında hızla büyüme hedefi.",
+        "approach": { "0": "Shopify kurulumu ve yapılandırma", "1": "Profesyonel ürün fotoğrafçılığı", "2": "Yeniden hedefleme ile Meta Ads kampanyaları", "3": "Dönüşüm odaklı açılış sayfaları" },
+        "results": { "0": "İlk 3 ayda 85K€ ciro", "1": "Reklamlarda 4,2 ROAS", "2": "İstikrarlı sadık müşteri tabanı", "3": "Hollanda'ya başarılı genişleme" }
+      },
+      "b2b-platform": {
+        "shortResult": "+%320 lead",
+        "challenge": "Uzun satış hunisine sahip karmaşık B2B SaaS. Çok az nitelikli lead ve web sitesi kötü dönüştürüyordu. Rakip konumlandırma daha güçlüydü.",
+        "approach": { "0": "Persona başına optimize edilmiş açılış sayfaları", "1": "Lead mıknatısları (teknik kılavuzlar, vaka çalışmaları)", "2": "Uzun kuyruk anahtar kelimeler için SEO stratejisi", "3": "Form ve CTA A/B testleri" },
+        "results": { "0": "4 ayda +%320 nitelikli lead", "1": "Lead başına düşürülmüş maliyet", "2": "Kısaltılmış satış huni süresi", "3": "Daha iyi lead kalitesi (SQL oranı)" }
+      },
+      "bouwbedrijf-website": {
+        "shortResult": "Google'da yerel #1",
+        "challenge": "Yalnızca ağızdan ağıza tavsiyeyle yaşayan aile inşaat şirketi. Web sitesi yok, çevrimiçi varlık yok. Genç nesil modernleşmek istiyordu.",
+        "approach": { "0": "Proje portföylü profesyonel web sitesi", "1": "Google My Business optimizasyonu", "2": "Yerel SEO stratejisi", "3": "Proje fotoğrafçılığı ve vaka çalışmaları" },
+        "results": { "0": "Yerel aramalar için Google'da #1", "1": "Web sitesi üzerinden aylık 45+ lead", "2": "Daha yüksek ortalama proje değeri", "3": "Rakiplere karşı daha iyi konumlandırma" }
+      },
+      "influencer-campagne": {
+        "shortResult": "2,4M erişim",
+        "challenge": "Marka bilinirliği olmayan yeni güzellik markası. 18-35 yaş hedef kitle geleneksel kanallarla ulaşılması zor.",
+        "approach": { "0": "Influencer ortaklık stratejisi", "1": "12 Belçikalı içerik üreticisi aktive edildi", "2": "Instagram ve TikTok'ta UGC kampanyası", "3": "Markalı içerik ve çekilişler" },
+        "results": { "0": "2 ayda 2,4 milyon organik erişim", "1": "UGC içeriğinde güçlü etkileşim", "2": "Hedef kitlede güçlü marka bilinirliği", "3": "Başarılı ürün lansmanı" }
+      },
+      "tech-startup-branding": {
+        "shortResult": "Kapsamlı marka kimliği",
+        "challenge": "Yatırımcı toplantıları için profesyonel görünüme ihtiyaç duyan pre-seed girişim. Mevcut DIY markalaşma ikna edici değildi.",
+        "approach": { "0": "Kapsamlı marka kimliği geliştirme", "1": "Logo ve görsel dil tasarımı", "2": "Yatırımcı sunum tasarımı", "3": "Yatırımcıya hazır web sitesi" },
+        "results": { "0": "3 ayda başarılı seed turunu tamamlama", "1": "Yatırımcılar nezdinde profesyonel imaj", "2": "Tüm temas noktalarında tutarlı marka görüntüsü", "3": "Ölçeklenebilir markalaşma için temel atılması" }
+      },
+      "e-commerce-groei": {
+        "shortResult": "+%240 ROAS",
+        "challenge": "Reklamlarda zarar eden mevcut iç dekorasyon web mağazası. Net strateji olmadan ROAS 1,0'ın altında. Bütçe israf ediliyordu.",
+        "approach": { "0": "Mevcut kampanyaların kapsamlı denetimi", "1": "Yeni hedef kitle segmentasyonu", "2": "Kreatif A/B testleri", "3": "Yeniden hedefleme hunileri kurulumu" },
+        "results": { "0": "90 günde +%240 ROAS iyileştirmesi", "1": "Kârlı reklam harcaması", "2": "Düşürülmüş edinme başına maliyet", "3": "Ölçeklenebilir kampanya yapısı" }
+      },
+      "content-strategie": {
+        "shortResult": "Ayda 50+ video",
+        "challenge": "Düzenli içerik üretmek isteyen ancak şirket içi zaman ve uzmanlığa sahip olmayan fitness zinciri. Sosyal medya ihmal ediliyordu.",
+        "approach": { "0": "Tam hizmet içerik retainer'ı kurulumu", "1": "Planlama, üretim ve yayınlama", "2": "Tüm şubeler için video ve fotoğraf içerik", "3": "Düzenli yayın stratejisi" },
+        "results": { "0": "Ayda 50+ kaliteli video", "1": "Tüm kanallarda tutarlı marka deneyimi", "2": "Daha yüksek üye etkileşimi", "3": "Sosyal medya üzerinden daha fazla kayıt" }
+      },
+      "ai-learn-academy": {
+        "shortResult": "Platform canlı – devam ediyor",
+        "challenge": "AI Deals, lider AI araçlarına abonelik modeli üzerinden erişimi kolaylaştıran premium bir platform ile içerik üreticileri ve profesyoneller için eğitim akademisine ihtiyaç duyuyordu.",
+        "approach": { "0": "Premium koyu temalı tam platform tasarımı ve UX/UI geliştirme", "1": "Abonelik erişim yönetim sistemi", "2": "Kategorize AI araçları marketplace yapısı", "3": "AI Academy mimarisi ve eğitim içeriği", "4": "Büyüme için ölçeklenebilir platform altyapısı", "5": "Sürekli teknik yönetim ve optimizasyon" },
+        "results": { "0": "Özel AI araç marketplace'i başlatıldı", "1": "Abonelik ve erişim yönetim sistemi canlı", "2": "Dönüşüm odaklı UX ile premium koyu UI", "3": "Eğitim AI Academy yapısı dağıtıldı", "4": "Sürekli büyümeyi destekleyen ölçeklenebilir mimari", "5": "Platform Groppi tarafından aktif olarak yönetiliyor ve optimize ediliyor" },
+        "disclaimer": "Canlı ve devam eden proje. Platform tasarımı ve yönetimi Groppi tarafından."
+      },
+      "pilotscareer": {
+        "shortResult": "Uluslararası havacılık işe alım platformu – canlı",
+        "challenge": "PilotsCareer, havayolu pilotlarını dünya çapındaki kariyer fırsatlarıyla buluşturan profesyonel ve ölçeklenebilir bir işe alım platformuna ihtiyaç duyuyordu.",
+        "approach": { "0": "Sıfırdan tam platform tasarım ve geliştirme", "1": "Havacılık estetiğiyle premium koyu UI", "2": "Gelişmiş iş arama ve filtreleme sistemi", "3": "Pilot profil ve başvuru yönetimi", "4": "Masaüstü ve mobil uyumlu responsive tasarım", "5": "Sürekli platform optimizasyonu ve özellik geliştirme" },
+        "results": { "0": "Profesyonel havacılık işe alım platformu başlatıldı", "1": "Uluslararası büyümeyi destekleyen ölçeklenebilir mimari", "2": "Pilotlar ve işe alımcılar için temiz, sezgisel UX", "3": "Gelişmiş arama ve filtreleme yetenekleri", "4": "Optimize edilmiş mobil pilot profil deneyimi", "5": "Platform Groppi tarafından aktif olarak yönetiliyor ve geliştiriliyor" },
+        "disclaimer": "Canlı ve devam eden proje. Platform tasarımı ve yönetimi Groppi tarafından."
+      },
+      "casa-mavi": {
+        "shortResult": "İspanya'daki bir Akdeniz incisi için kapsamlı dijital varlık.",
+        "challenge": "Casa Mavi, İspanya Fuengirola'daki İtalyan-Napoliten restoranı, yerel halk ve Costa del Sol turistlerini çekmek için profesyonel bir dijital varlık oluşturmak istiyordu.",
+        "approach": { "0": "Çevrimiçi rezervasyon sistemli özel web sitesi", "1": "Dijital menü ve görsel içerik oluşturma", "2": "Profesyonel dijital varlık oluşturma", "3": "Yerel ve turist kitlesine yönelik sosyal medya stratejisi" },
+        "results": { "0": "Entegre rezervasyon sistemli profesyonel web sitesi", "1": "Akdeniz atmosferini yansıtan güçlü görsel kimlik", "2": "Turistler ve yerel halk için iyileştirilmiş çevrimiçi görünürlük", "3": "Sürekli dijital yönetim ve optimizasyon" },
+        "disclaimer": "Proje GROPPI tarafından aktif olarak yönetilmektedir."
+      },
+      "arte-y-cocina": {
+        "shortResult": "Sanatsal fine-dining deneyimi için premium dijital kimlik.",
+        "challenge": "İspanya'daki sanatsal fine-dining restoranı ArTe y CoCiNa, sanat ve gastronominin benzersiz birleşimini yansıtan ve uluslararası bir kitleye hitap eden dijital varlık istiyordu.",
+        "approach": { "0": "Lüks görsel kimlikle özel web sitesi", "1": "Profesyonel yemek ve iç mekân içerik oluşturma", "2": "Güçlü dijital varlık oluşturma", "3": "Sanat ve mutfak mükemmelliğini birleştiren görsel markalaşma" },
+        "results": { "0": "Fine-dining deneyimini çevrimiçi yansıtan şık web sitesi", "1": "Sanatsal dokunuşlu güçlü görsel kimlik", "2": "İyileştirilmiş çevrimiçi görünürlük ve marka deneyimi", "3": "Sürekli dijital yönetim ve optimizasyon" },
+        "disclaimer": "Proje GROPPI tarafından aktif olarak yönetilmektedir."
+      },
+      "verona-los-boliches": {
+        "shortResult": "Canlı bir füzyon restoranı için kapsamlı çevrimiçi varlık.",
+        "challenge": "İspanya'daki benzersiz İtalyan-Hint-Meksika füzyon restoranı Verona Los Boliches, çok kültürlü mutfağı ve Costa del Sol'un canlı atmosferini yansıtan profesyonel bir dijital varlığa ihtiyaç duyuyordu.",
+        "approach": { "0": "Görsel kimlikle özel web sitesi", "1": "Profesyonel yemek ve ortam içerik oluşturma", "2": "Çevrimiçi varlık ve görünürlük oluşturma", "3": "Çeşitli mutfak tarzlarını hedefleyen görsel içerik" },
+        "results": { "0": "Füzyon mutfağını güçlü sunan profesyonel web sitesi", "1": "Turistler ve yerel halk için iyileştirilmiş çevrimiçi görünürlük", "2": "Tüm dijital kanallarda güçlü görsel içerik", "3": "Sürekli dijital yönetim ve optimizasyon" },
+        "disclaimer": "Proje GROPPI tarafından aktif olarak yönetilmektedir."
+      },
+      "happy-flavors": {
+        "shortResult": "İspanya'daki otantik Hint mutfağı için profesyonel dijital varlık.",
+        "challenge": "Happy Flavors Indian Restaurant, otantik Hint mutfağını ve sıcak misafirperverliği yansıtan profesyonel bir çevrimiçi varlık oluşturmak istiyordu.",
+        "approach": { "0": "Sıcak görsel kimlikle özel web sitesi", "1": "Profesyonel yemek ve ortam içerik oluşturma", "2": "Dijital varlık ve görünürlük oluşturma", "3": "Zengin Hint mutfağını öne çıkaran görsel içerik" },
+        "results": { "0": "Otantik Hint mutfağını sergileyen profesyonel web sitesi", "1": "Tüm dijital kanallarda güçlü görsel içerik", "2": "Turistler ve yerel halk için iyileştirilmiş çevrimiçi görünürlük", "3": "Sürekli dijital yönetim ve optimizasyon" },
+        "disclaimer": "Proje GROPPI tarafından aktif olarak yönetilmektedir."
+      },
+      "guest-reservations": {
+        "shortResult": "Küresel otel rezervasyon hizmeti için sürekli platform yönetimi.",
+        "challenge": "Guest Reservations, uluslararası otel rezervasyonu ve seyahat platformu, küresel büyümesini desteklemek için sürekli platform yönetimi, web sitesi optimizasyonu ve teknik desteğe ihtiyaç duyuyordu.",
+        "approach": { "0": "Sürekli platform yönetimi ve teknik destek", "1": "Daha iyi performans ve dönüşüm için web sitesi optimizasyonu", "2": "Rezervasyon platformunun proaktif izleme ve bakımı", "3": "Ölçeklenebilir büyüme için stratejik destek" },
+        "results": { "0": "İyileştirilmiş platform performansı ve kullanıcı deneyimi", "1": "Rezervasyon platformunda daha yüksek dönüşüm oranı", "2": "Küresel kullanıcılar için istikrarlı ve güvenilir platform", "3": "Sürekli teknik destek ve optimizasyon" },
+        "disclaimer": "GROPPI tarafından aktif olarak yönetilen devam eden proje."
+      },
+      "eurostars-hotels": {
+        "shortResult": "Avrupa otel grubu için dijital platform desteği ve performans optimizasyonu.",
+        "challenge": "Eurostars Hotels, geniş bir rezervasyon platformuna sahip Avrupa otel grubu, çevrimiçi varlığını güçlendirmek için sürekli dijital destek, web sitesi yönetimi ve performans optimizasyonuna ihtiyaç duyuyordu.",
+        "approach": { "0": "Sürekli dijital platform desteği ve teknik yönetim", "1": "Web sitesi yönetimi ve rezervasyon platformu optimizasyonu", "2": "Daha hızlı yükleme süreleri ve daha iyi dönüşüm için performans optimizasyonu", "3": "Avrupa genelinde büyüme için stratejik destek" },
+        "results": { "0": "Optimize edilmiş web sitesi performansı ve kullanıcı deneyimi", "1": "Rezervasyon platformunda iyileştirilmiş dönüşüm oranı", "2": "Avrupa müşterileri için istikrarlı ve güvenilir dijital platform", "3": "Sürekli teknik yönetim ve proaktif optimizasyon" },
+        "disclaimer": "GROPPI tarafından aktif olarak yönetilen devam eden proje."
+      },
+      "nda-project-001": {
+        "shortResult": "+%42 çevrimiçi rezervasyon",
+        "challenge": "Kaçırılan rezervasyonlara yol açan kötü mobil deneyimli güncel olmayan web sitesi.",
+        "approach": { "0": "Responsive web sitesi yeniden tasarımı", "1": "Çevrimiçi rezervasyon sistemi", "2": "Yerel SEO optimizasyonu" },
+        "results": { "0": "+%42 çevrimiçi rezervasyon", "1": "Daha hızlı yükleme süresi (< 2s)" },
+        "disclaimer": "Gösterge niteliğinde sonuç, dönem ve bütçeye bağlıdır."
+      },
+      "nda-project-002": {
+        "shortResult": "+%70 masa rezervasyonu",
+        "challenge": "Turistler ve yerel halk arasında çevrimiçi görünürlükten yoksun şehir merkezindeki bistro.",
+        "approach": { "0": "Instagram Reels stratejisi", "1": "Yemek videografisi", "2": "Mevsimsel menü kampanyaları" },
+        "results": { "0": "Sosyal medya üzerinden +%70 masa rezervasyonu", "1": "Viral Reel (50K+ görüntüleme)" },
+        "disclaimer": "Gösterge niteliğinde sonuç, dönem ve bütçeye bağlıdır."
+      },
+      "nda-project-003": {
+        "shortResult": "+%55 Instagram takipçisi",
+        "challenge": "Genç kitle arasında çevrimiçi görünürlükten yoksun güzellik salonu.",
+        "approach": { "0": "Instagram içerik stratejisi", "1": "Önce/sonra görsel serisi", "2": "Mikro-influencer ortaklıkları" },
+        "results": { "0": "+%55 Instagram takipçisi", "1": "DM üzerinden daha yüksek randevu oranı" },
+        "disclaimer": "Gösterge niteliğinde sonuç, dönem ve bütçeye bağlıdır."
+      },
+      "nda-project-004": {
+        "shortResult": "+%50 rezervasyon",
+        "challenge": "Rekabetçi sağlıklı yaşam pazarında farklılaşma eksikliği olan yeni spa.",
+        "approach": { "0": "Lüks marka kimliği geliştirme", "1": "Rezervasyon optimize edilmiş web sitesi", "2": "Atmosferik görsel dil" },
+        "results": { "0": "İlk 6 ayda +%50 rezervasyon", "1": "Premium konumlandırma başarıldı" },
+        "disclaimer": "Gösterge niteliğinde sonuç, dönem ve bütçeye bağlıdır."
+      },
+      "nda-project-005": {
+        "shortResult": "+%38 teklif talebi",
+        "challenge": "Güçlü itibara sahip ancak güncel olmayan marka kimliğiyle aile inşaat şirketi.",
+        "approach": { "0": "Kapsamlı marka kimliği yenileme", "1": "Profesyonel proje fotoğrafçılığı", "2": "Portföylü yeni web sitesi" },
+        "results": { "0": "+%38 teklif talebi", "1": "Güçlenmiş marka bilinirliği" },
+        "disclaimer": "Gösterge niteliğinde sonuç, dönem ve bütçeye bağlıdır."
+      },
+      "nda-project-006": {
+        "shortResult": "+%85 lead",
+        "challenge": "Büyüyen pazarda kötü lead oluşturma performansına sahip güneş paneli kurucusu.",
+        "approach": { "0": "Lead oluşturma hunileri", "1": "Google Ads kampanyaları", "2": "Web sitesine hesaplama aracı" },
+        "results": { "0": "Aylık +%85 lead", "1": "Lead başına maliyet yarıya düşürüldü" },
+        "disclaimer": "Gösterge niteliğinde sonuç, dönem ve bütçeye bağlıdır."
+      },
+      "nda-project-007": {
+        "shortResult": "1. çeyrekte 62K€ ciro",
+        "challenge": "Mevcut müşteri tabanı veya marka bilinirliği olmayan yeni çevrimiçi mağaza.",
+        "approach": { "0": "Shopify mağaza kurulumu", "1": "Meta Ads kampanyaları", "2": "Yeniden hedefleme hunileri" },
+        "results": { "0": "İlk çeyrekte 62K€ ciro", "1": "3,8 ROAS" },
+        "disclaimer": "Gösterge niteliğinde sonuç, dönem ve bütçeye bağlıdır."
+      },
+      "nda-project-008": {
+        "shortResult": "+%130 çevrimiçi satış",
+        "challenge": "Fiziksel mağazanın yanı sıra çevrimiçi satış başlatmak isteyen kuyumcu.",
+        "approach": { "0": "WooCommerce mağaza kurulumu", "1": "Ürün fotoğrafçılığı", "2": "Instagram Shopping entegrasyonu" },
+        "results": { "0": "4 ayda +%130 çevrimiçi satış", "1": "Güçlü Instagram topluluğu" },
+        "disclaimer": "Gösterge niteliğinde sonuç, dönem ve bütçeye bağlıdır."
+      },
+      "nda-project-009": {
+        "shortResult": "Google #2 pozisyon",
+        "challenge": "Güçlü itibara rağmen arama sonuçlarında görünmeyen tıp kliniği.",
+        "approach": { "0": "Teknik SEO denetimi ve düzeltmeler", "1": "Tıbbi içerik stratejisi", "2": "Google My Business optimizasyonu" },
+        "results": { "0": "Ana anahtar kelimeler için Google #2 pozisyon", "1": "+%60 organik trafik" },
+        "disclaimer": "Gösterge niteliğinde sonuç, dönem ve bütçeye bağlıdır."
+      },
+      "nda-project-010": {
+        "shortResult": "+%35 yeni hasta",
+        "challenge": "Rekabetçi bölgede yeni hasta sayısı düşen diş kliniği.",
+        "approach": { "0": "Yerel SEO stratejisi", "1": "Google Ads kampanyaları", "2": "Yorum yönetimi" },
+        "results": { "0": "Aylık +%35 yeni hasta", "1": "Yerel Google Maps #1" },
+        "disclaimer": "Gösterge niteliğinde sonuç, dönem ve bütçeye bağlıdır."
+      },
+      "nda-project-011": {
+        "shortResult": "Seed turu tamamlandı",
+        "challenge": "Yatırımcılar için profesyonel görünüme ihtiyaç duyan pre-seed girişim.",
+        "approach": { "0": "Logo ve görsel kimlik", "1": "Sunum tasarımı", "2": "Landing page geliştirme" },
+        "results": { "0": "Başarılı seed turu", "1": "Profesyonel yatırımcı sunumu" },
+        "disclaimer": "Gösterge niteliğinde sonuç, dönem ve bütçeye bağlıdır."
+      },
+      "nda-project-012": {
+        "shortResult": "30 günde 500+ kayıt",
+        "challenge": "Pazarlama altyapısı olmadan lansmana hazır B2B SaaS ürünü.",
+        "approach": { "0": "Yüksek dönüşümlü landing page", "1": "LinkedIn Ads kampanyası", "2": "İçerik pazarlama stratejisi" },
+        "results": { "0": "İlk ayda 500+ kayıt", "1": "Güçlü ürün-pazar uyumu sinyalleri" },
+        "disclaimer": "Gösterge niteliğinde sonuç, dönem ve bütçeye bağlıdır."
+      },
+      "nda-project-013": {
+        "shortResult": "+%75 nitelikli lead",
+        "challenge": "Geleneksel kanallara bağımlı, çevrimiçi lead eksikliği olan emlak ajansı.",
+        "approach": { "0": "Lead oluşturma kampanyaları", "1": "Proje bazlı landing sayfaları", "2": "CRM entegrasyonu" },
+        "results": { "0": "+%75 nitelikli lead", "1": "Düşürülmüş lead başına maliyet" },
+        "disclaimer": "Gösterge niteliğinde sonuç, dönem ve bütçeye bağlıdır."
+      },
+      "nda-project-014": {
+        "shortResult": "Daha yüksek satış fiyatı elde edildi",
+        "challenge": "Lüksü yansıtan görsel sunumdan yoksun premium gayrimenkul.",
+        "approach": { "0": "Üst düzey emlak web sitesi", "1": "Drone ve iç mekân fotoğrafçılığı", "2": "Sanal tur entegrasyonu" },
+        "results": { "0": "Daha yüksek satış fiyatı elde edildi", "1": "Daha kısa satış döngüsü" },
+        "disclaimer": "Gösterge niteliğinde sonuç, dönem ve bütçeye bağlıdır."
+      },
+      "nda-project-015": {
+        "shortResult": "+%32 proje talebi",
+        "challenge": "Sosyal medyada çalışmalarını gösteren ancak profesyonel portföyden yoksun iç mimar.",
+        "approach": { "0": "Galerili portföy web sitesi", "1": "Profesyonel proje fotoğrafçılığı", "2": "Blog stratejisi" },
+        "results": { "0": "+%32 proje talebi", "1": "Daha yüksek ortalama proje değeri" },
+        "disclaimer": "Gösterge niteliğinde sonuç, dönem ve bütçeye bağlıdır."
+      },
+      "nda-project-016": {
+        "shortResult": "+%55 showroom ziyareti",
+        "challenge": "Premium teklifine rağmen düşen ziyaretçi sayısına sahip mutfak mağazası.",
+        "approach": { "0": "Yerel odaklı Google Ads", "1": "Sosyal medyada ilham içerikleri", "2": "Sanal showroom turu" },
+        "results": { "0": "+%55 showroom ziyareti", "1": "Ziyaretten satışa daha iyi dönüşüm" },
+        "disclaimer": "Gösterge niteliğinde sonuç, dönem ve bütçeye bağlıdır."
+      },
+      "nda-project-017": {
+        "shortResult": "Ayda 40+ video",
+        "challenge": "Düzenli içerik isteyen ancak şirket içi kapasitesi olmayan fitness stüdyosu.",
+        "approach": { "0": "Tam hizmet içerik retainer'ı", "1": "Yerinde video prodüksiyonu", "2": "Sosyal medya planlaması" },
+        "results": { "0": "Ayda 40+ kaliteli video", "1": "Daha yüksek üye etkileşimi" },
+        "disclaimer": "Gösterge niteliğinde sonuç, dönem ve bütçeye bağlıdır."
+      },
+      "nda-project-018": {
+        "shortResult": "+%45 üye",
+        "challenge": "Yerleşik rakiplerden farklılaşması gereken yeni CrossFit kutusu.",
+        "approach": { "0": "Güçlü marka kimliği", "1": "Topluluk içeriği", "2": "Lansman kampanyası" },
+        "results": { "0": "İlk çeyrekte +%45 üye", "1": "Güçlü topluluk oluşturuldu" },
+        "disclaimer": "Gösterge niteliğinde sonuç, dönem ve bütçeye bağlıdır."
+      },
+      "nda-project-019": {
+        "shortResult": "+%28 showroom ziyareti",
+        "challenge": "Daha güçlü çevrimiçi varlığa sahip büyük bayilere pazar payı kaybeden otomobil bayisi.",
+        "approach": { "0": "Envanter sistemli yeni web sitesi", "1": "Google Ads kampanyaları", "2": "Remarketing stratejisi" },
+        "results": { "0": "+%28 showroom ziyareti", "1": "Düşürülmüş edinme maliyetleri" },
+        "disclaimer": "Gösterge niteliğinde sonuç, dönem ve bütçeye bağlıdır."
+      },
+      "nda-project-020": {
+        "shortResult": "+%45 iletişim talebi",
+        "challenge": "Güncel olmayan web sitesi ve minimum çevrimiçi görünürlüğe sahip hukuk bürosu.",
+        "approach": { "0": "Profesyonel web sitesi yeniden tasarımı", "1": "İçerik pazarlama stratejisi", "2": "Yerel SEO" },
+        "results": { "0": "+%45 iletişim talebi", "1": "Yerel Google ilk 5" },
+        "disclaimer": "Gösterge niteliğinde sonuç, dönem ve bütçeye bağlıdır."
+      }
+    }
   }
 }
