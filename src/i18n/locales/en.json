@@ -129,7 +129,7 @@
       "line1": "All prices exclude VAT (21%)."
     }
   },
-  "services": {
+  "servicesHome": {
     "sectionTitle": "Our Services",
     "sectionSubtitle": "Watch the video first to understand how each service works, then continue to the details.",
     "card": {
@@ -927,6 +927,21 @@
     "title": "Our Services",
     "subtitle": "What We Offer",
     "description": "We don't work with fixed packages. Every service is tailored to the client's objectives and executed by a specialized team, supported by smart technology where it adds value.",
+    "card": {
+      "requestQuote": "Request a quote",
+      "viewDetails": "View details",
+      "watchHowItWorks": "Watch how it works (60 sec)",
+      "buildYourPlan": "Build your plan",
+      "watchVideo": "Watch video",
+      "buildPlan": "Build plan",
+      "calculatorHint": "Calculate your price in 60 sec"
+    },
+    "badges": {
+      "monthly": "Monthly",
+      "oneTime": "One-time",
+      "custom": "Custom",
+      "mostChosen": "Most chosen"
+    },
     "monthly": "Monthly",
     "oneTime": "One-time",
     "customQuote": "Custom",

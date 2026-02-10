@@ -129,12 +129,12 @@
       "line1": "Alle prijzen zijn exclusief BTW (21%)."
     }
   },
-  "services": {
+  "servicesHome": {
     "sectionTitle": "Onze diensten",
     "sectionSubtitle": "Bekijk eerst de video om te begrijpen hoe elke dienst werkt, en ga daarna naar de details.",
     "card": {
       "requestQuote": "Offerte aanvragen",
-      "viewDetails": "Bekijk details",
+      "viewDetails": "Meer info",
       "watchHowItWorks": "Bekijk hoe het werkt (60 sec)",
       "buildYourPlan": "Stel je plan samen"
     },
@@ -927,6 +927,21 @@
     "title": "Onze diensten",
     "subtitle": "Wat wij bieden",
     "description": "Wij werken niet met vaste pakketten. Elke dienst wordt afgestemd op de doelstellingen van de klant en uitgevoerd door een gespecialiseerd team, ondersteund door slimme technologie waar dat waarde toevoegt.",
+    "card": {
+      "requestQuote": "Offerte aanvragen",
+      "viewDetails": "Meer info",
+      "watchHowItWorks": "Bekijk hoe het werkt (60 sec)",
+      "buildYourPlan": "Stel je plan samen",
+      "watchVideo": "Bekijk video",
+      "buildPlan": "Stel plan samen",
+      "calculatorHint": "Bereken je prijs in 60 sec"
+    },
+    "badges": {
+      "monthly": "Maandelijks",
+      "oneTime": "Eenmalig",
+      "custom": "Op maat",
+      "mostChosen": "Meest gekozen"
+    },
     "monthly": "Maandelijks",
     "oneTime": "Eenmalig",
     "customQuote": "Op maat",
