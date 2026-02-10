@@ -22,6 +22,7 @@ interface ServiceVideoPreviewProps {
  * - Unmounts iframe on mouse leave to save CPU.
  */
 const ServiceVideoPreview = memo(({ serviceId, onClickPlay }: ServiceVideoPreviewProps) => {
+  const { t } = useTranslation();
   const gdriveId = getVideoIdBySlug(serviceId);
   const navigate = useNavigate();
   const containerRef = useRef<HTMLDivElement>(null);
