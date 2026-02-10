@@ -88,7 +88,7 @@ const ServiceVideoPreview = memo(({ serviceId, onClickPlay }: ServiceVideoPrevie
           navigate(`/services/${serviceId}#video`);
         }
       }}
-      aria-label="Watch video preview"
+      aria-label={t('services.card.watchVideo', 'Bekijk videovoorbeeld')}
     >
       {/* Iframe – mounted only on hover (desktop) */}
       <AnimatePresence>

@@ -48,9 +48,9 @@ const HomeTrustSectors = memo(() => {
 
   const stats = [
     { value: '10+', labelKey: 'home.trustSectors.stats.experience' },
-    { value: 'BE + EU + World Wide', labelKey: 'home.trustSectors.stats.focus' },
-    { value: 'System-driven', labelKey: 'home.trustSectors.stats.system' },
-    { value: 'Premium', labelKey: 'home.trustSectors.stats.premium' },
+    { value: t('home.trustSectors.statsValues.focus'), labelKey: 'home.trustSectors.stats.focus' },
+    { value: t('home.trustSectors.statsValues.system'), labelKey: 'home.trustSectors.stats.system' },
+    { value: t('home.trustSectors.statsValues.premium'), labelKey: 'home.trustSectors.stats.premium' },
   ];
 
   const proofPoints = [
