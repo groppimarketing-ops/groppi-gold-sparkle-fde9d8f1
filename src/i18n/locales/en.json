@@ -198,7 +198,8 @@
     "requestQuote": "Request a quote",
     "required": "Required",
     "optional": "Optional",
-    "brandName": "GROPPI"
+    "brandName": "GROPPI",
+    "fullscreen": "Fullscreen"
   },
   "validation": {
     "required": "This field is required",
@@ -556,6 +557,11 @@
         "focus": "BE + EU + Worldwide",
         "system": "structure over chaos",
         "premium": "branding + performance"
+      },
+      "statsValues": {
+        "focus": "BE + EU + Worldwide",
+        "system": "System-driven",
+        "premium": "Premium"
       },
       "microNote": "*Results vary by industry and budget. We build scalable systems."
     },

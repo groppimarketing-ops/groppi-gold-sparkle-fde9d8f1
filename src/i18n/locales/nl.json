@@ -198,7 +198,8 @@
     "requestQuote": "Vraag offerte aan",
     "required": "Verplicht",
     "optional": "Optioneel",
-    "brandName": "GROPPI"
+    "brandName": "GROPPI",
+    "fullscreen": "Volledig scherm"
   },
   "validation": {
     "required": "Dit veld is verplicht",
@@ -392,12 +393,12 @@
           }
         },
         "mobileApp": {
-          "title": "Mobile App Development",
+          "title": "Mobiele App Ontwikkeling",
           "desc": "Lanceer een eigen app voor iOS & Android.",
           "deliverables": {
             "0": "UX/UI design + development",
             "1": "Backend & integraties",
-            "2": "App Store launch support"
+            "2": "App Store lancering support"
           }
         }
       }
@@ -408,7 +409,7 @@
         "deliverables": "Wat je krijgt",
         "pricing": "Prijs & logica",
         "video": "Video",
-        "calculator": "Plan Builder"
+        "calculator": "Planbouwer"
       },
       "overview": {
         "about": "Over deze dienst",
@@ -436,7 +437,7 @@
         "uploadNote": "Admin kan hier een mp4 video uploaden"
       },
       "calculator": {
-        "title": "Plan Builder",
+        "title": "Planbouwer",
         "desc": "Stel je eigen plan samen en krijg meteen een richtprijs.",
         "cta": "Open volledige calculator"
       },
@@ -531,7 +532,7 @@
           "subtitle": "Premium branding + lead flow."
         },
         "health": {
-          "title": "Beauty & Care",
+          "title": "Beauty & Verzorging",
           "subtitle": "Meer boekingen, sterkere merkwaarde."
         },
         "services": {
@@ -557,10 +558,15 @@
         "system": "geen chaos, wél structuur",
         "premium": "branding + performance"
       },
+      "statsValues": {
+        "focus": "BE + EU + Wereldwijd",
+        "system": "Systeemgestuurd",
+        "premium": "Premium"
+      },
       "microNote": "*Resultaten verschillen per sector en budget. We bouwen systemen die schaalbaar zijn."
     },
     "trustedBelgium": {
-      "eyebrow": "SOCIAL PROOF",
+      "eyebrow": "VERTROUWEN",
       "title": "Vertrouwd door groeiende bedrijven in België & Europa",
       "subtitle": "We zijn actief in 7 landen met focus op meetbare groei en duidelijke resultaten.",
       "europeCredibility": "Actief voor ambitieuze teams in België & Europa.",
@@ -1235,7 +1241,7 @@
         }
       },
       "mobileApp": {
-        "title": "Mobile App Development",
+        "title": "Mobiele App Ontwikkeling",
         "description": "Lanceer een snelle iOS & Android app met een native feel — gebouwd voor groei.",
         "features": {
           "0": "iOS & Android (native feel)",
@@ -1841,7 +1847,7 @@
   },
   "planBuilder": {
     "tab": "Plan samenstellen",
-    "title": "Plan Builder",
+    "title": "Planbouwer",
     "subtitle": "Stel je social media plan samen en krijg meteen een richtprijs.",
     "disclaimer": "Dit is een richtprijs. De finale prijs hangt af van scope, merkcomplexiteit en contentbehoefte.",
     "vatNote": "excl. btw",
@@ -1893,10 +1899,10 @@
         "unit": "foto"
       },
       "googleReviews": {
-        "label": "Google Review Management"
+        "label": "Google Review beheer"
       },
       "contentWriting": {
-        "label": "Content writing",
+        "label": "Copywriting",
         "unit": "uur"
       },
       "emailMarketing": {
@@ -1906,7 +1912,7 @@
         "label": "Social media posts (10-pack)"
       },
       "analyticsDashboard": {
-        "label": "Advanced Analytics Dashboard"
+        "label": "Geavanceerd analyse-dashboard"
       }
     },
     "summary": {
@@ -2261,7 +2267,7 @@
       }
     },
     "adsManagement": {
-      "title": "Advertising Management",
+      "title": "Advertentiebeheer",
       "subtitle": "Gerichte advertenties die leads en verkoop opleveren.",
       "benefits": {
         "1": "Hogere ROI op advertentie-uitgaven",
@@ -2327,7 +2333,7 @@
       }
     },
     "businessWebsite": {
-      "title": "Business Website",
+      "title": "Bedrijfswebsite",
       "subtitle": "Een professionele website die klanten overtuigt.",
       "benefits": {
         "1": "Modern design dat vertrouwen wekt",
@@ -2415,7 +2421,7 @@
       }
     },
     "mobileAppDevelopment": {
-      "title": "Mobile App Development",
+      "title": "Mobiele App Ontwikkeling",
       "subtitle": "Bouw een premium app — houd het veilig en up-to-date elke maand.",
       "benefits": {
         "1": "iOS & Android (native feel)",
@@ -2481,7 +2487,7 @@
       }
     },
     "contentCalculator": {
-      "label": "Content Calculator",
+      "label": "Contentcalculator",
       "title": "Bereken je prijs in 60 sec",
       "subtitle": "Kies wat je nodig hebt en krijg meteen een schatting.",
       "step1": "Kies je betaaltype",

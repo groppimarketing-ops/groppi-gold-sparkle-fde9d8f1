@@ -2,6 +2,7 @@ import { useState, useRef, useEffect, useCallback, memo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { getVideoIdBySlug, buildDrivePreviewUrl } from '@/data/serviceVideos';
 
 interface ServiceVideoPreviewProps {
@@ -21,6 +22,7 @@ interface ServiceVideoPreviewProps {
  * - Unmounts iframe on mouse leave to save CPU.
  */
 const ServiceVideoPreview = memo(({ serviceId, onClickPlay }: ServiceVideoPreviewProps) => {
+  const { t } = useTranslation();
   const gdriveId = getVideoIdBySlug(serviceId);
   const navigate = useNavigate();
   const containerRef = useRef<HTMLDivElement>(null);
@@ -88,7 +90,7 @@ const ServiceVideoPreview = memo(({ serviceId, onClickPlay }: ServiceVideoPrevie
           navigate(`/services/${serviceId}#video`);
         }
       }}
-      aria-label="Watch video preview"
+      aria-label={t('services.card.watchVideo', 'Bekijk videovoorbeeld')}
     >
       {/* Iframe – mounted only on hover (desktop) */}
       <AnimatePresence>

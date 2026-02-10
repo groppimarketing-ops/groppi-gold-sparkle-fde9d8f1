@@ -203,7 +203,7 @@ const ServiceVideoModal = ({
                   <button
                     onClick={handleFullscreen}
                     className="flex items-center justify-center w-9 h-9 rounded-full bg-black/60 backdrop-blur-sm text-white/80 hover:text-primary hover:bg-black/80 transition-all duration-200"
-                    aria-label="Fullscreen"
+                    aria-label={t('common.fullscreen', 'Volledig scherm')}
                   >
                     {isFullscreen ? (
                       <Minimize className="w-4 h-4" />
