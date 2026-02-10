@@ -167,16 +167,7 @@ const ServiceCard = forwardRef<HTMLDivElement, ServiceCardProps>(({ service, ind
 
   const handleWatchVideo = (e?: React.MouseEvent) => {
     e?.stopPropagation();
-    setIsVideoModalOpen(true);
-  };
-
-  const handleVideoModalContinue = () => {
-    setIsVideoModalOpen(false);
-    if (hasDetailPage) {
-      navigate(`/services/${service.id}`);
-    } else {
-      setIsModalOpen(true);
-    }
+    navigate(`/services/${service.id}#video`);
   };
 
   // Get simple explanation line for the service
