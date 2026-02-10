@@ -65,9 +65,9 @@ const Contact = () => {
 
       if (!response.ok) {
         if (response.status === 429) {
-          throw new Error('Too many requests. Please try again later.');
+          throw new Error(t('contact.rateLimited', 'Te veel aanvragen. Probeer later opnieuw.'));
         }
-        throw new Error(result.error || 'Failed to send message');
+        throw new Error(result.error || t('forms.submitError'));
       }
 
       toast({
