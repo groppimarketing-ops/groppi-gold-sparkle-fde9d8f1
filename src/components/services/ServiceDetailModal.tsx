@@ -49,66 +49,7 @@ const ServiceDetailModal = ({
     return () => document.removeEventListener('fullscreenchange', onFsChange);
   }, []);
 
-  // Detect video type and prepare embed URL
-  useEffect(() => {
-    if (!service.videoUrl) return;
-
-    if (service.videoUrl.includes('youtube.com') || service.videoUrl.includes('youtu.be')) {
-      setIsYouTube(true);
-      setIsVimeo(false);
-      const videoId = service.videoUrl.includes('youtu.be')
-        ? service.videoUrl.split('/').pop()
-        : new URLSearchParams(new URL(service.videoUrl).search).get('v');
-      setEmbedUrl(`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`);
-    } else if (service.videoUrl.includes('vimeo.com')) {
-      setIsVimeo(true);
-      setIsYouTube(false);
-      const videoId = service.videoUrl.split('/').pop();
-      setEmbedUrl(`https://player.vimeo.com/video/${videoId}?autoplay=1`);
-    } else {
-      setIsYouTube(false);
-      setIsVimeo(false);
-      setEmbedUrl('');
-    }
-  }, [service.videoUrl]);
-
-  // Disable body scroll when modal is open
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-      setVideoLoaded(false);
-    }
-
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [isOpen]);
-
-  // Handle ESC key
-  useEffect(() => {
-    const handleEsc = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        onClose();
-      }
-    };
-
-    if (isOpen) {
-      window.addEventListener('keydown', handleEsc);
-    }
-
-    return () => {
-      window.removeEventListener('keydown', handleEsc);
-    };
-  }, [isOpen, onClose]);
-
-  // Load video only when modal opens
-  useEffect(() => {
-    if (isOpen && service.videoUrl && !isYouTube && !isVimeo) {
-      setVideoLoaded(true);
-    }
-  }, [isOpen, service.videoUrl, isYouTube, isVimeo]);
+  // (video type detection removed — now uses centralized mapping)
 
   const backdropVariants = {
     hidden: { opacity: 0 },
