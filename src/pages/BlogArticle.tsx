@@ -8,6 +8,7 @@ import { getArticleBySlug, blogArticles } from '@/data/blogArticles';
 import GlassCard from '@/components/ui/GlassCard';
 import PageSEO from '@/components/seo/PageSEO';
 import { BreadcrumbSchema } from '@/components/seo/StructuredData';
+import RelatedServices from '@/components/blog/RelatedServices';
 
 const BlogArticle = () => {
   const { slug } = useParams<{ slug: string }>();
