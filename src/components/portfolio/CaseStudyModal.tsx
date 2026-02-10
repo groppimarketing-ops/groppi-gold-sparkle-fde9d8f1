@@ -134,7 +134,7 @@ const CaseStudyModal = memo(({ item, isOpen, onClose }: CaseStudyModalProps) => 
                   {t('portfolio.modal.challenge', 'Uitdaging')}
                 </h3>
                 <p className="text-foreground leading-relaxed">
-                  {item.popupContent.challenge}
+                  {translated.challenge}
                 </p>
               </div>
 
