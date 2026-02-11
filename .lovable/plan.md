@@ -1,98 +1,90 @@
 
+# Full i18n Parity Fix: Complete All 15 Locale Files
 
-# Services Video Player Overhaul
+## The Problem
 
-## What Changes
-Fix the video modal so it never crops at 100% zoom, add fullscreen support, add a quality selector (best-effort), and ensure card modal + service detail page use the exact same video mapping.
+Your `nl.json` base file has **2806 lines** of translations. Most other locale files are drastically incomplete:
 
-## Changes Overview
+| File | Lines | Coverage |
+|------|-------|----------|
+| nl.json | 2806 | 100% (base) |
+| en.json | ~2800 | ~100% |
+| fr.json | ~2800 | ~100% |
+| it.json | ~2800 | ~100% |
+| ar.json | 1990 | ~71% |
+| tr.json | 1062 | ~38% |
+| pl.json | 847 | ~30% |
+| es.json | 828 | ~30% |
+| de.json | ~800 | ~28% |
+| ru.json | ~850 | ~30% |
+| bn.json | ~850 | ~30% |
+| hi.json | ~850 | ~30% |
+| ur.json | ~850 | ~30% |
+| zh.json | ~850 | ~30% |
+| pt.json | ~850 | ~30% |
 
-### 1. Video Modal Sizing Fix (ServiceVideoModal.tsx)
-- Change modal max-width from `min(900px, 90vw)` to `min(960px, 92vw)`
-- Change max-height from `90vh` to `85vh`
-- Replace `overflow-y-auto` on the outer modal with a flex column layout so the video area + content below share the available height without scrolling past the viewport
-- Video container uses `aspect-video` with `object-fit: contain` -- no cropping, letterboxing is acceptable
-- Content below the video (title, bullets, pricing, CTAs) gets `overflow-y-auto` with `flex-shrink` so it scrolls independently if needed, while the video always stays fully visible
-- Close button stays `z-20` and always accessible
+## What's Missing
 
-### 2. Fullscreen Button (ServiceVideoModal.tsx)
-- Add a "Fullscreen" icon button (Maximize lucide icon) inside the video area, bottom-right corner
-- Uses the native Fullscreen API (`element.requestFullscreen()`) on the video container div
-- On mobile: tapping fullscreen expands the video container to fill screen
-- ESC exits fullscreen (native browser behavior)
-- Styled as a pill button matching the existing duration badge style (glass pill, gold icon)
+The incomplete files only have translations for `nav`, `careers`, `home` (recently added), and some `services` basics. They are completely missing:
 
-### 3. Quality Selector (ServiceVideoModal.tsx)
-- Add a small dropdown (Auto / 1080p / 720p) next to the fullscreen button
-- Since videos are Google Drive embeds (iframes), real quality switching is not possible -- the dropdown renders **disabled** with a tooltip "Quality depends on source"
-- If in the future HTML5 `<video>` sources are used, the dropdown will activate (code structure supports it but currently disabled)
-- No playback breakage: the selector is purely cosmetic for iframe sources
+- **about** - Entire About Us page (hero, whoWeAre, approach, timeline, values, stats, CTA)
+- **services** (deep keys) - items, modal, videoModal, wizard, guidedEntry, microGuidance, ads (budget framework), process, CTA
+- **servicePage** - All 10+ service detail pages (socialMedia, adsManagement, contentProduction, SEO, businessWebsite, onePageWebsite, ecommerceWebsite, branding, mobileAppDevelopment, reputation, dataSync) with their benefits, deliverables, process steps, calculator, FAQ
+- **contact** - Full contact form labels, placeholders, success/error messages
+- **footer** - Description, links, newsletter section
+- **blog** - Article titles, excerpts, full content, meta descriptions
+- **gallery/portfolio** - Page-level keys, filters, modal labels
+- **portfolio.items** - All 20+ project case studies (challenge, approach, results for each)
+- **partner** - Full franchise/partner page (hero, clarity, forWho, value, howItWorks, FAQ, apply, booking)
+- **caseStudy** - Labels and 8 case study translations
+- **planBuilder** - Full social media plan builder (steps, channels, frequency, addons, summary, CTA, FAQ)
+- **calculator** - Payment types, steps, business types, goals, packages, addons, WhatsApp templates
+- **pricing** - From, VAT notes
+- **common** - Additional utility strings
+- **social** - WhatsApp, call, email, follow links
+- **stats** - Years, clients, projects, team values
+- **admin** - Dashboard, articles, media labels
+- **validation** - Form validation messages
+- **servicesHome** - Card labels, badges
 
-### 4. Performance
-- Video iframe only mounts when `isOpen === true` (already implemented, kept as-is)
-- On close: iframe unmounts (React handles this via conditional render)
-- `loading="lazy"` kept on iframe
-- No autoplay on page load (user must click to open modal first)
+## The Plan
 
-### 5. Video Mapping Consistency (serviceVideos.ts)
-- The central mapping already covers all 10 services and is used by both ServiceVideoModal (via `getVideoIdBySlug(service.id)`) and ServicePageHero (via slug derived from serviceKey)
-- **Problem**: ServicePageHero derives slug from camelCase serviceKey (e.g., `contentProduction` -> `content-production`), and ServiceDetail passes `serviceKey` as camelCase. The mapping keys match the slugs, so this works correctly
-- **Verification**: The 7 services listed by the user map to existing keys: `content-production`, `business-website`, `reputation`, `seo`, `ads-management`, `ecommerce-website`, `one-page-website` -- all present in the mapping
-- No changes needed to the mapping file itself; IDs stay identical
+Due to the massive scope (each incomplete file needs ~2000 lines of new translations), I will work through the files systematically in batches:
 
-### 6. ServiceDetailModal Video Tab (ServiceDetailModal.tsx)
-- The "Video" tab inside the detail modal currently uses `service.videoUrl` (which may be undefined or a local mp4 path) instead of the centralized Google Drive mapping
-- **Fix**: Replace `service.videoUrl` logic with `getVideoIdBySlug(service.id)` + `buildDrivePreviewUrl()`, matching the same source of truth as the card modal
-- Add the same fullscreen button to this video embed
-- If no video exists, show the existing "Video coming soon" placeholder
+### Batch 1: Arabic (ar.json) - Complete remaining ~30%
+Arabic is already at 71% and is the RTL language, making it high priority. Missing sections: `servicePage.*` (all 10 service pages), `planBuilder.*`, `calculator.*` deep keys, some `portfolio.items.*` entries.
 
-### 7. No Design Changes
-- Dark glass background, gold border/glow, smooth framer-motion animations all kept
-- Close icon stays top-right
-- Brand styling (black + gold) untouched
-- Card layout on the services page unchanged
+### Batch 2: Turkish (tr.json) - Add ~62% missing content
+Missing almost all sections beyond nav, careers, and home. Will add: about, services (deep), servicePage (all), contact, footer, blog, gallery, portfolio.items, partner, caseStudy, planBuilder, calculator, pricing, common, social, stats, admin, validation.
 
----
+### Batch 3: Spanish (es.json) - Add ~70% missing content
+Same scope as Turkish.
 
-## Technical Details
+### Batch 4: German (de.json) - Add ~72% missing content
+Same scope.
 
-### Files Modified
+### Batch 5: Polish (pl.json) - Add ~70% missing content
+Same scope.
 
-| File | Change |
-|------|--------|
-| `src/components/services/ServiceVideoModal.tsx` | Resize modal (960px/85vh), flex layout, add fullscreen button, add disabled quality dropdown, ensure no cropping |
-| `src/components/services/ServiceDetailModal.tsx` | Replace `service.videoUrl` video logic with centralized `getVideoIdBySlug()` mapping, add fullscreen button |
+### Batch 6: Russian (ru.json) - Add ~70% missing content
+Same scope.
 
-### No Files Created or Deleted
+### Batch 7: Bengali (bn.json), Hindi (hi.json), Urdu (ur.json), Chinese (zh.json), Portuguese (pt.json)
+Same scope for remaining 5 files.
 
-### Key Implementation Notes
+### Quality Checks
+- Every key in `nl.json` will have a corresponding key in all 14 other files
+- No hardcoded text will remain -- all components already use `t()` calls
+- RTL languages (ar, ur) will continue working with the existing RTL system
+- The fallback chain (current lang -> nl -> en) will catch any edge cases
 
-**Modal layout structure (ServiceVideoModal):**
-```text
-modal container (max-w-[min(960px,92vw)], max-h-[85vh], flex flex-col)
-  +-- video area (aspect-video, flex-shrink-0, object-fit: contain)
-  |     +-- iframe (Google Drive /preview)
-  |     +-- fullscreen button (bottom-right pill)
-  |     +-- quality dropdown (bottom-right, disabled for iframes)
-  |     +-- duration badge (bottom-left)
-  +-- content area (flex-1, overflow-y-auto, min-h-0)
-        +-- title, bullets, pricing, CTAs
-```
+## Technical Notes
 
-**Fullscreen implementation:**
-```text
-const handleFullscreen = () => {
-  const el = videoContainerRef.current;
-  if (document.fullscreenElement) {
-    document.exitFullscreen();
-  } else {
-    el?.requestFullscreen();
-  }
-};
-```
+- The i18n config, language switcher, RTL handling, and `t()` usage in components are all already correct
+- The ONLY issue is missing keys in the locale JSON files
+- The `parseMissingKeyHandler` in `i18n/config.ts` falls back to English or Dutch, which is why you see Dutch text when switching languages -- the keys simply don't exist in those files
+- No code changes needed outside the locale files
 
-**Quality selector (disabled for Drive embeds):**
-- Renders as a small `<select>` or custom dropdown with options Auto/1080p/720p
-- `disabled` attribute set, with `title="Quality depends on source"`
-- Styled to match the glass pill aesthetic
+## Important Note on Scope
 
+This is a very large task -- approximately **24,000+ lines of translations** need to be added across 12 files. I will need multiple messages to complete this. I recommend we proceed batch by batch, starting with the most important languages for your audience.
