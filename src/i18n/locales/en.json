@@ -8,8 +8,7 @@
     "contact": "Contact",
     "partnership": "Franchise",
     "franchise": "Franchise",
-    "careers": "Careers",
-    "language": "Language"
+    "careers": "Careers"
   },
   "careers": {
     "meta": {
@@ -230,9 +229,6 @@
     "ctaSecondary": "View Our Services"
   },
   "home": {
-    "seo": {
-      "title": "Digital Marketing Agency Belgium"
-    },
     "heroNew": {
       "badge": "Structure. Content. Growth.",
       "headline": "We build your digital foundation — and scale your growth.",

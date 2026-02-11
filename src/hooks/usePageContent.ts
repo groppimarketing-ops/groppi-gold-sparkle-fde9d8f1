@@ -26,15 +26,14 @@ export const usePageContent = ({ pageSlug, enabled = true }: UsePageContentOptio
   // Get the current language content field name
   const getLanguageField = (): keyof PageContent => {
     const langMap: Record<string, keyof PageContent> = {
-      nl: 'content_nl',
       en: 'content_en',
-      fr: 'content_fr',
-      tr: 'content_tr',
-      it: 'content_it',
-      es: 'content_es',
       ar: 'content_ar',
+      nl: 'content_nl',
+      fr: 'content_fr',
+      de: 'content_de',
+      es: 'content_es',
     };
-    return langMap[i18n.language] || 'content_nl';
+    return langMap[i18n.language] || 'content_en';
   };
 
   useEffect(() => {

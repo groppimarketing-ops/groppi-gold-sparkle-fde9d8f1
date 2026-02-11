@@ -17,13 +17,12 @@ interface SectionEditorDialogProps {
 }
 
 const LANGUAGES = [
-  { code: 'nl', label: 'Nederlands (BE)' },
   { code: 'en', label: 'English' },
-  { code: 'fr', label: 'Français' },
-  { code: 'tr', label: 'Türkçe' },
-  { code: 'it', label: 'Italiano' },
-  { code: 'es', label: 'Español' },
   { code: 'ar', label: 'العربية' },
+  { code: 'nl', label: 'Nederlands' },
+  { code: 'fr', label: 'Français' },
+  { code: 'de', label: 'Deutsch' },
+  { code: 'es', label: 'Español' },
 ];
 
 const CONTENT_KEYS = {
@@ -110,13 +109,12 @@ const SectionEditorDialog = ({ section, onClose, onSave }: SectionEditorDialogPr
         id: c.id,
         section_id: c.section_id,
         content_key: c.content_key,
-        content_nl: c.content_nl,
         content_en: c.content_en,
-        content_fr: c.content_fr,
-        content_tr: c.content_tr,
-        content_it: c.content_it,
-        content_es: c.content_es,
         content_ar: c.content_ar,
+        content_nl: c.content_nl,
+        content_fr: c.content_fr,
+        content_de: c.content_de,
+        content_es: c.content_es,
         content_type: c.content_type,
         media_url: c.media_url,
       }));
