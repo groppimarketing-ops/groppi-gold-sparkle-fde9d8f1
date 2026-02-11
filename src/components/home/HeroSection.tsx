@@ -157,9 +157,9 @@ const HeroSection = memo(() => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 py-16 md:py-20">
         <div className="max-w-3xl mx-auto text-center flex flex-col items-center">
-          {/* 3D Brand Video */}
+          {/* Brand Video - Full Width */}
           <div
-            className="mb-8 rounded-2xl border-2 border-primary/50 p-1.5 backdrop-blur-sm"
+            className="mb-8 w-full rounded-2xl border-2 border-primary/50 p-1.5 backdrop-blur-sm animate-border-pulse"
             style={{
               boxShadow: '0 0 40px hsl(43 76% 52% / 0.3), inset 0 0 20px hsl(43 76% 52% / 0.1)',
             }}
@@ -169,7 +169,7 @@ const HeroSection = memo(() => {
               muted
               loop
               playsInline
-              className="w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 object-contain rounded-xl"
+              className="w-full object-cover rounded-xl"
             >
               <source src="/videos/hero-logo.mp4" type="video/mp4" />
             </video>
