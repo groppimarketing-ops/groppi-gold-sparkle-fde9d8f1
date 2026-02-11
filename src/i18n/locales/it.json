@@ -138,6 +138,7 @@
     "required": "Obbligatorio",
     "optional": "Facoltativo",
     "brandName": "GROPPI",
+    "fullscreen": "Schermo intero",
     "search": "Cerca",
     "noResults": "Nessun risultato trovato"
   },
@@ -983,7 +984,8 @@
     "phoneLabel": "Telefono",
     "emailLabel": "Email",
     "landline": "Fisso",
-    "mobile": "Cellulare"
+    "mobile": "Cellulare",
+    "rateLimited": "Troppe richieste. Riprova più tardi."
   },
   "franchise": {
     "title": "Franchising",
@@ -1187,6 +1189,7 @@
     }
   },
   "servicePage": {
+    "defaultDescription": "{{service}} — Servizio professionale di GROPPI Marketing Bureau.",
     "cta": { "requestQuote": "Richiedi un preventivo", "whatsapp": "Chatta via WhatsApp", "planCall": "Prenota una chiamata" },
     "trustNote": "Prezzi trasparenti. Nessun costo nascosto.",
     "videoPlaceholder": "Video in arrivo",
@@ -1593,7 +1596,5 @@
     "accept": "Accetta",
     "reject": "Rifiuta"
   },
-  "servicePage": {
-    "defaultDescription": "{{service}} — Servizio professionale di GROPPI Marketing Bureau."
-  }
+  "_footer_merged": true
 }
