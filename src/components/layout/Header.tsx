@@ -144,15 +144,24 @@ const Header = () => {
   const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
   const location = useLocation();
   const currentLang = languages.find(l => l.code === i18n.language || i18n.language.startsWith(l.code)) || languages[0];
   const isRtl = currentLang.dir === 'rtl';
 
   useEffect(() => {
+    let lastScrollY = window.scrollY;
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      const currentScrollY = window.scrollY;
+      setIsScrolled(currentScrollY > 50);
+      if (currentScrollY > 100) {
+        setIsHidden(currentScrollY > lastScrollY);
+      } else {
+        setIsHidden(false);
+      }
+      lastScrollY = currentScrollY;
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -176,7 +185,8 @@ const Header = () => {
     <TooltipProvider delayDuration={300}>
       <motion.header 
         initial={{ y: -100 }}
-        animate={{ y: 0 }}
+        animate={{ y: isHidden ? -150 : 0 }}
+        transition={{ duration: 0.3, ease: 'easeInOut' }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled 
             ? 'glass-card !rounded-none border-x-0 border-t-0' 
