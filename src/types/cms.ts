@@ -11,12 +11,13 @@ export interface PageContent {
   id: string;
   section_id: string;
   content_key: string;
-  content_en: string | null;
-  content_ar: string | null;
   content_nl: string | null;
+  content_en: string | null;
   content_fr: string | null;
-  content_de: string | null;
+  content_tr: string | null;
+  content_it: string | null;
   content_es: string | null;
+  content_ar: string | null;
   content_type: string;
   media_url: string | null;
 }
