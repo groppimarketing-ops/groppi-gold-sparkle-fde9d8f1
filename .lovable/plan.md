@@ -1,90 +1,99 @@
 
-# Full i18n Parity Fix: Complete All 15 Locale Files
 
-## The Problem
+# Complete i18n Translations: Remaining 9 Languages
 
-Your `nl.json` base file has **2806 lines** of translations. Most other locale files are drastically incomplete:
+## Current Status
 
-| File | Lines | Coverage |
-|------|-------|----------|
-| nl.json | 2806 | 100% (base) |
-| en.json | ~2800 | ~100% |
-| fr.json | ~2800 | ~100% |
-| it.json | ~2800 | ~100% |
-| ar.json | 1990 | ~71% |
-| tr.json | 1062 | ~38% |
-| pl.json | 847 | ~30% |
-| es.json | 828 | ~30% |
-| de.json | ~800 | ~28% |
-| ru.json | ~850 | ~30% |
-| bn.json | ~850 | ~30% |
-| hi.json | ~850 | ~30% |
-| ur.json | ~850 | ~30% |
-| zh.json | ~850 | ~30% |
-| pt.json | ~850 | ~30% |
+| Language | File | Lines | Coverage | Missing |
+|----------|------|-------|----------|---------|
+| Spanish | es.json | 828 | ~30% | ~2000 lines |
+| German | de.json | 1025 | ~37% | ~1800 lines |
+| Polish | pl.json | 847 | ~30% | ~2000 lines |
+| Russian | ru.json | 680 | ~24% | ~2100 lines |
+| Bengali | bn.json | 594 | ~21% | ~2200 lines |
+| Hindi | hi.json | 593 | ~21% | ~2200 lines |
+| Urdu | ur.json | 677 | ~24% | ~2100 lines |
+| Chinese | zh.json | 676 | ~24% | ~2100 lines |
+| Portuguese | pt.json | 1164 | ~41% | ~1650 lines |
 
-## What's Missing
+**Already completed:** nl.json (100%), en.json (100%), fr.json (100%), it.json (100%), ar.json (100%), tr.json (100%)
 
-The incomplete files only have translations for `nav`, `careers`, `home` (recently added), and some `services` basics. They are completely missing:
+## What's Missing (Common Across All 9 Files)
 
-- **about** - Entire About Us page (hero, whoWeAre, approach, timeline, values, stats, CTA)
-- **services** (deep keys) - items, modal, videoModal, wizard, guidedEntry, microGuidance, ads (budget framework), process, CTA
-- **servicePage** - All 10+ service detail pages (socialMedia, adsManagement, contentProduction, SEO, businessWebsite, onePageWebsite, ecommerceWebsite, branding, mobileAppDevelopment, reputation, dataSync) with their benefits, deliverables, process steps, calculator, FAQ
-- **contact** - Full contact form labels, placeholders, success/error messages
-- **footer** - Description, links, newsletter section
-- **blog** - Article titles, excerpts, full content, meta descriptions
-- **gallery/portfolio** - Page-level keys, filters, modal labels
-- **portfolio.items** - All 20+ project case studies (challenge, approach, results for each)
-- **partner** - Full franchise/partner page (hero, clarity, forWho, value, howItWorks, FAQ, apply, booking)
-- **caseStudy** - Labels and 8 case study translations
-- **planBuilder** - Full social media plan builder (steps, channels, frequency, addons, summary, CTA, FAQ)
-- **calculator** - Payment types, steps, business types, goals, packages, addons, WhatsApp templates
-- **pricing** - From, VAT notes
-- **common** - Additional utility strings
-- **social** - WhatsApp, call, email, follow links
-- **stats** - Years, clients, projects, team values
-- **admin** - Dashboard, articles, media labels
-- **validation** - Form validation messages
-- **servicesHome** - Card labels, badges
+The service cards on /services and service detail pages are the most visible problem. Here are ALL missing sections:
 
-## The Plan
+### Service Page Keys (why cards don't translate)
+- `services.card.watchVideo`, `buildPlan`, `calculatorHint`
+- `services.badges.monthly`, `oneTime`, `custom`, `mostChosen`
+- `services.goalEntry.*` -- goal-based entry cards
+- `services.wizard.*` -- guided wizard steps
+- `services.simpleExplanation.*` -- one-line explanations per service
+- `services.guidedEntry.*` -- guided entry section
+- `services.microGuidance.*` -- micro guidance tooltips
+- `services.videoModal.*` -- video modal with bullets per service
+- `services.ads.*` -- full ads budget framework (goals, transparency, salesFlow, faq)
+- `services.items.onePage`, `mobileApp` and deep `packages` sub-keys
 
-Due to the massive scope (each incomplete file needs ~2000 lines of new translations), I will work through the files systematically in batches:
+### Service Detail Pages (11 full pages)
+- `servicePage.socialMedia.*`
+- `servicePage.adsManagement.*`
+- `servicePage.contentProduction.*`
+- `servicePage.seo.*`
+- `servicePage.businessWebsite.*`
+- `servicePage.onePageWebsite.*`
+- `servicePage.ecommerceWebsite.*`
+- `servicePage.branding.*`
+- `servicePage.mobileAppDevelopment.*`
+- `servicePage.reputation.*`
+- `servicePage.dataSync.*`
+- `servicePage.calculator.*` (businessTypes, goals, packages, addons, whatsappTemplate)
+- `servicePage.faq.*`, `servicePage.finalCTA.*`, `servicePage.pricingFAQ.*`, `servicePage.generalFAQ.*`, `servicePage.servicesFAQ.*`
 
-### Batch 1: Arabic (ar.json) - Complete remaining ~30%
-Arabic is already at 71% and is the RTL language, making it high priority. Missing sections: `servicePage.*` (all 10 service pages), `planBuilder.*`, `calculator.*` deep keys, some `portfolio.items.*` entries.
+### Other Major Sections
+- `home.serviceMap.*` -- 4-column service overview
+- `home.clientLogoMarquee.*` -- client logos + testimonials
+- `home.trustSectors.*` -- sector trust section with 10 sectors
+- `home.trustedBelgium.*` -- trusted Belgium section with countries
+- `planBuilder.*` -- full social media plan builder (channels, frequency, addons, summary, FAQ)
+- `partner.*` -- full partner/franchise page (hero, clarity, forWho, value, howItWorks, FAQ, apply, booking)
+- `caseStudy.*` -- labels + 8 case study translations
+- `social.*` -- WhatsApp, call, email, follow links
+- `about` deep keys -- hero, whoWeAre, approach, valuesSection, cta
+- `footer.planCall`, `footer.newsletter` expansion
+- `forms.*` -- form labels
+- `common` expansion (cancel, save, delete, etc.)
+- `validation.phone`, `validation.invalidUrl`
 
-### Batch 2: Turkish (tr.json) - Add ~62% missing content
-Missing almost all sections beyond nav, careers, and home. Will add: about, services (deep), servicePage (all), contact, footer, blog, gallery, portfolio.items, partner, caseStudy, planBuilder, calculator, pricing, common, social, stats, admin, validation.
+## Implementation Plan
 
-### Batch 3: Spanish (es.json) - Add ~70% missing content
-Same scope as Turkish.
+Due to the massive scope (~18,000 lines total), this will be done in batches of 1-2 languages per message:
 
-### Batch 4: German (de.json) - Add ~72% missing content
+### Batch 3: Spanish (es.json)
+Add all missing sections listed above. Spanish already has partial `about`, `services.items`, `blog`, `portfolio.items`, `contact`, `footer`, `calculator` -- needs all `servicePage.*`, `planBuilder`, `partner`, `caseStudy`, `social`, `home.serviceMap`, `home.trustSectors`, `home.trustedBelgium`, `home.clientLogoMarquee`, and deep `services` keys.
+
+### Batch 4: German (de.json)
+Same scope. German has partial coverage similar to Spanish.
+
+### Batch 5: Polish (pl.json)
 Same scope.
 
-### Batch 5: Polish (pl.json) - Add ~70% missing content
+### Batch 6: Russian (ru.json)
 Same scope.
 
-### Batch 6: Russian (ru.json) - Add ~70% missing content
-Same scope.
+### Batch 7: Bengali (bn.json) + Hindi (hi.json)
+These are the smallest files. Will need nearly all sections added.
 
-### Batch 7: Bengali (bn.json), Hindi (hi.json), Urdu (ur.json), Chinese (zh.json), Portuguese (pt.json)
-Same scope for remaining 5 files.
+### Batch 8: Urdu (ur.json) + Chinese (zh.json)
+Same scope. Urdu is RTL like Arabic.
 
-### Quality Checks
-- Every key in `nl.json` will have a corresponding key in all 14 other files
-- No hardcoded text will remain -- all components already use `t()` calls
-- RTL languages (ar, ur) will continue working with the existing RTL system
-- The fallback chain (current lang -> nl -> en) will catch any edge cases
+### Batch 9: Portuguese (pt.json)
+Portuguese is the most complete of the remaining files at 41%. Still needs servicePage, planBuilder, partner, caseStudy, home.serviceMap, home.trustSectors, etc.
 
 ## Technical Notes
 
-- The i18n config, language switcher, RTL handling, and `t()` usage in components are all already correct
-- The ONLY issue is missing keys in the locale JSON files
-- The `parseMissingKeyHandler` in `i18n/config.ts` falls back to English or Dutch, which is why you see Dutch text when switching languages -- the keys simply don't exist in those files
-- No code changes needed outside the locale files
+- No code changes needed -- all components already use `t()` correctly
+- The service cards use keys like `services.simpleExplanation.social_media`, `services.card.watchVideo`, `services.badges.monthly` -- these are missing in all 9 files
+- Service detail pages use `servicePage.socialMedia.title`, `servicePage.socialMedia.benefits.1`, etc. -- completely missing
+- The fallback to Dutch/English is why untranslated text appears
+- Each file will be rewritten with full parity to nl.json's 2806 lines
 
-## Important Note on Scope
-
-This is a very large task -- approximately **24,000+ lines of translations** need to be added across 12 files. I will need multiple messages to complete this. I recommend we proceed batch by batch, starting with the most important languages for your audience.
