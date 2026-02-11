@@ -9,7 +9,7 @@ import { Button } from '@/components/ui/button';
  * Google Drive file ID for the brand / intro video.
  * Language-independent — admin can swap the ID here.
  */
-const BRAND_VIDEO_DRIVE_ID = '11TCn7_cr1UDvJbkx2X56uWUAFI_jB_Wb';
+const BRAND_VIDEO_DRIVE_ID = '1PJtjbRL1bi1CSQJ7F1OqsxHn7d-1Na9m';
 
 function buildDrivePreview(id: string) {
   return `https://drive.google.com/file/d/${id}/preview`;
