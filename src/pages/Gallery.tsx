@@ -84,7 +84,7 @@ const SectorFilters = memo(({
                 : 'border-border/50 text-muted-foreground hover:border-primary/40 hover:text-primary/80'
             }`}
           >
-            {sectorLabels[sector][lang]}
+            {t(`portfolio.sectors.${sector}`, { defaultValue: sectorLabels[sector][lang] })}
             <span className="ml-1.5 text-xs opacity-60">({count})</span>
           </button>
         );
