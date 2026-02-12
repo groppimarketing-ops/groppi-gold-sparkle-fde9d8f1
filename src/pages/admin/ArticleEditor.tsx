@@ -71,6 +71,7 @@ const languages = [
   { code: 'ar', name: 'العربية', dir: 'rtl' },
   { code: 'nl', name: 'Nederlands', dir: 'ltr' },
   { code: 'fr', name: 'Français', dir: 'ltr' },
+  { code: 'de', name: 'Deutsch', dir: 'ltr' },
   { code: 'es', name: 'Español', dir: 'ltr' },
 ];
 

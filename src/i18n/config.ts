@@ -6,6 +6,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import ar from './locales/ar.json';
 import en from './locales/en.json';
 import fr from './locales/fr.json';
+import de from './locales/de.json';
 import es from './locales/es.json';
 import it from './locales/it.json';
 import pt from './locales/pt.json';
@@ -15,18 +16,20 @@ import ru from './locales/ru.json';
 import tr from './locales/tr.json';
 import bn from './locales/bn.json';
 import hi from './locales/hi.json';
+import ur from './locales/ur.json';
 import zh from './locales/zh.json';
 
 // Brand name constant - use this everywhere
 export const BRAND_NAME = 'GROPPI';
 
 // RTL languages
-export const RTL_LANGUAGES = ['ar'] as const;
+export const RTL_LANGUAGES = ['ar', 'ur'] as const;
 
 export const languages = [
   { code: 'nl', name: 'Nederlands (BE)', dir: 'ltr' as const, flag: '🇧🇪' },
   { code: 'en', name: 'English', dir: 'ltr' as const, flag: '🇬🇧' },
   { code: 'fr', name: 'Français', dir: 'ltr' as const, flag: '🇫🇷' },
+  { code: 'de', name: 'Deutsch', dir: 'ltr' as const, flag: '🇩🇪' },
   { code: 'ar', name: 'العربية', dir: 'rtl' as const, flag: '🇦🇪' },
   { code: 'es', name: 'Español', dir: 'ltr' as const, flag: '🇪🇸' },
   { code: 'it', name: 'Italiano', dir: 'ltr' as const, flag: '🇮🇹' },
@@ -36,6 +39,7 @@ export const languages = [
   { code: 'tr', name: 'Türkçe', dir: 'ltr' as const, flag: '🇹🇷' },
   { code: 'bn', name: 'বাংলা', dir: 'ltr' as const, flag: '🇧🇩' },
   { code: 'hi', name: 'हिन्दी', dir: 'ltr' as const, flag: '🇮🇳' },
+  { code: 'ur', name: 'اردو', dir: 'rtl' as const, flag: '🇵🇰' },
   { code: 'zh', name: '中文', dir: 'ltr' as const, flag: '🇨🇳' },
 ] as const;
 
@@ -45,6 +49,7 @@ const resources = {
   ar: { translation: ar },
   en: { translation: en },
   fr: { translation: fr },
+  de: { translation: de },
   es: { translation: es },
   it: { translation: it },
   pt: { translation: pt },
@@ -54,6 +59,7 @@ const resources = {
   tr: { translation: tr },
   bn: { translation: bn },
   hi: { translation: hi },
+  ur: { translation: ur },
   zh: { translation: zh },
 };
 
@@ -124,26 +130,27 @@ export function applyDocumentDirection(code: string): void {
   }
 }
 
-const SUPPORTED_LNGS = ['ar','bn','en','es','fr','hi','it','nl','pl','pt','ru','tr','zh'];
-
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: 'en',
-    supportedLngs: SUPPORTED_LNGS,
-    nonExplicitSupportedLngs: true,
+    fallbackLng: ['nl', 'en'],
     load: 'languageOnly',
-    cleanCode: true,
     interpolation: {
       escapeValue: false,
     },
     detection: {
-      order: ['querystring', 'localStorage', 'navigator'],
-      lookupQuerystring: 'lng',
+      order: ['localStorage', 'navigator', 'htmlTag'],
       caches: ['localStorage'],
       lookupLocalStorage: 'i18nextLng',
+      convertDetectedLanguage: (lng: string) => {
+        // Strip regional codes: en-US → en, nl-BE → nl
+        const base = lng.split('-')[0].toLowerCase();
+        // Check if the base code matches any supported language
+        const supported = ['ar','en','fr','de','es','it','pt','nl','pl','ru','tr','bn','hi','ur','zh'];
+        return supported.includes(base) ? base : 'nl';
+      },
     },
     returnEmptyString: false,
     returnNull: false,
