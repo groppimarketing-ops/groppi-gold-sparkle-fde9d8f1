@@ -1401,6 +1401,19 @@
     "nda": {
       "disclaimer": "Sommige projecten zijn beschermd door geheimhoudingsovereenkomsten (NDA) en kunnen niet openbaar worden getoond."
     },
+    "sectors": {
+      "restaurants-hotels": "Restaurant's & Hotel's",
+      "interior-architecture": "Interieur & Architectuur",
+      "retail-local-shops": "Retail & lokale winkels",
+      "ecommerce": "E-commerce",
+      "real-estate": "Vastgoed",
+      "beauty-care": "Beauty & Care",
+      "local-services": "Lokale diensten",
+      "smes-startups": "KMO's & startups",
+      "medical-clinics": "Medische klinieken",
+      "educational-academies": "Educatieve academies"
+    },
+    "loadMore": "Meer projecten laden",
     "viewCase": "Bekijk case",
     "filters": {
       "all": "Alle",

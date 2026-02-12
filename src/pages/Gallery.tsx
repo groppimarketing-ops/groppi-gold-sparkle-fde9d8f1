@@ -42,14 +42,13 @@ const SectorFilters = memo(({
   activeSector,
   onSectorChange,
   sectorCounts,
-  lang,
 }: {
   activeSector: Sector | null;
   onSectorChange: (sector: Sector | null) => void;
   sectorCounts: Record<Sector, number>;
-  lang: 'nl' | 'en';
 }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language.startsWith('nl') ? 'nl' : 'en';
 
   return (
     <motion.div
@@ -84,7 +83,7 @@ const SectorFilters = memo(({
                 : 'border-border/50 text-muted-foreground hover:border-primary/40 hover:text-primary/80'
             }`}
           >
-            {sectorLabels[sector][lang]}
+            {t(`portfolio.sectors.${sector}`, sectorLabels[sector][lang])}
             <span className="ml-1.5 text-xs opacity-60">({count})</span>
           </button>
         );
@@ -209,7 +208,6 @@ const Gallery = () => {
             activeSector={activeSector}
             onSectorChange={handleSectorChange}
             sectorCounts={sectorCounts}
-            lang={lang}
           />
 
           {/* Search */}
