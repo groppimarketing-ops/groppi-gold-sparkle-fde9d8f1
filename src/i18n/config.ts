@@ -8,14 +8,8 @@ import en from './locales/en.json';
 import fr from './locales/fr.json';
 import es from './locales/es.json';
 import it from './locales/it.json';
-import pt from './locales/pt.json';
 import nl from './locales/nl.json';
-import pl from './locales/pl.json';
-import ru from './locales/ru.json';
 import tr from './locales/tr.json';
-import bn from './locales/bn.json';
-import hi from './locales/hi.json';
-import zh from './locales/zh.json';
 
 // Brand name constant - use this everywhere
 export const BRAND_NAME = 'GROPPI';
@@ -30,13 +24,7 @@ export const languages = [
   { code: 'ar', name: 'العربية', dir: 'rtl' as const, flag: '🇦🇪' },
   { code: 'es', name: 'Español', dir: 'ltr' as const, flag: '🇪🇸' },
   { code: 'it', name: 'Italiano', dir: 'ltr' as const, flag: '🇮🇹' },
-  { code: 'pt', name: 'Português', dir: 'ltr' as const, flag: '🇵🇹' },
-  { code: 'pl', name: 'Polski', dir: 'ltr' as const, flag: '🇵🇱' },
-  { code: 'ru', name: 'Русский', dir: 'ltr' as const, flag: '🇷🇺' },
   { code: 'tr', name: 'Türkçe', dir: 'ltr' as const, flag: '🇹🇷' },
-  { code: 'bn', name: 'বাংলা', dir: 'ltr' as const, flag: '🇧🇩' },
-  { code: 'hi', name: 'हिन्दी', dir: 'ltr' as const, flag: '🇮🇳' },
-  { code: 'zh', name: '中文', dir: 'ltr' as const, flag: '🇨🇳' },
 ] as const;
 
 export type LanguageCode = typeof languages[number]['code'];
@@ -47,14 +35,8 @@ const resources = {
   fr: { translation: fr },
   es: { translation: es },
   it: { translation: it },
-  pt: { translation: pt },
   nl: { translation: nl },
-  pl: { translation: pl },
-  ru: { translation: ru },
   tr: { translation: tr },
-  bn: { translation: bn },
-  hi: { translation: hi },
-  zh: { translation: zh },
 };
 
 /**
@@ -142,7 +124,7 @@ i18n
         // Strip regional codes: en-US → en, nl-BE → nl
         const base = lng.split('-')[0].toLowerCase();
         // Check if the base code matches any supported language
-        const supported = ['ar','en','fr','es','it','pt','nl','pl','ru','tr','bn','hi','zh'];
+        const supported = ['ar','en','fr','es','it','nl','tr'];
         return supported.includes(base) ? base : 'nl';
       },
     },
