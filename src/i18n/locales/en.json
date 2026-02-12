@@ -1401,6 +1401,19 @@
     "nda": {
       "disclaimer": "Some projects are protected by non-disclosure agreements (NDA) and cannot be shown publicly."
     },
+    "sectors": {
+      "restaurants-hotels": "Restaurants & Hotels",
+      "interior-architecture": "Interior & Architecture",
+      "retail-local-shops": "Retail & local shops",
+      "ecommerce": "E-commerce",
+      "real-estate": "Real estate",
+      "beauty-care": "Beauty & Care",
+      "local-services": "Local services",
+      "smes-startups": "SMEs & startups",
+      "medical-clinics": "Medical clinics",
+      "educational-academies": "Educational academies"
+    },
+    "loadMore": "Load more projects",
     "viewCase": "View case",
     "filters": {
       "all": "All",

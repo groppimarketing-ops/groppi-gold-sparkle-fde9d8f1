@@ -535,8 +535,21 @@
   "portfolio": {
     "page": { "subtitle": "Наши работы", "title": "Портфолио", "description": "Откройте наши проекты и результаты, которых мы достигли для наших клиентов.", "resultSingle": "проект найден", "resultPlural": "проектов найдено", "noResults": "Проектов с такими фильтрами не найдено." },
     "nda": { "disclaimer": "Некоторые проекты защищены соглашениями о неразглашении (NDA) и не могут быть показаны публично." },
+    "sectors": {
+      "restaurants-hotels": "Рестораны и отели",
+      "interior-architecture": "Интерьер и архитектура",
+      "retail-local-shops": "Розница и локальные магазины",
+      "ecommerce": "E-commerce",
+      "real-estate": "Недвижимость",
+      "beauty-care": "Красота и уход",
+      "local-services": "Локальные услуги",
+      "smes-startups": "МСП и стартапы",
+      "medical-clinics": "Медицинские клиники",
+      "educational-academies": "Образовательные академии"
+    },
+    "loadMore": "Загрузить больше проектов",
     "viewCase": "Смотреть кейс",
-    "filters": { "all": "Все", "searchPlaceholder": "Поиск по имени клиента...", "industryLabel": "Фильтр по индустрии", "serviceLabel": "Фильтр по услуге", "clearAll": "Очистить все фильтры" },
+    "filters": { "all": "Все", "searchPlaceholder": "Поиск по имени клиента...", "industryLabel": "Фильтр по индустрии", "serviceLabel": "Фильтр по услуге", "clearAll": "Очистить все фильтры", "search": "Искать проекты..." },
     "modal": { "challenge": "Вызов", "approach": "Наш подход", "results": "Результат", "deliverables": "Что мы доставили", "ctaPrimary": "Запросить предложение", "ctaWhatsApp": "Чат через WhatsApp" }
   },
   "contact": {
