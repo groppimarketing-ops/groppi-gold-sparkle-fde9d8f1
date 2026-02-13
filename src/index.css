@@ -755,6 +755,40 @@
     .groppi-strip-track { animation: none; }
   }
 
+  /* === Depth Effect (9 cards) === */
+  .groppi-strip-track .groppi-card {
+    transition: transform 220ms ease, filter 220ms ease, opacity 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+  }
+
+  .groppi-strip-track .groppi-card:nth-child(5) {
+    transform: scale(1.03);
+    filter: none;
+    opacity: 1;
+  }
+
+  .groppi-strip-track .groppi-card:nth-child(4),
+  .groppi-strip-track .groppi-card:nth-child(6) {
+    transform: scale(1.01);
+    opacity: 0.95;
+    filter: saturate(0.95);
+  }
+
+  .groppi-strip-track .groppi-card:nth-child(3),
+  .groppi-strip-track .groppi-card:nth-child(7) {
+    transform: scale(0.98);
+    opacity: 0.88;
+    filter: blur(0.2px) saturate(0.92);
+  }
+
+  .groppi-strip-track .groppi-card:nth-child(1),
+  .groppi-strip-track .groppi-card:nth-child(2),
+  .groppi-strip-track .groppi-card:nth-child(8),
+  .groppi-strip-track .groppi-card:nth-child(9) {
+    transform: scale(0.95);
+    opacity: 0.80;
+    filter: blur(0.6px) saturate(0.90);
+  }
+
   /* =====================================================
      Header layout + Hero overlap fix
      Logo sizing is handled in components directly
