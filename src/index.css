@@ -637,11 +637,9 @@
   .groppi-hero-pro {
     position: relative;
     height: 80vh;
-    min-height: 520px;
-    background: hsl(var(--background));
-    display: flex;
-    align-items: center;
+    min-height: 560px;
     overflow: hidden;
+    background: hsl(var(--background));
   }
 
   .groppi-bg {
@@ -650,6 +648,8 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: brightness(0.55) contrast(1.15) saturate(0.9);
+    transform: scale(1.02);
     z-index: 0;
   }
 
@@ -657,53 +657,71 @@
     position: absolute;
     inset: 0;
     z-index: 1;
-    background: linear-gradient(
-      to bottom,
-      hsl(0 0% 0% / 0.5) 0%,
-      hsl(0 0% 0% / 0.65) 50%,
-      hsl(0 0% 0% / 0.85) 100%
-    );
+    pointer-events: none;
+    background:
+      radial-gradient(60% 60% at 50% 45%, hsl(0 0% 0% / 0.18), hsl(0 0% 0% / 0.88)),
+      linear-gradient(to bottom, hsl(0 0% 0% / 0.45), hsl(0 0% 0% / 0.70));
   }
 
   .groppi-strip-wrap {
-    position: relative;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 2;
-    width: 100%;
-    overflow: hidden;
-    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    padding: 0 4vw;
+    mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
   }
 
   .groppi-strip-track {
     display: flex;
-    gap: 24px;
+    gap: 22px;
     width: max-content;
-    padding: 0 24px;
+    animation: groppiDriftPro 70s linear infinite;
+    will-change: transform;
+  }
+
+  .groppi-strip-wrap:hover .groppi-strip-track {
+    animation-play-state: paused;
   }
 
   .groppi-card {
-    width: 360px;
+    width: clamp(260px, 22vw, 420px);
     flex-shrink: 0;
     aspect-ratio: 16/9;
     border-radius: 18px;
     overflow: hidden;
     background: hsl(0 0% 2%);
-    border: 1px solid hsl(var(--gold) / 0.4);
-    box-shadow: 0 20px 60px hsl(0 0% 0% / 0.8);
+    border: 1px solid hsl(var(--gold) / 0.38);
+    box-shadow: 0 18px 60px hsl(0 0% 0% / 0.75);
     transform: translateZ(0);
-    transition: transform 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
   }
 
   .groppi-card:hover {
-    transform: scale(1.05);
-    border-color: hsl(var(--gold));
-    box-shadow: 0 0 40px hsl(var(--gold) / 0.35);
+    border-color: hsl(var(--gold) / 0.95);
+    box-shadow:
+      0 24px 90px hsl(0 0% 0% / 0.88),
+      0 0 0 1px hsl(var(--gold) / 0.55),
+      0 0 44px hsl(var(--gold) / 0.18);
+    transform: scale(1.04);
+    transition: 220ms ease;
+  }
+
+  @keyframes groppiDriftPro {
+    from { transform: translateX(0); }
+    to { transform: translateX(-28%); }
   }
 
   @media (max-width: 768px) {
-    .groppi-card {
-      width: clamp(220px, 70vw, 340px);
-    }
+    .groppi-hero-pro { min-height: 520px; }
+    .groppi-strip-track { gap: 14px; animation-duration: 85s; }
+    .groppi-card { width: clamp(220px, 78vw, 360px); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .groppi-strip-track { animation: none; }
   }
 
   /* =====================================================
