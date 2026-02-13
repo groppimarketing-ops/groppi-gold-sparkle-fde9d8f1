@@ -714,6 +714,37 @@
     to { transform: translateX(-28%); }
   }
 
+  /* Gold Shimmer Layer */
+  .groppi-strip-wrap::after {
+    content: "";
+    position: absolute;
+    top: -40%;
+    left: -60%;
+    width: 50%;
+    height: 180%;
+    pointer-events: none;
+    z-index: 3;
+    background: linear-gradient(
+      110deg,
+      hsl(var(--gold) / 0) 0%,
+      hsl(var(--gold) / 0.10) 35%,
+      hsl(0 0% 100% / 0.14) 50%,
+      hsl(var(--gold) / 0.10) 65%,
+      hsl(var(--gold) / 0) 100%
+    );
+    filter: blur(2px);
+    opacity: 0;
+    transform: translateX(0) rotate(8deg);
+    animation: groppiShimmer 12s linear infinite;
+  }
+
+  @keyframes groppiShimmer {
+    0%   { opacity: 0; transform: translateX(0) rotate(8deg); }
+    8%   { opacity: 1; }
+    20%  { opacity: 0; transform: translateX(360%) rotate(8deg); }
+    100% { opacity: 0; transform: translateX(360%) rotate(8deg); }
+  }
+
   @media (max-width: 768px) {
     .groppi-hero-pro { min-height: 520px; }
     .groppi-strip-track { gap: 14px; animation-duration: 85s; }
