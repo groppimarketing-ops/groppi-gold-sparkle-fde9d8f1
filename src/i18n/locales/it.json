@@ -106,6 +106,13 @@
     },
     "step1": "Scegli il tipo di pagamento",
     "step2": "Seleziona i tuoi contenuti",
+    "addonItems": {
+      "extraPages": "Pagina extra",
+      "seoSetup": "Configurazione SEO base",
+      "contentWriting": "Scrittura contenuti",
+      "socialIntegration": "Integrazione social media",
+      "analyticsSetup": "Dashboard analytics"
+    },
     "noDiscountMonthly": "Lo sconto lancio del 20% non si applica agli abbonamenti mensili.",
     "noDiscountMonthlyTitle": "Nessuno sconto disponibile",
     "referenceCode": "Codice di riferimento",

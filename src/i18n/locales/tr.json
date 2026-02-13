@@ -1028,6 +1028,13 @@
     },
     "step1": "Ödeme türünü seçin",
     "step2": "İçeriğinizi seçin",
+    "addonItems": {
+      "extraPages": "Ekstra sayfa",
+      "seoSetup": "Temel SEO kurulumu",
+      "contentWriting": "İçerik yazımı",
+      "socialIntegration": "Sosyal medya entegrasyonu",
+      "analyticsSetup": "Analytics paneli"
+    },
     "noDiscountMonthly": "%20 lansman indirimi aylık aboneliklere uygulanmaz.",
     "noDiscountMonthlyTitle": "İndirim mevcut değil",
     "referenceCode": "Referans kodu",
