@@ -1,129 +1,84 @@
 
+# Website Launch Readiness Review - GROPPI.be
 
-# Redesign Hero Section -- "Gold Standard" Spectacle
+## What's Already Working Well
 
-## Overview
-
-Replace the current `HeroSection` component with a visually stunning "Gold Standard" hero inspired by the provided HTML mockup. The new hero keeps the existing video background but adds floating gold icons, rising gold particles, animated gold chart bars (LEADS / SALES / ROI), and a refined content hierarchy -- all fully integrated with i18n, RTL, reduced motion, and the existing design system.
-
----
-
-## What Changes
-
-### 1. Update `HeroSection.tsx` (full rewrite)
-
-The new component preserves all existing functionality (video background, poster fallback, i18n, RTL, reduced motion, scroll indicator) and adds:
-
-- **Floating Gold Icons** -- 15 absolutely positioned Lucide icons (TrendingUp, BarChart3, Rocket, Crown, Gem, Target, Star, Zap, Award, Globe, Sparkles, ChartLine, DollarSign, Users, Eye) with a slow `floatGold` keyframe animation. Each icon is gold-colored with drop-shadow glow, pointer-events none.
-
-- **Rising Gold Particles** -- 10 small gold circles that rise from the bottom with fade-out, using a CSS `riseGold` keyframe. Replaces the current Framer Motion particle dots.
-
-- **Content hierarchy** (centered):
-  1. Gold logo icon (Crown with shimmer animation)
-  2. "GOLD STANDARD" headline (existing `gold-gradient-text`)
-  3. "GROWTH . CONTENT . ROI" subtitle in a bordered pill
-  4. Animated gold chart bars (3 bars: LEADS, SALES, ROI) with breathing glow
-  5. Primary CTA button ("ENTER" / i18n `ctaPrimary`) -- gold pill style
-  6. Footer micro-text ("BEYOND STANDARD")
-
-- **Scroll indicator** stays as-is (ChevronDown at bottom).
-
-### 2. Add CSS keyframes to `index.css`
-
-Add three new keyframes under the existing `@layer utilities` block:
-
-```css
-@keyframes floatGold {
-  0%   { transform: translate(0,0) rotate(0deg) scale(1); opacity:0.4; }
-  25%  { transform: translate(30px,-40px) rotate(15deg) scale(1.2); opacity:0.8; }
-  50%  { transform: translate(-25px,20px) rotate(-10deg) scale(0.9); opacity:0.6; }
-  75%  { transform: translate(20px,30px) rotate(20deg) scale(1.1); opacity:0.7; }
-  100% { transform: translate(0,0) rotate(0deg) scale(1); opacity:0.4; }
-}
-
-@keyframes riseGold {
-  0%   { transform: translateY(0) scale(1); opacity:0.8; }
-  100% { transform: translateY(-700px) scale(1.8); opacity:0; }
-}
-
-@keyframes barBreath {
-  0%   { box-shadow: 0 0 15px #D4AF37; opacity:0.8; }
-  100% { box-shadow: 0 0 45px #FFD700; opacity:1; }
-}
-```
-
-Plus utility classes:
-
-```css
-.animate-float-gold { animation: floatGold 20s infinite ease-in-out; }
-.animate-rise-gold  { animation: riseGold 8s infinite ease-out; }
-.animate-bar-breath { animation: barBreath 2.5s infinite alternate; }
-```
-
-### 3. Add i18n keys (all locale files)
-
-Add the following keys under `home.heroNew` in every locale file. The content uses existing keys where possible:
-
-```json
-"heroNew": {
-  ...existing keys stay...
-  "logoAlt": "GROPPI Gold Standard",
-  "chartLeads": "LEADS",
-  "chartSales": "SALES",
-  "chartRoi": "ROI",
-  "tagline": "GROWTH · CONTENT · ROI",
-  "beyondStandard": "✦ BEYOND STANDARD ✦"
-}
-```
-
-These 5 new keys will be added to all 15 locale files (nl, en, fr, de, es, it, pt, pl, tr, ru, zh, ar, ur, bn, hi).
+- **17 routes** all properly configured with lazy loading
+- **SEO setup** complete: sitemap.xml, robots.txt, PageSEO component, JSON-LD structured data
+- **Cookie consent** banner (EU compliant)
+- **Contact form** with server-side validation, rate limiting, and spam detection
+- **Newsletter** subscription via edge function
+- **i18n** across 15 languages
+- **Tracking** ready for GA4, GTM, TikTok Pixel, Meta Pixel
+- **Privacy** and **Terms** pages in place
+- **404 page** with SEO noindex
+- **WhatsApp floating button** active
+- **Admin panel** with protected routes
 
 ---
 
-## What Stays the Same
+## Items to Address Before Going Live
 
-- Video background + poster fallback
-- Dark multi-stop overlay for text readability
-- RTL support (dir attribute, icon mirroring)
-- Reduced motion respect (skip animations)
-- Scroll-to-services indicator
-- Header/Footer remain untouched (social icons + language switcher live in Header, not Hero)
+### 1. Connect Your Custom Domain (groppi.be)
+The site is not yet published. You need to:
+- Click "Publish" in Lovable
+- Go to Project Settings > Domains
+- Connect `groppi.be` and `www.groppi.be`
+- Add DNS records (A record pointing to `185.158.133.1` + TXT verification record) at your domain registrar
+- Wait for SSL provisioning
+
+### 2. Add Google Analytics / GTM Tracking Scripts
+The tracking utility (`tracking.ts`) is ready and pushes events to `dataLayer`, `gtag`, `fbq`, and `ttq` -- but **no actual tracking scripts** (GTM snippet, GA4, etc.) are loaded in `index.html`. Without these, no data is collected.
+
+**Action**: Add your GTM container snippet to `index.html` (respecting cookie consent -- only fire after `cookie_consent_accepted`).
+
+### 3. Database Security (2 RLS Warnings)
+The database linter found 2 tables with overly permissive RLS policies (`USING (true)` or `WITH CHECK (true)` on write operations). These should be tightened to restrict inserts/updates to authorized users only (e.g., admin roles for `contact_messages`, `newsletter_subscribers`).
+
+### 4. Hero Section -- Video Cards Not Loading on Mobile
+The mobile screenshot shows empty/blank video cards. The 9 Vimeo iframes all load simultaneously which is heavy on mobile. Consider:
+- Reducing the number of iframes on mobile
+- Or replacing them with static poster images on smaller screens
+
+### 5. Hero Social Icons Bar -- Missing on Mobile
+The large social icons pill at the bottom of the hero (`HeroSocialIcons`) is designed for desktop (wide `gap-16 px-16`) and likely overflows or is not visible on mobile. It needs responsive sizing.
+
+### 6. No Google Search Console Verification
+Add a Google Search Console verification meta tag to `index.html` so you can submit your sitemap and monitor indexing.
+
+### 7. Missing `<lastmod>` in Sitemap
+The sitemap.xml has `<changefreq>` and `<priority>` but no `<lastmod>` dates. Google prefers `<lastmod>` for crawl scheduling.
+
+### 8. No Favicon Variants
+Only `favicon.ico` exists. For modern browsers and mobile "Add to Home Screen", consider adding:
+- `apple-touch-icon.png` (180x180)
+- `favicon-32x32.png` and `favicon-16x16.png`
+- A `site.webmanifest` file
+
+### 9. Missing `lang` Attribute Synchronization
+`index.html` has `lang="nl"` hardcoded but the site supports 15 languages. The `RTLHandler` updates `dir` but should also update `document.documentElement.lang` to match the active language for SEO and accessibility.
 
 ---
 
-## Technical Details
+## Summary Priority Table
 
-### Component structure (pseudo-JSX)
+| # | Item | Priority | Effort |
+|---|------|----------|--------|
+| 1 | Publish + connect domain | Critical | Low |
+| 2 | Add GTM/GA4 scripts | Critical | Low |
+| 3 | Fix RLS policies | High | Low |
+| 4 | Hero video performance on mobile | High | Medium |
+| 5 | Hero social icons responsiveness | Medium | Low |
+| 6 | Google Search Console verification | Medium | Low |
+| 7 | Add lastmod to sitemap | Low | Low |
+| 8 | Favicon variants + webmanifest | Low | Low |
+| 9 | Sync `lang` attribute with i18n | Low | Low |
 
-```text
-section (relative, min-height 80vh)
-  |-- Video BG layer (z-0)         [existing]
-  |-- Dark overlay (z-1)           [existing]
-  |-- Floating gold icons (z-2)    [NEW - 15 Lucide icons, absolute, pointer-events-none]
-  |-- Rising gold particles (z-3)  [NEW - 10 divs, bottom-up animation]
-  |-- Content (z-10)               [UPDATED layout]
-  |   |-- Crown icon (shimmer)
-  |   |-- H1 "GOLD STANDARD"
-  |   |-- Subtitle pill "GROWTH . CONTENT . ROI"
-  |   |-- Chart bars (3 animated bars)
-  |   |-- CTA button (gold pill)
-  |   |-- Micro footer text
-  |-- Scroll indicator (z-10)      [existing]
-```
+---
 
-### Reduced motion handling
+## Technical Implementation Notes
 
-When `prefers-reduced-motion` is active:
-- Floating icons render statically (no animation)
-- Particles hidden entirely
-- Chart bars show without breathing animation
-- Crown icon without shimmer
-
-### Files modified
-
-| File | Change |
-|------|--------|
-| `src/components/home/HeroSection.tsx` | Full rewrite with new visual layout |
-| `src/index.css` | Add 3 keyframes + 3 utility classes |
-| `src/i18n/locales/*.json` (x15) | Add 5 new `home.heroNew.*` keys each |
-
+- **GTM integration**: Add the GTM snippet to `index.html` inside `<head>`, wrapped to fire only after cookie consent. The `CookieConsent` component already pushes `cookie_consent_accepted` to `dataLayer`.
+- **RLS fix**: Update the permissive policies on `contact_messages` and `newsletter_subscribers` to allow anonymous INSERT (via edge functions using service role key -- which is already the case) but restrict direct client-side writes.
+- **lang sync**: In `applyDocumentDirection()`, add `document.documentElement.lang = language` alongside the existing `dir` update.
+- **Hero mobile**: Use a CSS media query to hide iframes and show poster images below `768px`, or reduce the video count to 3-4 on mobile.
