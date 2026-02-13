@@ -272,8 +272,8 @@
           "title": "Zet je zaak online",
           "services": {
             "businessWebsite": "Bedrijfswebsite",
-            "onePage": "One-page website",
-            "webshop": "Webshop",
+            "onePage": "One-pager",
+            "webshop": "Webwinkel",
             "visualContent": "Visuele content & video"
           }
         },
@@ -1193,7 +1193,7 @@
         }
       },
       "onePage": {
-        "title": "One-page website",
+        "title": "One-pager",
         "description": "Een stijlvolle, snelle landingspagina perfect voor freelancers, startups of specifieke campagnes.",
         "features": {
           "0": "1 lange scrollpagina met secties",
@@ -1214,7 +1214,7 @@
         }
       },
       "ecommerce": {
-        "title": "E-commerce webshop",
+        "title": "E-commerce webwinkel",
         "description": "Volledige webshop met productbeheer, betalingen en voorraadbeheer. Klaar om te verkopen.",
         "features": {
           "0": "Onbeperkt producten toevoegen",
@@ -1392,7 +1392,7 @@
       "all": "Alles",
       "web": "Websites",
       "branding": "Branding",
-      "social": "Social Media",
+      "social": "Sociale media",
       "ecommerce": "E-commerce"
     }
   },
@@ -1516,7 +1516,7 @@
       "b2b-platform": {
         "shortResult": "+320% leads",
         "challenge": "Complex B2B SaaS met lange salesfunnel. Te weinig gekwalificeerde leads en de website converteerde slecht. Concurrentiepositionering was sterker.",
-        "approach": { "0": "Geoptimaliseerde landingspagina's per persona", "1": "Lead magnets (whitepapers, case studies)", "2": "SEO-strategie voor long-tail zoekwoorden", "3": "A/B-testen van formulieren en CTA's" },
+        "approach": { "0": "Geoptimaliseerde landingspagina's per persona", "1": "Leadmagneten (whitepapers, case studies)", "2": "SEO-strategie voor long-tail zoekwoorden", "3": "A/B-testen van formulieren en CTA's" },
         "results": { "0": "+320% gekwalificeerde leads binnen 4 maanden", "1": "Lagere kosten per lead", "2": "Kortere salesfunnel doorlooptijd", "3": "Betere leadkwaliteit (SQL-ratio)" }
       },
       "bouwbedrijf-website": {
@@ -1546,7 +1546,7 @@
       "content-strategie": {
         "shortResult": "50+ video's/maand",
         "challenge": "Fitnessketen wilde consistent content produceren maar had intern geen tijd of expertise. Social media werd verwaarloosd.",
-        "approach": { "0": "Full-service content retainer opgezet", "1": "Planning, productie en publicatie", "2": "Video- en fotocontent voor alle locaties", "3": "Consistente poststrategie" },
+        "approach": { "0": "Volledig contentpakket op abonnement", "1": "Planning, productie en publicatie", "2": "Video- en fotocontent voor alle locaties", "3": "Consistente poststrategie" },
         "results": { "0": "50+ kwalitatieve video's per maand", "1": "Consistente merkbeleving over alle kanalen", "2": "Hogere ledenbetrokkenheid", "3": "Meer inschrijvingen via social media" }
       },
       "ai-learn-academy": {
@@ -1720,7 +1720,7 @@
       "nda-project-017": {
         "shortResult": "40+ video's/maand",
         "challenge": "Fitnessstudio wilde consistent content maar had geen interne capaciteit.",
-        "approach": { "0": "Full-service content retainer", "1": "Video productie op locatie", "2": "Social media-planning" },
+        "approach": { "0": "Volledig contentpakket op abonnement", "1": "Video productie op locatie", "2": "Social media-planning" },
         "results": { "0": "40+ kwalitatieve video's per maand", "1": "Hogere ledenbetrokkenheid" },
         "disclaimer": "Indicatief resultaat, afhankelijk van periode & budget."
       },
@@ -1774,7 +1774,7 @@
     "rateLimited": "Te veel aanvragen. Probeer het later opnieuw."
   },
   "franchise": {
-    "title": "Franchise",
+    "title": "Partnernetwerk",
     "subtitle": "Word franchisenemer",
     "description": "Ben je geïnteresseerd in een samenwerking met GROPPI? Ontdek de mogelijkheden om samen te groeien.",
     "benefits": {
@@ -2391,7 +2391,7 @@
       }
     },
     "onePageWebsite": {
-      "title": "One-page website",
+      "title": "One-pager",
       "subtitle": "Een krachtige landingspagina voor snelle impact.",
       "benefits": {
         "1": "Snel online met je boodschap",
@@ -2413,7 +2413,7 @@
       }
     },
     "ecommerceWebsite": {
-      "title": "E-commerce webshop",
+      "title": "E-commerce webwinkel",
       "subtitle": "Een webshop die verkoopt terwijl je slaapt.",
       "benefits": {
         "1": "Gebruiksvriendelijke winkelervaring",
