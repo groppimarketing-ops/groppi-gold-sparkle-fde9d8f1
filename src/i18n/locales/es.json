@@ -167,7 +167,14 @@
       "planCallHelper": "Elige un horario que funcione. Consulta gratuita (30 min)."
     },
     "step1": "Elige tu tipo de pago",
-    "step2": "Elige tus deliverables"
+    "step2": "Elige tus deliverables",
+    "addonItems": {
+      "extraPages": "Página extra",
+      "seoSetup": "Configuración SEO básica",
+      "contentWriting": "Redacción de contenido",
+      "socialIntegration": "Integración de redes sociales",
+      "analyticsSetup": "Panel de analytics"
+    }
   },
   "common": {
     "loading": "Cargando...",

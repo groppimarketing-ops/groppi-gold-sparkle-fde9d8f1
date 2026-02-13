@@ -1984,6 +1984,13 @@
     "extraOptions": "خيارات إضافية",
     "step1": "اختر نوع الدفع",
     "step2": "اختر محتواك",
+    "addonItems": {
+      "extraPages": "صفحة إضافية",
+      "seoSetup": "إعداد SEO أساسي",
+      "contentWriting": "كتابة المحتوى",
+      "socialIntegration": "تكامل وسائل التواصل الاجتماعي",
+      "analyticsSetup": "لوحة التحليلات"
+    },
     "noDiscountMonthly": "خصم الإطلاق 20% لا ينطبق على الاشتراكات الشهرية.",
     "cta": {
       "whatsapp": "احصل على الكود عبر واتساب",

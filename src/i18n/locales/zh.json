@@ -83,7 +83,14 @@
     "extraOptions": "额外选项",
     "cta": { "whatsapp": "通过WhatsApp聊天", "requestQuote": "请求报价", "planCall": "预约通话", "planCallHelper": "选择合适的时段。免费咨询（30分钟）。" },
     "step1": "选择付款方式",
-    "step2": "选择交付内容"
+    "step2": "选择交付内容",
+    "addonItems": {
+      "extraPages": "额外页面",
+      "seoSetup": "SEO基础设置",
+      "contentWriting": "内容撰写",
+      "socialIntegration": "社交媒体集成",
+      "analyticsSetup": "数据分析面板"
+    }
   },
   "common": {
     "loading": "加载中...",

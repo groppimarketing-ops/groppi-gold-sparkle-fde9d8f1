@@ -86,7 +86,14 @@
     "extraOptions": "اضافی آپشنز",
     "cta": { "whatsapp": "WhatsApp پر چیٹ کریں", "requestQuote": "کوٹیشن کی درخواست کریں", "planCall": "کال شیڈول کریں", "planCallHelper": "آپ کے لیے موزوں وقت چنیں۔ مفت تعارف (30 منٹ)۔" },
     "step1": "ادائیگی کا طریقہ منتخب کریں",
-    "step2": "اپنے ڈیلیوریبلز منتخب کریں"
+    "step2": "اپنے ڈیلیوریبلز منتخب کریں",
+    "addonItems": {
+      "extraPages": "اضافی صفحہ",
+      "seoSetup": "بنیادی SEO سیٹ اپ",
+      "contentWriting": "مواد لکھنا",
+      "socialIntegration": "سوشل میڈیا انضمام",
+      "analyticsSetup": "تجزیاتی ڈیش بورڈ"
+    }
   },
   "common": {
     "loading": "لوڈ ہو رہا ہے...",

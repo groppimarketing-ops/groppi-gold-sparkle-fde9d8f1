@@ -167,7 +167,14 @@
       "planCallHelper": "Wybierz slot, który pasuje. Bezpłatna konsultacja (30 min)."
     },
     "step1": "Wybierz typ płatności",
-    "step2": "Wybierz swoje deliverables"
+    "step2": "Wybierz swoje deliverables",
+    "addonItems": {
+      "extraPages": "Dodatkowa strona",
+      "seoSetup": "Podstawowa konfiguracja SEO",
+      "contentWriting": "Pisanie treści",
+      "socialIntegration": "Integracja z mediami społecznościowymi",
+      "analyticsSetup": "Panel analityczny"
+    }
   },
   "common": {
     "loading": "Ładowanie...",

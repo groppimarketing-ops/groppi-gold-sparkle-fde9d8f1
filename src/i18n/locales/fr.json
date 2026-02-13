@@ -101,7 +101,14 @@
       "planCallHelper": "Choisissez un créneau qui vous convient. Appel découverte gratuit (30 min)."
     },
     "step1": "Choisissez le type de paiement",
-    "step2": "Sélectionnez vos livrables"
+    "step2": "Sélectionnez vos livrables",
+    "addonItems": {
+      "extraPages": "Page supplémentaire",
+      "seoSetup": "Configuration SEO de base",
+      "contentWriting": "Rédaction de contenu",
+      "socialIntegration": "Intégration réseaux sociaux",
+      "analyticsSetup": "Tableau de bord analytics"
+    }
   },
   "common": {
      "loading": "Chargement...",
