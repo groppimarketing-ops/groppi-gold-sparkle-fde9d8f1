@@ -24,6 +24,7 @@ import SectionHeader from '@/components/ui/SectionHeader';
 import GlassCard from '@/components/ui/GlassCard';
 import { Button } from '@/components/ui/button';
 import LangLink from '@/components/LangLink';
+import TeamSection from '@/components/about/TeamSection';
 
 const About = () => {
   const { t, i18n } = useTranslation();
@@ -415,6 +416,9 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* Meet the Team */}
+      <TeamSection />
 
       {/* Closing CTA */}
       <section className="py-20 relative overflow-hidden">
