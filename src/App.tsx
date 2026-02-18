@@ -70,7 +70,7 @@ const RTLHandler = ({ children }: { children: React.ReactNode }) => {
 // Floating WhatsApp visibility handler - hide on admin routes
 const FloatingWhatsAppHandler = () => {
   const location = useLocation();
-  const isAdminRoute = location.pathname.startsWith('/admin');
+  const isAdminRoute = location.pathname.startsWith("/admin");
   if (isAdminRoute) return null;
   return <FloatingWhatsApp />;
 };
@@ -95,61 +95,124 @@ const publicRoutes = () => [
 ];
 
 /** Non-nl language codes that need explicit route prefixes */
-const LANG_PREFIXES = SUPPORTED_LANGS.filter(l => l !== 'nl');
-  const App = () => {
-
+const LANG_PREFIXES = SUPPORTED_LANGS.filter((l) => l !== "nl");
+const App = () => {
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://www.googletagmanager.com/gtm.js?id=GTM-MJ8KSVHF";
     script.async = true;
     document.head.appendChild(script);
   }, []);
-return (
-  <HelmetProvider>
-    <QueryClientProvider client={queryClient}>
-      <AuthProvider>
-        <TooltipProvider>
-          <Toaster />
-          <Sonner />
-          <BrowserRouter>
-            <RTLHandler>
-              <Suspense fallback={<PageLoader />}>
-                <Routes>
-                  {/* Default (nl) routes — unprefixed */}
-                  <Route path="/" element={<LanguageLayout />}>
-                    {publicRoutes()}
-                  </Route>
-
-                  {/* Language-prefixed routes (/en, /fr, /de, …) */}
-                  {LANG_PREFIXES.map(lang => (
-                    <Route key={lang} path={`/${lang}`} element={<LanguageLayout />}>
+  return (
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <AuthProvider>
+          <TooltipProvider>
+            <Toaster />
+            <Sonner />
+            <BrowserRouter>
+              <RTLHandler>
+                <Suspense fallback={<PageLoader />}>
+                  <Routes>
+                    {/* Default (nl) routes — unprefixed */}
+                    <Route path="/" element={<LanguageLayout />}>
                       {publicRoutes()}
                     </Route>
-                  ))}
 
-                  {/* Admin Routes */}
-                  <Route path="/admin/login" element={<AdminLogin />} />
-                  <Route path="/admin" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
-                  <Route path="/admin/pages" element={<ProtectedRoute><AdminPages /></ProtectedRoute>} />
-                  <Route path="/admin/articles" element={<ProtectedRoute><AdminArticles /></ProtectedRoute>} />
-                  <Route path="/admin/articles/new" element={<ProtectedRoute><AdminArticleEditor /></ProtectedRoute>} />
-                  <Route path="/admin/articles/:id" element={<ProtectedRoute><AdminArticleEditor /></ProtectedRoute>} />
-                  <Route path="/admin/services" element={<ProtectedRoute><AdminServices /></ProtectedRoute>} />
-                  <Route path="/admin/media" element={<ProtectedRoute><AdminMedia /></ProtectedRoute>} />
-                  <Route path="/admin/messages" element={<ProtectedRoute><AdminMessages /></ProtectedRoute>} />
-                  <Route path="/admin/settings" element={<ProtectedRoute><AdminSettings /></ProtectedRoute>} />
-                  
-                  <Route path="*" element={<NotFound />} />
-                </Routes>
-              </Suspense>
-              <FloatingWhatsAppHandler />
-              <CookieConsent />
-            </RTLHandler>
-          </BrowserRouter>
-        </TooltipProvider>
-      </AuthProvider>
-    </QueryClientProvider>
-  </HelmetProvider>
-);
+                    {/* Language-prefixed routes (/en, /fr, /de, …) */}
+                    {LANG_PREFIXES.map((lang) => (
+                      <Route key={lang} path={`/${lang}`} element={<LanguageLayout />}>
+                        {publicRoutes()}
+                      </Route>
+                    ))}
+
+                    {/* Admin Routes */}
+                    <Route path="/admin/login" element={<AdminLogin />} />
+                    <Route
+                      path="/admin"
+                      element={
+                        <ProtectedRoute>
+                          <AdminDashboard />
+                        </ProtectedRoute>
+                      }
+                    />
+                    <Route
+                      path="/admin/pages"
+                      element={
+                        <ProtectedRoute>
+                          <AdminPages />
+                        </ProtectedRoute>
+                      }
+                    />
+                    <Route
+                      path="/admin/articles"
+                      element={
+                        <ProtectedRoute>
+                          <AdminArticles />
+                        </ProtectedRoute>
+                      }
+                    />
+                    <Route
+                      path="/admin/articles/new"
+                      element={
+                        <ProtectedRoute>
+                          <AdminArticleEditor />
+                        </ProtectedRoute>
+                      }
+                    />
+                    <Route
+                      path="/admin/articles/:id"
+                      element={
+                        <ProtectedRoute>
+                          <AdminArticleEditor />
+                        </ProtectedRoute>
+                      }
+                    />
+                    <Route
+                      path="/admin/services"
+                      element={
+                        <ProtectedRoute>
+                          <AdminServices />
+                        </ProtectedRoute>
+                      }
+                    />
+                    <Route
+                      path="/admin/media"
+                      element={
+                        <ProtectedRoute>
+                          <AdminMedia />
+                        </ProtectedRoute>
+                      }
+                    />
+                    <Route
+                      path="/admin/messages"
+                      element={
+                        <ProtectedRoute>
+                          <AdminMessages />
+                        </ProtectedRoute>
+                      }
+                    />
+                    <Route
+                      path="/admin/settings"
+                      element={
+                        <ProtectedRoute>
+                          <AdminSettings />
+                        </ProtectedRoute>
+                      }
+                    />
+
+                    <Route path="*" element={<NotFound />} />
+                  </Routes>
+                </Suspense>
+                <FloatingWhatsAppHandler />
+                <CookieConsent />
+              </RTLHandler>
+            </BrowserRouter>
+          </TooltipProvider>
+        </AuthProvider>
+      </QueryClientProvider>
+    </HelmetProvider>
+  );
+};
 
 export default App;
