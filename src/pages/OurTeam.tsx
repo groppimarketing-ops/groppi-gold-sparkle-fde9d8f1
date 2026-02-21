@@ -254,12 +254,34 @@ const OurTeam = () => (
       </div>
     </section>
 
-    {/* ─ SECTION 4: Our Team Grid ─ */}
+    {/* ─ SECTION 5: Senior Manager ─ */}
     <section className="py-20">
       <div className="container mx-auto px-4">
         <SectionHeader subtitle="Who We Are" title="Our Team" showSparkle />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
-          {teamMembers.map((m, i) => <TeamCard key={m.name} person={m} index={i} />)}
+
+        {/* Row 5 – Senior Manager (1 centered) */}
+        <div className="max-w-sm mx-auto mb-12">
+          <TeamCard person={teamMembers[0]} index={0} />
+        </div>
+
+        {/* Row 6 – Team Leads (2 side by side) */}
+        <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-12">
+          {teamMembers.slice(1, 3).map((m, i) => <TeamCard key={m.name} person={m} index={i} />)}
+        </div>
+
+        {/* Row 7 – Core Team First Group (4 cards) */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto mb-12">
+          {teamMembers.slice(3, 7).map((m, i) => <TeamCard key={m.name} person={m} index={i} />)}
+        </div>
+
+        {/* Row 8 – Core Team Second Group (3 cards) */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
+          {teamMembers.slice(7, 10).map((m, i) => <TeamCard key={m.name} person={m} index={i} />)}
+        </div>
+
+        {/* Row 9 – Core Team Final Group (2 centered) */}
+        <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          {teamMembers.slice(10, 12).map((m, i) => <TeamCard key={m.name} person={m} index={i} />)}
         </div>
       </div>
     </section>
