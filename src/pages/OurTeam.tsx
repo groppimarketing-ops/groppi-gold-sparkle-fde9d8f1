@@ -42,7 +42,7 @@ interface Person {
 }
 
 const founders: Person[] = [
-  { name: 'Koen Van Grop', role: 'Founder & Chief Executive Officer', tagline: 'Vision-driven leadership shaping the future of performance marketing.', image: koenImg },
+  { name: 'Koen Van Gorp', role: 'Founder & Chief Executive Officer', tagline: 'Vision-driven leadership shaping the future of performance marketing.', image: koenImg },
   { name: 'Totti Franco', role: 'Co-Founder & Chief Strategy Officer', tagline: 'Strategic growth architect behind scalable brand expansion.', image: tottiImg },
 ];
 
