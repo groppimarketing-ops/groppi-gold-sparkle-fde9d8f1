@@ -188,6 +188,8 @@ const MediaCarousel = memo(({ media, clientName }: MediaCarouselProps) => {
                   className="w-full h-full object-cover"
                   loading="lazy"
                   decoding="async"
+                  width={56}
+                  height={56}
                 />
               ) : (
                 <>
