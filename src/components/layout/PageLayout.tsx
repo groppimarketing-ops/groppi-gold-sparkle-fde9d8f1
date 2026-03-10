@@ -6,7 +6,6 @@ import WaveAnimation from '../effects/WaveAnimation';
 interface PageLayoutProps {
   children: ReactNode;
   waveIntensity?: 'low' | 'medium' | 'high';
-  waveSpeed?: 'slow' | 'normal' | 'fast';
 }
 
 const PageLayout = ({ 
