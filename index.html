@@ -45,9 +45,17 @@
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="theme-color" content="#D4AF37" />
 
-    <!-- Google Fonts — non-blocking preload -->
+    <!-- DNS prefetch + preconnect for third-party origins -->
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    <link rel="preconnect" href="https://www.google-analytics.com" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts — non-blocking preload -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'" />
     <meta name="p:domain_verify" content="671e15501d93b7d26950e2a1fc0ef369" />
 
