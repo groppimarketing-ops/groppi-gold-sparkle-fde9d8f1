@@ -166,7 +166,7 @@ const TeamCard = ({ person, index }: { person: Person; index: number }) => (
     <div className="glass-card border border-primary/10 hover:border-primary/35 rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-[0_6px_30px_hsl(43_100%_50%/0.1)]">
       <div className="relative aspect-[4/5] bg-gradient-to-b from-primary/[0.03] to-background flex items-center justify-center overflow-hidden">
         {person.image ? (
-          <img src={person.image} alt={person.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+          <img src={person.image} alt={person.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" decoding="async" width={320} height={400} />
         ) : (
           <Initials name={person.name} />
         )}
