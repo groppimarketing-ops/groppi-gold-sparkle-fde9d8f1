@@ -224,6 +224,10 @@ const BlogArticle = () => {
                       src={related.image}
                       alt={t(related.titleKey)}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      loading="lazy"
+                      decoding="async"
+                      width={400}
+                      height={250}
                     />
                   </div>
                   <div className="p-5">
