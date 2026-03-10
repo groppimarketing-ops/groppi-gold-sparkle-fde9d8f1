@@ -47,7 +47,16 @@ const AdminMedia = lazy(() => import("./pages/admin/Media"));
 const AdminMessages = lazy(() => import("./pages/admin/Messages"));
 const AdminSettings = lazy(() => import("./pages/admin/Settings"));
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 5 * 60 * 1000,   // 5 min — no refetch on navigation
+      gcTime: 10 * 60 * 1000,      // 10 min — keep in memory
+      refetchOnWindowFocus: false,
+      retry: 1,
+    },
+  },
+});
 
 // Loading component
 const PageLoader = () => (
