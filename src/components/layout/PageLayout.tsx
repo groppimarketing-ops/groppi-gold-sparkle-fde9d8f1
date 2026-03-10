@@ -15,7 +15,7 @@ const PageLayout = ({
   return (
     <div className="min-h-screen bg-background flex flex-col relative">
       {/* Golden Wave Background Effect */}
-      <WaveAnimation intensity={waveIntensity} speed={waveSpeed} />
+      <WaveAnimation intensity={waveIntensity} />
       
       <Header />
       <main className="flex-1 pt-24 relative z-10">
