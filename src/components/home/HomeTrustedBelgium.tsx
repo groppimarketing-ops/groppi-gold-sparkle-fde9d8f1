@@ -174,8 +174,8 @@ const CountryCard = ({ countryKey, flag, clientCount, sectors, index }: CountryC
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20, filter: 'blur(6px)' }}
-      whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.08, duration: 0.5 }}
       className="group glass-card p-5 hover:border-primary/50 hover:shadow-[0_0_30px_hsl(var(--gold)/0.15)] hover:-translate-y-1 transition-all duration-500"
