@@ -1089,9 +1089,6 @@ export const portfolioItems: PortfolioItem[] = [
   },
 ];
 
-// Import NDA items
-import { ndaPortfolioItems } from './ndaPortfolioItems';
-
 // All portfolio items (real + NDA)
 export const allPortfolioItems: PortfolioItem[] = [
   ...portfolioItems,
