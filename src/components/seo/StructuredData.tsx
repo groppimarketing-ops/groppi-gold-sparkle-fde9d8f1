@@ -1,4 +1,6 @@
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
+import { getLangPath } from '@/utils/languageRouting';
 import { SERVICE_PRICING_CONFIG } from '@/config/pricingConfig';
 
 const SITE_URL = 'https://groppi.be';
@@ -92,6 +94,8 @@ const OrganizationSchema = () => {
 
 /**
  * Breadcrumb JSON-LD
+ * Automatically injects the current language prefix into every item URL.
+ * e.g. on /fr/services/social-media → item URLs use /fr/... prefix.
  */
 interface BreadcrumbItem {
   name: string;
@@ -99,6 +103,9 @@ interface BreadcrumbItem {
 }
 
 const BreadcrumbSchema = ({ items }: { items: BreadcrumbItem[] }) => {
+  const { i18n } = useTranslation();
+  const lang = i18n.language;
+
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -106,7 +113,7 @@ const BreadcrumbSchema = ({ items }: { items: BreadcrumbItem[] }) => {
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: `https://groppi.be${item.path}`,
+      item: `https://groppi.be${getLangPath(item.path, lang)}`,
     })),
   };
 
