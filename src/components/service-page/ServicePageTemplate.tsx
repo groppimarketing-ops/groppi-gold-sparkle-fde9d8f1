@@ -51,6 +51,11 @@ const ServicePageTemplate = memo(({ serviceKey, posterImage }: ServicePageTempla
         { name: serviceTitle, path: `/services/${slug}` },
       ]} />
       <ServiceSchema name={serviceTitle} description={serviceDescription} />
+      <ServiceOfferingSchema
+        slug={slug}
+        name={serviceTitle}
+        description={serviceDescription}
+      />
       <Header />
       <main>
         <ServicePageHero 
