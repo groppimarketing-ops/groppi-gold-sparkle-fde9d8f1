@@ -110,7 +110,7 @@ const FounderCard = ({ person, index }: { person: Person; index: number }) => (
           }}
         >
           {person.image ? (
-            <img src={person.image} alt={person.name} className="w-full h-full object-cover" loading="lazy" />
+            <img src={person.image} alt={person.name} className="w-full h-full object-cover" loading="lazy" decoding="async" width={260} height={260} />
           ) : (
             <Initials name={person.name} />
           )}
