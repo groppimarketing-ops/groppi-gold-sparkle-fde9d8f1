@@ -1,23 +1,10 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
+import resourcesToBackend from 'i18next-resources-to-backend';
 
-// Import all language files
-import ar from './locales/ar.json';
-import en from './locales/en.json';
-import fr from './locales/fr.json';
-import de from './locales/de.json';
-import es from './locales/es.json';
-import it from './locales/it.json';
-import pt from './locales/pt.json';
+// Pre-bundle nl (default) and en (fallback + missing-key handler)
 import nl from './locales/nl.json';
-import pl from './locales/pl.json';
-import ru from './locales/ru.json';
-import tr from './locales/tr.json';
-import bn from './locales/bn.json';
-import hi from './locales/hi.json';
-import ur from './locales/ur.json';
-import zh from './locales/zh.json';
+import en from './locales/en.json';
 
 // Brand name constant - use this everywhere
 export const BRAND_NAME = 'GROPPI';
@@ -44,24 +31,6 @@ export const languages = [
 ] as const;
 
 export type LanguageCode = typeof languages[number]['code'];
-
-const resources = {
-  ar: { translation: ar },
-  en: { translation: en },
-  fr: { translation: fr },
-  de: { translation: de },
-  es: { translation: es },
-  it: { translation: it },
-  pt: { translation: pt },
-  nl: { translation: nl },
-  pl: { translation: pl },
-  ru: { translation: ru },
-  tr: { translation: tr },
-  bn: { translation: bn },
-  hi: { translation: hi },
-  ur: { translation: ur },
-  zh: { translation: zh },
-};
 
 /**
  * Release-safety: Never render raw i18n keys in UI.
@@ -134,9 +103,20 @@ export function applyDocumentDirection(code: string): void {
 try { localStorage.removeItem('i18nextLng'); } catch (_) {}
 
 i18n
+  // Dynamic backend: loads other languages on-demand via Vite code-split chunks
+  .use(resourcesToBackend((language: string, _namespace: string) => {
+    // nl and en are pre-bundled; skip dynamic import for them
+    if (language === 'nl' || language === 'en') return Promise.resolve(null);
+    return import(`./locales/${language}.json`);
+  }))
   .use(initReactI18next)
   .init({
-    resources,
+    // nl + en pre-bundled — zero network request for default language
+    resources: {
+      nl: { translation: nl },
+      en: { translation: en },
+    },
+    partialBundledLanguages: true,
     lng: 'nl',              // Always start in Dutch
     fallbackLng: ['nl', 'en'],
     load: 'languageOnly',
