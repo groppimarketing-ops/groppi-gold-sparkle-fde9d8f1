@@ -3,7 +3,7 @@ import StarterKit from '@tiptap/starter-kit';
 import ImageExtension from '@tiptap/extension-image';
 import LinkExtension from '@tiptap/extension-link';
 import PlaceholderExtension from '@tiptap/extension-placeholder';
-import TextAlignExtension from '@tiptap/extension-text-align';
+
 import UnderlineExtension from '@tiptap/extension-underline';
 import { useEffect, useCallback } from 'react';
 import {
