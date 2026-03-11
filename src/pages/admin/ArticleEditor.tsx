@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Save, Eye, Image as ImageIcon, X, Check, Upload } from 'lucide-react';
+import { ArrowLeft, Save, Eye, Image as ImageIcon, X, Check, Upload, Sparkles, Loader2 } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import { useToast } from '@/hooks/use-toast';
 import AdminLayout from '@/components/admin/AdminLayout';
@@ -93,6 +93,11 @@ const ArticleEditor = () => {
   const insertImageRef = useRef<((url: string) => void) | null>(null);
   const [mediaPickerMode, setMediaPickerMode] = useState<'featured' | 'content'>('featured');
 
+  // AI generation state
+  const [showAiDialog, setShowAiDialog] = useState(false);
+  const [aiTopic, setAiTopic] = useState('');
+  const [isGenerating, setIsGenerating] = useState(false);
+
   useEffect(() => {
     if (!isNew && id) {
       fetchArticle(id);
@@ -179,6 +184,46 @@ const ArticleEditor = () => {
       .toLowerCase()
       .replace(/[^a-z0-9]+/g, '-')
       .replace(/(^-|-$)/g, '');
+  };
+
+  const handleGenerateWithAI = async () => {
+    if (!aiTopic.trim()) return;
+    setIsGenerating(true);
+    try {
+      const { data, error } = await supabase.functions.invoke('generate-article', {
+        body: { topic: aiTopic.trim() },
+      });
+      if (error) throw error;
+      if (data?.error) throw new Error(data.error);
+
+      const a = data.article;
+      setArticle(prev => ({
+        ...prev,
+        title_en: a.en?.title || prev.title_en,
+        title_ar: a.ar?.title || prev.title_ar,
+        title_fr: a.fr?.title || prev.title_fr,
+        title_nl: a.nl?.title || prev.title_nl,
+        content_en: a.en?.content || prev.content_en,
+        content_ar: a.ar?.content || prev.content_ar,
+        content_fr: a.fr?.content || prev.content_fr,
+        content_nl: a.nl?.content || prev.content_nl,
+        excerpt_en: a.en?.excerpt || prev.excerpt_en,
+        excerpt_ar: a.ar?.excerpt || prev.excerpt_ar,
+        slug: prev.slug || generateSlug(a.en?.title || aiTopic),
+      }));
+
+      setShowAiDialog(false);
+      setAiTopic('');
+      toast({
+        title: '✨ Article Generated!',
+        description: 'Content filled for EN, AR, FR, NL. Review and publish.',
+      });
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : 'Generation failed';
+      toast({ title: 'Error', description: msg, variant: 'destructive' });
+    } finally {
+      setIsGenerating(false);
+    }
   };
 
   const handleTitleChange = (lang: string, value: string) => {
@@ -288,6 +333,14 @@ const ArticleEditor = () => {
             </div>
           </div>
           <div className="flex items-center gap-2">
+            <Button
+              variant="outline"
+              onClick={() => setShowAiDialog(true)}
+              className="border-primary/40 hover:border-primary text-primary hover:bg-primary/10"
+            >
+              <Sparkles className="w-4 h-4 mr-2" />
+              Generate with AI
+            </Button>
             <Button
               variant="outline"
               onClick={() => handleSave(false)}
@@ -441,6 +494,61 @@ const ArticleEditor = () => {
           </div>
         </div>
       </div>
+
+      {/* AI Article Generation Dialog */}
+      <Dialog open={showAiDialog} onOpenChange={setShowAiDialog}>
+        <DialogContent className="glass-card border-primary/20 max-w-md">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2">
+              <Sparkles className="w-5 h-5 text-primary" />
+              Generate Article with AI
+            </DialogTitle>
+          </DialogHeader>
+          <div className="space-y-4 pt-2">
+            <p className="text-sm text-muted-foreground">
+              Enter a topic in Arabic or English and the AI will generate a full SEO-optimized article (~800 words) in English, Arabic, French, and Dutch.
+            </p>
+            <div>
+              <Label htmlFor="ai-topic">Article Topic</Label>
+              <Input
+                id="ai-topic"
+                value={aiTopic}
+                onChange={(e) => setAiTopic(e.target.value)}
+                placeholder="e.g. أهمية SEO للشركات الصغيرة"
+                className="mt-1"
+                onKeyDown={(e) => e.key === 'Enter' && !isGenerating && handleGenerateWithAI()}
+                autoFocus
+              />
+            </div>
+            <div className="flex items-center gap-2 text-xs text-muted-foreground bg-muted/30 rounded-lg p-3">
+              <Sparkles className="w-4 h-4 text-primary shrink-0" />
+              <span>Will fill: EN, AR, FR, NL — titles, excerpts &amp; full HTML content</span>
+            </div>
+            <div className="flex justify-end gap-2">
+              <Button variant="outline" onClick={() => setShowAiDialog(false)} disabled={isGenerating}>
+                Cancel
+              </Button>
+              <Button
+                className="luxury-button"
+                onClick={handleGenerateWithAI}
+                disabled={isGenerating || !aiTopic.trim()}
+              >
+                {isGenerating ? (
+                  <>
+                    <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                    Generating…
+                  </>
+                ) : (
+                  <>
+                    <Sparkles className="w-4 h-4 mr-2" />
+                    Generate Article
+                  </>
+                )}
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
 
       {/* Media Picker Dialog */}
       <Dialog open={showMediaPicker} onOpenChange={setShowMediaPicker}>
