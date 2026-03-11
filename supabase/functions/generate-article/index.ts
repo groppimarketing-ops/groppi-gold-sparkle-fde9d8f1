@@ -1,4 +1,5 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -26,6 +27,7 @@ serve(async (req) => {
       throw new Error("LOVABLE_API_KEY is not configured");
     }
 
+    // ─── Step 1: Generate Article Text ───────────────────────────────────────
     const systemPrompt = `You are an expert SEO content writer and digital marketing specialist for GROPPI, a premium digital marketing agency. You write high-quality, SEO-optimized articles in multiple languages.
 
 IMPORTANT RULES:
@@ -64,7 +66,7 @@ Return a JSON object with EXACTLY this structure (no extra keys, no markdown):
   }
 }`;
 
-    const response = await fetch(
+    const textResponse = await fetch(
       "https://ai.gateway.lovable.dev/v1/chat/completions",
       {
         method: "POST",
@@ -83,40 +85,27 @@ Return a JSON object with EXACTLY this structure (no extra keys, no markdown):
       }
     );
 
-    if (!response.ok) {
-      if (response.status === 429) {
+    if (!textResponse.ok) {
+      if (textResponse.status === 429) {
         return new Response(
-          JSON.stringify({
-            error: "Rate limit exceeded. Please try again in a moment.",
-          }),
-          {
-            status: 429,
-            headers: { ...corsHeaders, "Content-Type": "application/json" },
-          }
+          JSON.stringify({ error: "Rate limit exceeded. Please try again in a moment." }),
+          { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } }
         );
       }
-      if (response.status === 402) {
+      if (textResponse.status === 402) {
         return new Response(
-          JSON.stringify({
-            error:
-              "AI usage credits exhausted. Please add credits to your workspace.",
-          }),
-          {
-            status: 402,
-            headers: { ...corsHeaders, "Content-Type": "application/json" },
-          }
+          JSON.stringify({ error: "AI usage credits exhausted. Please add credits to your workspace." }),
+          { status: 402, headers: { ...corsHeaders, "Content-Type": "application/json" } }
         );
       }
-      const errText = await response.text();
-      console.error("AI gateway error:", response.status, errText);
-      throw new Error("AI gateway error");
+      const errText = await textResponse.text();
+      console.error("AI gateway error (text):", textResponse.status, errText);
+      throw new Error("AI gateway error during text generation");
     }
 
-    const aiData = await response.json();
-    const rawContent =
-      aiData.choices?.[0]?.message?.content ?? "";
+    const aiTextData = await textResponse.json();
+    const rawContent = aiTextData.choices?.[0]?.message?.content ?? "";
 
-    // Strip potential markdown code fences
     const cleaned = rawContent
       .replace(/^```json\s*/i, "")
       .replace(/^```\s*/i, "")
@@ -129,29 +118,110 @@ Return a JSON object with EXACTLY this structure (no extra keys, no markdown):
     } catch (e) {
       console.error("JSON parse error:", e, "Raw:", cleaned.slice(0, 500));
       return new Response(
-        JSON.stringify({
-          error: "AI returned invalid JSON. Please try again.",
-        }),
-        {
-          status: 500,
-          headers: { ...corsHeaders, "Content-Type": "application/json" },
-        }
+        JSON.stringify({ error: "AI returned invalid JSON. Please try again." }),
+        { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
 
-    return new Response(JSON.stringify({ article }), {
+    // ─── Step 2: Generate Branded Cover Image ─────────────────────────────────
+    let imageUrl: string | null = null;
+
+    try {
+      const englishTitle = (article as Record<string, { title?: string }>).en?.title || topic;
+
+      const imagePrompt = `Create a professional blog cover image for a premium digital marketing agency article.
+Topic: "${topic}"
+Article title: "${englishTitle}"
+
+DESIGN REQUIREMENTS:
+- Landscape format, widescreen (16:9 ratio)
+- Dark luxury background: deep black or very dark charcoal (#050505)
+- Abstract digital/marketing visual elements: glowing network nodes, geometric gold lines, subtle data visualization shapes
+- Elegant gold color accents (#D4AF37) throughout
+- Professional and editorial — like a high-end agency publication
+- CRITICAL: In the lower-left corner, render the word "GROPPI" in bold uppercase serif or modern sans-serif font, in solid gold color (#D4AF37), clearly legible against the dark background. This is a brand watermark and must be visible.
+- No people, no faces
+- Cinematic lighting, depth, premium feel`;
+
+      const imageResponse = await fetch(
+        "https://ai.gateway.lovable.dev/v1/chat/completions",
+        {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${LOVABLE_API_KEY}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            model: "google/gemini-3.1-flash-image-preview",
+            messages: [{ role: "user", content: imagePrompt }],
+            modalities: ["image", "text"],
+          }),
+        }
+      );
+
+      if (imageResponse.ok) {
+        const imageData = await imageResponse.json();
+        const base64Image = imageData.choices?.[0]?.message?.images?.[0]?.image_url?.url;
+
+        if (base64Image) {
+          // base64Image is "data:image/png;base64,..."
+          const base64Data = base64Image.split(",")[1];
+          const imageBytes = Uint8Array.from(atob(base64Data), (c) => c.charCodeAt(0));
+
+          // Upload to Supabase Storage
+          const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
+          const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+          const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
+
+          const slug = (englishTitle as string)
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, "-")
+            .replace(/(^-|-$)/g, "")
+            .slice(0, 50);
+
+          const fileName = `ai-cover-${slug}-${Date.now()}.png`;
+
+          const { error: uploadError } = await supabase.storage
+            .from("media")
+            .upload(fileName, imageBytes, {
+              contentType: "image/png",
+              upsert: false,
+            });
+
+          if (!uploadError) {
+            const { data: publicUrlData } = supabase.storage
+              .from("media")
+              .getPublicUrl(fileName);
+
+            imageUrl = publicUrlData.publicUrl;
+
+            // Register in media table
+            await supabase.from("media").insert({
+              title: `AI Cover — ${englishTitle}`,
+              file_url: imageUrl,
+              file_type: "image/png",
+              description: `AI-generated branded cover image for article: ${topic}`,
+            });
+          } else {
+            console.error("Storage upload error:", uploadError);
+          }
+        }
+      } else {
+        console.error("Image generation failed:", imageResponse.status, await imageResponse.text());
+      }
+    } catch (imgErr) {
+      // Image generation is non-blocking — article text is still returned
+      console.error("Image generation error (non-fatal):", imgErr);
+    }
+
+    return new Response(JSON.stringify({ article, imageUrl }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   } catch (e) {
     console.error("generate-article error:", e);
     return new Response(
-      JSON.stringify({
-        error: e instanceof Error ? e.message : "Unknown error",
-      }),
-      {
-        status: 500,
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-      }
+      JSON.stringify({ error: e instanceof Error ? e.message : "Unknown error" }),
+      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
   }
 });

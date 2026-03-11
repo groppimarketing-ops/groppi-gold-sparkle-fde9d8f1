@@ -197,6 +197,8 @@ const ArticleEditor = () => {
       if (data?.error) throw new Error(data.error);
 
       const a = data.article;
+      const generatedImageUrl: string | null = data.imageUrl || null;
+
       setArticle(prev => ({
         ...prev,
         title_en: a.en?.title || prev.title_en,
@@ -210,13 +212,17 @@ const ArticleEditor = () => {
         excerpt_en: a.en?.excerpt || prev.excerpt_en,
         excerpt_ar: a.ar?.excerpt || prev.excerpt_ar,
         slug: prev.slug || generateSlug(a.en?.title || aiTopic),
+        // Auto-apply AI-generated branded cover image
+        featured_image: generatedImageUrl || prev.featured_image,
       }));
 
       setShowAiDialog(false);
       setAiTopic('');
       toast({
         title: '✨ Article Generated!',
-        description: 'Content filled for EN, AR, FR, NL. Review and publish.',
+        description: generatedImageUrl
+          ? 'Content + GROPPI branded cover image ready. Review and publish.'
+          : 'Content filled for EN, AR, FR, NL. Review and publish.',
       });
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : 'Generation failed';
@@ -522,7 +528,7 @@ const ArticleEditor = () => {
             </div>
             <div className="flex items-center gap-2 text-xs text-muted-foreground bg-muted/30 rounded-lg p-3">
               <Sparkles className="w-4 h-4 text-primary shrink-0" />
-              <span>Will fill: EN, AR, FR, NL — titles, excerpts &amp; full HTML content</span>
+              <span>Will generate: EN/AR/FR/NL content + a <strong className="text-primary">GROPPI branded cover image</strong> automatically</span>
             </div>
             <div className="flex justify-end gap-2">
               <Button variant="outline" onClick={() => setShowAiDialog(false)} disabled={isGenerating}>
