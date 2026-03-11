@@ -300,8 +300,8 @@ const Header = () => {
 
           {/* Mobile Navigation — CSS transition, no framer-motion */}
           {isMenuOpen && (
-            <div className="lg:hidden mt-4 pb-4 animate-fade-up">
-              <div className="glass-card p-4 flex flex-col gap-2">
+            <div className="lg:hidden mt-2 pb-4 animate-fade-up">
+              <div className="rounded-2xl p-4 flex flex-col gap-1" style={{ background: 'hsl(0 0% 5% / 0.98)', border: '1px solid hsl(43 76% 52% / 0.25)', backdropFilter: 'blur(20px)' }}>
                 {navItems.map((item) => (
                   <Link
                     key={item.path}
