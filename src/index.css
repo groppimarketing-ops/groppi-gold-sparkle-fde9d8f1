@@ -983,10 +983,33 @@
   }
 
   @media (max-width: 768px) {
-    /* 1) HERO — reduce height & padding */
+    /* 1) HERO — ارتفاع يسع الكروت + social icons معاً */
     .groppi-hero-pro {
-      height: 55vh;
-      min-height: 340px;
+      height: 60vh;
+      min-height: 360px;
+    }
+
+    /* strip في المنتصف الصحيح */
+    .groppi-strip-wrap {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    /* كروت الـ Hero — أصغر على موبايل */
+    .groppi-card {
+      width: clamp(148px, 42vw, 185px);
+    }
+
+    /* strip gap أصغر على موبايل */
+    .groppi-strip-track {
+      gap: 10px;
+    }
+
+    /* social icons داخل الـ Hero — أقرب للأسفل */
+    .groppi-hero-pro .absolute.bottom-6 {
+      bottom: 12px;
+      gap: 12px;
+      padding: 8px 14px;
     }
 
     .gold-drop svg { width: clamp(24px, 7vw, 34px); height: clamp(24px, 7vw, 34px); }
@@ -1108,15 +1131,15 @@
   .navbar,
   .sticky-header {
     height: auto !important;
-    min-height: 110px !important;
-    padding-block: 10px !important;
+    min-height: 88px !important;
+    padding-block: 8px !important;
     display: flex !important;
     align-items: center !important;
   }
 
   /* Content offset for fixed header */
   main {
-    margin-top: 110px !important;
+    margin-top: 88px !important;
   }
 
   /* Responsive header + content offset */
@@ -1125,12 +1148,12 @@
     .site-header,
     .navbar,
     .sticky-header {
-      min-height: 96px !important;
-      padding-block: 8px !important;
+      min-height: 80px !important;
+      padding-block: 6px !important;
     }
 
     main {
-      margin-top: 96px !important;
+      margin-top: 80px !important;
     }
   }
 
@@ -1139,11 +1162,12 @@
     .site-header,
     .navbar,
     .sticky-header {
-      min-height: 84px !important;
+      min-height: 68px !important;
+      padding-block: 4px !important;
     }
 
     main {
-      margin-top: 84px !important;
+      margin-top: 68px !important;
     }
   }
 }
