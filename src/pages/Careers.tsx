@@ -296,7 +296,7 @@ const Careers = () => {
 
             {isSuccess ? (
               <div className="glass-card p-8 text-center animate-scale-in">
-                <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
+                <CheckCircle className="h-16 w-16 text-primary mx-auto mb-4" />
                 <h3 className="text-2xl font-semibold mb-2">{t('careers.form.successTitle')}</h3>
                 <p className="text-muted-foreground mb-6">{t('careers.form.successMessage')}</p>
                 <Button onClick={() => setIsSuccess(false)} variant="outline">
