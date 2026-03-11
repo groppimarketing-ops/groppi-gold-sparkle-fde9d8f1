@@ -1,5 +1,4 @@
 import { memo, useRef, useEffect, useState, useCallback } from 'react';
-import { motion } from 'framer-motion';
 import { socialIconsData } from '@/components/shared/SocialIconsPill';
 import { trackEvent } from '@/utils/tracking';
 
