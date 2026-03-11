@@ -10,7 +10,6 @@ import {
   Bold, Italic, Underline, Strikethrough,
   Heading1, Heading2, Heading3,
   List, ListOrdered, Quote, Minus,
-  AlignLeft, AlignCenter, AlignRight,
   Link, Image as ImageIcon, Undo, Redo,
   Code,
 } from 'lucide-react';
