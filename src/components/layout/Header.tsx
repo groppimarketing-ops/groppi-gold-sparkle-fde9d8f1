@@ -340,7 +340,7 @@ const Header = () => {
                 </div>
 
                 {/* Mobile Social Icons */}
-                <div className="flex items-center justify-center gap-4 px-4 py-3 border-t border-white/10">
+                <div className="flex items-center justify-center flex-wrap gap-3 px-4 py-3 border-t border-white/10">
                   {socialIconsData.map((social) => (
                     <a
                       key={social.label}
@@ -349,7 +349,7 @@ const Header = () => {
                       rel="noopener noreferrer"
                       aria-label={`Open ${social.label}`}
                       onClick={() => trackEvent({ event: social.event, location: 'header_mobile' })}
-                      className="social-icon-glow transition-transform hover:scale-110"
+                      className="social-icon-glow w-11 h-11 rounded-xl border border-white/10 bg-white/5 flex items-center justify-center active:scale-90 transition-transform duration-150"
                       style={{ color: social.color }}
                     >
                       <social.icon className="h-5 w-5" />

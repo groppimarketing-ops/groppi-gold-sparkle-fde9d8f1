@@ -115,7 +115,7 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
             <ul className="space-y-4">
               {/* WhatsApp */}
               <li className="flex items-start gap-3 text-sm text-muted-foreground group">
-                <div className="w-8 h-8 rounded-lg glass-card flex items-center justify-center shrink-0 group-hover:gold-glow transition-all bg-[#25D366]/10">
+                <div className="w-8 h-8 rounded-lg border border-[#25D366]/30 bg-[#25D366]/15 flex items-center justify-center shrink-0 group-hover:border-[#25D366]/60 transition-all">
                   <MessageCircle className="h-4 w-4 text-[#25D366]" />
                 </div>
                 <a 
@@ -130,7 +130,7 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
               </li>
               {/* Plan a Call */}
               <li className="flex items-start gap-3 text-sm text-muted-foreground group">
-                <div className="w-8 h-8 rounded-lg glass-card flex items-center justify-center shrink-0 group-hover:gold-glow transition-all bg-primary/10">
+                <div className="w-8 h-8 rounded-lg border border-primary/30 bg-primary/15 flex items-center justify-center shrink-0 group-hover:border-primary/60 transition-all">
                   <Calendar className="h-4 w-4 text-primary" />
                 </div>
                 <a 
@@ -145,14 +145,14 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
               </li>
               {/* Address */}
               <li className="flex items-start gap-3 text-sm text-muted-foreground group">
-                <div className="w-8 h-8 rounded-lg glass-card flex items-center justify-center shrink-0 group-hover:gold-glow transition-all">
+                <div className="w-8 h-8 rounded-lg border border-primary/30 bg-primary/15 flex items-center justify-center shrink-0 group-hover:border-primary/60 transition-all">
                   <MapPin className="h-4 w-4 text-primary" />
                 </div>
                 <span className="pt-1">{contactInfo.address}</span>
               </li>
               {/* Landline */}
               <li className="flex items-start gap-3 text-sm text-muted-foreground group">
-                <div className="w-8 h-8 rounded-lg glass-card flex items-center justify-center shrink-0 group-hover:gold-glow transition-all">
+                <div className="w-8 h-8 rounded-lg border border-primary/30 bg-primary/15 flex items-center justify-center shrink-0 group-hover:border-primary/60 transition-all">
                   <Phone className="h-4 w-4 text-primary" />
                 </div>
                 <a 
@@ -165,7 +165,7 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
               </li>
               {/* Mobile */}
               <li className="flex items-start gap-3 text-sm text-muted-foreground group">
-                <div className="w-8 h-8 rounded-lg glass-card flex items-center justify-center shrink-0 group-hover:gold-glow transition-all">
+                <div className="w-8 h-8 rounded-lg border border-primary/30 bg-primary/15 flex items-center justify-center shrink-0 group-hover:border-primary/60 transition-all">
                   <Smartphone className="h-4 w-4 text-primary" />
                 </div>
                 <a 
@@ -178,7 +178,7 @@ const Footer = forwardRef<HTMLElement>((_, ref) => {
               </li>
               {/* Email */}
               <li className="flex items-center gap-3 text-sm text-muted-foreground group">
-                <div className="w-8 h-8 rounded-lg glass-card flex items-center justify-center shrink-0 group-hover:gold-glow transition-all">
+                <div className="w-8 h-8 rounded-lg border border-primary/30 bg-primary/15 flex items-center justify-center shrink-0 group-hover:border-primary/60 transition-all">
                   <Mail className="h-4 w-4 text-primary" />
                 </div>
                 <a 
