@@ -11,6 +11,13 @@ export default defineConfig(({ mode }) => ({
     hmr: {
       overlay: false,
     },
+    proxy: {
+      '/sitemap.xml': {
+        target: 'https://dffmjqjokfccdnfutdmx.supabase.co/functions/v1/sitemap',
+        changeOrigin: true,
+        rewrite: () => '',
+      },
+    },
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
