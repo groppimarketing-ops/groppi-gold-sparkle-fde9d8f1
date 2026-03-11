@@ -38,6 +38,7 @@ export default defineConfig(({ mode }) => ({
 
         // ── Pre-cache all Vite-built assets (JS/CSS chunks + index.html) ──
         globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,woff2}'],
+        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5 MB limit to avoid workbox timeout
 
         // ── Runtime caching rules ─────────────────────────────────────────
         runtimeCaching: [
