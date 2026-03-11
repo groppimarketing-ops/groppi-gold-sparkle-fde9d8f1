@@ -158,14 +158,20 @@ const ArticleEditor = () => {
     }
   };
 
-  const handleOpenMediaPicker = () => {
+  const handleOpenMediaPicker = (mode: 'featured' | 'content' = 'featured') => {
+    setMediaPickerMode(mode);
     setShowMediaPicker(true);
     fetchMedia();
   };
 
   const handleSelectMedia = (url: string) => {
-    setArticle(prev => ({ ...prev, featured_image: url }));
+    if (mediaPickerMode === 'content' && insertImageRef.current) {
+      insertImageRef.current(url);
+    } else {
+      setArticle(prev => ({ ...prev, featured_image: url }));
+    }
     setShowMediaPicker(false);
+    insertImageRef.current = null;
   };
 
   const generateSlug = (title: string) => {
