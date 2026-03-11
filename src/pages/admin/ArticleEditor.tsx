@@ -495,6 +495,61 @@ const ArticleEditor = () => {
         </div>
       </div>
 
+      {/* AI Article Generation Dialog */}
+      <Dialog open={showAiDialog} onOpenChange={setShowAiDialog}>
+        <DialogContent className="glass-card border-primary/20 max-w-md">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2">
+              <Sparkles className="w-5 h-5 text-primary" />
+              Generate Article with AI
+            </DialogTitle>
+          </DialogHeader>
+          <div className="space-y-4 pt-2">
+            <p className="text-sm text-muted-foreground">
+              Enter a topic in Arabic or English and the AI will generate a full SEO-optimized article (~800 words) in English, Arabic, French, and Dutch.
+            </p>
+            <div>
+              <Label htmlFor="ai-topic">Article Topic</Label>
+              <Input
+                id="ai-topic"
+                value={aiTopic}
+                onChange={(e) => setAiTopic(e.target.value)}
+                placeholder="e.g. أهمية SEO للشركات الصغيرة"
+                className="mt-1"
+                onKeyDown={(e) => e.key === 'Enter' && !isGenerating && handleGenerateWithAI()}
+                autoFocus
+              />
+            </div>
+            <div className="flex items-center gap-2 text-xs text-muted-foreground bg-muted/30 rounded-lg p-3">
+              <Sparkles className="w-4 h-4 text-primary shrink-0" />
+              <span>Will fill: EN, AR, FR, NL — titles, excerpts &amp; full HTML content</span>
+            </div>
+            <div className="flex justify-end gap-2">
+              <Button variant="outline" onClick={() => setShowAiDialog(false)} disabled={isGenerating}>
+                Cancel
+              </Button>
+              <Button
+                className="luxury-button"
+                onClick={handleGenerateWithAI}
+                disabled={isGenerating || !aiTopic.trim()}
+              >
+                {isGenerating ? (
+                  <>
+                    <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                    Generating…
+                  </>
+                ) : (
+                  <>
+                    <Sparkles className="w-4 h-4 mr-2" />
+                    Generate Article
+                  </>
+                )}
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+
       {/* Media Picker Dialog */}
       <Dialog open={showMediaPicker} onOpenChange={setShowMediaPicker}>
         <DialogContent className="max-w-4xl glass-card border-primary/20">
