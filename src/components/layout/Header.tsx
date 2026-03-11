@@ -300,8 +300,8 @@ const Header = () => {
 
           {/* Mobile Navigation — CSS transition, no framer-motion */}
           {isMenuOpen && (
-            <div className="lg:hidden mt-4 pb-4 animate-fade-up">
-              <div className="glass-card p-4 flex flex-col gap-2">
+            <div className="lg:hidden mt-2 pb-4 animate-fade-up">
+              <div className="rounded-2xl p-4 flex flex-col gap-1" style={{ background: 'hsl(0 0% 5% / 0.98)', border: '1px solid hsl(43 76% 52% / 0.25)', backdropFilter: 'blur(20px)' }}>
                 {navItems.map((item) => (
                   <Link
                     key={item.path}
@@ -340,7 +340,7 @@ const Header = () => {
                 </div>
 
                 {/* Mobile Social Icons */}
-                <div className="flex items-center justify-center gap-4 px-4 py-3 border-t border-white/10">
+                <div className="flex items-center justify-center flex-wrap gap-3 px-4 py-3 border-t border-white/10">
                   {socialIconsData.map((social) => (
                     <a
                       key={social.label}
@@ -349,7 +349,7 @@ const Header = () => {
                       rel="noopener noreferrer"
                       aria-label={`Open ${social.label}`}
                       onClick={() => trackEvent({ event: social.event, location: 'header_mobile' })}
-                      className="social-icon-glow transition-transform hover:scale-110"
+                      className="social-icon-glow w-11 h-11 rounded-xl border border-white/10 bg-white/5 flex items-center justify-center active:scale-90 transition-transform duration-150"
                       style={{ color: social.color }}
                     >
                       <social.icon className="h-5 w-5" />

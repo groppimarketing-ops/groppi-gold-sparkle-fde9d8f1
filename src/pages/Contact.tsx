@@ -102,7 +102,7 @@ const Contact = () => {
       action: t('social.actions.chat'),
       href: socialUrls.whatsapp,
       isExternal: true,
-      color: 'bg-[#25D366]/10 text-[#25D366]',
+      color: 'bg-[#25D366]/15 text-[#25D366] border border-[#25D366]/30',
       iconColor: 'text-[#25D366]',
       event: 'whatsapp_click' as const,
     },
@@ -112,7 +112,7 @@ const Contact = () => {
       action: contactInfo.landline,
       href: socialUrls.landline,
       isExternal: false,
-      color: 'bg-primary/10',
+      color: 'bg-primary/15 border border-primary/30',
       iconColor: 'text-primary',
       event: 'phone_click' as const,
     },
@@ -122,7 +122,7 @@ const Contact = () => {
       action: contactInfo.phone,
       href: socialUrls.phone,
       isExternal: false,
-      color: 'bg-primary/10',
+      color: 'bg-primary/15 border border-primary/30',
       iconColor: 'text-primary',
       event: 'phone_click' as const,
     },
@@ -132,7 +132,7 @@ const Contact = () => {
       action: t('social.actions.email'),
       href: socialUrls.email,
       isExternal: false,
-      color: 'bg-primary/10',
+      color: 'bg-primary/15 border border-primary/30',
       iconColor: 'text-primary',
       event: 'email_click' as const,
     },
@@ -290,7 +290,7 @@ const Contact = () => {
                     className="block hover:-translate-y-0.5 hover:scale-[1.01] transition-transform duration-200"
                   >
                     <GlassCard className="flex items-center gap-4 p-5 border border-primary/20 hover:border-primary/40 transition-all duration-300 group cursor-pointer">
-                      <div className={`w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 ${method.color} shadow-lg group-hover:scale-105 transition-transform duration-200`}>
+                      <div className={`w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 ${method.color} border border-white/10 shadow-lg group-hover:scale-105 transition-transform duration-200`}>
                         <method.icon className={`w-7 h-7 ${method.iconColor}`} />
                       </div>
                       <div className="flex-1">
@@ -317,11 +317,11 @@ const Contact = () => {
 
               {/* Additional Contact Info */}
               {contactInfoItems.map((info, index) => (
-                <GlassCard
-                  key={index}
-                  className="flex items-start gap-4 p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 group"
-                >
-                  <div className="w-14 h-14 rounded-2xl glass-card flex items-center justify-center shrink-0 border border-primary/30 shadow-lg shadow-primary/10 group-hover:scale-105 transition-transform duration-200">
+                    <GlassCard
+                      key={index}
+                      className="flex items-start gap-4 p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300 group"
+                    >
+                      <div className="w-14 h-14 rounded-2xl border border-primary/30 bg-primary/15 flex items-center justify-center shrink-0 shadow-lg shadow-primary/10 group-hover:scale-105 transition-transform duration-200">
                     <info.icon className="w-7 h-7 text-primary drop-shadow-[0_0_8px_rgba(218,165,32,0.5)]" />
                   </div>
                   <div className="flex-1">
