@@ -3,14 +3,13 @@ import StarterKit from '@tiptap/starter-kit';
 import ImageExtension from '@tiptap/extension-image';
 import LinkExtension from '@tiptap/extension-link';
 import PlaceholderExtension from '@tiptap/extension-placeholder';
-import TextAlignExtension from '@tiptap/extension-text-align';
+
 import UnderlineExtension from '@tiptap/extension-underline';
 import { useEffect, useCallback } from 'react';
 import {
   Bold, Italic, Underline, Strikethrough,
   Heading1, Heading2, Heading3,
   List, ListOrdered, Quote, Minus,
-  AlignLeft, AlignCenter, AlignRight,
   Link, Image as ImageIcon, Undo, Redo,
   Code,
 } from 'lucide-react';
@@ -172,31 +171,6 @@ const Toolbar = ({
 
       <Divider />
 
-      {/* Alignment */}
-      <ToolbarBtn
-        title="Align Left"
-        active={editor.isActive({ textAlign: 'left' })}
-        onClick={() => editor.chain().focus().setTextAlign('left').run()}
-      >
-        <AlignLeft className="w-4 h-4" />
-      </ToolbarBtn>
-      <ToolbarBtn
-        title="Align Center"
-        active={editor.isActive({ textAlign: 'center' })}
-        onClick={() => editor.chain().focus().setTextAlign('center').run()}
-      >
-        <AlignCenter className="w-4 h-4" />
-      </ToolbarBtn>
-      <ToolbarBtn
-        title="Align Right"
-        active={editor.isActive({ textAlign: 'right' })}
-        onClick={() => editor.chain().focus().setTextAlign('right').run()}
-      >
-        <AlignRight className="w-4 h-4" />
-      </ToolbarBtn>
-
-      <Divider />
-
       {/* Link */}
       <ToolbarBtn
         title="Insert / Edit Link"
@@ -241,7 +215,6 @@ const RichTextEditor = ({
       ImageExtension.configure({ inline: false, allowBase64: false }),
       LinkExtension.configure({ openOnClick: false, HTMLAttributes: { rel: 'noopener noreferrer', target: '_blank' } }),
       PlaceholderExtension.configure({ placeholder }),
-      TextAlignExtension.configure({ types: ['heading', 'paragraph'] }),
     ],
     content: value,
     onUpdate: ({ editor }) => {

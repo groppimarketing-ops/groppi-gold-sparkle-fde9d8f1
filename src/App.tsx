@@ -38,6 +38,7 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 
 // Admin pages
 const AdminLogin = lazy(() => import("./pages/admin/Login"));
+const AdminResetPassword = lazy(() => import("./pages/admin/ResetPassword"));
 const AdminDashboard = lazy(() => import("./pages/admin/Dashboard"));
 const AdminPages = lazy(() => import("./pages/admin/Pages"));
 const AdminArticles = lazy(() => import("./pages/admin/Articles"));
@@ -131,6 +132,7 @@ const LANG_PREFIXES = SUPPORTED_LANGS.filter(l => l !== 'nl');
 
                   {/* Admin Routes */}
                   <Route path="/admin/login" element={<AdminLogin />} />
+                  <Route path="/admin/reset-password" element={<AdminResetPassword />} />
                   <Route path="/admin" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
                   <Route path="/admin/pages" element={<ProtectedRoute><AdminPages /></ProtectedRoute>} />
                   <Route path="/admin/articles" element={<ProtectedRoute><AdminArticles /></ProtectedRoute>} />

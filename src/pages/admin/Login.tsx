@@ -1,14 +1,22 @@
 import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Mail, Lock, LogIn, AlertCircle } from 'lucide-react';
+import { Mail, Lock, LogIn, AlertCircle, KeyRound, CheckCircle2 } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { useAuth } from '@/contexts/AuthContext';
+import { supabase } from '@/integrations/supabase/client';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from '@/components/ui/dialog';
 import GlassCard from '@/components/ui/GlassCard';
 import logo from '@/assets/groppi-logo.png';
 
@@ -22,6 +30,12 @@ type LoginFormData = z.infer<typeof loginSchema>;
 const Login = () => {
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [showForgot, setShowForgot] = useState(false);
+  const [forgotEmail, setForgotEmail] = useState('');
+  const [forgotLoading, setForgotLoading] = useState(false);
+  const [forgotSent, setForgotSent] = useState(false);
+  const [forgotError, setForgotError] = useState<string | null>(null);
+
   const navigate = useNavigate();
   const location = useLocation();
   const { signIn } = useAuth();
@@ -30,28 +44,46 @@ const Login = () => {
 
   const form = useForm<LoginFormData>({
     resolver: zodResolver(loginSchema),
-    defaultValues: {
-      email: '',
-      password: '',
-    },
+    defaultValues: { email: '', password: '' },
   });
 
   const onSubmit = async (data: LoginFormData) => {
     setIsLoading(true);
     setError(null);
-
     try {
       const { error } = await signIn(data.email, data.password);
-      
       if (error) {
         setError(error.message || 'Invalid email or password');
       } else {
         navigate(from, { replace: true });
       }
-    } catch (err) {
+    } catch {
       setError('An unexpected error occurred. Please try again.');
     } finally {
       setIsLoading(false);
+    }
+  };
+
+  const handleForgotPassword = async () => {
+    if (!forgotEmail) {
+      setForgotError('Please enter your email address.');
+      return;
+    }
+    setForgotLoading(true);
+    setForgotError(null);
+    try {
+      const { error } = await supabase.auth.resetPasswordForEmail(forgotEmail, {
+        redirectTo: `${window.location.origin}/admin/reset-password`,
+      });
+      if (error) {
+        setForgotError(error.message);
+      } else {
+        setForgotSent(true);
+      }
+    } catch {
+      setForgotError('An unexpected error occurred. Please try again.');
+    } finally {
+      setForgotLoading(false);
     }
   };
 
@@ -60,25 +92,25 @@ const Login = () => {
       {/* Background effects */}
       <div className="absolute inset-0 neural-bg opacity-30" />
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10" />
-      
+
       {/* Animated particles */}
       {[...Array(20)].map((_, i) => (
         <motion.div
           key={i}
           className="absolute w-1 h-1 bg-primary/30 rounded-full"
-          initial={{ 
-            x: Math.random() * window.innerWidth, 
+          initial={{
+            x: Math.random() * window.innerWidth,
             y: Math.random() * window.innerHeight,
-            opacity: 0 
+            opacity: 0,
           }}
-          animate={{ 
+          animate={{
             y: [null, Math.random() * -500],
             opacity: [0, 1, 0],
           }}
-          transition={{ 
-            duration: 5 + Math.random() * 5, 
+          transition={{
+            duration: 5 + Math.random() * 5,
             repeat: Infinity,
-            delay: Math.random() * 5 
+            delay: Math.random() * 5,
           }}
         />
       ))}
@@ -176,17 +208,91 @@ const Login = () => {
             </form>
           </Form>
 
-          {/* Back to site */}
-          <div className="mt-6 text-center">
-            <a 
-              href="/" 
+          {/* Forgot password link */}
+          <div className="mt-4 text-center">
+            <button
+              type="button"
+              onClick={() => { setShowForgot(true); setForgotSent(false); setForgotError(null); setForgotEmail(''); }}
               className="text-sm text-muted-foreground hover:text-primary transition-colors"
             >
+              Forgot password?
+            </button>
+          </div>
+
+          {/* Back to site */}
+          <div className="mt-3 text-center">
+            <a href="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">
               ← Back to website
             </a>
           </div>
         </GlassCard>
       </motion.div>
+
+      {/* Forgot Password Dialog */}
+      <Dialog open={showForgot} onOpenChange={setShowForgot}>
+        <DialogContent className="sm:max-w-md bg-background border-primary/20">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2 gold-gradient-text">
+              <KeyRound className="h-5 w-5 text-primary" />
+              Reset Password
+            </DialogTitle>
+            <DialogDescription className="text-muted-foreground">
+              Enter your admin email and we'll send you a reset link.
+            </DialogDescription>
+          </DialogHeader>
+
+          {forgotSent ? (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="flex flex-col items-center gap-3 py-4 text-center"
+            >
+              <CheckCircle2 className="h-12 w-12 text-primary" />
+              <p className="text-foreground font-medium">Check your inbox!</p>
+              <p className="text-sm text-muted-foreground">
+                A password reset link has been sent to <span className="text-primary">{forgotEmail}</span>.
+              </p>
+              <Button variant="outline" className="mt-2 border-primary/30" onClick={() => setShowForgot(false)}>
+                Close
+              </Button>
+            </motion.div>
+          ) : (
+            <div className="space-y-4 pt-2">
+              {forgotError && (
+                <div className="p-3 rounded-lg bg-destructive/10 border border-destructive/30 flex items-start gap-2">
+                  <AlertCircle className="h-4 w-4 text-destructive shrink-0 mt-0.5" />
+                  <p className="text-xs text-destructive">{forgotError}</p>
+                </div>
+              )}
+              <div className="relative">
+                <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                <Input
+                  type="email"
+                  placeholder="admin@groppi.be"
+                  value={forgotEmail}
+                  onChange={(e) => setForgotEmail(e.target.value)}
+                  onKeyDown={(e) => e.key === 'Enter' && handleForgotPassword()}
+                  className="pl-10 bg-background/50 border-primary/20 focus:border-primary"
+                />
+              </div>
+              <Button
+                onClick={handleForgotPassword}
+                disabled={forgotLoading}
+                className="w-full luxury-button"
+              >
+                {forgotLoading ? (
+                  <div className="flex items-center gap-2">
+                    <div className="w-4 h-4 border-2 border-primary-foreground border-t-transparent rounded-full animate-spin" />
+                    Sending...
+                  </div>
+                ) : (
+                  'Send Reset Link'
+                )}
+              </Button>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
