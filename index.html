@@ -58,6 +58,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Drive preview preconnect (brand video iframe) -->
+    <link rel="dns-prefetch" href="https://drive.google.com" />
+    <link rel="preconnect" href="https://drive.google.com" />
 
     <!--
       NOTE: JS chunk modulepreload (react-core, framer-motion, etc.) is injected
@@ -65,7 +68,7 @@
       filenames contain content hashes unknown at dev time.
     -->
 
-    <!-- Google Fonts: preload stylesheet → eliminates render-blocking FOUT -->
+    <!-- Google Fonts: preload stylesheet → eliminates FOUT; display=swap already in URL -->
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" onload="this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" /></noscript>
     <meta name="p:domain_verify" content="671e15501d93b7d26950e2a1fc0ef369" />
