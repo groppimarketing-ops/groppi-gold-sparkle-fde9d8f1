@@ -215,7 +215,6 @@ const RichTextEditor = ({
       ImageExtension.configure({ inline: false, allowBase64: false }),
       LinkExtension.configure({ openOnClick: false, HTMLAttributes: { rel: 'noopener noreferrer', target: '_blank' } }),
       PlaceholderExtension.configure({ placeholder }),
-      TextAlignExtension.configure({ types: ['heading', 'paragraph'] }),
     ],
     content: value,
     onUpdate: ({ editor }) => {
