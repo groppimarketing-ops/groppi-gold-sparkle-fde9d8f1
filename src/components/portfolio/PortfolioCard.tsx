@@ -1,4 +1,4 @@
-import { memo, useState, useCallback } from 'react';
+import { memo, useState, useCallback, forwardRef } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
@@ -13,11 +13,11 @@ interface PortfolioCardProps {
   index?: number;
 }
 
-const PortfolioCard = memo(({
+const PortfolioCard = memo(forwardRef<HTMLElement, PortfolioCardProps>(({
   item,
   onClick,
   index = 0
-}: PortfolioCardProps) => {
+}, ref) => {
   const { t, i18n } = useTranslation();
   const lang = i18n.language.startsWith('nl') ? 'nl' : 'en';
   const translated = getTranslatedPortfolio(t, item);
@@ -101,7 +101,7 @@ const PortfolioCard = memo(({
       </button>
     </motion.article>
   );
-});
+}));
 
 PortfolioCard.displayName = 'PortfolioCard';
 export default PortfolioCard;
