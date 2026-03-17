@@ -90,6 +90,22 @@ const handler = async (req: Request): Promise<Response> => {
 
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
+    // Rate limiting — 3 submissions per hour per IP
+    const ipAddress = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim()
+      || req.headers.get("x-real-ip")
+      || "unknown";
+    const rateLimit = await checkRateLimit(supabase, ipAddress);
+    if (!rateLimit.allowed) {
+      console.log(`Rate limit exceeded for IP: ${ipAddress}`);
+      return new Response(
+        JSON.stringify({ success: false, error: "Too many applications. Please try again later." }),
+        {
+          status: 429,
+          headers: { "Content-Type": "application/json", "Retry-After": "3600", ...corsHeaders },
+        }
+      );
+    }
+
     const body: JobApplicationRequest = await req.json();
     console.log("Received application for role:", body.role);
 
