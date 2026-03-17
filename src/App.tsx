@@ -114,7 +114,7 @@ const LANG_PREFIXES = SUPPORTED_LANGS.filter(l => l !== 'nl');
         <TooltipProvider>
           <Toaster />
           <Sonner />
-          <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+          <BrowserRouter>
             <RTLHandler>
               <Suspense fallback={<PageLoader />}>
                 <Routes>
