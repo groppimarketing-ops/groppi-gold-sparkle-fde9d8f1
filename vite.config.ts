@@ -132,6 +132,7 @@ export default defineConfig(({ mode }) => ({
     dedupe: [
       "react", "react-dom", "react/jsx-runtime", "framer-motion",
       "@tiptap/core", "@tiptap/react", "@tiptap/pm",
+      "@tiptap/starter-kit", "@tiptap/extension-horizontal-rule",
     ],
   },
   build: {
