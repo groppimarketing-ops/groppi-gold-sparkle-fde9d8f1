@@ -8,6 +8,55 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
+// Rate limiting constants
+const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000; // 1 hour
+const MAX_REQUESTS_PER_WINDOW = 3;
+
+interface RateLimitRecord {
+  id: string;
+  request_count: number;
+  ip_address: string;
+  action_type: string;
+  window_start: string;
+}
+
+async function checkRateLimit(
+  supabase: ReturnType<typeof createClient>,
+  ipAddress: string
+): Promise<{ allowed: boolean; remaining: number }> {
+  const windowStart = new Date(Date.now() - RATE_LIMIT_WINDOW_MS).toISOString();
+
+  const { data: existing } = await supabase
+    .from("rate_limits")
+    .select("*")
+    .eq("ip_address", ipAddress)
+    .eq("action_type", "job_application")
+    .gte("window_start", windowStart)
+    .single();
+
+  const record = existing as RateLimitRecord | null;
+
+  if (record) {
+    if (record.request_count >= MAX_REQUESTS_PER_WINDOW) {
+      return { allowed: false, remaining: 0 };
+    }
+    await supabase
+      .from("rate_limits")
+      .update({ request_count: record.request_count + 1 })
+      .eq("id", record.id);
+    return { allowed: true, remaining: MAX_REQUESTS_PER_WINDOW - record.request_count - 1 };
+  }
+
+  await supabase.from("rate_limits").insert({
+    ip_address: ipAddress,
+    action_type: "job_application",
+    request_count: 1,
+    window_start: new Date().toISOString(),
+  });
+
+  return { allowed: true, remaining: MAX_REQUESTS_PER_WINDOW - 1 };
+}
+
 interface JobApplicationRequest {
   fullName: string;
   email: string;
