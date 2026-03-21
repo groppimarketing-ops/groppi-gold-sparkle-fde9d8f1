@@ -193,65 +193,81 @@ const Contact = () => {
                 </h3>
               </div>
               
-              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" noValidate>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-sm font-medium text-foreground/80">{t('contact.name')}</label>
+                    <label htmlFor="contact-name" className="text-sm font-medium text-foreground/80">{t('contact.name')}</label>
                     <input
+                      id="contact-name"
                       {...register('name')}
                       placeholder={t('contact.name')}
+                      autoComplete="name"
+                      aria-required="true"
+                      aria-invalid={!!errors.name}
                       className="w-full px-4 py-3 glass-card !rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 bg-transparent placeholder:text-muted-foreground"
                     />
                     {errors.name && (
-                      <p className="text-destructive text-sm">{t('validation.required')}</p>
+                      <p className="text-destructive text-sm" role="alert">{t('validation.required')}</p>
                     )}
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-medium text-foreground/80">{t('contact.email')}</label>
+                    <label htmlFor="contact-email" className="text-sm font-medium text-foreground/80">{t('contact.email')}</label>
                     <input
+                      id="contact-email"
                       {...register('email')}
                       type="email"
                       placeholder={t('contact.email')}
+                      autoComplete="email"
+                      aria-required="true"
+                      aria-invalid={!!errors.email}
                       className="w-full px-4 py-3 glass-card !rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 bg-transparent placeholder:text-muted-foreground"
                     />
                     {errors.email && (
-                      <p className="text-destructive text-sm">{t('validation.email')}</p>
+                      <p className="text-destructive text-sm" role="alert">{t('validation.email')}</p>
                     )}
                   </div>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-sm font-medium text-foreground/80">{t('contact.phone')}</label>
+                    <label htmlFor="contact-phone" className="text-sm font-medium text-foreground/80">{t('contact.phone')}</label>
                     <input
+                      id="contact-phone"
                       {...register('phone')}
                       placeholder={t('contact.phone')}
+                      autoComplete="tel"
                       className="w-full px-4 py-3 glass-card !rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 bg-transparent placeholder:text-muted-foreground"
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-medium text-foreground/80">{t('contact.subject')}</label>
+                    <label htmlFor="contact-subject" className="text-sm font-medium text-foreground/80">{t('contact.subject')}</label>
                     <input
+                      id="contact-subject"
                       {...register('subject')}
                       placeholder={t('contact.subject')}
+                      aria-required="true"
+                      aria-invalid={!!errors.subject}
                       className="w-full px-4 py-3 glass-card !rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 bg-transparent placeholder:text-muted-foreground"
                     />
                     {errors.subject && (
-                      <p className="text-destructive text-sm">{t('validation.required')}</p>
+                      <p className="text-destructive text-sm" role="alert">{t('validation.required')}</p>
                     )}
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-foreground/80">{t('contact.message')}</label>
+                  <label htmlFor="contact-message" className="text-sm font-medium text-foreground/80">{t('contact.message')}</label>
                   <textarea
+                    id="contact-message"
                     {...register('message')}
                     placeholder={t('contact.message')}
                     rows={5}
+                    aria-required="true"
+                    aria-invalid={!!errors.message}
                     className="w-full px-4 py-3 glass-card !rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 bg-transparent placeholder:text-muted-foreground resize-none"
                   />
                   {errors.message && (
-                    <p className="text-destructive text-sm">{t('validation.required')}</p>
+                    <p className="text-destructive text-sm" role="alert">{t('validation.required')}</p>
                   )}
                 </div>
 
@@ -263,12 +279,12 @@ const Contact = () => {
                 >
                   {isSubmitting ? (
                     <>
-                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden="true" />
                       {t('contact.sending')}
                     </>
                   ) : (
                     <>
-                      <Send className="mr-2 h-4 w-4" />
+                      <Send className="mr-2 h-4 w-4" aria-hidden="true" />
                       {t('contact.send')}
                     </>
                   )}
