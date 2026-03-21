@@ -1,7 +1,5 @@
 import { Eye, Users, ShoppingCart, ArrowRight, HelpCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import GlassCard from '@/components/ui/GlassCard';
-import { Button } from '@/components/ui/button';
 import { memo } from 'react';
 
 interface HomeQuickChoiceProps {
