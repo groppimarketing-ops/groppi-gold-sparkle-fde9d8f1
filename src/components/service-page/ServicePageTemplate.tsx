@@ -1,7 +1,6 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
+import PageLayout from '@/components/layout/PageLayout';
 import ServicePageHero from './ServicePageHero';
 import ServiceDeliverables from './ServiceDeliverables';
 import ServiceProcess from './ServiceProcess';

@@ -237,9 +237,7 @@ const CaseStudy = () => {
           </div>
         </section>
       </main>
-      
-      <Footer />
-    </div>
+    </PageLayout>
   );
 };
 
