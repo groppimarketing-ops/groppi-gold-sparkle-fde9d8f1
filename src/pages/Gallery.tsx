@@ -85,6 +85,9 @@ SectorFilters.displayName = 'SectorFilters';
 const Gallery = () => {
   const { t, i18n } = useTranslation();
   const lang = i18n.language.startsWith('nl') ? 'nl' : 'en';
+  const location = useLocation();
+  // Detect if this Gallery is being served under the /portfolio alias
+  const isPortfolioAlias = location.pathname.replace(/^\/(en|fr|de|es|it|pt|pl|tr|ar|zh|hi|bn|ru|ur|ur)\//, '/').startsWith('/portfolio');
 
   const [searchQuery, setSearchQuery] = useState('');
   const [activeSector, setActiveSector] = useState<Sector | null>(null);
