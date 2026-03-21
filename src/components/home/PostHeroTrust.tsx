@@ -7,7 +7,8 @@ const PostHeroTrust = memo(() => {
 
   return (
     <section
-      className="relative py-10 md:py-12 bg-background overflow-hidden"
+      className="relative py-14 md:py-16 bg-background overflow-hidden"
+      aria-labelledby="post-hero-trust-heading"
       dir={isRtl ? 'rtl' : 'ltr'}
     >
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
