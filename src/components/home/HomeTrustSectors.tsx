@@ -122,7 +122,7 @@ const HomeTrustSectors = memo(() => {
               ))}
             </ul>
 
-            <p className="text-sm text-muted-foreground/70 italic">
+            <p className="text-sm text-muted-foreground/80 italic">
               {t('home.trustSectors.note')}
             </p>
 
