@@ -4,12 +4,12 @@
     "about": "Nosotros",
     "services": "Servicios",
     "blog": "Blog",
-    "gallery": "Portfolio",
+    "gallery": "Portafolio",
     "contact": "Contacto",
     "partnership": "Franquicia",
     "franchise": "Franquicia",
     "careers": "Empleo",
-    "team": "Our Team"
+    "team": "Nuestro Equipo"
   },
   "careers": {
     "meta": {
@@ -112,38 +112,38 @@
       }
     },
     "form": {
-      "title": "Apply now",
-      "subtitle": "Fill in the form and upload your CV. We'll get back to you soon.",
-      "fullName": "Full name",
-      "fullNamePlaceholder": "John Smith",
-      "email": "Email address",
-      "emailPlaceholder": "john@example.com",
-      "phone": "Phone number",
+      "title": "Aplica ahora",
+      "subtitle": "Rellena el formulario y sube tu CV. Nos pondremos en contacto contigo pronto.",
+      "fullName": "Nombre completo",
+      "fullNamePlaceholder": "Juan Pérez",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "juan@ejemplo.com",
+      "phone": "Número de teléfono",
       "phonePlaceholder": "+32 400 00 00 00",
-      "role": "Position",
-      "rolePlaceholder": "Select a position",
-      "otherRole": "Other / Spontaneous application",
-      "linkedin": "LinkedIn / Portfolio URL",
-      "linkedinPlaceholder": "https://linkedin.com/in/your-profile",
-      "message": "Short message",
-      "messagePlaceholder": "Tell us why you're interested (optional)",
-      "cv": "Upload CV",
-      "cvPlaceholder": "Click to upload your CV (PDF, DOC, DOCX)",
-      "cvHint": "Max 10MB. Supported formats: PDF, DOC, DOCX",
-      "cvRequired": "CV is required",
-      "invalidFileType": "Invalid file type. Please upload a PDF, DOC or DOCX.",
-      "fileTooLarge": "File is too large. Maximum 10MB allowed.",
-      "consent": "I agree to be contacted about my application.",
-      "submit": "Submit application",
-      "submitting": "Submitting...",
-      "uploading": "Uploading CV...",
-      "successTitle": "Application received!",
-      "successMessage": "Thank you for your interest. We'll get back to you as soon as possible.",
-      "submitAnother": "Submit another application",
-      "errorTitle": "Something went wrong",
-      "errorMessage": "We couldn't process your application. Please try again.",
-      "privacyNote": "Your data is used only for recruitment. CVs are handled confidentially.",
-      "contactLink": "Contact us"
+      "role": "Puesto",
+      "rolePlaceholder": "Selecciona un puesto",
+      "otherRole": "Otro / Candidatura espontánea",
+      "linkedin": "URL de LinkedIn / Portafolio",
+      "linkedinPlaceholder": "https://linkedin.com/in/tu-perfil",
+      "message": "Mensaje breve",
+      "messagePlaceholder": "Cuéntanos por qué te interesa (opcional)",
+      "cv": "Subir CV",
+      "cvPlaceholder": "Haz clic para subir tu CV (PDF, DOC, DOCX)",
+      "cvHint": "Máx. 10MB. Formatos admitidos: PDF, DOC, DOCX",
+      "cvRequired": "El CV es obligatorio",
+      "invalidFileType": "Tipo de archivo no válido. Sube un PDF, DOC o DOCX.",
+      "fileTooLarge": "El archivo es demasiado grande. Máximo 10MB permitidos.",
+      "consent": "Acepto ser contactado sobre mi solicitud.",
+      "submit": "Enviar solicitud",
+      "submitting": "Enviando...",
+      "uploading": "Subiendo CV...",
+      "successTitle": "¡Solicitud recibida!",
+      "successMessage": "Gracias por tu interés. Nos pondremos en contacto contigo lo antes posible.",
+      "submitAnother": "Enviar otra solicitud",
+      "errorTitle": "Algo salió mal",
+      "errorMessage": "No pudimos procesar tu solicitud. Por favor, inténtalo de nuevo.",
+      "privacyNote": "Tus datos se utilizan únicamente para la contratación. Los CV se tratan de forma confidencial.",
+      "contactLink": "Contáctanos"
     }
   },
   "pricing": {
@@ -1504,7 +1504,7 @@
   },
   "gallery": {
     "title": "Nuestro trabajo",
-    "subtitle": "Portfolio",
+    "subtitle": "Portafolio",
     "description": "Descubre una selección de proyectos que realizamos para nuestros clientes.",
     "filters": {
       "all": "Todo",
@@ -1525,7 +1525,7 @@
     },
     "page": {
       "subtitle": "Nuestro trabajo",
-      "title": "Portfolio",
+      "title": "Portafolio",
       "description": "Descubre nuestros proyectos y los resultados que logramos para nuestros clientes.",
       "resultSingle": "proyecto encontrado",
       "resultPlural": "proyectos encontrados",
@@ -1553,7 +1553,7 @@
       "results": "Resultado",
       "ctaPrimary": "Solicitar presupuesto",
       "ctaWhatsApp": "Chat por WhatsApp",
-      "deliverables": "What we delivered"
+      "deliverables": "Lo que entregamos"
     },
     "items": {
       "caseStudy": "Caso de estudio",
@@ -1763,411 +1763,411 @@
         }
       },
       "cose-pazzi-torino": {
-        "shortResult": "Authentic Italian pizzeria website with strong food-focused visuals and local brand character.",
-        "challenge": "Pizzeria Cose Pazzi in Torino needed a polished digital presence to reflect their authentic Italian cuisine and vibrant neighborhood character, attracting both locals and visitors.",
+        "shortResult": "Sitio web auténtico de pizzería italiana con potentes imágenes centradas en la comida y carácter de marca local.",
+        "challenge": "Pizzería Cose Pazzi en Turín necesitaba una presencia digital pulida para reflejar su auténtica cocina italiana y el vibrante carácter del barrio, atrayendo tanto a locales como a visitantes.",
         "approach": {
-          "0": "Website structure & optimization",
-          "1": "Visual presentation & food-focused hierarchy",
-          "2": "Mobile-first usability improvements",
-          "3": "Local Italian brand feel and storytelling"
+          "0": "Estructura y optimización del sitio web",
+          "1": "Presentación visual y jerarquía centrada en la comida",
+          "2": "Mejoras de usabilidad mobile-first",
+          "3": "Sensación de marca italiana local y storytelling"
         },
         "results": {
-          "0": "Premium restaurant branding online",
-          "1": "Strong food visibility and appetite appeal",
-          "2": "Clear and simple customer journey",
-          "3": "Improved online visibility and local SEO"
+          "0": "Branding online de restaurante premium",
+          "1": "Fuerte visibilidad de la comida y atractivo apetitoso",
+          "2": "Recorrido del cliente claro y sencillo",
+          "3": "Mejora de la visibilidad online y SEO local"
         },
-        "disclaimer": "Visuals are illustrative and created for presentation purposes."
+        "disclaimer": "Las imágenes son ilustrativas y creadas con fines de presentación."
       },
       "augusto-torino": {
-        "shortResult": "Elegant restaurant website with strong visual identity and refined food presentation.",
-        "challenge": "Ristorante Pizzeria Augusto in Torino needed a polished digital presence to reflect their refined Italian cuisine and welcoming atmosphere, attracting both locals and visitors.",
+        "shortResult": "Elegante sitio web de restaurante con fuerte identidad visual y presentación refinada de la comida.",
+        "challenge": "Ristorante Pizzeria Augusto en Turín necesitaba una presencia digital pulida para reflejar su refinada cocina italiana y su ambiente acogedor, atrayendo tanto a locales como a visitantes.",
         "approach": {
-          "0": "Website structure & optimization",
-          "1": "Visual hierarchy & food-focused layout",
-          "2": "Performance and mobile usability",
-          "3": "Event and reservation integration"
+          "0": "Estructura y optimización del sitio web",
+          "1": "Jerarquía visual y diseño centrado en la gastronomía",
+          "2": "Rendimiento y usabilidad móvil",
+          "3": "Integración de eventos y reservas"
         },
         "results": {
-          "0": "Premium restaurant branding online",
-          "1": "Clear customer journey from menu to booking",
-          "2": "Strong visual storytelling across all pages",
-          "3": "Improved online visibility and local SEO"
+          "0": "Marca de restaurante premium online",
+          "1": "Recorrido claro del cliente desde el menú hasta la reserva",
+          "2": "Narrativa visual potente en todas las páginas",
+          "3": "Mayor visibilidad online y SEO local"
         },
-        "disclaimer": "Project actively managed by GROPPI."
+        "disclaimer": "Proyecto gestionado activamente por GROPPI."
       },
       "pummaro-torino": {
-        "shortResult": "Modern restaurant website with strong food presentation and clear customer flow.",
-        "challenge": "Pizzeria Pummarò in Torino needed a professional digital presence that reflected their commitment to authentic Italian cuisine using premium ingredients from small Italian producers.",
+        "shortResult": "Web moderna para restaurante con fuerte presentación de alimentos y flujo de cliente claro.",
+        "challenge": "Pizzeria Pummarò en Torino necesitaba una presencia digital profesional que reflejara su compromiso con la auténtica cocina italiana utilizando ingredientes premium de pequeños productores italianos.",
         "approach": {
-          "0": "Website structure & optimization",
-          "1": "Visual hierarchy & food presentation",
-          "2": "Mobile usability improvements",
-          "3": "Online reservation and delivery integration"
+          "0": "Estructura y optimización web",
+          "1": "Jerarquía visual y presentación de alimentos",
+          "2": "Mejoras en la usabilidad móvil",
+          "3": "Integración de reservas y pedidos online"
         },
         "results": {
-          "0": "Conversion-friendly layout with clear navigation",
-          "1": "Strong local restaurant branding online",
-          "2": "Professional food visibility and ingredient storytelling",
-          "3": "Seamless customer journey from menu to reservation"
+          "0": "Diseño optimizado para conversión con navegación clara",
+          "1": "Fuerte branding local online para el restaurante",
+          "2": "Visibilidad profesional de alimentos y narrativa de ingredientes",
+          "3": "Recorrido del cliente fluido desde el menú hasta la reserva"
         },
-        "disclaimer": "Project actively managed by GROPPI."
+        "disclaimer": "Proyecto gestionado activamente por GROPPI."
       },
       "fratelli-roselli": {
-        "shortResult": "Authentic Italian restaurant website with strong food presentation and local branding.",
-        "challenge": "Pizzeria Fratelli Roselli in Turin had a loyal local following for over 20 years, but needed a professional digital presence to showcase their commitment to quality ingredients and authentic pizza-making.",
+        "shortResult": "Web auténtica de restaurante italiano con fuerte presentación de alimentos y branding local.",
+        "challenge": "Pizzeria Fratelli Roselli en Turín tenía una clientela local fiel durante más de 20 años, pero necesitaba una presencia digital profesional para mostrar su compromiso con los ingredientes de calidad y la auténtica elaboración de pizzas.",
         "approach": {
-          "0": "Website structure & optimization",
-          "1": "Visual presentation & content layout",
-          "2": "Performance & usability improvements",
-          "3": "Online reservation system integration"
+          "0": "Estructura y optimización web",
+          "1": "Presentación visual y diseño de contenido",
+          "2": "Mejoras de rendimiento y usabilidad",
+          "3": "Integración de sistema de reservas online"
         },
         "results": {
-          "0": "Professional and clear website reflecting brand quality",
-          "1": "Strong food visibility with premium ingredient focus",
-          "2": "Clear customer journey from menu to reservation",
-          "3": "Improved local restaurant branding online"
+          "0": "Web profesional y clara que refleja la calidad de la marca",
+          "1": "Fuerte visibilidad de alimentos con enfoque en ingredientes premium",
+          "2": "Recorrido claro del cliente desde el menú hasta la reserva",
+          "3": "Mejora del branding local online del restaurante"
         },
-        "disclaimer": "Project actively managed by GROPPI."
+        "disclaimer": "Proyecto gestionado activamente por GROPPI."
       },
       "boothuis-turnhout": {
-        "shortResult": "Clean restaurant website and visual presentation for a local hospitality business.",
-        "challenge": "Restaurant Boothuis Turnhout needed a professional digital presence that reflected the atmosphere and quality of the restaurant online.",
+        "shortResult": "Web de restaurante limpia y presentación visual para un negocio de hostelería local.",
+        "challenge": "El restaurante Boothuis Turnhout necesitaba una presencia digital profesional que reflejara la atmósfera y la calidad del restaurante online.",
         "approach": {
-          "0": "Website management and ongoing optimization",
-          "1": "Visual content and professional presentation",
-          "2": "Digital presence building and maintenance",
-          "3": "Consistent brand experience across all online channels"
+          "0": "Gestión web y optimización continua",
+          "1": "Contenido visual y presentación profesional",
+          "2": "Construcción y mantenimiento de la presencia digital",
+          "3": "Experiencia de marca consistente en todos los canales online"
         },
         "results": {
-          "0": "Professional and clear website",
-          "1": "Strong visual presentation of the restaurant",
-          "2": "Improved online visibility",
-          "3": "Ongoing management and optimization"
+          "0": "Web profesional y clara",
+          "1": "Fuerte presentación visual del restaurante",
+          "2": "Mayor visibilidad online",
+          "3": "Gestión y optimización continuas"
         },
-        "disclaimer": "Project actively managed by GROPPI."
+        "disclaimer": "Proyecto gestionado activamente por GROPPI."
       },
       "sanremo-pizzeria": {
-        "shortResult": "Strong social media presence and visual content for a local restaurant.",
-        "challenge": "Sanremo Pizzeria Restaurant had a loyal local following, but lacked a professional digital presence to attract new customers and convey the restaurant atmosphere online.",
+        "shortResult": "Fuerte presencia en redes sociales y contenido visual para un restaurante local.",
+        "challenge": "El restaurante Pizzeria Sanremo tenía una clientela local fiel, pero carecía de una presencia digital profesional para atraer nuevos clientes y transmitir la atmósfera del restaurante online.",
         "approach": {
-          "0": "Facebook page management and optimization",
-          "1": "Professional visual content creation",
-          "2": "Social media strategy and consistent posting",
-          "3": "Digital presence building and maintenance"
+          "0": "Gestión y optimización de la página de Facebook",
+          "1": "Creación de contenido visual profesional",
+          "2": "Estrategia de redes sociales y publicación consistente",
+          "3": "Construcción y mantenimiento de la presencia digital"
         },
         "results": {
-          "0": "Professional and consistent online presence",
-          "1": "Visually strong social media content",
-          "2": "Better visibility and findability online",
-          "3": "Ongoing management and optimization"
+          "0": "Presencia online profesional y consistente",
+          "1": "Contenido visual potente en redes sociales",
+          "2": "Mayor visibilidad y facilidad de búsqueda online",
+          "3": "Gestión y optimización continuas"
         },
-        "disclaimer": "Project actively managed by GROPPI."
+        "disclaimer": "Proyecto gestionado activamente por GROPPI."
       },
       "mangiare-3840": {
-        "shortResult": "Modern restaurant website with strong visual identity.",
-        "challenge": "Mangiare 3840 had a strong local reputation but lacked a professional online presence that reflected the atmosphere and quality of the restaurant.",
+        "shortResult": "Web de restaurante moderna con fuerte identidad visual.",
+        "challenge": "Mangiare 3840 tenía una sólida reputación local, pero carecía de una presencia online profesional que reflejara la atmósfera y la calidad del restaurante.",
         "approach": {
-          "0": "Fully custom-designed website with dark premium design",
-          "1": "Visual content and branding matching the restaurant atmosphere",
-          "2": "Ongoing digital support and optimization",
-          "3": "Menu and reservation system integrated"
+          "0": "Web de diseño totalmente personalizado con temática oscura premium",
+          "1": "Contenido visual y branding a juego con la atmósfera del restaurante",
+          "2": "Soporte digital y optimización continuos",
+          "3": "Menú y sistema de reservas integrados"
         },
         "results": {
-          "0": "Professional online presence strengthening the brand experience",
-          "1": "Improved user experience for visitors",
-          "2": "Strong visual identity across all digital channels",
-          "3": "Ongoing management and optimization"
+          "0": "Presencia online profesional que refuerza la experiencia de marca",
+          "1": "Mejora de la experiencia de usuario para los visitantes",
+          "2": "Fuerte identidad visual en todos los canales digitales",
+          "3": "Gestión y optimización continuas"
         },
-        "disclaimer": "Project actively managed by GROPPI."
+        "disclaimer": "Proyecto gestionado activamente por GROPPI."
       },
       "ai-learn-academy": {
-        "shortResult": "Live platform – ongoing",
-        "challenge": "AI Deals needed a premium platform that simplifies access to leading AI tools through a subscription model, combined with an educational academy for creators and professionals.",
+        "shortResult": "Plataforma en vivo – en curso",
+        "challenge": "AI Deals necesitaba una plataforma premium que simplificara el acceso a las principales herramientas de AI a través de un modelo de suscripción, combinado con una academia educativa para creadores y profesionales.",
         "approach": {
-          "0": "Full platform design & UX/UI development with premium dark theme",
-          "1": "Subscription-based access management system",
-          "2": "AI tools marketplace structure with categorization",
-          "3": "AI Academy & educational content architecture",
-          "4": "Scalable platform infrastructure for growth",
-          "5": "Ongoing technical management and optimization"
+          "0": "Diseño completo de la plataforma y desarrollo UX/UI con tema oscuro premium",
+          "1": "Sistema de gestión de acceso basado en suscripción",
+          "2": "Estructura de marketplace de herramientas AI con categorización",
+          "3": "Arquitectura de AI Academy y contenido educativo",
+          "4": "Infraestructura de plataforma escalable para el crecimiento",
+          "5": "Gestión técnica y optimización continuas"
         },
         "results": {
-          "0": "Custom AI tools marketplace launched",
-          "1": "Subscription & access management system live",
-          "2": "Premium dark UI with conversion-focused UX",
-          "3": "Educational AI Academy structure deployed",
-          "4": "Scalable architecture supporting continuous growth",
+          "0": "Lanzamiento de marketplace personalizado de herramientas AI",
+          "1": "Sistema de suscripción y gestión de acceso en vivo",
+          "2": "UI oscura premium con UX centrada en la conversión",
+          "3": "Estructura de AI Academy educativa implementada",
+          "4": "Arquitectura escalable que soporta el crecimiento continuo",
           "5": "Platform actively managed & optimized by Groppi"
         },
         "disclaimer": "This is a live and ongoing project. Platform design & management by Groppi."
       },
       "pilotscareer": {
-        "shortResult": "International aviation recruitment platform – live",
-        "challenge": "PilotsCareer needed a professional, scalable recruitment platform connecting airline pilots with global career opportunities.",
+        "shortResult": "Plataforma internacional de reclutamiento de aviación – en vivo",
+        "challenge": "PilotsCareer necesitaba una plataforma de reclutamiento profesional y escalable que conectara a pilotos de aerolíneas con oportunidades laborales globales.",
         "approach": {
-          "0": "Full platform design & development from scratch",
-          "1": "Premium dark UI with aviation-inspired aesthetics",
-          "2": "Advanced job search and filtering system",
-          "3": "Pilot profile and application management",
-          "4": "Responsive design for desktop and mobile",
-          "5": "Ongoing platform optimization and feature development"
+          "0": "Diseño y desarrollo completo de la plataforma desde cero",
+          "1": "UI oscura premium con estética inspirada en la aviación",
+          "2": "Sistema avanzado de búsqueda y filtrado de empleo",
+          "3": "Gestión de perfiles de pilotos y solicitudes",
+          "4": "Diseño responsive para escritorio y móvil",
+          "5": "Optimización continua de la plataforma y desarrollo de funcionalidades"
         },
         "results": {
-          "0": "Professional aviation recruitment platform launched",
-          "1": "Scalable architecture supporting international growth",
-          "2": "Clean, intuitive UX for pilots and recruiters",
-          "3": "Advanced search and filtering capabilities",
-          "4": "Mobile-optimized pilot profile experience",
+          "0": "Lanzamiento de plataforma profesional de reclutamiento aeronáutico",
+          "1": "Arquitectura escalable para crecimiento internacional",
+          "2": "UX limpia e intuitiva para pilotos y reclutadores",
+          "3": "Capacidades avanzadas de búsqueda y filtrado",
+          "4": "Experiencia de perfil de piloto optimizada para móvil",
           "5": "Platform actively managed & developed by Groppi"
         },
         "disclaimer": "This is a live and ongoing project. Platform design & management by Groppi."
       },
       "casa-mavi": {
-        "shortResult": "Complete digital presence for a Mediterranean gem in Spain.",
-        "challenge": "Casa Mavi, an Italian-Neapolitan restaurant in Fuengirola (Spain), wanted to build a professional digital presence to attract both local guests and tourists along the Costa del Sol.",
+        "shortResult": "Presencia digital completa para una joya mediterránea en España.",
+        "challenge": "Casa Mavi, un restaurante italiano-napolitano en Fuengirola (España), quería construir una presencia digital profesional para atraer tanto a clientes locales como a turistas a lo largo de la Costa del Sol.",
         "approach": {
-          "0": "Custom website with online reservation system",
-          "1": "Digital menu and visual content creation",
-          "2": "Building a professional digital presence",
-          "3": "Social media strategy targeting local and tourist audiences"
+          "0": "Sitio web personalizado con sistema de reservas online",
+          "1": "Creación de menú digital y contenido visual",
+          "2": "Construcción de una presencia digital profesional",
+          "3": "Estrategia de redes sociales dirigida a audiencias locales y turistas"
         },
         "results": {
-          "0": "Professional website with integrated reservation system",
-          "1": "Strong visual identity reflecting the Mediterranean atmosphere",
-          "2": "Improved online visibility for tourists and locals",
-          "3": "Ongoing digital management and optimization"
+          "0": "Sitio web profesional con sistema de reservas integrado",
+          "1": "Identidad visual sólida que refleja el ambiente mediterráneo",
+          "2": "Mayor visibilidad online para turistas y locales",
+          "3": "Gestión y optimización digital continua"
         },
-        "disclaimer": "Project actively managed by GROPPI."
+        "disclaimer": "Proyecto gestionado activamente por GROPPI."
       },
       "arte-y-cocina": {
-        "shortResult": "Premium digital identity for an artistic fine-dining experience.",
-        "challenge": "ArTe y CoCiNa, an artistic fine-dining restaurant in Spain, wanted a digital presence that reflects the unique fusion of art and gastronomy and appeals to an international audience.",
+        "shortResult": "Identidad digital premium para una experiencia gastronómica artística.",
+        "challenge": "ArTe y CoCiNa, un restaurante de alta cocina artística en España, quería una presencia digital que reflejara la fusión única de arte y gastronomía y atrajera a una audiencia internacional.",
         "approach": {
-          "0": "Custom website with luxurious visual identity",
-          "1": "Professional food and interior content creation",
-          "2": "Building a strong digital presence",
-          "3": "Visual branding combining art and culinary excellence"
+          "0": "Sitio web personalizado con identidad visual lujosa",
+          "1": "Creación de contenido profesional de comida e interiores",
+          "2": "Construcción de una fuerte presencia digital",
+          "3": "Branding visual que combina arte y excelencia culinaria"
         },
         "results": {
-          "0": "Elegant website reflecting the fine-dining experience online",
-          "1": "Strong visual identity with artistic flair",
-          "2": "Improved online visibility and brand experience",
-          "3": "Ongoing digital management and optimization"
+          "0": "Sitio web elegante que refleja la experiencia de alta cocina online",
+          "1": "Identidad visual sólida con un toque artístico",
+          "2": "Mayor visibilidad online y experiencia de marca",
+          "3": "Gestión y optimización digital continua"
         },
-        "disclaimer": "Project actively managed by GROPPI."
+        "disclaimer": "Proyecto gestionado activamente por GROPPI."
       },
       "verona-los-boliches": {
-        "shortResult": "Complete online presence for a vibrant fusion restaurant.",
-        "challenge": "Verona Los Boliches, a unique Italian-Indian-Mexican fusion restaurant in Spain, needed a professional digital presence reflecting the multicultural cuisine and vibrant atmosphere of the Costa del Sol.",
+        "shortResult": "Presencia online completa para un vibrante restaurante de fusión.",
+        "challenge": "Verona Los Boliches, un restaurante de fusión italiano-indio-mexicano único en España, necesitaba una presencia digital profesional que reflejara la cocina multicultural y el ambiente vibrante de la Costa del Sol.",
         "approach": {
-          "0": "Custom website with visual identity",
-          "1": "Professional food and ambiance content creation",
-          "2": "Building online presence and visibility",
-          "3": "Visual content targeting diverse cuisine styles"
+          "0": "Sitio web personalizado con identidad visual",
+          "1": "Creación de contenido profesional de comida y ambiente",
+          "2": "Construcción de presencia y visibilidad online",
+          "3": "Contenido visual dirigido a diversos estilos de cocina"
         },
         "results": {
-          "0": "Professional website strongly presenting the fusion cuisine",
-          "1": "Improved online visibility for tourists and locals",
-          "2": "Strong visual content across all digital channels",
-          "3": "Ongoing digital management and optimization"
+          "0": "Sitio web profesional que presenta con fuerza la cocina de fusión",
+          "1": "Mayor visibilidad online para turistas y locales",
+          "2": "Contenido visual sólido en todos los canales digitales",
+          "3": "Gestión y optimización digital continua"
         },
-        "disclaimer": "Project actively managed by GROPPI."
+        "disclaimer": "Proyecto gestionado activamente por GROPPI."
       },
       "happy-flavors": {
-        "shortResult": "Professional digital presence for authentic Indian cuisine in Spain.",
-        "challenge": "Happy Flavors Indian Restaurant wanted to build a professional online presence reflecting authentic Indian cuisine and warm hospitality, appealing to both local guests and tourists.",
+        "shortResult": "Presencia digital profesional para auténtica cocina india en España.",
+        "challenge": "Happy Flavors Indian Restaurant quería construir una presencia online profesional que reflejara la auténtica cocina india y la cálida hospitalidad, atrayendo tanto a clientes locales como a turistas.",
         "approach": {
-          "0": "Custom website with warm visual identity",
-          "1": "Professional food and ambiance content creation",
-          "2": "Building digital presence and visibility",
-          "3": "Visual content showcasing the rich Indian cuisine"
+          "0": "Sitio web personalizado con identidad visual cálida",
+          "1": "Creación de contenido profesional de comida y ambiente",
+          "2": "Construcción de presencia y visibilidad digital",
+          "3": "Contenido visual que muestra la rica cocina india"
         },
         "results": {
-          "0": "Professional website presenting authentic Indian cuisine",
-          "1": "Strong visual content across all digital channels",
-          "2": "Improved online visibility for tourists and locals",
-          "3": "Ongoing digital management and optimization"
+          "0": "Sitio web profesional que presenta auténtica cocina india",
+          "1": "Contenido visual sólido en todos los canales digitales",
+          "2": "Mayor visibilidad online para turistas y locales",
+          "3": "Gestión y optimización digital continua"
         },
-        "disclaimer": "Project actively managed by GROPPI."
+        "disclaimer": "Proyecto gestionado activamente por GROPPI."
       },
       "guest-reservations": {
-        "shortResult": "Ongoing platform management for a global hotel booking service.",
-        "challenge": "Guest Reservations, an international hotel and travel booking platform, needed ongoing platform management, website optimization and technical support to sustain their worldwide growth.",
+        "shortResult": "Gestión continua de plataforma para un servicio global de reservas de hoteles.",
+        "challenge": "Guest Reservations, una plataforma internacional de reservas de hoteles y viajes, necesitaba gestión continua de la plataforma, optimización del sitio web y soporte técnico para sostener su crecimiento mundial.",
         "approach": {
-          "0": "Ongoing platform management and technical support",
-          "1": "Website optimization for better performance and conversion",
-          "2": "Monitoring and proactive maintenance of the booking platform",
-          "3": "Strategic support for scalable growth"
+          "0": "Gestión continua de la plataforma y soporte técnico",
+          "1": "Optimización del sitio web para mejor rendimiento y conversión",
+          "2": "Monitoreo y mantenimiento proactivo de la plataforma de reservas",
+          "3": "Soporte estratégico para un crecimiento escalable"
         },
         "results": {
-          "0": "Improved platform performance and user experience",
-          "1": "Higher conversion rate on the booking platform",
-          "2": "Stable and reliable platform for global users",
-          "3": "Ongoing technical support and optimization"
+          "0": "Rendimiento de plataforma y experiencia de usuario mejorados",
+          "1": "Mayor tasa de conversión en la plataforma de reservas",
+          "2": "Plataforma estable y fiable para usuarios globales",
+          "3": "Soporte técnico y optimización continuos"
         },
-        "disclaimer": "Ongoing project actively managed by GROPPI."
+        "disclaimer": "Proyecto en curso gestionado activamente por GROPPI."
       },
       "eurostars-hotels": {
-        "shortResult": "Digital platform support & performance optimization for a European hotel group.",
-        "challenge": "Eurostars Hotels, a European hotel group with an extensive booking platform, needed ongoing digital support, website management and performance optimization to strengthen their online presence.",
+        "shortResult": "Soporte de plataforma digital y optimización de rendimiento para un grupo hotelero europeo.",
+        "challenge": "Eurostars Hotels, un grupo hotelero europeo con una extensa plataforma de reservas, necesitaba soporte digital continuo, gestión de sitios web y optimización de rendimiento para fortalecer su presencia online.",
         "approach": {
-          "0": "Ongoing digital platform support and technical management",
-          "1": "Website management and booking platform optimization",
-          "2": "Performance optimization for faster load times and better conversion",
-          "3": "Strategic support for European growth"
+          "0": "Soporte continuo de plataforma digital y gestión técnica",
+          "1": "Gestión de sitios web y optimización de plataforma de reservas",
+          "2": "Optimización de rendimiento para tiempos de carga más rápidos y mejor conversión",
+          "3": "Soporte estratégico para el crecimiento europeo"
         },
         "results": {
-          "0": "Optimized website performance and user experience",
-          "1": "Improved conversion rate on the booking platform",
-          "2": "Stable and reliable digital platform for European guests",
-          "3": "Ongoing technical management and proactive optimization"
+          "0": "Rendimiento del sitio web y experiencia de usuario optimizados",
+          "1": "Mayor tasa de conversión en la plataforma de reservas",
+          "2": "Plataforma digital estable y fiable para huéspedes europeos",
+          "3": "Gestión técnica y optimización proactiva continuas"
         },
-        "disclaimer": "Ongoing project actively managed by GROPPI."
+        "disclaimer": "Proyecto en curso gestionado activamente por GROPPI."
       },
       "nda-project-001": {
-        "shortResult": "+42% online reservations",
-        "challenge": "Outdated website with poor mobile experience led to missed reservations.",
+        "shortResult": "+42% reservas online",
+        "challenge": "Sitio web obsoleto con mala experiencia móvil que provocó pérdidas de reservas.",
         "approach": {
-          "0": "Responsive website redesign",
-          "1": "Online reservation system",
-          "2": "Local SEO optimization"
+          "0": "Rediseño web responsive",
+          "1": "Sistema de reservas online",
+          "2": "Optimización SEO local"
         },
         "results": {
-          "0": "+42% online reservations",
-          "1": "Faster load time (< 2s)"
+          "0": "+42% reservas online",
+          "1": "Tiempo de carga más rápido (< 2s)"
         },
-        "disclaimer": "Indicative result, dependent on period & budget."
+        "disclaimer": "Resultado indicativo, dependiente del período y presupuesto."
       },
       "nda-project-002": {
-        "shortResult": "+70% table reservations",
-        "challenge": "City center bistro lacked online visibility with tourists and locals.",
+        "shortResult": "+70% reservas de mesa",
+        "challenge": "Bistró céntrico con poca visibilidad online para turistas y locales.",
         "approach": {
-          "0": "Instagram Reels strategy",
-          "1": "Food videography",
-          "2": "Seasonal menu campaigns"
+          "0": "Estrategia de Instagram Reels",
+          "1": "Videografía gastronómica",
+          "2": "Campañas de menú de temporada"
         },
         "results": {
-          "0": "+70% table reservations via social",
-          "1": "Viral Reel (50K+ views)"
+          "0": "+70% reservas de mesa vía redes sociales",
+          "1": "Reel viral (más de 50K vistas)"
         },
-        "disclaimer": "Indicative result, dependent on period & budget."
+        "disclaimer": "Resultado indicativo, dependiente del período y presupuesto."
       },
       "nda-project-003": {
-        "shortResult": "+55% Instagram followers",
-        "challenge": "Beauty salon lacked online visibility with younger target audience.",
+        "shortResult": "+55% seguidores en Instagram",
+        "challenge": "Salón de belleza con poca visibilidad online para público joven.",
         "approach": {
-          "0": "Instagram content strategy",
-          "1": "Before/after visual series",
-          "2": "Influencer micro-partnerships"
+          "0": "Estrategia de contenido para Instagram",
+          "1": "Serie visual de antes/después",
+          "2": "Micro-colaboraciones con influencers"
         },
         "results": {
-          "0": "+55% Instagram followers",
-          "1": "Higher booking rate via DM"
+          "0": "+55% seguidores en Instagram",
+          "1": "Mayor tasa de reservas vía DM"
         },
-        "disclaimer": "Indicative result, dependent on period & budget."
+        "disclaimer": "Resultado indicativo, dependiente del período y presupuesto."
       },
       "nda-project-004": {
-        "shortResult": "+50% bookings",
-        "challenge": "New spa lacked differentiation in competitive wellness market.",
+        "shortResult": "+50% reservas",
+        "challenge": "Nuevo spa sin diferenciación en un mercado de bienestar competitivo.",
         "approach": {
-          "0": "Luxury brand identity development",
-          "1": "Booking-optimized website",
-          "2": "Atmospheric visual language"
+          "0": "Desarrollo de identidad de marca de lujo",
+          "1": "Web optimizada para reservas",
+          "2": "Lenguaje visual atmosférico"
         },
         "results": {
-          "0": "+50% bookings in first 6 months",
-          "1": "Premium positioning achieved"
+          "0": "+50% reservas en los primeros 6 meses",
+          "1": "Posicionamiento premium logrado"
         },
-        "disclaimer": "Indicative result, dependent on period & budget."
+        "disclaimer": "Resultado indicativo, dependiente del período y presupuesto."
       },
       "nda-project-005": {
-        "shortResult": "+38% quote requests",
-        "challenge": "Family business with strong reputation but outdated brand identity.",
+        "shortResult": "+38% solicitudes de presupuesto",
+        "challenge": "Negocio familiar con gran reputación pero identidad de marca anticuada.",
         "approach": {
-          "0": "Complete brand identity reworked",
-          "1": "Professional project photography",
-          "2": "New website with portfolio"
+          "0": "Renovación completa de la identidad de marca",
+          "1": "Fotografía profesional de proyectos",
+          "2": "Nueva web con portfolio"
         },
         "results": {
-          "0": "+38% quote requests",
-          "1": "Stronger brand recognition"
+          "0": "+38% solicitudes de presupuesto",
+          "1": "Mayor reconocimiento de marca"
         },
-        "disclaimer": "Indicative result, dependent on period & budget."
+        "disclaimer": "Resultado indicativo, dependiente del período y presupuesto."
       },
       "nda-project-006": {
         "shortResult": "+85% leads",
-        "challenge": "Solar panel installer in growing market with poor lead generation.",
+        "challenge": "Instalador de paneles solares en mercado creciente con poca generación de leads.",
         "approach": {
-          "0": "Lead generation funnels",
-          "1": "Google Ads campaigns",
-          "2": "Calculator tool on website"
+          "0": "Embudos de generación de leads",
+          "1": "Campañas de Google Ads",
+          "2": "Herramienta de calculadora en la web"
         },
         "results": {
-          "0": "+85% leads per month",
-          "1": "Cost per lead halved"
+          "0": "+85% leads al mes",
+          "1": "Costo por lead reducido a la mitad"
         },
-        "disclaimer": "Indicative result, dependent on period & budget."
+        "disclaimer": "Resultado indicativo, dependiente del período y presupuesto."
       },
       "nda-project-007": {
-        "shortResult": "€62K revenue in Q1",
-        "challenge": "New webshop without existing customer base or brand awareness.",
+        "shortResult": "62K€ de ingresos en Q1",
+        "challenge": "Nueva tienda online sin base de clientes ni reconocimiento de marca.",
         "approach": {
-          "0": "Shopify webshop configuration",
-          "1": "Meta Ads campaigns",
-          "2": "Retargeting funnels"
+          "0": "Configuración de tienda Shopify",
+          "1": "Campañas de Meta Ads",
+          "2": "Embudos de retargeting"
         },
         "results": {
-          "0": "€62K revenue in first quarter",
-          "1": "ROAS of 3.8"
+          "0": "62K€ de ingresos en el primer trimestre",
+          "1": "ROAS de 3.8"
         },
-        "disclaimer": "Indicative result, dependent on period & budget."
+        "disclaimer": "Resultado indicativo, dependiente del período y presupuesto."
       },
       "nda-project-008": {
-        "shortResult": "+130% online sales",
-        "challenge": "Jeweler wanted to start online sales alongside physical store.",
+        "shortResult": "+130% ventas online",
+        "challenge": "Joyero quería iniciar ventas online junto a su tienda física.",
         "approach": {
-          "0": "WooCommerce webshop setup",
-          "1": "Product photography",
-          "2": "Instagram shopping integration"
+          "0": "Configuración de tienda WooCommerce",
+          "1": "Fotografía de producto",
+          "2": "Integración de Instagram Shopping"
         },
         "results": {
-          "0": "+130% online sales in 4 months",
-          "1": "Strong Instagram community"
+          "0": "+130% ventas online en 4 meses",
+          "1": "Fuerte comunidad en Instagram"
         },
-        "disclaimer": "Indicative result, dependent on period & budget."
+        "disclaimer": "Resultado indicativo, dependiente del período y presupuesto."
       },
       "nda-project-009": {
-        "shortResult": "#2 Google position",
-        "challenge": "Medical practice invisible in search results despite strong reputation.",
+        "shortResult": "Posición #2 en Google",
+        "challenge": "Clínica médica invisible en resultados de búsqueda a pesar de gran reputación.",
         "approach": {
-          "0": "Technical SEO audit and fixes",
-          "1": "Medical content strategy",
-          "2": "Google My Business optimization"
+          "0": "Auditoría y corrección SEO técnico",
+          "1": "Estrategia de contenido médico",
+          "2": "Optimización de Google My Business"
         },
         "results": {
-          "0": "#2 Google position for core keywords",
-          "1": "+60% organic traffic"
+          "0": "Posición #2 en Google para palabras clave principales",
+          "1": "+60% tráfico orgánico"
         },
-        "disclaimer": "Indicative result, dependent on period & budget."
+        "disclaimer": "Resultado indicativo, dependiente del período y presupuesto."
       },
       "nda-project-010": {
-        "shortResult": "+35% new patients",
-        "challenge": "Dental practice in competitive region with declining new patient numbers.",
+        "shortResult": "+35% nuevos pacientes",
+        "challenge": "Clínica dental en región competitiva con disminución de nuevos pacientes.",
         "approach": {
-          "0": "Local SEO strategy",
-          "1": "Google Ads campaigns",
-          "2": "Review management"
+          "0": "Estrategia SEO local",
+          "1": "Campañas de Google Ads",
+          "2": "Gestión de reseñas"
         },
         "results": {
-          "0": "+35% new patients per month",
-          "1": "#1 Google Maps local"
+          "0": "+35% nuevos pacientes al mes",
+          "1": "#1 en Google Maps local"
         },
-        "disclaimer": "Indicative result, dependent on period & budget."
+        "disclaimer": "Resultado indicativo, dependiente del período y presupuesto."
       },
       "nda-project-011": {
-        "shortResult": "Seed round closed",
-        "challenge": "Pre-seed startup needed professional appearance for investors.",
+        "shortResult": "Ronda semilla cerrada",
+        "challenge": "Startup pre-seed necesitaba una imagen profesional para inversores.",
         "approach": {
           "0": "Logo and visual identity",
           "1": "Pitch deck design",

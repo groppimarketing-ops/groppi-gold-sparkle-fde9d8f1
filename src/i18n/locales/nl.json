@@ -29,7 +29,7 @@
     },
     "locations": {
       "belgium": "België",
-      "remote": "Remote",
+      "remote": "Vanop afstand",
       "hybrid": "Hybride"
     },
     "roles": {
@@ -235,7 +235,7 @@
       "scrollHint": "Ontdek meer",
       "logoAlt": "GROPPI Gold Standard",
       "chartLeads": "LEADS",
-      "chartSales": "SALES",
+      "chartSales": "VERKOOP",
       "chartRoi": "ROI",
       "tagline": "GROEI · CONTENT · ROI",
       "beyondStandard": "✦ BEYOND STANDARD ✦"
@@ -1449,7 +1449,7 @@
       "results": "Resultaat",
       "ctaPrimary": "Vraag een offerte aan",
       "ctaWhatsApp": "Stuur een bericht via WhatsApp",
-      "deliverables": "What we delivered"
+      "deliverables": "Wat we geleverd hebben"
     },
     "items": {
       "castello-vicchiomaggio": {
@@ -2711,7 +2711,7 @@
       "subtitle": "Geen vage beloftes. Wij leveren een concreet plan met duidelijke stappen.",
       "primaryCTA": "Vraag een voorstel aan",
       "secondaryCTA": "Stuur een bericht via WhatsApp",
-      "trustNote": "No-obligation conversation · Final quote after intake · Prices excl. VAT"
+      "trustNote": "Vrijblijvend gesprek · Definitieve offerte na intake · Prijzen excl. btw"
     },
     "socialMedia": {
       "title": "Social mediabeheer",

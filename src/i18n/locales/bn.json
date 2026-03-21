@@ -1299,9 +1299,9 @@
       },
       "transparency": {
         "headline": "সম্পূর্ণ বাজেট নিয়ন্ত্রণ",
-        "subheadline": "You decide the budget. We maximize its performance.",
-        "description": "Our advertising management fees cover strategy, setup, optimization, and reporting only. Advertising budgets are paid directly to platforms such as Google or Meta, giving you full transparency and control.",
-        "shortNote": "Ad spend is paid directly to advertising platforms."
+        "subheadline": "বাজেট আপনার, সর্বোচ্চ পারফরম্যান্স নিশ্চিত করার দায়িত্ব আমাদের।",
+        "description": "আমাদের বিজ্ঞাপন ব্যবস্থাপনা ফি শুধুমাত্র কৌশল, সেটআপ, অপ্টিমাইজেশন এবং রিপোর্টিং কভার করে। বিজ্ঞাপনের বাজেট সরাসরি Google বা Meta-এর মতো প্ল্যাটফর্মগুলিতে পরিশোধ করা হয়, যা আপনাকে সম্পূর্ণ স্বচ্ছতা এবং নিয়ন্ত্রণ দেয়।",
+        "shortNote": "বিজ্ঞাপনের খরচ সরাসরি বিজ্ঞাপন প্ল্যাটফর্মগুলিতে পরিশোধ করা হয়।"
       },
       "salesFlow": {
         "title": "আমাদের সহযোগিতার প্রক্রিয়া",
@@ -1313,24 +1313,24 @@
           "4": "ডেটা সংগ্রহ এবং অপ্টিমাইজেশন",
           "5": "কর্মক্ষমতা প্রতিবেদন এবং স্কেলিং"
         },
-        "closingStatement": "We guide the strategy. You control the budget. Results come from alignment between both."
+        "closingStatement": "কৌশল আমরা তৈরি করি। বাজেট আপনি নিয়ন্ত্রণ করেন। উভয়ের সমন্বয়েই আসে সেরা ফলাফল।"
       },
       "faq": {
         "title": "বিজ্ঞাপন FAQ",
         "budgetIncluded": {
-          "question": "Is the advertising budget included in the management price?",
-          "answer": "No. Management fees cover strategy, setup, optimization, and reporting only. Ad spend is paid directly to advertising platforms."
+          "question": "বিজ্ঞাপন বাজেট কি ব্যবস্থাপনা মূল্যের অন্তর্ভুক্ত?",
+          "answer": "না। ব্যবস্থাপনা ফি শুধুমাত্র কৌশল, সেটআপ, অপ্টিমাইজেশন এবং রিপোর্টিং কভার করে। বিজ্ঞাপনের খরচ সরাসরি বিজ্ঞাপন প্ল্যাটফর্মগুলিতে পরিশোধ করা হয়।"
         },
         "smallBudget": {
-          "question": "Can I run ads with a very small budget?",
-          "answer": "Yes, but very low budgets may not generate enough data for meaningful or measurable results."
+          "question": "খুব কম বাজেট দিয়ে কি বিজ্ঞাপন চালানো সম্ভব?",
+          "answer": "হ্যাঁ, তবে খুব কম বাজেটে অর্থপূর্ণ বা পরিমাপযোগ্য ফলাফলের জন্য পর্যাপ্ত ডেটা নাও তৈরি হতে পারে।"
         },
         "whoDecides": {
           "question": "বিজ্ঞাপনের বাজেট কে নির্ধারণ করে?",
-          "answer": "We recommend a budget based on your goal and market. You approve and control the final budget."
+          "answer": "আপনার লক্ষ্য এবং বাজারের উপর ভিত্তি করে আমরা একটি বাজেট সুপারিশ করি। চূড়ান্ত বাজেট আপনি অনুমোদন ও নিয়ন্ত্রণ করেন।"
         },
         "lowerBudget": {
-          "question": "What happens if I choose a lower budget than recommended?",
+          "question": "সুপারিশকৃত বাজেটের চেয়ে কম বাজেট বেছে নিলে কী হবে?",
           "answer": "ক্যাম্পেইনগুলি পেশাদারভাবে পরিচালিত হবে, তবে অপর্যাপ্ত ডেটার কারণে কর্মক্ষমতা এবং অপ্টিমাইজেশন সীমিত হতে পারে।"
         }
       }
@@ -1423,7 +1423,7 @@
       "subtitle": "আসুন এই পরিকল্পনা বাস্তবে রূপ দিই।",
       "primaryCTA": "সঠিক কোটেশন চান",
       "secondaryCTA": "WhatsApp-এ লিখুন",
-      "trustNote": "No-obligation conversation · Final quote after intake · Prices excl. VAT"
+      "trustNote": "কোনো বাধ্যবাধকতা নেই · প্রাথমিক আলোচনার পর চূড়ান্ত উদ্ধৃতি · মূল্য VAT ব্যতীত"
     },
     "socialMedia": {
       "title": "সোশ্যাল মিডিয়া ম্যানেজমেন্ট",
@@ -2150,12 +2150,12 @@
         "daily": "প্রতিদিন",
         "custom": "অন্য পরিমাণ"
       },
-      "2month": "2 posts per month",
-      "1week": "1 post per week",
-      "2week": "2 posts per week",
-      "3week": "3 posts per week",
-      "4week": "4 posts per week",
-      "5week": "5 posts per week"
+      "2month": "প্রতি মাসে ২টি পোস্ট",
+      "1week": "প্রতি সপ্তাহে ১টি পোস্ট",
+      "2week": "প্রতি সপ্তাহে ২টি পোস্ট",
+      "3week": "প্রতি সপ্তাহে ৩টি পোস্ট",
+      "4week": "প্রতি সপ্তাহে ৪টি পোস্ট",
+      "5week": "প্রতি সপ্তাহে ৫টি পোস্ট"
     },
     "ads": {
       "title": "বিজ্ঞাপন চালু করতে চান?",
@@ -2178,20 +2178,20 @@
       },
       "productPhotos": {
         "label": "অতিরিক্ত পণ্যের ছবি",
-        "unit": "photo"
+        "unit": "ছবি"
       },
       "googleReviews": {
-        "label": "Google Review Management"
+        "label": "Google রিভিউ ব্যবস্থাপনা"
       },
       "contentWriting": {
         "label": "কন্টেন্ট রাইটিং",
-        "unit": "hour"
+        "unit": "ঘণ্টা"
       },
       "emailMarketing": {
-        "label": "Email marketing campaigns"
+        "label": "Email মার্কেটিং ক্যাম্পেইন"
       },
       "postsPack": {
-        "label": "Social media posts (10-pack)"
+        "label": "সোশ্যাল মিডিয়া পোস্ট (১০-প্যাক)"
       },
       "analyticsDashboard": {
         "label": "উন্নত Analytics Dashboard"
@@ -2209,8 +2209,8 @@
       "disclaimer": "নেট মূল্য। বিজ্ঞাপন বাজেট আলাদা প্রদেয়।",
       "ctaWhatsapp": "হোয়াটসঅ্যাপে প্ল্যান পাঠান",
       "ctaCall": "এই প্ল্যান আলোচনা করুন",
-      "adsBudget": "Ad budget (paid directly)",
-      "included": "included"
+      "adsBudget": "বিজ্ঞাপন বাজেট (সরাসরি পরিশোধিত)",
+      "included": "অন্তর্ভুক্ত"
     },
     "faq": {
       "title": "বিল্ডার FAQ",
@@ -2229,42 +2229,42 @@
         }
       },
       "adjustLater": {
-        "question": "Can I adjust my plan later?",
-        "answer": "Yes. You can adjust at any time. We align everything with your goals and evolution."
+        "question": "আমি কি পরে আমার প্ল্যান পরিবর্তন করতে পারবো?",
+        "answer": "হ্যাঁ। আপনি যেকোনো সময় পরিবর্তন করতে পারবেন। আমরা আপনার লক্ষ্য এবং অগ্রগতির সাথে সবকিছু সামঞ্জস্য করি।"
       },
       "setupCost": {
-        "question": "Is there a setup cost?",
-        "answer": "Setup is included in the management fee. Extras only arise with additional scope or exceptional setup."
+        "question": "সেটআপ খরচ আছে কি?",
+        "answer": "সেটআপ ম্যানেজমেন্ট ফির অন্তর্ভুক্ত। অতিরিক্ত খরচ শুধুমাত্র অতিরিক্ত কাজের ক্ষেত্র বা ব্যতিক্রমী সেটআপের ক্ষেত্রে প্রযোজ্য।"
       },
       "adBudgetIncluded": {
         "question": "বিজ্ঞাপনের বাজেট কি অন্তর্ভুক্ত?",
-        "answer": "No. Advertising budget is paid directly to Meta/Google. Our cost is for management and optimization."
+        "answer": "না। বিজ্ঞাপনের বাজেট সরাসরি Meta/Google-কে পরিশোধ করা হয়। আমাদের খরচ শুধুমাত্র ব্যবস্থাপনা এবং অপ্টিমাইজেশনের জন্য।"
       }
     },
     "tab": "আপনার পরিকল্পনা তৈরি করুন",
-    "disclaimer": "This is an indicative price. Final pricing depends on scope, brand complexity, and content needs.",
-    "vatNote": "excl. VAT",
-    "adsBudgetDisclaimer": "Advertising budget is paid directly to Meta/Google and is not included in management costs.",
-    "adsBudgetNote": "Advertising budget is paid directly to Meta/Google.",
-    "pauseNote": "You can pause or stop whenever you want.",
-    "included": "Included",
-    "next": "Next",
-    "back": "Back",
-    "quantity": "Quantity",
+    "disclaimer": "এটি একটি নির্দেশক মূল্য। চূড়ান্ত মূল্য কাজের পরিধি, ব্র্যান্ডের জটিলতা এবং বিষয়বস্তুর চাহিদার উপর নির্ভর করে।",
+    "vatNote": "ভ্যাট ব্যতীত",
+    "adsBudgetDisclaimer": "বিজ্ঞাপন বাজেট সরাসরি Meta/Google-কে পরিশোধ করা হয় এবং ব্যবস্থাপনা খরচের অন্তর্ভুক্ত নয়।",
+    "adsBudgetNote": "বিজ্ঞাপন বাজেট সরাসরি Meta/Google-কে পরিশোধ করা হয়।",
+    "pauseNote": "আপনি যখন খুশি বিরতি দিতে বা বন্ধ করতে পারেন।",
+    "included": "অন্তর্ভুক্ত",
+    "next": "পরবর্তী",
+    "back": "পেছনে",
+    "quantity": "পরিমাণ",
     "viewSummary": "সারাংশ দেখুন",
     "validation": {
-      "minChannel": "Select at least 1 channel."
+      "minChannel": "কমপক্ষে ১টি চ্যানেল নির্বাচন করুন।"
     },
     "adsBudget": {
-      "100": "€100 / month",
-      "250": "€250 / month",
-      "500": "€500 / month",
-      "1000": "€1000 / month",
+      "100": "€১০০ / মাস",
+      "250": "€২৫০ / মাস",
+      "500": "€৫০০ / মাস",
+      "1000": "€১০০০ / মাস",
       "none": "কোনো পেইড ক্যাম্পেইন নেই"
     },
     "cta": {
       "primary": "একটি কাস্টম প্রস্তাবের অনুরোধ করুন",
-      "secondary": "Save plan"
+      "secondary": "প্ল্যান সংরক্ষণ করুন"
     }
   },
   "partner": {
@@ -3292,15 +3292,15 @@
     "followFacebook": "ফেসবুকে লাইক দিন",
     "followLinkedin": "লিঙ্কডইনে অনুসরণ করুন",
     "whatsappChat": "WhatsApp এর মাধ্যমে চ্যাট করুন",
-    "callUs": "Call us",
-    "emailUs": "Send an email",
-    "followUs": "Follow us on social media",
+    "callUs": "আমাদের কল করুন",
+    "emailUs": "একটি ইমেল পাঠান",
+    "followUs": "সোশ্যাল মিডিয়ায় আমাদের অনুসরণ করুন",
     "actions": {
       "chat": "WhatsApp এর মাধ্যমে একটি কথোপকথন শুরু করুন",
-      "call": "Call +32 494 31 11 19",
-      "email": "Email info@groppi.be"
+      "call": "কল করুন +৩২ ৪৯৪ ৩১ ১১ ১৯",
+      "email": "ইমেল করুন info@groppi.be"
     },
-    "followTiktok": "Follow us on TikTok"
+    "followTiktok": "TikTok-এ আমাদের অনুসরণ করুন"
   },
   "footer": {
     "rights": "সর্বস্বত্ব সংরক্ষিত।",
@@ -3431,21 +3431,21 @@
     "submitError": "Something went wrong. Please try again."
   },
   "gallery": {
-    "title": "Our Work",
-    "subtitle": "Portfolio",
-    "description": "Discover a selection of projects we've delivered for our clients.",
+    "title": "আমাদের কাজ",
+    "subtitle": "পোর্টফোলিও",
+    "description": "আমাদের ক্লায়েন্টদের জন্য সম্পন্ন করা কিছু নির্বাচিত প্রকল্প দেখুন।",
     "filters": {
-      "all": "All",
-      "web": "Websites",
-      "branding": "Branding",
-      "social": "Social Media",
-      "ecommerce": "E-commerce"
+      "all": "সব",
+      "web": "ওয়েবসাইট",
+      "branding": "ব্র্যান্ডিং",
+      "social": "সোশ্যাল মিডিয়া",
+      "ecommerce": "ই-কমার্স"
     }
   },
   "franchise": {
-    "title": "Franchise",
+    "title": "ফ্র্যাঞ্চাইজি",
     "subtitle": "ফ্র্যাঞ্চাইজি হন",
-    "description": "Are you interested in partnering with GROPPI? Discover the opportunities to grow together.",
+    "description": "আপনি কি GROPPI-এর সাথে অংশীদারিত্ব করতে আগ্রহী? একসাথে বেড়ে ওঠার সুযোগগুলি আবিষ্কার করুন।",
     "benefits": {
       "title": "ফ্র্যাঞ্চাইজি সুবিধা",
       "items": {
@@ -3456,7 +3456,7 @@
       }
     },
     "requirements": {
-      "title": "What We're Looking For",
+      "title": "আমরা যা খুঁজছি",
       "items": {
         "0": "ডিজিটাল বিপণন বা সংশ্লিষ্ট ক্ষেত্রে অভিজ্ঞতা",
         "1": "উদ্যোক্তা মানসিকতা এবং বৃদ্ধির মানসিকতা",
@@ -3465,114 +3465,114 @@
       }
     },
     "cta": "আরও তথ্যের জন্য আমাদের সাথে যোগাযোগ করুন",
-    "apply": "Apply Now",
-    "call": "Call Us"
+    "apply": "এখনই আবেদন করুন",
+    "call": "আমাদের কল করুন"
   },
   "stats": {
     "years": "অভিজ্ঞতার বছর",
-    "yearsValue": "9+",
+    "yearsValue": "৯+",
     "clients": "সন্তুষ্ট ক্লায়েন্ট",
-    "clientsValue": "150+",
-    "projects": "Projects",
-    "projectsValue": "500+",
+    "clientsValue": "১৫০+",
+    "projects": "প্রজেক্ট",
+    "projectsValue": "৫০০+",
     "team": "দলের সদস্য",
-    "teamValue": "9+"
+    "teamValue": "৯+"
   },
   "admin": {
-    "dashboard": "Dashboard",
-    "articles": "Articles",
-    "media": "Media",
-    "services": "Services",
-    "messages": "Messages",
-    "settings": "Settings",
-    "logout": "Log Out",
-    "login": "Log In",
-    "email": "Email",
-    "password": "Password",
-    "loginTitle": "Admin Login",
-    "loginButton": "Log In"
+    "dashboard": "ড্যাশবোর্ড",
+    "articles": "আর্টিকেল",
+    "media": "মিডিয়া",
+    "services": "পরিষেবা",
+    "messages": "মেসেজ",
+    "settings": "সেটিংস",
+    "logout": "লগ আউট",
+    "login": "লগ ইন",
+    "email": "ইমেল",
+    "password": "পাসওয়ার্ড",
+    "loginTitle": "অ্যাডমিন লগইন",
+    "loginButton": "লগ ইন করুন"
   },
   "privacy": {
     "meta": {
       "title": "গোপনীয়তা নীতি",
-      "description": "Learn how GROPPI protects and processes your personal data in compliance with GDPR."
+      "description": "জানুন কিভাবে GROPPI GDPR মেনে আপনার ব্যক্তিগত ডেটা সুরক্ষিত রাখে এবং প্রক্রিয়া করে।"
     },
     "title": "গোপনীয়তা নীতি",
-    "subtitle": "Your privacy matters to us. This policy explains how we collect, use, and protect your data.",
+    "subtitle": "আপনার গোপনীয়তা আমাদের কাছে গুরুত্বপূর্ণ। এই নীতি ব্যাখ্যা করে আমরা কিভাবে আপনার ডেটা সংগ্রহ, ব্যবহার এবং সুরক্ষিত রাখি।",
     "lastUpdated": "সর্বশেষ হালনাগাদ করা হয়েছে",
-    "footerNote": "Have questions about this privacy policy? Feel free to contact us at info@groppi.be",
+    "footerNote": "এই গোপনীয়তা নীতি সম্পর্কে প্রশ্ন আছে? info@groppi.be এ আমাদের সাথে যোগাযোগ করতে দ্বিধা করবেন না।",
     "sections": {
       "dataCollection": {
         "title": "তথ্য সংগ্রহ",
-        "content": "We collect personal data that you voluntarily provide to us, such as:\n\n• Name and contact details when you fill out our contact form\n• Email address for newsletter subscriptions\n• CV and application data for job openings\n• Business information for commercial inquiries\n\nWe also automatically collect certain technical data such as IP address, browser type, and pages visited for analytical purposes."
+        "content": "আমরা আপনার স্বেচ্ছায় দেওয়া ব্যক্তিগত ডেটা সংগ্রহ করি, যেমন:\n\n• আপনি যখন আমাদের যোগাযোগ ফর্ম পূরণ করেন তখন নাম এবং যোগাযোগের বিবরণ\n• নিউজলেটার সাবস্ক্রিপশনের জন্য ইমেল ঠিকানা\n• চাকরির আবেদনের জন্য CV এবং আবেদন ডেটা\n• বাণিজ্যিক অনুসন্ধানের জন্য ব্যবসার তথ্য\n\nআমরা বিশ্লেষণমূলক উদ্দেশ্যে স্বয়ংক্রিয়ভাবে কিছু প্রযুক্তিগত ডেটা যেমন IP ঠিকানা, ব্রাউজারের ধরন এবং ভিজিট করা পৃষ্ঠাগুলিও সংগ্রহ করি।"
       },
       "dataUsage": {
-        "title": "Data Usage",
-        "content": "We use your data to:\n\n• Respond to your questions and requests\n• Send newsletters (only with your consent)\n• Improve our website and services\n• Fulfill legal obligations\n• Send relevant information about our services"
+        "title": "ডেটা ব্যবহার",
+        "content": "আমরা আপনার ডেটা ব্যবহার করি:\n\n• আপনার প্রশ্ন এবং অনুরোধের উত্তর দিতে\n• নিউজলেটার পাঠাতে (শুধুমাত্র আপনার সম্মতি নিয়ে)\n• আমাদের ওয়েবসাইট এবং পরিষেবা উন্নত করতে\n• আইনি বাধ্যবাধকতা পূরণ করতে\n• আমাদের পরিষেবা সম্পর্কে প্রাসঙ্গিক তথ্য পাঠাতে"
       },
       "dataSecurity": {
         "title": "তথ্য নিরাপত্তা",
-        "content": "We take the security of your data seriously. We use:\n\n• SSL encryption for all data transfer\n• Secure servers and databases\n• Limited access to personal data\n• Regular security audits\n\nDespite our efforts, no method of transmission over the internet can be 100% secure."
+        "content": "আমরা আপনার ডেটার নিরাপত্তা গুরুত্ব সহকারে নিই। আমরা ব্যবহার করি:\n\n• সমস্ত ডেটা স্থানান্তরের জন্য SSL এনক্রিপশন\n• সুরক্ষিত সার্ভার এবং ডেটাবেস\n• ব্যক্তিগত ডেটাতে সীমিত অ্যাক্সেস\n• নিয়মিত নিরাপত্তা নিরীক্ষা\n\nআমাদের প্রচেষ্টা সত্ত্বেও, ইন্টারনেটের মাধ্যমে ডেটা স্থানান্তরের কোনো পদ্ধতিই 100% সুরক্ষিত হতে পারে না।"
       },
       "yourRights": {
-        "title": "Your Rights",
-        "content": "Under GDPR, you have the following rights:\n\n• Right to access your data\n• Right to correct inaccurate data\n• Right to delete your data\n• Right to restrict processing\n• Right to data portability\n• Right to object to processing\n\nContact us to exercise these rights."
+        "title": "আপনার অধিকার",
+        "content": "GDPR অনুযায়ী, আপনার নিম্নলিখিত অধিকার রয়েছে:\n\n• আপনার ডেটা অ্যাক্সেস করার অধিকার\n• ভুল ডেটা সংশোধন করার অধিকার\n• আপনার ডেটা মুছে ফেলার অধিকার\n• প্রক্রিয়াকরণ সীমাবদ্ধ করার অধিকার\n• ডেটা পোর্টেবিলিটির অধিকার\n• প্রক্রিয়াকরণে আপত্তি জানানোর অধিকার\n\nএই অধিকারগুলি প্রয়োগ করতে আমাদের সাথে যোগাযোগ করুন।"
       },
       "cookies": {
-        "title": "Cookies",
-        "content": "Our website uses cookies to enhance your experience:\n\n• Essential cookies for website functionality\n• Analytical cookies to understand how visitors use our site\n• Marketing cookies for targeted advertising (only with consent)\n\nYou can manage cookies through your browser settings."
+        "title": "কুকিজ",
+        "content": "আমাদের ওয়েবসাইট আপনার অভিজ্ঞতা উন্নত করতে কুকিজ ব্যবহার করে:\n\n• ওয়েবসাইটের কার্যকারিতার জন্য অপরিহার্য কুকিজ\n• দর্শকরা কিভাবে আমাদের সাইট ব্যবহার করে তা বোঝার জন্য অ্যানালিটিক্যাল কুকিজ\n• লক্ষ্যযুক্ত বিজ্ঞাপনের জন্য মার্কেটিং কুকিজ (শুধুমাত্র সম্মতি নিয়ে)\n\nআপনি আপনার ব্রাউজার সেটিংসের মাধ্যমে কুকিজ পরিচালনা করতে পারেন।"
       },
       "retention": {
         "title": "তথ্য ধারণ",
-        "content": "We retain your data only as long as necessary:\n\n• Contact data: 2 years after last contact\n• Application data: 1 year after procedure completion\n• Newsletter subscribers: until unsubscription\n• Analytical data: 26 months\n\nAfter this period, data is securely deleted."
+        "content": "আমরা আপনার ডেটা শুধুমাত্র প্রয়োজনীয় সময়ের জন্য সংরক্ষণ করি:\n\n• যোগাযোগের ডেটা: শেষ যোগাযোগের ২ বছর পর\n• আবেদনের ডেটা: প্রক্রিয়া সম্পন্ন হওয়ার ১ বছর পর\n• নিউজলেটার গ্রাহক: আনসাবস্ক্রাইব না করা পর্যন্ত\n• অ্যানালিটিক্যাল ডেটা: ২৬ মাস\n\nএই সময়ের পর, ডেটা নিরাপদে মুছে ফেলা হয়।"
       },
       "contact": {
-        "title": "Contact",
-        "content": "For questions about your privacy or to exercise your rights:\n\nGROPPI\nEmail: info@groppi.be\nPhone: +32 456 19 87 21\n\nYou also have the right to file a complaint with the Belgian Data Protection Authority."
+        "title": "যোগাযোগ",
+        "content": "আপনার গোপনীয়তা সম্পর্কে প্রশ্ন বা আপনার অধিকার প্রয়োগের জন্য:\n\nGROPPI\nEmail: info@groppi.be\nPhone: +32 456 19 87 21\n\nআপনার বেলজিয়ান ডেটা প্রোটেকশন অথরিটির কাছে অভিযোগ দায়ের করার অধিকারও রয়েছে।"
       }
     }
   },
   "terms": {
     "meta": {
       "title": "পরিষেবার শর্তাবলী",
-      "description": "Read the terms and conditions for using GROPPI services and website."
+      "description": "GROPPI পরিষেবা এবং ওয়েবসাইট ব্যবহারের শর্তাবলী পড়ুন।"
     },
     "title": "পরিষেবার শর্তাবলী",
-    "subtitle": "These terms govern your use of our website and services. By using our services, you agree to these terms.",
+    "subtitle": "এই শর্তাবলী আমাদের ওয়েবসাইট এবং পরিষেবাগুলির আপনার ব্যবহার নিয়ন্ত্রণ করে। আমাদের পরিষেবাগুলি ব্যবহার করে, আপনি এই শর্তাবলীতে সম্মত হন।",
     "lastUpdated": "সর্বশেষ হালনাগাদ করা হয়েছে",
-    "footerNote": "Have questions about these terms? Contact us at info@groppi.be",
+    "footerNote": "এই শর্তাবলী সম্পর্কে প্রশ্ন আছে? info@groppi.be এ আমাদের সাথে যোগাযোগ করুন।",
     "sections": {
       "acceptance": {
         "title": "শর্তাবলী গ্রহণ",
-        "content": "By accessing or using the GROPPI website and services, you agree to these Terms of Service.\n\nIf you do not agree to any part of these terms, you may not use our services.\n\nWe reserve the right to modify these terms at any time."
+        "content": "GROPPI ওয়েবসাইট এবং পরিষেবাগুলি অ্যাক্সেস বা ব্যবহার করার মাধ্যমে, আপনি এই পরিষেবার শর্তাবলীতে সম্মত হন।\n\nযদি আপনি এই শর্তাবলীর কোনো অংশের সাথে একমত না হন, তাহলে আপনি আমাদের পরিষেবাগুলি ব্যবহার করতে পারবেন না।\n\nআমরা যেকোনো সময় এই শর্তাবলী পরিবর্তন করার অধিকার সংরক্ষণ করি।"
       },
       "services": {
         "title": "আমাদের পরিষেবাগুলি",
-        "content": "GROPPI provides digital marketing services, including:\n\n• Web design and development\n• Search engine optimization (SEO)\n• Social media marketing\n• Paid advertising\n• Content creation\n• Brand identity and branding\n\nSpecific services and deliverables are defined in individual agreements."
+        "content": "GROPPI ডিজিটাল মার্কেটিং পরিষেবা প্রদান করে, যার মধ্যে রয়েছে:\n\n• ওয়েব ডিজাইন এবং ডেভেলপমেন্ট\n• সার্চ ইঞ্জিন অপ্টিমাইজেশন (SEO)\n• সোশ্যাল মিডিয়া মার্কেটিং\n• পেইড অ্যাডভার্টাইজিং\n• কন্টেন্ট ক্রিয়েশন\n• ব্র্যান্ড আইডেন্টিটি এবং ব্র্যান্ডিং\n\nনির্দিষ্ট পরিষেবা এবং ডেলিভারেবলগুলি পৃথক চুক্তিতে সংজ্ঞায়িত করা হয়।"
       },
       "payment": {
         "title": "অর্থপ্রদান এবং বিলিং",
-        "content": "• All prices are exclusive of VAT unless otherwise stated\n• Payments are due within 14 days of invoice date\n• A 50% deposit may be required for projects\n• Late payments may incur administrative fees\n• We reserve the right to suspend services for outstanding payments"
+        "content": "• অন্যথায় উল্লেখ না থাকলে সমস্ত মূল্য VAT ব্যতীত\n• ইনভয়েস তারিখের ১৪ দিনের মধ্যে পেমেন্ট পরিশোধ করতে হবে\n• প্রকল্পের জন্য ৫০% অগ্রিম পেমেন্টের প্রয়োজন হতে পারে\n• দেরিতে পেমেন্টের জন্য প্রশাসনিক ফি প্রযোজ্য হতে পারে\n• বকেয়া পেমেন্টের জন্য পরিষেবা স্থগিত করার অধিকার আমরা সংরক্ষণ করি"
       },
       "liability": {
-        "title": "Liability",
-        "content": "• GROPPI is not liable for indirect or consequential damages\n• Our liability is limited to the amount paid for the specific service\n• We do not guarantee specific results from marketing campaigns\n• Clients are responsible for the accuracy of information provided\n• We are not liable for changes made by third-party platforms"
+        "title": "দায়বদ্ধতা",
+        "content": "• GROPPI পরোক্ষ বা আনুষঙ্গিক ক্ষতির জন্য দায়ী নয়\n• আমাদের দায়বদ্ধতা নির্দিষ্ট পরিষেবার জন্য পরিশোধিত পরিমাণের মধ্যে সীমাবদ্ধ\n• আমরা মার্কেটিং ক্যাম্পেইন থেকে নির্দিষ্ট ফলাফলের গ্যারান্টি দিই না\n• ক্লায়েন্টরা প্রদত্ত তথ্যের নির্ভুলতার জন্য দায়ী\n• তৃতীয় পক্ষের প্ল্যাটফর্ম দ্বারা করা পরিবর্তনের জন্য আমরা দায়ী নই"
       },
       "termination": {
-        "title": "Termination",
-        "content": "• Either party may terminate the agreement with 30 days written notice\n• Immediate termination may occur in case of serious breach\n• Upon termination, all outstanding amounts become immediately due\n• We will facilitate reasonable transfer of materials after termination"
+        "title": "সমাপ্তি",
+        "content": "• উভয় পক্ষই ৩০ দিনের লিখিত নোটিশ দিয়ে চুক্তি বাতিল করতে পারে\n• গুরুতর লঙ্ঘনের ক্ষেত্রে তাৎক্ষণিক বাতিল হতে পারে\n• বাতিলের পর, সমস্ত বকেয়া পরিমাণ অবিলম্বে পরিশোধযোগ্য হবে\n• বাতিলের পর আমরা উপকরণের যুক্তিসঙ্গত স্থানান্তরে সহায়তা করব"
       },
       "modifications": {
         "title": "সংশোধন",
-        "content": "We reserve the right to modify these terms at any time.\n\nFor significant changes, we will notify you by email if applicable.\n\nContinued use of our services after modifications constitutes acceptance of the new terms."
+        "content": "আমরা যেকোনো সময় এই শর্তাবলী পরিবর্তন করার অধিকার সংরক্ষণ করি।\n\nগুরুত্বপূর্ণ পরিবর্তনের জন্য, প্রযোজ্য হলে আমরা আপনাকে ইমেলের মাধ্যমে অবহিত করব।\n\nপরিবর্তনের পর আমাদের পরিষেবাগুলির ক্রমাগত ব্যবহার নতুন শর্তাবলী গ্রহণ করার সমতুল্য।"
       },
       "governing": {
         "title": "প্রযোজ্য আইন",
-        "content": "These terms are governed by Belgian law.\n\nDisputes will be submitted to the competent courts of Belgium.\n\nIf any provision of these terms is found to be invalid or unenforceable, the remaining provisions will remain in full force and effect."
+        "content": "এই শর্তাবলী বেলজিয়ান আইন দ্বারা নিয়ন্ত্রিত।\n\nবিরোধগুলি বেলজিয়ামের উপযুক্ত আদালতে জমা দেওয়া হবে।\n\nযদি এই শর্তাবলীর কোনো বিধান অবৈধ বা অপ্রয়োগযোগ্য বলে প্রমাণিত হয়, তবে অবশিষ্ট বিধানগুলি সম্পূর্ণ কার্যকর থাকবে।"
       },
       "contact": {
-        "title": "Contact",
-        "content": "For questions about these terms:\n\nGROPPI\nEmail: info@groppi.be\nPhone: +32 456 19 87 21\n\nWe aim to respond to all inquiries within 48 hours."
+        "title": "যোগাযোগ",
+        "content": "এই শর্তাবলী সম্পর্কে প্রশ্নের জন্য:\n\nGROPPI\nEmail: info@groppi.be\nPhone: +32 456 19 87 21\n\nআমরা ৪৮ ঘন্টার মধ্যে সমস্ত অনুসন্ধানের উত্তর দেওয়ার লক্ষ্য রাখি।"
       }
     }
   },
