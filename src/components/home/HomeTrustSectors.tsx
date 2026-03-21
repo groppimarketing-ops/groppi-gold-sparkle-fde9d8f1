@@ -102,7 +102,7 @@ const HomeTrustSectors = memo(() => {
         </div>
 
         {/* Micro Note */}
-        <p className="animate-fade-up text-center text-xs text-muted-foreground/60 italic mb-16">
+        <p className="animate-fade-up text-center text-xs text-muted-foreground/80 italic mb-16">
           {t('home.trustSectors.microNote')}
         </p>
 
