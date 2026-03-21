@@ -76,7 +76,7 @@ const Contact = () => {
       reset();
 
       // GTM conversion tracking
-      trackEvent({ event: 'contact_form_submit' as any, location: 'contact_page', label: data.subject });
+      trackEvent({ event: 'contact_form_submit', location: 'contact_page', label: data.subject });
       if (typeof window !== 'undefined' && window.dataLayer) {
         window.dataLayer.push({
           event: 'generate_lead',
@@ -362,7 +362,7 @@ const Contact = () => {
               {/* Map */}
               <GlassCard className="aspect-video overflow-hidden !p-0 border border-primary/20">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2496.8!2d4.8547!3d51.3547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6a9d15e52d8e7%3A0x1!2sHet+Steeke+5A%2C+2330+Merksplas%2C+Belgium!5e0!3m2!1sen!2sbe!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2496.8!2d4.8547!3d51.3547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6db6c5980346f%3A0x5765a23e1f498a36!2sHet%20Steeke%205A%2C%202330%20Merksplas%2C%20Belgium!5e0!3m2!1sen!2sbe!4v1711000000000"
                   width="100%"
                   height="100%"
                   style={{ border: 0, filter: 'invert(0.9) hue-rotate(180deg)' }}

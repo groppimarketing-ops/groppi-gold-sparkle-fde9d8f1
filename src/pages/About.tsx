@@ -319,10 +319,7 @@ const About = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                <LangLink to="/contact">{t('about.cta.bookConsultation')}</LangLink>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="glass-card border-primary/30 hover:bg-primary/10">
+              <Button asChild size="lg" className="luxury-button">
                 <LangLink to="/contact">{t('about.cta.contactUs')}</LangLink>
               </Button>
             </div>

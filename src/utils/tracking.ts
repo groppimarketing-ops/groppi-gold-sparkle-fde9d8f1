@@ -21,7 +21,8 @@ type TrackingEvent =
   | 'planbuilder_social_addons'
   | 'planbuilder_social_cta_custom_offer'
   | 'planbuilder_social_cta_save_plan'
-  | 'newsletter_subscribe';
+  | 'newsletter_subscribe'
+  | 'contact_form_submit';
 
 interface TrackingParams {
   event: TrackingEvent;

@@ -23,6 +23,7 @@ const Terms = () => {
         title={t('terms.meta.title', 'Algemene Voorwaarden')}
         description={t('terms.meta.description', 'De algemene voorwaarden van GROPPI Marketing Bureau.')}
         path="/terms"
+        noIndex
       />
 
       <div className="container mx-auto px-4 py-16">

@@ -130,65 +130,73 @@ const Blog = () => {
       {/* Blog Grid */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {isLoading
-              ? Array.from({ length: 4 }).map((_, i) => <ArticleSkeleton key={i} />)
-              : otherArticles.map((article, index) => (
-                  <LangLink key={article.id} to={`/blog/${article.slug}`} className="block group">
-                    <GlassCard
-                      className={`overflow-hidden !p-0 h-full hover:border-primary/50 transition-colors animate-fade-up-${Math.min(index + 1, 4)}`}
-                    >
-                      <div className="relative aspect-[16/10] overflow-hidden">
-                        {article.image ? (
-                          <img
-                            src={article.image}
-                            alt={article.isDynamic ? article.title : t(article.titleKey!)}
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                            loading="lazy"
-                            decoding="async"
-                            width={800}
-                            height={500}
-                          />
-                        ) : (
-                          <div className="w-full h-full bg-muted/20 flex items-center justify-center">
-                            <Sparkles className="w-8 h-8 text-primary/30" />
-                          </div>
-                        )}
-                        <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                      </div>
-                      
-                      <div className="p-5">
-                        <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
-                          <span className="flex items-center gap-1">
-                            <Calendar className="h-3 w-3 text-primary" />
-                            {new Date(article.date).toLocaleDateString(i18n.language, {
-                              month: 'short',
-                              day: 'numeric',
-                            })}
-                          </span>
-                          <span className="flex items-center gap-1">
-                            <Clock className="h-3 w-3 text-primary" />
-                            {article.readTime} {t('blog.minRead')}
-                          </span>
+          {!isLoading && articles.length === 0 ? (
+            <div className="text-center py-20">
+              <Sparkles className="w-12 h-12 text-primary/30 mx-auto mb-4" />
+              <h2 className="text-2xl font-bold mb-2 text-foreground">{t('blog.empty.title', 'Nog geen artikelen')}</h2>
+              <p className="text-muted-foreground">{t('blog.empty.text', 'We werken aan nieuwe content. Kom binnenkort terug!')}</p>
+            </div>
+          ) : (
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {isLoading
+                ? Array.from({ length: 4 }).map((_, i) => <ArticleSkeleton key={i} />)
+                : otherArticles.map((article, index) => (
+                    <LangLink key={article.id} to={`/blog/${article.slug}`} className="block group">
+                      <GlassCard
+                        className={`overflow-hidden !p-0 h-full hover:border-primary/50 transition-colors animate-fade-up-${Math.min(index + 1, 4)}`}
+                      >
+                        <div className="relative aspect-[16/10] overflow-hidden">
+                          {article.image ? (
+                            <img
+                              src={article.image}
+                              alt={article.isDynamic ? article.title : t(article.titleKey!)}
+                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                              loading="lazy"
+                              decoding="async"
+                              width={800}
+                              height={500}
+                            />
+                          ) : (
+                            <div className="w-full h-full bg-muted/20 flex items-center justify-center">
+                              <Sparkles className="w-8 h-8 text-primary/30" />
+                            </div>
+                          )}
+                          <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                         </div>
                         
-                        <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors line-clamp-2">
-                          {article.isDynamic ? article.title : t(article.titleKey!)}
-                        </h3>
-                        
-                        <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
-                          {article.isDynamic ? article.excerpt : t(article.excerptKey!)}
-                        </p>
-                        
-                        <span className="inline-flex items-center text-primary text-sm font-medium">
-                          {t('blog.readArticle')}
-                          <ArrowRight className={`h-4 w-4 ${isRtl ? 'mr-1 rotate-180' : 'ml-1'} group-hover:translate-x-1 transition-transform`} />
-                        </span>
-                      </div>
-                    </GlassCard>
-                  </LangLink>
-                ))}
-          </div>
+                        <div className="p-5">
+                          <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
+                            <span className="flex items-center gap-1">
+                              <Calendar className="h-3 w-3 text-primary" />
+                              {new Date(article.date).toLocaleDateString(i18n.language, {
+                                month: 'short',
+                                day: 'numeric',
+                              })}
+                            </span>
+                            <span className="flex items-center gap-1">
+                              <Clock className="h-3 w-3 text-primary" />
+                              {article.readTime} {t('blog.minRead')}
+                            </span>
+                          </div>
+                          
+                          <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                            {article.isDynamic ? article.title : t(article.titleKey!)}
+                          </h3>
+                          
+                          <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
+                            {article.isDynamic ? article.excerpt : t(article.excerptKey!)}
+                          </p>
+                          
+                          <span className="inline-flex items-center text-primary text-sm font-medium">
+                            {t('blog.readArticle')}
+                            <ArrowRight className={`h-4 w-4 ${isRtl ? 'mr-1 rotate-180' : 'ml-1'} group-hover:translate-x-1 transition-transform`} />
+                          </span>
+                        </div>
+                      </GlassCard>
+                    </LangLink>
+                  ))}
+            </div>
+          )}
         </div>
       </section>
     </PageLayout>
