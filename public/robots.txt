@@ -15,4 +15,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /admin
 
-Sitemap: https://dffmjqjokfccdnfutdmx.supabase.co/functions/v1/sitemap
+Sitemap: https://www.groppi.be/sitemap.xml

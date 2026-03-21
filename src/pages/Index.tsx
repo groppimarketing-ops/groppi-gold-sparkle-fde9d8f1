@@ -79,7 +79,7 @@ const Index = () => {
       />
       <OrganizationSchema />
       <Header />
-      <main>
+      <main id="main-content">
         {hasDynamicContent ? (
           sections.map((section) => (
             <DynamicSection
