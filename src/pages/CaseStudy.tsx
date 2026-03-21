@@ -3,8 +3,7 @@ import LangLink from '@/components/LangLink';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight, Check } from 'lucide-react';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
+import PageLayout from '@/components/layout/PageLayout';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
@@ -59,9 +58,7 @@ const CaseStudy = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      
+    <PageLayout>
       <main>
         {/* Hero Image */}
         <section className="relative h-[50vh] md:h-[60vh] overflow-hidden">
@@ -240,9 +237,7 @@ const CaseStudy = () => {
           </div>
         </section>
       </main>
-      
-      <Footer />
-    </div>
+    </PageLayout>
   );
 };
 

@@ -1,7 +1,10 @@
 import { useTranslation } from 'react-i18next';
 import { useRef, useState, lazy, Suspense } from 'react';
+import { useIsMobile } from '@/hooks/use-mobile';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import MobileHeader from '@/components/mobile/MobileHeader';
+import MobileBottomTabs from '@/components/mobile/MobileBottomTabs';
 import HeroSection from '@/components/home/HeroSection';
 import PostHeroTrust from '@/components/home/PostHeroTrust';
 import HomeAfterHeroWrapper from '@/components/home/HomeAfterHeroWrapper';
@@ -70,6 +73,8 @@ const Index = () => {
     </>
   );
 
+  const isMobile = useIsMobile();
+
   return (
     <div className="min-h-screen bg-background">
       <PageSEO
@@ -78,8 +83,8 @@ const Index = () => {
         path="/"
       />
       <OrganizationSchema />
-      <Header />
-      <main id="main-content">
+      {isMobile ? <MobileHeader /> : <Header />}
+      <main id="main-content" className={isMobile ? 'pb-16' : ''}>
         {hasDynamicContent ? (
           sections.map((section) => (
             <DynamicSection
@@ -94,6 +99,7 @@ const Index = () => {
         )}
       </main>
       <Footer />
+      {isMobile && <MobileBottomTabs />}
     </div>
   );
 };
