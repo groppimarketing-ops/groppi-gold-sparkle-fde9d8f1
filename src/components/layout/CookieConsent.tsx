@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Cookie, X } from 'lucide-react';
+import { Cookie } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import LangLink from '@/components/LangLink';
 
