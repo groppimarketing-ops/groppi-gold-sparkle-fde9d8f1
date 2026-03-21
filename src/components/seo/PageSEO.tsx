@@ -14,6 +14,11 @@ interface PageSEOProps {
   title: string;
   description: string;
   path: string;
+  /**
+   * Override the canonical + hreflang path when the current route is an alias.
+   * E.g. /portfolio renders Gallery but canonical should point to /gallery.
+   */
+  canonicalPath?: string;
   ogImage?: string;
   noIndex?: boolean;
   type?: 'website' | 'article';
