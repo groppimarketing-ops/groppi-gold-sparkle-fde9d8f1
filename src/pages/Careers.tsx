@@ -446,19 +446,22 @@ const Careers = () => {
                     control={form.control}
                     name="consent"
                     render={({ field }) => (
-                      <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                      <FormItem className="flex flex-row items-start gap-3 space-y-0">
+                        {/* Tap-friendly wrapper: min 44×44px touch target */}
                         <FormControl>
-                          <Checkbox
-                            checked={field.value}
-                            onCheckedChange={field.onChange}
-                          />
+                          <div className="flex items-center justify-center min-w-[44px] min-h-[44px]">
+                            <Checkbox
+                              checked={field.value}
+                              onCheckedChange={field.onChange}
+                            />
+                          </div>
                         </FormControl>
-                        <div className="space-y-1 leading-none">
+                        <div className="space-y-1 leading-none pt-3">
                           <FormLabel className="text-sm font-normal">
                             {t('careers.form.consent')} *
                           </FormLabel>
+                          <FormMessage />
                         </div>
-                        <FormMessage />
                       </FormItem>
                     )}
                   />
