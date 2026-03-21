@@ -185,7 +185,7 @@ const Contact = () => {
             {/* Contact Form */}
             <GlassCard className="p-8 animate-fade-up">
               <div className="flex items-center gap-3 mb-8">
-                <div className="w-10 h-10 rounded-xl glass-card flex items-center justify-center slow-spin">
+                <div className="w-10 h-10 rounded-xl glass-card flex items-center justify-center" aria-hidden="true">
                   <Sparkles className="w-5 h-5 text-primary" />
                 </div>
                 <h3 className="text-2xl font-bold gold-gradient-text">
