@@ -106,7 +106,8 @@ const publicRoutes = () => [
 
 /** Non-nl language codes that need explicit route prefixes */
 const LANG_PREFIXES = SUPPORTED_LANGS.filter(l => l !== 'nl');
-  const App = () => {
+
+const App = () => {
   return (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
