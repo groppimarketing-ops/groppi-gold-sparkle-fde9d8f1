@@ -38,7 +38,7 @@ const ServicePageTemplate = memo(({ serviceKey, posterImage }: ServicePageTempla
   const serviceDescription = t(`servicePage.${serviceKey}.subtitle`, '');
   
   return (
-    <div className="min-h-screen bg-background">
+    <PageLayout>
       <PageSEO
         title={serviceTitle}
         description={serviceDescription || t('servicePage.defaultDescription', { service: serviceTitle })}
@@ -55,30 +55,26 @@ const ServicePageTemplate = memo(({ serviceKey, posterImage }: ServicePageTempla
         name={serviceTitle}
         description={serviceDescription}
       />
-      <Header />
-      <main>
-        <ServicePageHero 
-          serviceKey={serviceKey} 
-          posterImage={posterImage}
-        />
-        <ServiceDeliverables serviceKey={serviceKey} />
-        <ServiceProcess serviceKey={serviceKey} />
-        
-        {/* Calculator with integrated discount module (shown after intent) */}
-        {isContentProduction ? (
-          <>
-            <ContentCalculator />
-            <PricingFAQ />
-          </>
-        ) : (
-          <>
-            <ServicePriceCalculator serviceKey={serviceKey} />
-            <ServiceFAQ serviceKey={serviceKey} />
-          </>
-        )}
-        
-        <ServiceFinalCTA serviceKey={serviceKey} />
-      </main>
+      <ServicePageHero 
+        serviceKey={serviceKey} 
+        posterImage={posterImage}
+      />
+      <ServiceDeliverables serviceKey={serviceKey} />
+      <ServiceProcess serviceKey={serviceKey} />
+      
+      {isContentProduction ? (
+        <>
+          <ContentCalculator />
+          <PricingFAQ />
+        </>
+      ) : (
+        <>
+          <ServicePriceCalculator serviceKey={serviceKey} />
+          <ServiceFAQ serviceKey={serviceKey} />
+        </>
+      )}
+      
+      <ServiceFinalCTA serviceKey={serviceKey} />
     </PageLayout>
   );
 });
