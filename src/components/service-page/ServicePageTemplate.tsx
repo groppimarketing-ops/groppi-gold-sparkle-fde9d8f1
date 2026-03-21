@@ -79,8 +79,7 @@ const ServicePageTemplate = memo(({ serviceKey, posterImage }: ServicePageTempla
         
         <ServiceFinalCTA serviceKey={serviceKey} />
       </main>
-      <Footer />
-    </div>
+    </PageLayout>
   );
 });
 
