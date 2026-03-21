@@ -76,7 +76,7 @@ const Contact = () => {
       reset();
 
       // GTM conversion tracking
-      trackEvent({ event: 'contact_form_submit' as any, location: 'contact_page', label: data.subject });
+      trackEvent({ event: 'contact_form_submit', location: 'contact_page', label: data.subject });
       if (typeof window !== 'undefined' && window.dataLayer) {
         window.dataLayer.push({
           event: 'generate_lead',
