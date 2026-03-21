@@ -164,6 +164,7 @@ const Gallery = () => {
         title={t('gallery.title', 'Portfolio')}
         description={t('gallery.description', 'Ontdek onze projecten. Van social media campagnes tot websites — bekijk het werk van GROPPI.')}
         path="/gallery"
+        canonicalPath={isPortfolioAlias ? '/gallery' : undefined}
       />
       <BreadcrumbSchema items={[{ name: 'Home', path: '/' }, { name: t('nav.gallery', 'Portfolio'), path: '/gallery' }]} />
 
