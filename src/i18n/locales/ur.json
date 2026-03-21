@@ -9,7 +9,7 @@
     "partnership": "فرنچائز",
     "franchise": "فرنچائز",
     "careers": "ملازمتیں",
-    "team": "Our Team"
+    "team": "ہماری ٹیم"
   },
   "notFound": {
     "message": "یہ صفحہ موجود نہیں ہے یا منتقل ہو چکا ہے۔",
@@ -212,7 +212,7 @@
     "optional": "اختیاری",
     "brandName": "GROPPI",
     "fullscreen": "فل سکرین",
-    "search": "Search",
+    "search": "تلاش کریں",
     "noResults": "کوئی نتیجہ نہیں ملا"
   },
   "validation": {
@@ -2233,18 +2233,18 @@
     "email": "ای میل کریں",
     "follow": "فالو کریں",
     "whatsappChat": "WhatsApp کے ذریعے چیٹ کریں",
-    "callUs": "Call us",
-    "emailUs": "Send an email",
-    "followUs": "Follow us on social media",
+    "callUs": "ہمیں کال کریں",
+    "emailUs": "ای میل بھیجیں",
+    "followUs": "سوشل میڈیا پر ہمیں فالو کریں",
     "actions": {
       "chat": "WhatsApp کے ذریعے گفتگو شروع کریں",
-      "call": "Call +32 494 31 11 19",
-      "email": "Email info@groppi.be"
+      "call": "کال کریں +32 494 31 11 19",
+      "email": "ای میل کریں info@groppi.be"
     },
-    "followInstagram": "Follow us on Instagram",
-    "followFacebook": "Follow us on Facebook",
-    "followTiktok": "Follow us on TikTok",
-    "followLinkedin": "Follow us on LinkedIn"
+    "followInstagram": "Instagram پر ہمیں فالو کریں",
+    "followFacebook": "Facebook پر ہمیں فالو کریں",
+    "followTiktok": "TikTok پر ہمیں فالو کریں",
+    "followLinkedin": "LinkedIn پر ہمیں فالو کریں"
   },
   "contact": {
     "title": "ہم سے رابطہ کریں",
@@ -2272,27 +2272,27 @@
       "phone": "براہ راست کال",
       "whatsapp": "WhatsApp"
     },
-    "intro": "Do you have a project in mind or want to strengthen your digital presence? Contact us for a no-obligation conversation.",
-    "mobileLabel": "Mobile",
-    "officeLabel": "Office",
+    "intro": "کیا آپ کے ذہن میں کوئی پروجیکٹ ہے یا آپ اپنی ڈیجیٹل موجودگی کو مضبوط بنانا چاہتے ہیں؟ بلا جھجھک ہم سے رابطہ کریں۔",
+    "mobileLabel": "موبائل",
+    "officeLabel": "دفتر",
     "hoursLabel": "کاروباری اوقات",
-    "hoursValue": "Mon - Fri: 9:00 AM - 6:00 PM",
-    "name": "Name",
-    "email": "Email Address",
+    "hoursValue": "پیر - جمعہ: صبح 9:00 بجے - شام 6:00 بجے",
+    "name": "نام",
+    "email": "ای میل ایڈریس",
     "phone": "فون نمبر",
-    "company": "Company",
-    "subject": "Subject",
+    "company": "کمپنی",
+    "subject": "موضوع",
     "message": "آپ کا پیغام",
-    "send": "Send",
-    "sending": "Sending...",
-    "success": "Message sent successfully! We'll get back to you as soon as possible.",
-    "error": "Something went wrong. Please try again or contact us by phone.",
-    "address": "Address",
-    "phoneLabel": "Phone",
-    "emailLabel": "Email",
-    "landline": "Landline",
-    "mobile": "Mobile",
-    "rateLimited": "Too many requests. Please try again later."
+    "send": "بھیجیں",
+    "sending": "بھیجا جا رہا ہے...",
+    "success": "پیغام کامیابی سے بھیج دیا گیا! ہم جلد ہی آپ سے رابطہ کریں گے۔",
+    "error": "کچھ غلط ہو گیا ہے۔ براہ کرم دوبارہ کوشش کریں یا فون کے ذریعے ہم سے رابطہ کریں۔",
+    "address": "پتہ",
+    "phoneLabel": "فون",
+    "emailLabel": "ای میل",
+    "landline": "لینڈ لائن",
+    "mobile": "موبائل",
+    "rateLimited": "بہت زیادہ درخواستیں ہیں۔ براہ کرم بعد میں دوبارہ کوشش کریں۔"
   },
   "footer": {
     "rights": "جملہ حقوق محفوظ ہیں۔",
@@ -2403,18 +2403,18 @@
       }
     },
     "tab": "اپنا منصوبہ بنائیں",
-    "disclaimer": "This is an indicative price. Final pricing depends on scope, brand complexity, and content needs.",
-    "vatNote": "excl. VAT",
-    "adsBudgetDisclaimer": "Advertising budget is paid directly to Meta/Google and is not included in management costs.",
-    "adsBudgetNote": "Advertising budget is paid directly to Meta/Google.",
-    "pauseNote": "You can pause or stop whenever you want.",
-    "included": "Included",
-    "next": "Next",
-    "back": "Back",
-    "quantity": "Quantity",
+    "disclaimer": "یہ ایک اشارتی قیمت ہے۔ حتمی قیمت کا انحصار دائرہ کار، برانڈ کی پیچیدگی اور مواد کی ضروریات پر ہے۔",
+    "vatNote": "بشمول VAT",
+    "adsBudgetDisclaimer": "اشتہاری بجٹ براہ راست Meta/Google کو ادا کیا جاتا ہے اور انتظامی اخراجات میں شامل نہیں ہے۔",
+    "adsBudgetNote": "اشتہاری بجٹ براہ راست Meta/Google کو ادا کیا جاتا ہے۔",
+    "pauseNote": "آپ جب چاہیں روک سکتے ہیں یا بند کر سکتے ہیں۔",
+    "included": "شامل",
+    "next": "اگلا",
+    "back": "واپس",
+    "quantity": "مقدار",
     "viewSummary": "خلاصہ دیکھیں",
     "validation": {
-      "minChannel": "Select at least 1 channel."
+      "minChannel": "کم از کم 1 چینل منتخب کریں۔"
     },
     "steps": {
       "channels": "اپنے چینلز کا انتخاب کریں",
@@ -2703,7 +2703,7 @@
     },
     "faq": {
       "label": "عام سوالات",
-      "title": "FAQ",
+      "title": "اکثر پوچھے گئے سوالات",
       "q1": "کیا یہ ماہانہ معاہدہ ہے؟",
       "a1": "ہاں، آپ ماہانہ ادائیگی کرتے ہیں۔ سالانہ معاہدہ لازمی نہیں۔",
       "q2": "کیا میں جب چاہوں رک سکتا ہوں؟",
@@ -2722,7 +2722,7 @@
       "subtitle": "کوئی مبہم وعدے نہیں۔ ہم واضح اقدامات کے ساتھ ٹھوس پلان فراہم کرتے ہیں۔",
       "primaryCTA": "تجویز کی درخواست کریں",
       "secondaryCTA": "WhatsApp پر پیغام بھیجیں",
-      "trustNote": "No-obligation conversation · Final quote after intake · Prices excl. VAT"
+      "trustNote": "بلا جھجھک بات چیت · انٹیک کے بعد حتمی کوٹیشن · قیمتیں VAT کے بغیر"
     },
     "socialMedia": {
       "title": "سوشل میڈیا مینجمنٹ",
@@ -3442,22 +3442,22 @@
       },
       "dataSecurity": {
         "title": "ڈیٹا سیکیورٹی",
-        "content": "We take the security of your data seriously. We use:\n\n• SSL encryption for all data transfer\n• Secure servers and databases\n• Limited access to personal data\n• Regular security audits\n\nDespite our efforts, no method of transmission over the internet can be 100% secure."
+        "content": "ہم آپ کے ڈیٹا کی حفاظت کو سنجیدگی سے لیتے ہیں۔ ہم استعمال کرتے ہیں:\n\n• تمام ڈیٹا کی منتقلی کے لیے SSL انکرپشن\n• محفوظ سرورز اور ڈیٹا بیس\n• ذاتی ڈیٹا تک محدود رسائی\n• باقاعدہ سیکیورٹی آڈٹ\n\nہماری کوششوں کے باوجود، انٹرنیٹ پر منتقلی کا کوئی بھی طریقہ 100% محفوظ نہیں ہو سکتا۔"
       },
       "yourRights": {
-        "title": "Your Rights",
-        "content": "Under GDPR, you have the following rights:\n\n• Right to access your data\n• Right to correct inaccurate data\n• Right to delete your data\n• Right to restrict processing\n• Right to data portability\n• Right to object to processing\n\nContact us to exercise these rights."
+        "title": "آپ کے حقوق",
+        "content": "GDPR کے تحت، آپ کو درج ذیل حقوق حاصل ہیں:\n\n• اپنے ڈیٹا تک رسائی کا حق\n• غلط ڈیٹا کو درست کرنے کا حق\n• اپنا ڈیٹا حذف کرنے کا حق\n• پروسیسنگ کو محدود کرنے کا حق\n• ڈیٹا پورٹیبلٹی کا حق\n• پروسیسنگ پر اعتراض کا حق\n\nان حقوق کو استعمال کرنے کے لیے ہم سے رابطہ کریں۔"
       },
       "retention": {
         "title": "ڈیٹا برقرار رکھنا",
-        "content": "We retain your data only as long as necessary:\n\n• Contact data: 2 years after last contact\n• Application data: 1 year after procedure completion\n• Newsletter subscribers: until unsubscription\n• Analytical data: 26 months\n\nAfter this period, data is securely deleted."
+        "content": "ہم آپ کا ڈیٹا صرف اس وقت تک برقرار رکھتے ہیں جب تک ضروری ہو:\n\n• رابطہ ڈیٹا: آخری رابطے کے 2 سال بعد\n• درخواست کا ڈیٹا: طریقہ کار کی تکمیل کے 1 سال بعد\n• نیوز لیٹر کے سبسکرائبرز: ان سبسکرائب ہونے تک\n• تجزیاتی ڈیٹا: 26 ماہ\n\nاس مدت کے بعد، ڈیٹا کو محفوظ طریقے سے حذف کر دیا جاتا ہے۔"
       }
     },
     "meta": {
       "title": "رازداری کی پالیسی",
-      "description": "Learn how GROPPI protects and processes your personal data in compliance with GDPR."
+      "description": "جانیں کہ GROPPI GDPR کی تعمیل میں آپ کے ذاتی ڈیٹا کی حفاظت اور پروسیسنگ کیسے کرتا ہے۔"
     },
-    "footerNote": "Have questions about this privacy policy? Feel free to contact us at info@groppi.be"
+    "footerNote": "اس پرائیویسی پالیسی کے بارے میں سوالات ہیں؟ بلا جھجھک ہم سے info@groppi.be پر رابطہ کریں۔"
   },
   "terms": {
     "title": "شرائط و ضوابط",
@@ -3490,26 +3490,26 @@
       },
       "acceptance": {
         "title": "شرائط کی قبولیت",
-        "content": "By accessing or using the GROPPI website and services, you agree to these Terms of Service.\n\nIf you do not agree to any part of these terms, you may not use our services.\n\nWe reserve the right to modify these terms at any time."
+        "content": "GROPPI ویب سائٹ اور خدمات تک رسائی یا استعمال کرکے، آپ ان سروس کی شرائط سے اتفاق کرتے ہیں۔\n\nاگر آپ ان شرائط کے کسی بھی حصے سے متفق نہیں ہیں، تو آپ ہماری خدمات استعمال نہیں کر سکتے۔\n\nہم کسی بھی وقت ان شرائط میں ترمیم کرنے کا حق محفوظ رکھتے ہیں۔"
       },
       "modifications": {
         "title": "ترمیمات",
-        "content": "We reserve the right to modify these terms at any time.\n\nFor significant changes, we will notify you by email if applicable.\n\nContinued use of our services after modifications constitutes acceptance of the new terms."
+        "content": "ہم کسی بھی وقت ان شرائط میں ترمیم کرنے کا حق محفوظ رکھتے ہیں۔\n\nاہم تبدیلیوں کے لیے، اگر قابل اطلاق ہو تو ہم آپ کو Email کے ذریعے مطلع کریں گے۔\n\nترمیم کے بعد ہماری خدمات کا مسلسل استعمال نئی شرائط کی قبولیت کے مترادف ہے۔"
       },
       "governing": {
         "title": "قابل اطلاق قانون",
-        "content": "These terms are governed by Belgian law.\n\nDisputes will be submitted to the competent courts of Belgium.\n\nIf any provision of these terms is found to be invalid or unenforceable, the remaining provisions will remain in full force and effect."
+        "content": "یہ شرائط بیلجیئم کے قانون کے تحت ہیں۔\n\nتنازعات کو بیلجیئم کی مجاز عدالتوں میں پیش کیا جائے گا۔\n\nاگر ان شرائط کی کوئی بھی شق غلط یا ناقابل نفاذ پائی جاتی ہے، تو باقی شقیں مکمل طور پر نافذ العمل رہیں گی۔"
       },
       "contact": {
-        "title": "Contact",
-        "content": "For questions about these terms:\n\nGROPPI\nEmail: info@groppi.be\nPhone: +32 456 19 87 21\n\nWe aim to respond to all inquiries within 48 hours."
+        "title": "رابطہ کریں",
+        "content": "ان شرائط کے بارے میں سوالات کے لیے:\n\nGROPPI\nEmail: info@groppi.be\nPhone: +32 456 19 87 21\n\nہم تمام استفسارات کا 48 گھنٹوں کے اندر جواب دینے کی کوشش کرتے ہیں۔"
       }
     },
     "meta": {
       "title": "سروس کی شرائط",
-      "description": "Read the terms and conditions for using GROPPI services and website."
+      "description": "GROPPI کی خدمات اور ویب سائٹ استعمال کرنے کے لیے شرائط و ضوابط پڑھیں۔"
     },
-    "footerNote": "Have questions about these terms? Contact us at info@groppi.be"
+    "footerNote": "ان شرائط کے بارے میں سوالات ہیں؟ ہم سے info@groppi.be پر رابطہ کریں۔"
   },
   "cookies": {
     "banner": {
@@ -3520,15 +3520,15 @@
       "customize": "اپنی مرضی سے ترتیب دیں"
     },
     "title": "ہم کوکیز استعمال کرتے ہیں",
-    "description": "This website uses cookies to improve your experience and measure our performance. By clicking \"Accept\", you agree to our cookie policy.",
-    "learnMore": "Learn more",
-    "accept": "Accept",
-    "reject": "Reject"
+    "description": "یہ ویب سائٹ آپ کے تجربے کو بہتر بنانے اور ہماری کارکردگی کی پیمائش کے لیے کوکیز استعمال کرتی ہے۔ \"Accept\" پر کلک کرکے، آپ ہماری کوکی پالیسی سے اتفاق کرتے ہیں۔",
+    "learnMore": "مزید جانیں",
+    "accept": "قبول کریں",
+    "reject": "مسترد کریں"
   },
   "franchise": {
-    "title": "Franchise",
+    "title": "فرنچائز",
     "subtitle": "فرنچائزی بنیں",
-    "description": "Are you interested in partnering with GROPPI? Discover the opportunities to grow together.",
+    "description": "کیا آپ GROPPI کے ساتھ شراکت میں دلچسپی رکھتے ہیں؟ مل کر ترقی کے مواقع دریافت کریں۔",
     "benefits": {
       "title": "فرنچائز کے فوائد",
       "items": {
@@ -3539,7 +3539,7 @@
       }
     },
     "requirements": {
-      "title": "What We're Looking For",
+      "title": "ہمیں کیا چاہیے",
       "items": {
         "0": "ڈیجیٹل مارکیٹنگ یا متعلقہ شعبے میں تجربہ",
         "1": "کاروباری ذہنیت اور ترقی کی سوچ",
@@ -3548,32 +3548,32 @@
       }
     },
     "cta": "مزید معلومات کے لیے ہم سے رابطہ کریں",
-    "apply": "Apply Now",
-    "call": "Call Us"
+    "apply": "ابھی درخواست دیں",
+    "call": "ہمیں کال کریں"
   },
   "stats": {
     "years": "سالوں کا تجربہ",
     "yearsValue": "9+",
     "clients": "مطمئن کلائنٹس",
     "clientsValue": "150+",
-    "projects": "Projects",
+    "projects": "پروجیکٹس",
     "projectsValue": "500+",
     "team": "ٹیم کے ارکان",
     "teamValue": "9+"
   },
   "admin": {
-    "dashboard": "Dashboard",
-    "articles": "Articles",
-    "media": "Media",
-    "services": "Services",
-    "messages": "Messages",
-    "settings": "Settings",
-    "logout": "Log Out",
-    "login": "Log In",
-    "email": "Email",
-    "password": "Password",
-    "loginTitle": "Admin Login",
-    "loginButton": "Log In"
+    "dashboard": "ڈیش بورڈ",
+    "articles": "مضامین",
+    "media": "میڈیا",
+    "services": "خدمات",
+    "messages": "پیغامات",
+    "settings": "سیٹنگز",
+    "logout": "لاگ آؤٹ",
+    "login": "لاگ ان",
+    "email": "ای میل",
+    "password": "پاس ورڈ",
+    "loginTitle": "ایڈمن لاگ ان",
+    "loginButton": "لاگ ان کریں"
   },
   "_footer_merged": true
 }

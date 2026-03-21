@@ -9,7 +9,7 @@
     "franchise": "Franchise",
     "partnership": "Franchise",
     "careers": "Karriere",
-    "team": "Our Team"
+    "team": "Unser Team"
   },
   "careers": {
     "meta": {
@@ -351,7 +351,7 @@
       "description": "Jede Dienstleistung ist klar erklärt: was Sie bekommen, was es kostet und wie es funktioniert.",
       "featured": "Am häufigsten gewählt",
       "viewDetails": "Mehr Info",
-      "watchVideo": "Video",
+      "watchVideo": "Video ansehen",
       "buildPlan": "Plan erstellen",
       "seePricing": "Preis ansehen",
       "customQuote": "Individuelles Angebot",
@@ -431,7 +431,7 @@
         "deliverables": "Was Sie bekommen",
         "pricing": "Preis & Logik",
         "video": "Video",
-        "calculator": "Plan Builder"
+        "calculator": "Plan-Konfigurator"
       },
       "overview": {
         "about": "Über diesen Service",
@@ -459,7 +459,7 @@
         "uploadNote": "Admin kann hier ein Video hochladen"
       },
       "calculator": {
-        "title": "Plan Builder",
+        "title": "Plan-Konfigurator",
         "desc": "Stellen Sie Ihren Plan zusammen und erhalten Sie sofort einen Richtpreis.",
         "cta": "Vollständigen Rechner öffnen"
       },
@@ -631,7 +631,7 @@
         "website": "Website",
         "branding": "Branding",
         "ads": "Anzeigen",
-        "social": "Social",
+        "social": "Social Media",
         "ecommerce": "E-Commerce",
         "seo": "SEO",
         "content": "Content"
@@ -1116,7 +1116,7 @@
     },
     "packages": {
       "starter": "Starter",
-      "growth": "Growth",
+      "growth": "Wachstum",
       "pro": "Pro"
     },
     "calculatorHelperText": "Nutzen Sie dieses Tool für einen Richtpreis basierend auf Ihren Bedürfnissen.",
@@ -1616,7 +1616,7 @@
       "results": "Ergebnis",
       "ctaPrimary": "Angebot anfordern",
       "ctaWhatsApp": "Chat per WhatsApp",
-      "deliverables": "What we delivered"
+      "deliverables": "Was wir geliefert haben"
     },
     "items": {
       "castello-vicchiomaggio": {
@@ -2449,25 +2449,25 @@
         "answer": "Nein. Werbebudget zahlen Sie direkt an Meta/Google. Unsere Kosten sind für Verwaltung und Optimierung."
       }
     },
-    "tab": "Build Your Plan",
-    "disclaimer": "This is an indicative price. Final pricing depends on scope, brand complexity, and content needs.",
-    "vatNote": "excl. VAT",
-    "adsBudgetDisclaimer": "Advertising budget is paid directly to Meta/Google and is not included in management costs.",
-    "adsBudgetNote": "Advertising budget is paid directly to Meta/Google.",
-    "pauseNote": "You can pause or stop whenever you want.",
-    "included": "Included",
-    "next": "Next",
-    "back": "Back",
-    "quantity": "Quantity",
-    "viewSummary": "View summary",
+    "tab": "Plan erstellen",
+    "disclaimer": "Dies ist ein Richtpreis. Die endgültige Preisgestaltung hängt vom Umfang, der Markenkomplexität und den Inhaltsanforderungen ab.",
+    "vatNote": "zzgl. MwSt.",
+    "adsBudgetDisclaimer": "Das Werbebudget wird direkt an Meta/Google gezahlt und ist nicht in den Verwaltungskosten enthalten.",
+    "adsBudgetNote": "Das Werbebudget wird direkt an Meta/Google gezahlt.",
+    "pauseNote": "Sie können jederzeit pausieren oder beenden.",
+    "included": "Inklusive",
+    "next": "Weiter",
+    "back": "Zurück",
+    "quantity": "Anzahl",
+    "viewSummary": "Zusammenfassung ansehen",
     "validation": {
-      "minChannel": "Select at least 1 channel."
+      "minChannel": "Wählen Sie mindestens 1 Kanal aus."
     },
     "steps": {
-      "channels": "Choose your channels",
-      "frequency": "Post frequency",
-      "campaigns": "Paid campaigns",
-      "addons": "Optional add-ons"
+      "channels": "Wählen Sie Ihre Kanäle",
+      "frequency": "Beitragsfrequenz",
+      "campaigns": "Bezahlte Kampagnen",
+      "addons": "Optionale Add-ons"
     }
   },
   "partner": {
@@ -2663,7 +2663,7 @@
         "result": "2,4 Millionen Reichweite"
       },
       "tech-startup-branding": {
-        "title": "Tech Startup Complete Branding",
+        "title": "Komplettes Branding für Tech-Startup",
         "challenge": "Startup ohne visuelle Identität oder Markenposition.",
         "approach": "Markenstrategie + Logo-Design + Website + Pitch Deck.",
         "result": "Komplette Markenidentität gelauncht"
@@ -2769,7 +2769,7 @@
       "subtitle": "Keine vagen Versprechen. Wir liefern einen konkreten Plan mit klaren Schritten.",
       "primaryCTA": "Angebot anfordern",
       "secondaryCTA": "Nachricht per WhatsApp senden",
-      "trustNote": "No-obligation conversation · Final quote after intake · Prices excl. VAT"
+      "trustNote": "Unverbindliches Gespräch · Endgültiges Angebot nach Erstgespräch · Preise exkl. MwSt."
     },
     "socialMedia": {
       "title": "Social Media Management",
@@ -3458,51 +3458,51 @@
       }
     },
     "onePageWebsite": {
-      "title": "One-page Website",
-      "subtitle": "A powerful landing page for quick impact.",
+      "title": "One-Page Website",
+      "subtitle": "Eine starke Landingpage für schnelle Wirkung.",
       "benefits": {
-        "1": "Get online fast with your message",
-        "2": "Perfect for launches or campaigns",
-        "3": "Affordable and effective"
+        "1": "Schnell online mit Ihrer Botschaft",
+        "2": "Ideal für Launches oder Kampagnen",
+        "3": "Erschwinglich und effektiv"
       },
       "deliverables": {
         "1": {
           "title": "Design",
-          "desc": "Attractive and on-brand design."
+          "desc": "Ansprechendes und markengerechtes Design."
         },
         "2": {
-          "title": "Development",
-          "desc": "Fast and responsive page."
+          "title": "Entwicklung",
+          "desc": "Schnelle und responsive Seite."
         },
         "3": {
-          "title": "Form integration",
-          "desc": "Lead capture functionality."
+          "title": "Formularintegration",
+          "desc": "Funktionalität zur Lead-Erfassung."
         },
         "4": {
-          "title": "Mobile optimized",
-          "desc": "Perfect on every device."
+          "title": "Mobil optimiert",
+          "desc": "Perfekt auf jedem Gerät."
         },
         "5": {
-          "title": "Analytics setup",
-          "desc": "Tracking from day one."
+          "title": "Analytics-Setup",
+          "desc": "Tracking vom ersten Tag an."
         },
         "6": {
-          "title": "Fast delivery",
-          "desc": "Live within 1-2 weeks."
+          "title": "Schnelle Lieferung",
+          "desc": "Live innerhalb von 1-2 Wochen."
         }
       },
       "process": {
         "1": {
-          "title": "Analysis",
-          "desc": "Briefing and defining goals."
+          "title": "Analyse",
+          "desc": "Briefing und Zieldefinition."
         },
         "2": {
-          "title": "Execution",
-          "desc": "Design and development in one sprint."
+          "title": "Umsetzung",
+          "desc": "Design und Entwicklung in einem Sprint."
         },
         "3": {
-          "title": "Growth & optimization",
-          "desc": "A/B testing and improvements."
+          "title": "Wachstum & Optimierung",
+          "desc": "A/B-Tests und Verbesserungen."
         }
       }
     }

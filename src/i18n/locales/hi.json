@@ -9,7 +9,7 @@
     "franchise": "फ्रैंचाइज़ी",
     "partnership": "फ्रैंचाइज़ी",
     "careers": "करियर",
-    "team": "Our Team"
+    "team": "हमारी टीम"
   },
   "careers": {
     "meta": {
@@ -277,11 +277,11 @@
         "about": "इस सेवा के बारे में",
         "priceRange": "मूल्य सीमा",
         "content_production": "पेशेवर सामग्री उत्पादन गुणवत्तापूर्ण वीडियो और तस्वीरों के साथ आपके ब्रांड को मजबूत करता है जो आपके संदेश को स्पष्ट रूप से व्यक्त करते हैं और आपके लक्षित दर्शकों को आकर्षित करते हैं।",
-        "business_website": "A professional website is the foundation of your online presence. We build websites that are not only beautiful, but also convert.",
-        "ecommerce_website": "Start selling online with a fully optimized webshop with all the functionality you need.",
-        "ads_management": "Maximize your advertising budget with data-driven campaigns on Google, Facebook, Instagram and more.",
+        "business_website": "एक पेशेवर वेबसाइट आपकी ऑनलाइन उपस्थिति की नींव है। हम ऐसी वेबसाइटें बनाते हैं जो न केवल सुंदर हों, बल्कि रूपांतरण भी लाएँ।",
+        "ecommerce_website": "अपनी ज़रूरत की सभी कार्यक्षमताओं के साथ एक पूरी तरह से अनुकूलित वेबशॉप के साथ ऑनलाइन बेचना शुरू करें।",
+        "ads_management": "Google, Facebook, Instagram और अन्य पर डेटा-संचालित अभियानों के साथ अपने विज्ञापन बजट को अधिकतम करें।",
         "seo": "अनुकूलित सामग्री और तकनीकी SEO सुधारों के माध्यम से ऑर्गेनिक ट्रैफ़िक के साथ स्थायी रूप से विकास करें।",
-        "social_media": "Build an engaged community with consistent, quality content on all your social media channels."
+        "social_media": "अपने सभी सोशल मीडिया चैनलों पर सुसंगत, गुणवत्तापूर्ण सामग्री के साथ एक सक्रिय समुदाय बनाएँ।"
       },
       "deliverables": {
         "title": "क्या मिलेगा"
@@ -366,36 +366,36 @@
       "title": "चयनित परियोजनाएं",
       "viewAll": "पूर्ण पोर्टफोलियो देखें",
       "thumbnailPlaceholder": "परियोजना छवि",
-      "viewCase": "View case",
+      "viewCase": "केस देखें",
       "tags": {
-        "website": "Website",
-        "branding": "Branding",
+        "website": "वेबसाइट",
+        "branding": "ब्रांडिंग",
         "ads": "Ads",
-        "social": "Social",
-        "ecommerce": "E-commerce",
+        "social": "सोशल",
+        "ecommerce": "ई-कॉमर्स",
         "seo": "SEO",
-        "content": "Content"
+        "content": "सामग्री"
       },
       "projects": {
         "restaurant-branding": {
           "title": "रेस्तरां ब्रांडिंग",
-          "metric": "+180% reservations"
+          "metric": "+180% आरक्षण"
         },
         "mode-webshop": {
           "title": "फैशन वेबशॉप",
-          "metric": "€85K revenue in 3 months"
+          "metric": "3 महीनों में €85K राजस्व"
         },
         "b2b-platform": {
           "title": "B2B प्लेटफॉर्म",
-          "metric": "+320% leads"
+          "metric": "+320% लीड"
         },
         "bouwbedrijf-website": {
           "title": "निर्माण वेबसाइट",
-          "metric": "#1 Google local"
+          "metric": "#1 Google स्थानीय"
         },
         "influencer-campagne": {
           "title": "इन्फ्लुएंसर अभियान",
-          "metric": "2.4M reach"
+          "metric": "2.4M पहुँच"
         },
         "tech-startup-branding": {
           "title": "टेक स्टार्टअप ब्रांडिंग",
@@ -407,7 +407,7 @@
         },
         "content-strategie": {
           "title": "सामग्री रणनीति",
-          "metric": "50+ videos/month"
+          "metric": "50+ वीडियो/माह"
         }
       }
     },
@@ -2896,28 +2896,28 @@
     },
     "seo": {
       "title": "SEO",
-      "subtitle": "Rank higher in Google for more organic traffic.",
+      "subtitle": "अधिक ऑर्गेनिक ट्रैफ़िक के लिए Google में उच्च रैंक प्राप्त करें।",
       "benefits": {
         "1": "खोज इंजनों में बेहतर दृश्यता",
-        "2": "More quality traffic to your site",
-        "3": "Long-term growth without ad costs"
+        "2": "आपकी साइट पर अधिक गुणवत्ता वाला ट्रैफ़िक",
+        "3": "विज्ञापन लागत के बिना दीर्घकालिक विकास"
       },
       "deliverables": {
         "1": {
           "title": "तकनीकी ऑडिट",
-          "desc": "We check speed, structure and indexation."
+          "desc": "हम गति, संरचना और अनुक्रमण की जाँच करते हैं।"
         },
         "2": {
           "title": "कीवर्ड अनुसंधान",
-          "desc": "The right keywords for your market."
+          "desc": "आपके बाज़ार के लिए सही कीवर्ड।"
         },
         "3": {
           "title": "ऑन-पेज अनुकूलन",
-          "desc": "Improve titles, metas and content."
+          "desc": "शीर्षक, मेटा और सामग्री में सुधार करें।"
         },
         "4": {
           "title": "सामग्री रणनीति",
-          "desc": "SEO-focused articles and pages."
+          "desc": "SEO-केंद्रित लेख और पेज।"
         },
         "5": {
           "title": "लिंक बिल्डिंग",
@@ -2930,11 +2930,11 @@
       },
       "process": {
         "1": {
-          "title": "Analysis",
-          "desc": "Technical and content audit of your site."
+          "title": "विश्लेषण",
+          "desc": "आपकी साइट का तकनीकी और सामग्री ऑडिट।"
         },
         "2": {
-          "title": "Execution",
+          "title": "निष्पादन",
           "desc": "ऑप्टिमाइज़ेशन और सामग्री लागू करना।"
         },
         "3": {
@@ -2982,12 +2982,12 @@
         "daily": "प्रतिदिन",
         "custom": "अन्य मात्रा"
       },
-      "2month": "2 posts per month",
-      "1week": "1 post per week",
-      "2week": "2 posts per week",
-      "3week": "3 posts per week",
-      "4week": "4 posts per week",
-      "5week": "5 posts per week"
+      "2month": "प्रति माह 2 पोस्ट",
+      "1week": "प्रति सप्ताह 1 पोस्ट",
+      "2week": "प्रति सप्ताह 2 पोस्ट",
+      "3week": "प्रति सप्ताह 3 पोस्ट",
+      "4week": "प्रति सप्ताह 4 पोस्ट",
+      "5week": "प्रति सप्ताह 5 पोस्ट"
     },
     "ads": {
       "title": "क्या आप विज्ञापन चालू करना चाहते हैं?",
@@ -3010,20 +3010,20 @@
       },
       "productPhotos": {
         "label": "अतिरिक्त उत्पाद तस्वीरें",
-        "unit": "photo"
+        "unit": "फोटो"
       },
       "googleReviews": {
         "label": "Google समीक्षा प्रबंधन"
       },
       "contentWriting": {
         "label": "सामग्री लेखन",
-        "unit": "hour"
+        "unit": "घंटा"
       },
       "emailMarketing": {
         "label": "Email मार्केटिंग अभियान"
       },
       "postsPack": {
-        "label": "Social media posts (10-pack)"
+        "label": "सोशल मीडिया पोस्ट (10 का पैक)"
       },
       "analyticsDashboard": {
         "label": "उन्नत Analytics डैशबोर्ड"
@@ -3041,8 +3041,8 @@
       "disclaimer": "नेट मूल्य। विज्ञापन बजट अलग से देय।",
       "ctaWhatsapp": "प्लान WhatsApp पर भेजें",
       "ctaCall": "इस प्लान पर चर्चा करें",
-      "adsBudget": "Ad budget (paid directly)",
-      "included": "included"
+      "adsBudget": "विज्ञापन बजट (सीधे भुगतान किया गया)",
+      "included": "शामिल"
     },
     "faq": {
       "title": "बिल्डर FAQ",
@@ -3061,42 +3061,42 @@
         }
       },
       "adjustLater": {
-        "question": "Can I adjust my plan later?",
-        "answer": "Yes. You can adjust at any time. We align everything with your goals and evolution."
+        "question": "क्या मैं बाद में अपना प्लान बदल सकता हूँ?",
+        "answer": "हाँ। आप किसी भी समय बदलाव कर सकते हैं। हम आपके लक्ष्यों और विकास के साथ सब कुछ संरेखित करते हैं।"
       },
       "setupCost": {
-        "question": "Is there a setup cost?",
-        "answer": "Setup is included in the management fee. Extras only arise with additional scope or exceptional setup."
+        "question": "क्या कोई सेटअप लागत है?",
+        "answer": "सेटअप प्रबंधन शुल्क में शामिल है। अतिरिक्त शुल्क केवल अतिरिक्त दायरे या असाधारण सेटअप के साथ उत्पन्न होते हैं।"
       },
       "adBudgetIncluded": {
         "question": "क्या विज्ञापन बजट शामिल है?",
-        "answer": "No. Advertising budget is paid directly to Meta/Google. Our cost is for management and optimization."
+        "answer": "नहीं। विज्ञापन बजट सीधे Meta/Google को भुगतान किया जाता है। हमारी लागत प्रबंधन और अनुकूलन के लिए है।"
       }
     },
     "tab": "अपनी योजना बनाएं",
-    "disclaimer": "This is an indicative price. Final pricing depends on scope, brand complexity, and content needs.",
-    "vatNote": "excl. VAT",
-    "adsBudgetDisclaimer": "Advertising budget is paid directly to Meta/Google and is not included in management costs.",
-    "adsBudgetNote": "Advertising budget is paid directly to Meta/Google.",
-    "pauseNote": "You can pause or stop whenever you want.",
-    "included": "Included",
-    "next": "Next",
-    "back": "Back",
-    "quantity": "Quantity",
+    "disclaimer": "यह एक सांकेतिक मूल्य है। अंतिम मूल्य दायरे, ब्रांड की जटिलता और सामग्री की ज़रूरतों पर निर्भर करता है।",
+    "vatNote": "वैट को छोड़कर",
+    "adsBudgetDisclaimer": "विज्ञापन बजट सीधे Meta/Google को भुगतान किया जाता है और इसमें प्रबंधन लागत शामिल नहीं है।",
+    "adsBudgetNote": "विज्ञापन बजट सीधे Meta/Google को भुगतान किया जाता है।",
+    "pauseNote": "आप जब चाहें रोक या बंद कर सकते हैं।",
+    "included": "शामिल",
+    "next": "अगला",
+    "back": "वापस",
+    "quantity": "मात्रा",
     "viewSummary": "सारांश देखें",
     "validation": {
-      "minChannel": "Select at least 1 channel."
+      "minChannel": "कम से कम 1 चैनल चुनें।"
     },
     "adsBudget": {
-      "100": "€100 / month",
-      "250": "€250 / month",
-      "500": "€500 / month",
-      "1000": "€1000 / month",
+      "100": "€100 / माह",
+      "250": "€250 / माह",
+      "500": "€500 / माह",
+      "1000": "€1000 / माह",
       "none": "कोई सशुल्क अभियान नहीं"
     },
     "cta": {
       "primary": "एक कस्टम प्रस्ताव का अनुरोध करें",
-      "secondary": "Save plan"
+      "secondary": "प्लान सहेजें"
     }
   },
   "partner": {
@@ -3440,35 +3440,35 @@
     "reject": "अस्वीकार करें"
   },
   "common": {
-    "loading": "Loading...",
+    "loading": "लोड हो रहा है...",
     "error": "एक त्रुटि हुई",
-    "retry": "Try Again",
-    "back": "Back",
-    "next": "Next",
-    "previous": "Previous",
-    "close": "Close",
-    "search": "Search",
+    "retry": "पुनः प्रयास करें",
+    "back": "वापस",
+    "next": "अगला",
+    "previous": "पिछला",
+    "close": "बंद करें",
+    "search": "खोजें",
     "noResults": "कोई परिणाम नहीं मिला",
-    "learnMore": "Learn More",
-    "getStarted": "Get Started",
-    "viewAll": "View All"
+    "learnMore": "और जानें",
+    "getStarted": "शुरू करें",
+    "viewAll": "सभी देखें"
   },
   "forms": {
-    "name": "Name",
+    "name": "नाम",
     "email": "Email",
-    "phone": "Phone",
-    "company": "Company",
-    "message": "Message",
-    "subject": "Subject",
-    "website": "Website",
-    "budget": "Budget",
-    "submitSuccess": "Thank you! We'll be in touch soon.",
-    "submitError": "Something went wrong. Please try again."
+    "phone": "फ़ोन",
+    "company": "कंपनी",
+    "message": "संदेश",
+    "subject": "विषय",
+    "website": "वेबसाइट",
+    "budget": "बजट",
+    "submitSuccess": "धन्यवाद! हम जल्द ही आपसे संपर्क करेंगे।",
+    "submitError": "कुछ गलत हो गया। कृपया पुनः प्रयास करें।"
   },
   "franchise": {
-    "title": "Franchise",
+    "title": "फ्रैंचाइज़ी",
     "subtitle": "एक फ्रेंचाइजी बनें",
-    "description": "Are you interested in partnering with GROPPI? Discover the opportunities to grow together.",
+    "description": "क्या आप GROPPI के साथ साझेदारी करने में रुचि रखते हैं? एक साथ बढ़ने के अवसरों की खोज करें।",
     "benefits": {
       "title": "फ्रेंचाइजी के लाभ",
       "items": {
@@ -3479,7 +3479,7 @@
       }
     },
     "requirements": {
-      "title": "What We're Looking For",
+      "title": "हमें क्या चाहिए",
       "items": {
         "0": "डिजिटल मार्केटिंग या संबंधित क्षेत्र में अनुभव",
         "1": "उद्यमी मानसिकता और विकास की सोच",
@@ -3488,114 +3488,114 @@
       }
     },
     "cta": "अधिक जानकारी के लिए हमसे संपर्क करें",
-    "apply": "Apply Now",
-    "call": "Call Us"
+    "apply": "अभी आवेदन करें",
+    "call": "हमें कॉल करें"
   },
   "stats": {
     "years": "वर्षों का अनुभव",
     "yearsValue": "9+",
     "clients": "खुश ग्राहक",
     "clientsValue": "150+",
-    "projects": "Projects",
+    "projects": "प्रोजेक्ट",
     "projectsValue": "500+",
     "team": "टीम के सदस्य",
     "teamValue": "9+"
   },
   "admin": {
-    "dashboard": "Dashboard",
-    "articles": "Articles",
-    "media": "Media",
-    "services": "Services",
-    "messages": "Messages",
-    "settings": "Settings",
-    "logout": "Log Out",
-    "login": "Log In",
+    "dashboard": "डैशबोर्ड",
+    "articles": "लेख",
+    "media": "मीडिया",
+    "services": "सेवाएँ",
+    "messages": "संदेश",
+    "settings": "सेटिंग्स",
+    "logout": "लॉग आउट",
+    "login": "लॉग इन",
     "email": "Email",
-    "password": "Password",
-    "loginTitle": "Admin Login",
-    "loginButton": "Log In"
+    "password": "पासवर्ड",
+    "loginTitle": "एडमिन लॉग इन",
+    "loginButton": "लॉग इन करें"
   },
   "privacy": {
     "meta": {
       "title": "गोपनीयता नीति",
-      "description": "Learn how GROPPI protects and processes your personal data in compliance with GDPR."
+      "description": "जानें कि GROPPI GDPR के अनुपालन में आपके व्यक्तिगत डेटा की सुरक्षा और उसे कैसे संसाधित करता है।"
     },
     "title": "गोपनीयता नीति",
-    "subtitle": "Your privacy matters to us. This policy explains how we collect, use, and protect your data.",
+    "subtitle": "आपकी गोपनीयता हमारे लिए महत्वपूर्ण है। यह नीति बताती है कि हम आपके डेटा को कैसे एकत्र, उपयोग और सुरक्षित रखते हैं।",
     "lastUpdated": "अंतिम बार अपडेट किया गया",
-    "footerNote": "Have questions about this privacy policy? Feel free to contact us at info@groppi.be",
+    "footerNote": "इस गोपनीयता नीति के बारे में प्रश्न हैं? बेझिझक हमसे info@groppi.be पर संपर्क करें",
     "sections": {
       "dataCollection": {
         "title": "डेटा संग्रह",
-        "content": "We collect personal data that you voluntarily provide to us, such as:\n\n• Name and contact details when you fill out our contact form\n• Email address for newsletter subscriptions\n• CV and application data for job openings\n• Business information for commercial inquiries\n\nWe also automatically collect certain technical data such as IP address, browser type, and pages visited for analytical purposes."
+        "content": "हम आपके द्वारा स्वेच्छा से प्रदान किए गए व्यक्तिगत डेटा को एकत्र करते हैं, जैसे:\n\n• जब आप हमारा संपर्क फ़ॉर्म भरते हैं तो नाम और संपर्क विवरण\n• न्यूज़लेटर सदस्यता के लिए ईमेल पता\n• नौकरी के अवसरों के लिए CV और आवेदन डेटा\n• वाणिज्यिक पूछताछ के लिए व्यावसायिक जानकारी\n\nहम विश्लेषणात्मक उद्देश्यों के लिए IP पता, ब्राउज़र प्रकार और देखे गए पृष्ठों जैसे कुछ तकनीकी डेटा को स्वचालित रूप से भी एकत्र करते हैं।"
       },
       "dataUsage": {
-        "title": "Data Usage",
-        "content": "We use your data to:\n\n• Respond to your questions and requests\n• Send newsletters (only with your consent)\n• Improve our website and services\n• Fulfill legal obligations\n• Send relevant information about our services"
+        "title": "डेटा उपयोग",
+        "content": "हम आपके डेटा का उपयोग करते हैं:\n\n• आपके प्रश्नों और अनुरोधों का जवाब देने के लिए\n• न्यूज़लेटर भेजने के लिए (केवल आपकी सहमति से)\n• हमारी वेबसाइट और सेवाओं को बेहतर बनाने के लिए\n• कानूनी दायित्वों को पूरा करने के लिए\n• हमारी सेवाओं के बारे में प्रासंगिक जानकारी भेजने के लिए"
       },
       "dataSecurity": {
         "title": "डेटा सुरक्षा",
-        "content": "We take the security of your data seriously. We use:\n\n• SSL encryption for all data transfer\n• Secure servers and databases\n• Limited access to personal data\n• Regular security audits\n\nDespite our efforts, no method of transmission over the internet can be 100% secure."
+        "content": "हम आपके डेटा की सुरक्षा को गंभीरता से लेते हैं। हम उपयोग करते हैं:\n\n• सभी डेटा ट्रांसफर के लिए SSL एन्क्रिप्शन\n• सुरक्षित सर्वर और डेटाबेस\n• व्यक्तिगत डेटा तक सीमित पहुंच\n• नियमित सुरक्षा ऑडिट\n\nहमारे प्रयासों के बावजूद, इंटरनेट पर ट्रांसमिशन का कोई भी तरीका 100% सुरक्षित नहीं हो सकता है।"
       },
       "yourRights": {
-        "title": "Your Rights",
-        "content": "Under GDPR, you have the following rights:\n\n• Right to access your data\n• Right to correct inaccurate data\n• Right to delete your data\n• Right to restrict processing\n• Right to data portability\n• Right to object to processing\n\nContact us to exercise these rights."
+        "title": "आपके अधिकार",
+        "content": "GDPR के तहत, आपके पास निम्नलिखित अधिकार हैं:\n\n• अपने डेटा तक पहुंचने का अधिकार\n• गलत डेटा को ठीक करने का अधिकार\n• अपने डेटा को हटाने का अधिकार\n• प्रसंस्करण को प्रतिबंधित करने का अधिकार\n• डेटा पोर्टेबिलिटी का अधिकार\n• प्रसंस्करण पर आपत्ति करने का अधिकार\n\nइन अधिकारों का प्रयोग करने के लिए हमसे संपर्क करें।"
       },
       "cookies": {
-        "title": "Cookies",
-        "content": "Our website uses cookies to enhance your experience:\n\n• Essential cookies for website functionality\n• Analytical cookies to understand how visitors use our site\n• Marketing cookies for targeted advertising (only with consent)\n\nYou can manage cookies through your browser settings."
+        "title": "कुकीज़",
+        "content": "हमारी वेबसाइट आपके अनुभव को बेहतर बनाने के लिए कुकीज़ का उपयोग करती है:\n\n• वेबसाइट कार्यक्षमता के लिए आवश्यक कुकीज़\n• आगंतुक हमारी साइट का उपयोग कैसे करते हैं, यह समझने के लिए विश्लेषणात्मक कुकीज़\n• लक्षित विज्ञापन के लिए मार्केटिंग कुकीज़ (केवल सहमति से)\n\nआप अपनी ब्राउज़र सेटिंग्स के माध्यम से कुकीज़ का प्रबंधन कर सकते हैं।"
       },
       "retention": {
         "title": "डेटा प्रतिधारण",
-        "content": "We retain your data only as long as necessary:\n\n• Contact data: 2 years after last contact\n• Application data: 1 year after procedure completion\n• Newsletter subscribers: until unsubscription\n• Analytical data: 26 months\n\nAfter this period, data is securely deleted."
+        "content": "हम आपके डेटा को केवल तब तक बनाए रखते हैं जब तक आवश्यक हो:\n\n• संपर्क डेटा: अंतिम संपर्क के 2 साल बाद\n• आवेदन डेटा: प्रक्रिया पूरी होने के 1 साल बाद\n• न्यूज़लेटर ग्राहक: सदस्यता समाप्त होने तक\n• विश्लेषणात्मक डेटा: 26 महीने\n\nइस अवधि के बाद, डेटा को सुरक्षित रूप से हटा दिया जाता है।"
       },
       "contact": {
-        "title": "Contact",
-        "content": "For questions about your privacy or to exercise your rights:\n\nGROPPI\nEmail: info@groppi.be\nPhone: +32 456 19 87 21\n\nYou also have the right to file a complaint with the Belgian Data Protection Authority."
+        "title": "संपर्क करें",
+        "content": "आपकी गोपनीयता के बारे में प्रश्नों के लिए या अपने अधिकारों का प्रयोग करने के लिए:\n\nGROPPI\nईमेल: info@groppi.be\nफ़ोन: +32 456 19 87 21\n\nआपके पास बेल्जियम डेटा संरक्षण प्राधिकरण के पास शिकायत दर्ज करने का भी अधिकार है।"
       }
     }
   },
   "terms": {
     "meta": {
       "title": "सेवा की शर्तें",
-      "description": "Read the terms and conditions for using GROPPI services and website."
+      "description": "GROPPI सेवाओं और वेबसाइट का उपयोग करने के लिए नियम और शर्तें पढ़ें।"
     },
     "title": "सेवा की शर्तें",
-    "subtitle": "These terms govern your use of our website and services. By using our services, you agree to these terms.",
+    "subtitle": "ये शर्तें हमारी वेबसाइट और सेवाओं के आपके उपयोग को नियंत्रित करती हैं। हमारी सेवाओं का उपयोग करके, आप इन शर्तों से सहमत होते हैं।",
     "lastUpdated": "अंतिम बार अपडेट किया गया",
-    "footerNote": "Have questions about these terms? Contact us at info@groppi.be",
+    "footerNote": "इन शर्तों के बारे में प्रश्न हैं? हमसे info@groppi.be पर संपर्क करें",
     "sections": {
       "acceptance": {
         "title": "शर्तों की स्वीकृति",
-        "content": "By accessing or using the GROPPI website and services, you agree to these Terms of Service.\n\nIf you do not agree to any part of these terms, you may not use our services.\n\nWe reserve the right to modify these terms at any time."
+        "content": "GROPPI वेबसाइट और सेवाओं तक पहुंच या उपयोग करके, आप इन सेवा की शर्तों से सहमत होते हैं।\n\nयदि आप इन शर्तों के किसी भी हिस्से से सहमत नहीं हैं, तो आप हमारी सेवाओं का उपयोग नहीं कर सकते हैं।\n\nहम किसी भी समय इन शर्तों को संशोधित करने का अधिकार सुरक्षित रखते हैं।"
       },
       "services": {
         "title": "हमारी सेवाएँ",
-        "content": "GROPPI provides digital marketing services, including:\n\n• Web design and development\n• Search engine optimization (SEO)\n• Social media marketing\n• Paid advertising\n• Content creation\n• Brand identity and branding\n\nSpecific services and deliverables are defined in individual agreements."
+        "content": "GROPPI डिजिटल मार्केटिंग सेवाएं प्रदान करता है, जिनमें शामिल हैं:\n\n• वेब डिज़ाइन और विकास\n• सर्च इंजन ऑप्टिमाइजेशन (SEO)\n• सोशल मीडिया मार्केटिंग\n• सशुल्क विज्ञापन\n• सामग्री निर्माण\n• ब्रांड पहचान और ब्रांडिंग\n\nविशिष्ट सेवाएं और डिलिवरेबल्स व्यक्तिगत समझौतों में परिभाषित किए गए हैं।"
       },
       "payment": {
         "title": "भुगतान और बिलिंग",
-        "content": "• All prices are exclusive of VAT unless otherwise stated\n• Payments are due within 14 days of invoice date\n• A 50% deposit may be required for projects\n• Late payments may incur administrative fees\n• We reserve the right to suspend services for outstanding payments"
+        "content": "• सभी कीमतें VAT को छोड़कर हैं जब तक कि अन्यथा न कहा गया हो\n• चालान की तारीख के 14 दिनों के भीतर भुगतान देय हैं\n• परियोजनाओं के लिए 50% जमा की आवश्यकता हो सकती है\n• देर से भुगतान पर प्रशासनिक शुल्क लग सकता है\n• हम बकाया भुगतानों के लिए सेवाओं को निलंबित करने का अधिकार सुरक्षित रखते हैं"
       },
       "liability": {
-        "title": "Liability",
-        "content": "• GROPPI is not liable for indirect or consequential damages\n• Our liability is limited to the amount paid for the specific service\n• We do not guarantee specific results from marketing campaigns\n• Clients are responsible for the accuracy of information provided\n• We are not liable for changes made by third-party platforms"
+        "title": "दायित्व",
+        "content": "• GROPPI अप्रत्यक्ष या परिणामी नुकसान के लिए उत्तरदायी नहीं है\n• हमारी देयता विशिष्ट सेवा के लिए भुगतान की गई राशि तक सीमित है\n• हम मार्केटिंग अभियानों से विशिष्ट परिणामों की गारंटी नहीं देते हैं\n• ग्राहक प्रदान की गई जानकारी की सटीकता के लिए जिम्मेदार हैं\n• हम तीसरे पक्ष के प्लेटफार्मों द्वारा किए गए परिवर्तनों के लिए उत्तरदायी नहीं हैं"
       },
       "termination": {
-        "title": "Termination",
-        "content": "• Either party may terminate the agreement with 30 days written notice\n• Immediate termination may occur in case of serious breach\n• Upon termination, all outstanding amounts become immediately due\n• We will facilitate reasonable transfer of materials after termination"
+        "title": "समाप्ति",
+        "content": "• कोई भी पक्ष 30 दिनों के लिखित नोटिस के साथ समझौते को समाप्त कर सकता है\n• गंभीर उल्लंघन के मामले में तत्काल समाप्ति हो सकती है\n• समाप्ति पर, सभी बकाया राशि तुरंत देय हो जाती है\n• हम समाप्ति के बाद सामग्री के उचित हस्तांतरण की सुविधा प्रदान करेंगे"
       },
       "modifications": {
         "title": "संशोधन",
-        "content": "We reserve the right to modify these terms at any time.\n\nFor significant changes, we will notify you by email if applicable.\n\nContinued use of our services after modifications constitutes acceptance of the new terms."
+        "content": "हम किसी भी समय इन शर्तों को संशोधित करने का अधिकार सुरक्षित रखते हैं।\n\nमहत्वपूर्ण परिवर्तनों के लिए, यदि लागू हो तो हम आपको ईमेल द्वारा सूचित करेंगे।\n\nसंशोधनों के बाद हमारी सेवाओं का निरंतर उपयोग नई शर्तों की स्वीकृति का गठन करता है।"
       },
       "governing": {
         "title": "शासी कानून",
-        "content": "These terms are governed by Belgian law.\n\nDisputes will be submitted to the competent courts of Belgium.\n\nIf any provision of these terms is found to be invalid or unenforceable, the remaining provisions will remain in full force and effect."
+        "content": "ये शर्तें बेल्जियम के कानून द्वारा शासित हैं।\n\nविवाद बेल्जियम के सक्षम न्यायालयों को प्रस्तुत किए जाएंगे।\n\nयदि इन शर्तों का कोई प्रावधान अमान्य या अप्रवर्तनीय पाया जाता है, तो शेष प्रावधान पूर्ण बल और प्रभाव में रहेंगे।"
       },
       "contact": {
-        "title": "Contact",
-        "content": "For questions about these terms:\n\nGROPPI\nEmail: info@groppi.be\nPhone: +32 456 19 87 21\n\nWe aim to respond to all inquiries within 48 hours."
+        "title": "संपर्क करें",
+        "content": "इन शर्तों के बारे में प्रश्नों के लिए:\n\nGROPPI\nईमेल: info@groppi.be\nफ़ोन: +32 456 19 87 21\n\nहम 48 घंटों के भीतर सभी पूछताछ का जवाब देने का लक्ष्य रखते हैं।"
       }
     }
   },
