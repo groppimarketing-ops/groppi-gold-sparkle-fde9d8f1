@@ -1,6 +1,5 @@
 import { useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Helmet } from 'react-helmet-async';
 import { Briefcase, MapPin, Clock, Upload, ChevronDown, Loader2, CheckCircle, ExternalLink } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -15,6 +14,9 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
+import PageSEO from '@/components/seo/PageSEO';
+import { BreadcrumbSchema } from '@/components/seo/StructuredData';
+
 
 // Job roles data
 const jobRoles = [
@@ -193,10 +195,12 @@ const Careers = () => {
 
   return (
     <PageLayout>
-      <Helmet>
-        <title>{t('careers.meta.title')} | GROPPI</title>
-        <meta name="description" content={t('careers.meta.description')} />
-      </Helmet>
+      <PageSEO
+        title={t('careers.meta.title', 'Carrière bij GROPPI')}
+        description={t('careers.meta.description', 'Sluit je aan bij het GROPPI-team. Bekijk onze vacatures en solliciteer vandaag nog.')}
+        path="/careers"
+      />
+      <BreadcrumbSchema items={[{ name: 'Home', path: '/' }, { name: t('nav.careers', 'Vacatures'), path: '/careers' }]} />
 
       {/* Hero Section */}
       <section className="relative flex items-center justify-center pt-16 pb-12 md:pt-28 md:pb-16">
