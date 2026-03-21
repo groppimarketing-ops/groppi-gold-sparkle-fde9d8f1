@@ -284,7 +284,8 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: shimmer 3s linear infinite;
+    /* Removed always-on animation — use gold-gradient-text for static headings */
+    /* animation: shimmer 3s linear infinite; */
   }
 
   .gold-glow {
