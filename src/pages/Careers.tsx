@@ -200,6 +200,7 @@ const Careers = () => {
         description={t('careers.meta.description', 'Sluit je aan bij het GROPPI-team. Bekijk onze vacatures en solliciteer vandaag nog.')}
         path="/careers"
       />
+      <BreadcrumbSchema items={[{ name: 'Home', path: '/' }, { name: t('nav.careers', 'Vacatures'), path: '/careers' }]} />
 
       {/* Hero Section */}
       <section className="relative flex items-center justify-center pt-16 pb-12 md:pt-28 md:pb-16">
