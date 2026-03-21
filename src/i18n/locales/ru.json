@@ -216,7 +216,7 @@
     "submitError": "Что-то пошло не так. Попробуйте снова."
   },
   "hero": {
-    "title": "GROPPI Gold Standard",
+    "title": "GROPPI Золотой Стандарт",
     "subtitle": "Совершенство в каждой детали",
     "description": "Премиальные цифровые услуги с 2016 года.",
     "cta": "Запланировать бесплатную встречу",
@@ -233,7 +233,7 @@
       "ctaPrimary": "Смотреть услуги и цены",
       "ctaSecondary": "Запросить предложение",
       "scrollHint": "Прокрутите",
-      "logoAlt": "GROPPI Gold Standard",
+      "logoAlt": "GROPPI Золотой Стандарт",
       "chartLeads": "ЛИДЫ",
       "chartSales": "ПРОДАЖИ",
       "chartRoi": "ROI",
@@ -1465,15 +1465,15 @@
     "intro": "Do you have a project in mind or want to strengthen your digital presence? Contact us for a no-obligation conversation.",
     "mobileLabel": "Mobile",
     "officeLabel": "Office",
-    "hoursLabel": "Business Hours",
+    "hoursLabel": "Часы работы",
     "hoursValue": "Mon - Fri: 9:00 AM - 6:00 PM",
     "description": "We'd love to hear from you. Fill out the form and we'll get back to you as soon as possible.",
     "name": "Name",
     "email": "Email Address",
-    "phone": "Phone Number",
+    "phone": "Номер телефона",
     "company": "Company",
     "subject": "Subject",
-    "message": "Your Message",
+    "message": "Ваше сообщение",
     "send": "Send",
     "sending": "Sending...",
     "success": "Message sent successfully! We'll get back to you as soon as possible.",
@@ -2703,7 +2703,7 @@
         "content": "Если у вас есть вопросы, свяжитесь с нами через контактную форму или info@groppi.be."
       },
       "dataSecurity": {
-        "title": "Data Security",
+        "title": "Безопасность данных",
         "content": "We take the security of your data seriously. We use:\n\n• SSL encryption for all data transfer\n• Secure servers and databases\n• Limited access to personal data\n• Regular security audits\n\nDespite our efforts, no method of transmission over the internet can be 100% secure."
       },
       "yourRights": {
@@ -2711,12 +2711,12 @@
         "content": "Under GDPR, you have the following rights:\n\n• Right to access your data\n• Right to correct inaccurate data\n• Right to delete your data\n• Right to restrict processing\n• Right to data portability\n• Right to object to processing\n\nContact us to exercise these rights."
       },
       "retention": {
-        "title": "Data Retention",
+        "title": "Хранение данных",
         "content": "We retain your data only as long as necessary:\n\n• Contact data: 2 years after last contact\n• Application data: 1 year after procedure completion\n• Newsletter subscribers: until unsubscription\n• Analytical data: 26 months\n\nAfter this period, data is securely deleted."
       }
     },
     "meta": {
-      "title": "Privacy Policy",
+      "title": "Политика конфиденциальности",
       "description": "Learn how GROPPI protects and processes your personal data in compliance with GDPR."
     },
     "footerNote": "Have questions about this privacy policy? Feel free to contact us at info@groppi.be"
@@ -2752,15 +2752,15 @@
         "content": "Споры разрешаются через переговоры. Если не возможно, применимо бельгийское право."
       },
       "acceptance": {
-        "title": "Acceptance of Terms",
+        "title": "Принятие условий",
         "content": "By accessing or using the GROPPI website and services, you agree to these Terms of Service.\n\nIf you do not agree to any part of these terms, you may not use our services.\n\nWe reserve the right to modify these terms at any time."
       },
       "modifications": {
-        "title": "Modifications",
+        "title": "Изменения",
         "content": "We reserve the right to modify these terms at any time.\n\nFor significant changes, we will notify you by email if applicable.\n\nContinued use of our services after modifications constitutes acceptance of the new terms."
       },
       "governing": {
-        "title": "Governing Law",
+        "title": "Применимое право",
         "content": "These terms are governed by Belgian law.\n\nDisputes will be submitted to the competent courts of Belgium.\n\nIf any provision of these terms is found to be invalid or unenforceable, the remaining provisions will remain in full force and effect."
       },
       "contact": {
@@ -2769,7 +2769,7 @@
       }
     },
     "meta": {
-      "title": "Terms of Service",
+      "title": "Условия использования",
       "description": "Read the terms and conditions for using GROPPI services and website."
     },
     "footerNote": "Have questions about these terms? Contact us at info@groppi.be"
@@ -2827,7 +2827,7 @@
       "results": "Результат",
       "ctaPrimary": "Запросить предложение",
       "ctaWhatsApp": "Чат через WhatsApp",
-      "deliverables": "What we delivered"
+      "deliverables": "Что мы предоставили"
     },
     "items": {
       "castello-vicchiomaggio": {

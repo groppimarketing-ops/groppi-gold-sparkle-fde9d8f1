@@ -213,7 +213,7 @@
     "brandName": "GROPPI",
     "fullscreen": "فل سکرین",
     "search": "Search",
-    "noResults": "No results found"
+    "noResults": "کوئی نتیجہ نہیں ملا"
   },
   "validation": {
     "required": "یہ خانہ ضروری ہے",
@@ -253,7 +253,7 @@
       "ctaPrimary": "خدمات اور قیمتیں دیکھیں",
       "ctaSecondary": "تجویز کی درخواست کریں",
       "scrollHint": "سکرول کریں",
-      "logoAlt": "GROPPI Gold Standard",
+      "logoAlt": "GROPPI گولڈ سٹینڈرڈ",
       "chartLeads": "لیڈز",
       "chartSales": "فروخت",
       "chartRoi": "ROI",
@@ -854,7 +854,7 @@
         "team": {
           "title": "9+ پیشہ ور",
           "desc": "ماہرین کی کثیر الجہتی ٹیم",
-          "text": "Multidisciplinary team of experts"
+          "text": "ماہرین کی کثیر الجہتی ٹیم"
         },
         "partnerships": {
           "title": "طویل مدتی تعلقات",
@@ -2232,12 +2232,12 @@
     "call": "کال کریں",
     "email": "ای میل کریں",
     "follow": "فالو کریں",
-    "whatsappChat": "Chat via WhatsApp",
+    "whatsappChat": "WhatsApp کے ذریعے چیٹ کریں",
     "callUs": "Call us",
     "emailUs": "Send an email",
     "followUs": "Follow us on social media",
     "actions": {
-      "chat": "Start a conversation via WhatsApp",
+      "chat": "WhatsApp کے ذریعے گفتگو شروع کریں",
       "call": "Call +32 494 31 11 19",
       "email": "Email info@groppi.be"
     },
@@ -2275,14 +2275,14 @@
     "intro": "Do you have a project in mind or want to strengthen your digital presence? Contact us for a no-obligation conversation.",
     "mobileLabel": "Mobile",
     "officeLabel": "Office",
-    "hoursLabel": "Business Hours",
+    "hoursLabel": "کاروباری اوقات",
     "hoursValue": "Mon - Fri: 9:00 AM - 6:00 PM",
     "name": "Name",
     "email": "Email Address",
-    "phone": "Phone Number",
+    "phone": "فون نمبر",
     "company": "Company",
     "subject": "Subject",
-    "message": "Your Message",
+    "message": "آپ کا پیغام",
     "send": "Send",
     "sending": "Sending...",
     "success": "Message sent successfully! We'll get back to you as soon as possible.",
@@ -2402,7 +2402,7 @@
         "answer": "نہیں۔ اشتہاری بجٹ آپ براہ راست Meta/Google کو ادا کرتے ہیں۔ ہماری لاگت انتظام اور آپٹیمائزیشن کے لیے ہے۔"
       }
     },
-    "tab": "Build Your Plan",
+    "tab": "اپنا منصوبہ بنائیں",
     "disclaimer": "This is an indicative price. Final pricing depends on scope, brand complexity, and content needs.",
     "vatNote": "excl. VAT",
     "adsBudgetDisclaimer": "Advertising budget is paid directly to Meta/Google and is not included in management costs.",
@@ -2412,15 +2412,15 @@
     "next": "Next",
     "back": "Back",
     "quantity": "Quantity",
-    "viewSummary": "View summary",
+    "viewSummary": "خلاصہ دیکھیں",
     "validation": {
       "minChannel": "Select at least 1 channel."
     },
     "steps": {
-      "channels": "Choose your channels",
-      "frequency": "Post frequency",
-      "campaigns": "Paid campaigns",
-      "addons": "Optional add-ons"
+      "channels": "اپنے چینلز کا انتخاب کریں",
+      "frequency": "پوسٹ کی فریکوئنسی",
+      "campaigns": "ادا شدہ مہمات",
+      "addons": "اختیاری ایڈ آنز"
     }
   },
   "partner": {
@@ -3441,7 +3441,7 @@
         "content": "رازداری سے متعلق سوالات کے لیے ہم سے رابطہ کریں۔"
       },
       "dataSecurity": {
-        "title": "Data Security",
+        "title": "ڈیٹا سیکیورٹی",
         "content": "We take the security of your data seriously. We use:\n\n• SSL encryption for all data transfer\n• Secure servers and databases\n• Limited access to personal data\n• Regular security audits\n\nDespite our efforts, no method of transmission over the internet can be 100% secure."
       },
       "yourRights": {
@@ -3449,12 +3449,12 @@
         "content": "Under GDPR, you have the following rights:\n\n• Right to access your data\n• Right to correct inaccurate data\n• Right to delete your data\n• Right to restrict processing\n• Right to data portability\n• Right to object to processing\n\nContact us to exercise these rights."
       },
       "retention": {
-        "title": "Data Retention",
+        "title": "ڈیٹا برقرار رکھنا",
         "content": "We retain your data only as long as necessary:\n\n• Contact data: 2 years after last contact\n• Application data: 1 year after procedure completion\n• Newsletter subscribers: until unsubscription\n• Analytical data: 26 months\n\nAfter this period, data is securely deleted."
       }
     },
     "meta": {
-      "title": "Privacy Policy",
+      "title": "رازداری کی پالیسی",
       "description": "Learn how GROPPI protects and processes your personal data in compliance with GDPR."
     },
     "footerNote": "Have questions about this privacy policy? Feel free to contact us at info@groppi.be"
@@ -3489,15 +3489,15 @@
         "content": "تنازعات بیلجیم کے قانون کے تحت حل کیے جاتے ہیں۔"
       },
       "acceptance": {
-        "title": "Acceptance of Terms",
+        "title": "شرائط کی قبولیت",
         "content": "By accessing or using the GROPPI website and services, you agree to these Terms of Service.\n\nIf you do not agree to any part of these terms, you may not use our services.\n\nWe reserve the right to modify these terms at any time."
       },
       "modifications": {
-        "title": "Modifications",
+        "title": "ترمیمات",
         "content": "We reserve the right to modify these terms at any time.\n\nFor significant changes, we will notify you by email if applicable.\n\nContinued use of our services after modifications constitutes acceptance of the new terms."
       },
       "governing": {
-        "title": "Governing Law",
+        "title": "قابل اطلاق قانون",
         "content": "These terms are governed by Belgian law.\n\nDisputes will be submitted to the competent courts of Belgium.\n\nIf any provision of these terms is found to be invalid or unenforceable, the remaining provisions will remain in full force and effect."
       },
       "contact": {
@@ -3506,7 +3506,7 @@
       }
     },
     "meta": {
-      "title": "Terms of Service",
+      "title": "سروس کی شرائط",
       "description": "Read the terms and conditions for using GROPPI services and website."
     },
     "footerNote": "Have questions about these terms? Contact us at info@groppi.be"
@@ -3519,7 +3519,7 @@
       "decline": "صرف ضروری",
       "customize": "اپنی مرضی سے ترتیب دیں"
     },
-    "title": "We use cookies",
+    "title": "ہم کوکیز استعمال کرتے ہیں",
     "description": "This website uses cookies to improve your experience and measure our performance. By clicking \"Accept\", you agree to our cookie policy.",
     "learnMore": "Learn more",
     "accept": "Accept",
@@ -3527,38 +3527,38 @@
   },
   "franchise": {
     "title": "Franchise",
-    "subtitle": "Become a Franchisee",
+    "subtitle": "فرنچائزی بنیں",
     "description": "Are you interested in partnering with GROPPI? Discover the opportunities to grow together.",
     "benefits": {
-      "title": "Franchise Benefits",
+      "title": "فرنچائز کے فوائد",
       "items": {
-        "0": "Access to proven processes and methodologies",
-        "1": "Support from our experienced team",
-        "2": "Joint marketing efforts",
-        "3": "Knowledge sharing and training"
+        "0": "ثابت شدہ عمل اور طریقہ کار تک رسائی",
+        "1": "ہماری تجربہ کار ٹیم کی حمایت",
+        "2": "مشترکہ مارکیٹنگ کی کوششیں",
+        "3": "علم کا تبادلہ اور تربیت"
       }
     },
     "requirements": {
       "title": "What We're Looking For",
       "items": {
-        "0": "Experience in digital marketing or related field",
-        "1": "Entrepreneurial mindset and growth mentality",
-        "2": "Commitment to quality and customer satisfaction",
-        "3": "Willingness for long-term collaboration"
+        "0": "ڈیجیٹل مارکیٹنگ یا متعلقہ شعبے میں تجربہ",
+        "1": "کاروباری ذہنیت اور ترقی کی سوچ",
+        "2": "معیار اور کسٹمر کی اطمینان کے لیے عزم",
+        "3": "طویل مدتی تعاون کے لیے رضامندی"
       }
     },
-    "cta": "Contact us for more information",
+    "cta": "مزید معلومات کے لیے ہم سے رابطہ کریں",
     "apply": "Apply Now",
     "call": "Call Us"
   },
   "stats": {
-    "years": "Years of Experience",
+    "years": "سالوں کا تجربہ",
     "yearsValue": "9+",
-    "clients": "Happy Clients",
+    "clients": "مطمئن کلائنٹس",
     "clientsValue": "150+",
     "projects": "Projects",
     "projectsValue": "500+",
-    "team": "Team Members",
+    "team": "ٹیم کے ارکان",
     "teamValue": "9+"
   },
   "admin": {
