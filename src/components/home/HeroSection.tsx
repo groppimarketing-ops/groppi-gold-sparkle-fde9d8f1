@@ -200,7 +200,11 @@ const HeroSection = memo(() => {
   const interacted = useUserInteracted();
 
   return (
-    <section className="groppi-hero-pro" aria-label="GROPPI Hero Videos">
+    <section className="groppi-hero-pro" aria-labelledby="hero-heading">
+      {/* Screen-reader-only H1 for homepage SEO — visible H1 is the brand name */}
+      <h1 id="hero-heading" className="sr-only">
+        GROPPI Digital Marketing Bureau — Social Media, SEO, Webdesign &amp; Advertenties in België
+      </h1>
       {/*
         Desktop: background video — deferred until first interaction.
         Poster image (preloaded in index.html) covers the gap seamlessly.
