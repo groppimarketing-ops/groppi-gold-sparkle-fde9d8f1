@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import PageLayout from '@/components/layout/PageLayout';
+import LangLink from '@/components/LangLink';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -446,19 +447,22 @@ const Careers = () => {
                     control={form.control}
                     name="consent"
                     render={({ field }) => (
-                      <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                      <FormItem className="flex flex-row items-start gap-3 space-y-0">
+                        {/* Tap-friendly wrapper: min 44×44px touch target */}
                         <FormControl>
-                          <Checkbox
-                            checked={field.value}
-                            onCheckedChange={field.onChange}
-                          />
+                          <div className="flex items-center justify-center min-w-[44px] min-h-[44px]">
+                            <Checkbox
+                              checked={field.value}
+                              onCheckedChange={field.onChange}
+                            />
+                          </div>
                         </FormControl>
-                        <div className="space-y-1 leading-none">
+                        <div className="space-y-1 leading-none pt-3">
                           <FormLabel className="text-sm font-normal">
                             {t('careers.form.consent')} *
                           </FormLabel>
+                          <FormMessage />
                         </div>
-                        <FormMessage />
                       </FormItem>
                     )}
                   />
@@ -480,9 +484,9 @@ const Careers = () => {
 
                   <p className="text-xs text-muted-foreground text-center">
                     {t('careers.form.privacyNote')}{' '}
-                    <a href="/contact" className="text-primary hover:underline">
+                    <LangLink to="/contact" className="text-primary hover:underline">
                       {t('careers.form.contactLink')}
-                    </a>
+                    </LangLink>
                   </p>
                 </form>
               </Form>
