@@ -116,6 +116,13 @@ const LANG_PREFIXES = SUPPORTED_LANGS.filter(l => l !== 'nl');
           <Sonner />
           <BrowserRouter>
             <RTLHandler>
+              {/* Skip to main content — accessibility for keyboard/screen-reader users */}
+              <a
+                href="#main-content"
+                className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[99999] focus:px-4 focus:py-2 focus:rounded-lg focus:bg-primary focus:text-primary-foreground focus:font-semibold focus:shadow-lg"
+              >
+                Skip to main content
+              </a>
               <Suspense fallback={<PageLoader />}>
                 <Routes>
                   {/* Default (nl) routes — unprefixed */}
