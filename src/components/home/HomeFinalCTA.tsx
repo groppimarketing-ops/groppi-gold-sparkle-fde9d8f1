@@ -30,8 +30,8 @@ const HomeFinalCTA = forwardRef<HTMLElement>((_, ref) => {
             {/* Shimmer sweep — pure CSS animation */}
             <div className="final-cta-shimmer absolute inset-0 pointer-events-none" />
 
-            {/* Icon — CSS spin */}
-            <div className="final-cta-spin w-16 h-16 rounded-full glass-card flex items-center justify-center mx-auto mb-8 border border-primary/30">
+            {/* Icon — static, no spin */}
+            <div className="w-16 h-16 rounded-full glass-card flex items-center justify-center mx-auto mb-8 border border-primary/30">
               <Sparkles className="w-8 h-8 text-primary" />
             </div>
 
