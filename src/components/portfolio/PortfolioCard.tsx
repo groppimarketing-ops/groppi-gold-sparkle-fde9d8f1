@@ -16,23 +16,19 @@ const PortfolioCard = memo(forwardRef<HTMLElement, PortfolioCardProps>(({
   item,
   onClick,
   index = 0
-}, ref) => {
+}, _ref) => {
   const { t, i18n } = useTranslation();
   const lang = i18n.language.startsWith('nl') ? 'nl' : 'en';
   const translated = getTranslatedPortfolio(t, item);
   const [imageLoaded, setImageLoaded] = useState(false);
+  const stagger = Math.min(index + 1, 10);
 
   const handleImageLoad = useCallback(() => {
     setImageLoaded(true);
   }, []);
 
   return (
-    <motion.article
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: index * 0.08, duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
-    >
+    <article className={`animate-fade-up-${stagger}`}>
       <button
         onClick={onClick}
         className="group block w-full text-left glass-card p-0 overflow-hidden rounded-xl border border-border/50 hover:border-primary/60 hover:shadow-[0_0_40px_hsl(var(--gold)/0.22)] hover:-translate-y-2 transition-all duration-300 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
@@ -64,7 +60,7 @@ const PortfolioCard = memo(forwardRef<HTMLElement, PortfolioCardProps>(({
           <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-500" />
 
           {/* View case overlay */}
-          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg shadow">
+          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <span className="px-5 py-2.5 rounded-full bg-primary/95 text-primary-foreground text-sm font-semibold flex items-center gap-2 shadow-[0_0_25px_hsl(var(--gold)/0.5)]">
               {t('portfolio.viewCase', 'Bekijk case')}
               <ArrowRight className="w-4 h-4" />
@@ -98,7 +94,7 @@ const PortfolioCard = memo(forwardRef<HTMLElement, PortfolioCardProps>(({
           </p>
         </div>
       </button>
-    </motion.article>
+    </article>
   );
 }));
 
