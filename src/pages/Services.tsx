@@ -253,14 +253,8 @@ const Services = () => {
       {/* Content Calculator */}
       <ContentCalculator />
 
-      {/* General FAQ */}
+      {/* FAQ — consolidated into one section */}
       <GeneralFAQ />
-
-      {/* Services FAQ */}
-      <ServicesFAQ />
-
-      {/* Pricing FAQ */}
-      <PricingFAQ />
 
       {/* ─── CTA Section ─── */}
       <section className="py-20">

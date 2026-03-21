@@ -78,8 +78,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <PageSEO
-        title="Digital Marketing Bureau België"
-        description={t('home.heroNew.subtitle', 'GROPPI is een full-service digital marketing bureau in België. Social media management, SEO, advertenties, webdesign en contentcreatie.')}
+        title={t('home.meta.title', 'Digital Marketing Bureau België')}
+        description={t('home.meta.description', 'GROPPI is een full-service digital marketing bureau in België. Social media management, SEO, advertenties, webdesign en contentcreatie.')}
         path="/"
       />
       <OrganizationSchema />

@@ -22,6 +22,7 @@ const Privacy = () => {
         title={t('privacy.meta.title', 'Privacybeleid')}
         description={t('privacy.meta.description', 'Het privacybeleid van GROPPI Marketing Bureau.')}
         path="/privacy"
+        noIndex
       />
 
       <div className="container mx-auto px-4 py-16">

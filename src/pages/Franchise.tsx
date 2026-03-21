@@ -19,7 +19,7 @@ const Franchise = () => {
     <PageLayout>
       <PageSEO
         title={t('nav.franchise', 'Franchise')}
-        description="Word GROPPI franchise partner. Bouw je eigen marketingbureau onder het GROPPI-merk met exclusieve regio-rechten en volledige ondersteuning."
+        description={t('franchise.meta.description', 'Word GROPPI franchise partner. Bouw je eigen marketingbureau onder het GROPPI-merk met exclusieve regio-rechten en volledige ondersteuning.')}
         path="/franchise"
       />
       <BreadcrumbSchema items={[{ name: 'Home', path: '/' }, { name: t('nav.franchise', 'Franchise'), path: '/franchise' }]} />
