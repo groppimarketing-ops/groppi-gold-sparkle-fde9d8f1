@@ -56,17 +56,17 @@ const PageSEO = ({
 
       {noIndex && <meta name="robots" content="noindex, nofollow" />}
 
-      {/* hreflang alternates for every supported language */}
+      {/* hreflang alternates for every supported language — use seoPath to avoid alias duplication */}
       {languages.map(lang => (
         <link
           key={lang.code}
           rel="alternate"
           hrefLang={lang.hreflang}
-          href={`${SITE_URL}${getLangPath(path, lang.code)}`}
+          href={`${SITE_URL}${getLangPath(seoPath, lang.code)}`}
         />
       ))}
       {/* x-default points to the nl (Belgian Dutch) version */}
-      <link rel="alternate" hrefLang="x-default" href={`${SITE_URL}${path}`} />
+      <link rel="alternate" hrefLang="x-default" href={`${SITE_URL}${seoPath}`} />
 
       {/* Open Graph */}
       <meta property="og:title" content={fullTitle} />
