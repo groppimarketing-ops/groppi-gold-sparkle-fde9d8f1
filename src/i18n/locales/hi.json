@@ -136,7 +136,7 @@
       "ctaPrimary": "सेवाएं और मूल्य देखें",
       "ctaSecondary": "उद्धरण का अनुरोध करें",
       "scrollHint": "स्क्रॉल करें",
-      "logoAlt": "GROPPI Gold Standard",
+      "logoAlt": "GROPPI गोल्ड स्टैंडर्ड",
       "chartLeads": "लीड्स",
       "chartSales": "बिक्री",
       "chartRoi": "ROI",
@@ -276,11 +276,11 @@
       "overview": {
         "about": "इस सेवा के बारे में",
         "priceRange": "मूल्य सीमा",
-        "content_production": "Professional content production strengthens your brand with quality videos and photos that clearly convey your message and appeal to your target audience.",
+        "content_production": "पेशेवर सामग्री उत्पादन गुणवत्तापूर्ण वीडियो और तस्वीरों के साथ आपके ब्रांड को मजबूत करता है जो आपके संदेश को स्पष्ट रूप से व्यक्त करते हैं और आपके लक्षित दर्शकों को आकर्षित करते हैं।",
         "business_website": "A professional website is the foundation of your online presence. We build websites that are not only beautiful, but also convert.",
         "ecommerce_website": "Start selling online with a fully optimized webshop with all the functionality you need.",
         "ads_management": "Maximize your advertising budget with data-driven campaigns on Google, Facebook, Instagram and more.",
-        "seo": "Grow sustainably with organic traffic through optimized content and technical SEO improvements.",
+        "seo": "अनुकूलित सामग्री और तकनीकी SEO सुधारों के माध्यम से ऑर्गेनिक ट्रैफ़िक के साथ स्थायी रूप से विकास करें।",
         "social_media": "Build an engaged community with consistent, quality content on all your social media channels."
       },
       "deliverables": {
@@ -365,7 +365,7 @@
       "subtitle": "हमारा काम",
       "title": "चयनित परियोजनाएं",
       "viewAll": "पूर्ण पोर्टफोलियो देखें",
-      "thumbnailPlaceholder": "Project image",
+      "thumbnailPlaceholder": "परियोजना छवि",
       "viewCase": "View case",
       "tags": {
         "website": "Website",
@@ -378,35 +378,35 @@
       },
       "projects": {
         "restaurant-branding": {
-          "title": "Restaurant Branding",
+          "title": "रेस्तरां ब्रांडिंग",
           "metric": "+180% reservations"
         },
         "mode-webshop": {
-          "title": "Fashion Webshop",
+          "title": "फैशन वेबशॉप",
           "metric": "€85K revenue in 3 months"
         },
         "b2b-platform": {
-          "title": "B2B Platform",
+          "title": "B2B प्लेटफॉर्म",
           "metric": "+320% leads"
         },
         "bouwbedrijf-website": {
-          "title": "Construction Website",
+          "title": "निर्माण वेबसाइट",
           "metric": "#1 Google local"
         },
         "influencer-campagne": {
-          "title": "Influencer Campaign",
+          "title": "इन्फ्लुएंसर अभियान",
           "metric": "2.4M reach"
         },
         "tech-startup-branding": {
-          "title": "Tech Startup Branding",
-          "metric": "Complete brand identity"
+          "title": "टेक स्टार्टअप ब्रांडिंग",
+          "metric": "पूर्ण ब्रांड पहचान"
         },
         "e-commerce-groei": {
-          "title": "E-commerce Growth",
+          "title": "ई-कॉमर्स विकास",
           "metric": "+240% ROAS"
         },
         "content-strategie": {
-          "title": "Content Strategy",
+          "title": "सामग्री रणनीति",
           "metric": "50+ videos/month"
         }
       }
@@ -2898,34 +2898,34 @@
       "title": "SEO",
       "subtitle": "Rank higher in Google for more organic traffic.",
       "benefits": {
-        "1": "Better visibility in search engines",
+        "1": "खोज इंजनों में बेहतर दृश्यता",
         "2": "More quality traffic to your site",
         "3": "Long-term growth without ad costs"
       },
       "deliverables": {
         "1": {
-          "title": "Technical audit",
+          "title": "तकनीकी ऑडिट",
           "desc": "We check speed, structure and indexation."
         },
         "2": {
-          "title": "Keyword research",
+          "title": "कीवर्ड अनुसंधान",
           "desc": "The right keywords for your market."
         },
         "3": {
-          "title": "On-page optimization",
+          "title": "ऑन-पेज अनुकूलन",
           "desc": "Improve titles, metas and content."
         },
         "4": {
-          "title": "Content strategy",
+          "title": "सामग्री रणनीति",
           "desc": "SEO-focused articles and pages."
         },
         "5": {
-          "title": "Link building",
-          "desc": "Quality backlinks for authority."
+          "title": "लिंक बिल्डिंग",
+          "desc": "प्राधिकरण के लिए गुणवत्तापूर्ण बैकलिंक्स।"
         },
         "6": {
-          "title": "Monthly reporting",
-          "desc": "Rankings and traffic numbers."
+          "title": "मासिक रिपोर्टिंग",
+          "desc": "रैंकिंग और ट्रैफ़िक संख्याएँ।"
         }
       },
       "process": {
@@ -2935,11 +2935,11 @@
         },
         "2": {
           "title": "Execution",
-          "desc": "Implementing optimizations and content."
+          "desc": "ऑप्टिमाइज़ेशन और सामग्री लागू करना।"
         },
         "3": {
-          "title": "Growth & optimization",
-          "desc": "Continuous improvement of rankings."
+          "title": "विकास और ऑप्टिमाइज़ेशन",
+          "desc": "रैंकिंग में निरंतर सुधार।"
         }
       }
     }
@@ -2952,7 +2952,7 @@
       "frequency": "आवृत्ति",
       "ads": "विज्ञापन",
       "addons": "एड-ऑन",
-      "campaigns": "Paid campaigns"
+      "campaigns": "सशुल्क अभियान"
     },
     "channels": {
       "title": "आप कहाँ मौजूद रहना चाहते हैं?",
@@ -3009,24 +3009,24 @@
         "influencerCollab": "इन्फ्लुएंसर सहयोग"
       },
       "productPhotos": {
-        "label": "Extra product photos",
+        "label": "अतिरिक्त उत्पाद तस्वीरें",
         "unit": "photo"
       },
       "googleReviews": {
-        "label": "Google Review Management"
+        "label": "Google समीक्षा प्रबंधन"
       },
       "contentWriting": {
-        "label": "Content writing",
+        "label": "सामग्री लेखन",
         "unit": "hour"
       },
       "emailMarketing": {
-        "label": "Email marketing campaigns"
+        "label": "Email मार्केटिंग अभियान"
       },
       "postsPack": {
         "label": "Social media posts (10-pack)"
       },
       "analyticsDashboard": {
-        "label": "Advanced Analytics Dashboard"
+        "label": "उन्नत Analytics डैशबोर्ड"
       }
     },
     "summary": {
@@ -3069,11 +3069,11 @@
         "answer": "Setup is included in the management fee. Extras only arise with additional scope or exceptional setup."
       },
       "adBudgetIncluded": {
-        "question": "Is advertising budget included?",
+        "question": "क्या विज्ञापन बजट शामिल है?",
         "answer": "No. Advertising budget is paid directly to Meta/Google. Our cost is for management and optimization."
       }
     },
-    "tab": "Build Your Plan",
+    "tab": "अपनी योजना बनाएं",
     "disclaimer": "This is an indicative price. Final pricing depends on scope, brand complexity, and content needs.",
     "vatNote": "excl. VAT",
     "adsBudgetDisclaimer": "Advertising budget is paid directly to Meta/Google and is not included in management costs.",
@@ -3083,7 +3083,7 @@
     "next": "Next",
     "back": "Back",
     "quantity": "Quantity",
-    "viewSummary": "View summary",
+    "viewSummary": "सारांश देखें",
     "validation": {
       "minChannel": "Select at least 1 channel."
     },
@@ -3092,10 +3092,10 @@
       "250": "€250 / month",
       "500": "€500 / month",
       "1000": "€1000 / month",
-      "none": "No paid campaigns"
+      "none": "कोई सशुल्क अभियान नहीं"
     },
     "cta": {
-      "primary": "Request a custom proposal",
+      "primary": "एक कस्टम प्रस्ताव का अनुरोध करें",
       "secondary": "Save plan"
     }
   },
@@ -3441,14 +3441,14 @@
   },
   "common": {
     "loading": "Loading...",
-    "error": "An error occurred",
+    "error": "एक त्रुटि हुई",
     "retry": "Try Again",
     "back": "Back",
     "next": "Next",
     "previous": "Previous",
     "close": "Close",
     "search": "Search",
-    "noResults": "No results found",
+    "noResults": "कोई परिणाम नहीं मिला",
     "learnMore": "Learn More",
     "getStarted": "Get Started",
     "viewAll": "View All"
@@ -3467,38 +3467,38 @@
   },
   "franchise": {
     "title": "Franchise",
-    "subtitle": "Become a Franchisee",
+    "subtitle": "एक फ्रेंचाइजी बनें",
     "description": "Are you interested in partnering with GROPPI? Discover the opportunities to grow together.",
     "benefits": {
-      "title": "Franchise Benefits",
+      "title": "फ्रेंचाइजी के लाभ",
       "items": {
-        "0": "Access to proven processes and methodologies",
-        "1": "Support from our experienced team",
-        "2": "Joint marketing efforts",
-        "3": "Knowledge sharing and training"
+        "0": "सिद्ध प्रक्रियाओं और पद्धतियों तक पहुंच",
+        "1": "हमारी अनुभवी टीम से समर्थन",
+        "2": "संयुक्त विपणन प्रयास",
+        "3": "ज्ञान साझा करना और प्रशिक्षण"
       }
     },
     "requirements": {
       "title": "What We're Looking For",
       "items": {
-        "0": "Experience in digital marketing or related field",
-        "1": "Entrepreneurial mindset and growth mentality",
-        "2": "Commitment to quality and customer satisfaction",
-        "3": "Willingness for long-term collaboration"
+        "0": "डिजिटल मार्केटिंग या संबंधित क्षेत्र में अनुभव",
+        "1": "उद्यमी मानसिकता और विकास की सोच",
+        "2": "गुणवत्ता और ग्राहक संतुष्टि के प्रति प्रतिबद्धता",
+        "3": "दीर्घकालिक सहयोग के लिए तत्परता"
       }
     },
-    "cta": "Contact us for more information",
+    "cta": "अधिक जानकारी के लिए हमसे संपर्क करें",
     "apply": "Apply Now",
     "call": "Call Us"
   },
   "stats": {
-    "years": "Years of Experience",
+    "years": "वर्षों का अनुभव",
     "yearsValue": "9+",
-    "clients": "Happy Clients",
+    "clients": "खुश ग्राहक",
     "clientsValue": "150+",
     "projects": "Projects",
     "projectsValue": "500+",
-    "team": "Team Members",
+    "team": "टीम के सदस्य",
     "teamValue": "9+"
   },
   "admin": {
@@ -3517,16 +3517,16 @@
   },
   "privacy": {
     "meta": {
-      "title": "Privacy Policy",
+      "title": "गोपनीयता नीति",
       "description": "Learn how GROPPI protects and processes your personal data in compliance with GDPR."
     },
-    "title": "Privacy Policy",
+    "title": "गोपनीयता नीति",
     "subtitle": "Your privacy matters to us. This policy explains how we collect, use, and protect your data.",
-    "lastUpdated": "Last updated",
+    "lastUpdated": "अंतिम बार अपडेट किया गया",
     "footerNote": "Have questions about this privacy policy? Feel free to contact us at info@groppi.be",
     "sections": {
       "dataCollection": {
-        "title": "Data Collection",
+        "title": "डेटा संग्रह",
         "content": "We collect personal data that you voluntarily provide to us, such as:\n\n• Name and contact details when you fill out our contact form\n• Email address for newsletter subscriptions\n• CV and application data for job openings\n• Business information for commercial inquiries\n\nWe also automatically collect certain technical data such as IP address, browser type, and pages visited for analytical purposes."
       },
       "dataUsage": {
@@ -3534,7 +3534,7 @@
         "content": "We use your data to:\n\n• Respond to your questions and requests\n• Send newsletters (only with your consent)\n• Improve our website and services\n• Fulfill legal obligations\n• Send relevant information about our services"
       },
       "dataSecurity": {
-        "title": "Data Security",
+        "title": "डेटा सुरक्षा",
         "content": "We take the security of your data seriously. We use:\n\n• SSL encryption for all data transfer\n• Secure servers and databases\n• Limited access to personal data\n• Regular security audits\n\nDespite our efforts, no method of transmission over the internet can be 100% secure."
       },
       "yourRights": {
@@ -3546,7 +3546,7 @@
         "content": "Our website uses cookies to enhance your experience:\n\n• Essential cookies for website functionality\n• Analytical cookies to understand how visitors use our site\n• Marketing cookies for targeted advertising (only with consent)\n\nYou can manage cookies through your browser settings."
       },
       "retention": {
-        "title": "Data Retention",
+        "title": "डेटा प्रतिधारण",
         "content": "We retain your data only as long as necessary:\n\n• Contact data: 2 years after last contact\n• Application data: 1 year after procedure completion\n• Newsletter subscribers: until unsubscription\n• Analytical data: 26 months\n\nAfter this period, data is securely deleted."
       },
       "contact": {
@@ -3557,24 +3557,24 @@
   },
   "terms": {
     "meta": {
-      "title": "Terms of Service",
+      "title": "सेवा की शर्तें",
       "description": "Read the terms and conditions for using GROPPI services and website."
     },
-    "title": "Terms of Service",
+    "title": "सेवा की शर्तें",
     "subtitle": "These terms govern your use of our website and services. By using our services, you agree to these terms.",
-    "lastUpdated": "Last updated",
+    "lastUpdated": "अंतिम बार अपडेट किया गया",
     "footerNote": "Have questions about these terms? Contact us at info@groppi.be",
     "sections": {
       "acceptance": {
-        "title": "Acceptance of Terms",
+        "title": "शर्तों की स्वीकृति",
         "content": "By accessing or using the GROPPI website and services, you agree to these Terms of Service.\n\nIf you do not agree to any part of these terms, you may not use our services.\n\nWe reserve the right to modify these terms at any time."
       },
       "services": {
-        "title": "Our Services",
+        "title": "हमारी सेवाएँ",
         "content": "GROPPI provides digital marketing services, including:\n\n• Web design and development\n• Search engine optimization (SEO)\n• Social media marketing\n• Paid advertising\n• Content creation\n• Brand identity and branding\n\nSpecific services and deliverables are defined in individual agreements."
       },
       "payment": {
-        "title": "Payment and Billing",
+        "title": "भुगतान और बिलिंग",
         "content": "• All prices are exclusive of VAT unless otherwise stated\n• Payments are due within 14 days of invoice date\n• A 50% deposit may be required for projects\n• Late payments may incur administrative fees\n• We reserve the right to suspend services for outstanding payments"
       },
       "liability": {
@@ -3586,11 +3586,11 @@
         "content": "• Either party may terminate the agreement with 30 days written notice\n• Immediate termination may occur in case of serious breach\n• Upon termination, all outstanding amounts become immediately due\n• We will facilitate reasonable transfer of materials after termination"
       },
       "modifications": {
-        "title": "Modifications",
+        "title": "संशोधन",
         "content": "We reserve the right to modify these terms at any time.\n\nFor significant changes, we will notify you by email if applicable.\n\nContinued use of our services after modifications constitutes acceptance of the new terms."
       },
       "governing": {
-        "title": "Governing Law",
+        "title": "शासी कानून",
         "content": "These terms are governed by Belgian law.\n\nDisputes will be submitted to the competent courts of Belgium.\n\nIf any provision of these terms is found to be invalid or unenforceable, the remaining provisions will remain in full force and effect."
       },
       "contact": {

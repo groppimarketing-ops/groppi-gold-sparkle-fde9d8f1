@@ -253,7 +253,7 @@
       "ctaPrimary": "查看服务和价格",
       "ctaSecondary": "请求方案",
       "scrollHint": "滚动",
-      "logoAlt": "GROPPI Gold Standard",
+      "logoAlt": "GROPPI 黄金标准",
       "chartLeads": "线索",
       "chartSales": "销售",
       "chartRoi": "ROI",
@@ -1476,7 +1476,7 @@
       "results": "结果",
       "ctaPrimary": "请求报价",
       "ctaWhatsApp": "通过WhatsApp聊天",
-      "deliverables": "What we delivered"
+      "deliverables": "我们交付了什么"
     },
     "items": {
       "castello-vicchiomaggio": {
@@ -3482,15 +3482,15 @@
         "content": "我们保留修改这些条款的权利。变更将在网站上公布。"
       },
       "acceptance": {
-        "title": "Acceptance of Terms",
+        "title": "条款接受",
         "content": "By accessing or using the GROPPI website and services, you agree to these Terms of Service.\n\nIf you do not agree to any part of these terms, you may not use our services.\n\nWe reserve the right to modify these terms at any time."
       },
       "modifications": {
-        "title": "Modifications",
+        "title": "修改",
         "content": "We reserve the right to modify these terms at any time.\n\nFor significant changes, we will notify you by email if applicable.\n\nContinued use of our services after modifications constitutes acceptance of the new terms."
       },
       "governing": {
-        "title": "Governing Law",
+        "title": "适用法律",
         "content": "These terms are governed by Belgian law.\n\nDisputes will be submitted to the competent courts of Belgium.\n\nIf any provision of these terms is found to be invalid or unenforceable, the remaining provisions will remain in full force and effect."
       },
       "contact": {
@@ -3499,7 +3499,7 @@
       }
     },
     "meta": {
-      "title": "Terms of Service",
+      "title": "服务条款",
       "description": "Read the terms and conditions for using GROPPI services and website."
     },
     "subtitle": "These terms govern your use of our website and services. By using our services, you agree to these terms.",
@@ -3538,7 +3538,7 @@
         "content": "We use your data to:\n\n• Respond to your questions and requests\n• Send newsletters (only with your consent)\n• Improve our website and services\n• Fulfill legal obligations\n• Send relevant information about our services"
       },
       "dataSecurity": {
-        "title": "Data Security",
+        "title": "数据安全",
         "content": "We take the security of your data seriously. We use:\n\n• SSL encryption for all data transfer\n• Secure servers and databases\n• Limited access to personal data\n• Regular security audits\n\nDespite our efforts, no method of transmission over the internet can be 100% secure."
       },
       "yourRights": {
@@ -3546,12 +3546,12 @@
         "content": "Under GDPR, you have the following rights:\n\n• Right to access your data\n• Right to correct inaccurate data\n• Right to delete your data\n• Right to restrict processing\n• Right to data portability\n• Right to object to processing\n\nContact us to exercise these rights."
       },
       "retention": {
-        "title": "Data Retention",
+        "title": "数据保留",
         "content": "We retain your data only as long as necessary:\n\n• Contact data: 2 years after last contact\n• Application data: 1 year after procedure completion\n• Newsletter subscribers: until unsubscription\n• Analytical data: 26 months\n\nAfter this period, data is securely deleted."
       }
     },
     "meta": {
-      "title": "Privacy Policy",
+      "title": "隐私政策",
       "description": "Learn how GROPPI protects and processes your personal data in compliance with GDPR."
     },
     "subtitle": "Your privacy matters to us. This policy explains how we collect, use, and protect your data.",
@@ -3562,7 +3562,7 @@
     "accept": "接受",
     "decline": "拒绝",
     "learnMore": "了解更多",
-    "title": "We use cookies",
+    "title": "我们使用 cookies",
     "description": "This website uses cookies to improve your experience and measure our performance. By clicking \"Accept\", you agree to our cookie policy.",
     "reject": "Reject"
   },
