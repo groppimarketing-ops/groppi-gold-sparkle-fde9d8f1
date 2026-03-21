@@ -34,6 +34,7 @@ const PageSEO = ({
   title,
   description,
   path,
+  canonicalPath,
   ogImage = DEFAULT_OG_IMAGE,
   noIndex = false,
   type = 'website',
@@ -41,8 +42,9 @@ const PageSEO = ({
 }: PageSEOProps) => {
   const { i18n } = useTranslation();
 
-  // Self-referencing canonical based on the active language
-  const canonicalUrl = `${SITE_URL}${getLangPath(path, i18n.language)}`;
+  // Use canonicalPath override when this route is an alias (e.g. /portfolio → /gallery)
+  const seoPath = canonicalPath ?? path;
+  const canonicalUrl = `${SITE_URL}${getLangPath(seoPath, i18n.language)}`;
   const fullTitle = path === '/' ? `${SITE_NAME} | Digital Marketing Bureau België` : `${title} | ${SITE_NAME}`;
   const truncatedDescription = description.length > 160 ? description.slice(0, 157) + '...' : description;
 
