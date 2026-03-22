@@ -48,7 +48,7 @@ const About = () => {
       <BreadcrumbSchema items={[{ name: 'Home', path: '/' }, { name: t('nav.about', 'Over ons'), path: '/about' }]} />
 
       {/* ─── Hero ─── */}
-      <section className="relative py-24 md:py-36 overflow-hidden">
+      <section className="relative py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
         {/* CSS radial pulse — replaces framer-motion animated background */}
         <div className="about-hero-glow absolute inset-0 opacity-20 pointer-events-none" />
