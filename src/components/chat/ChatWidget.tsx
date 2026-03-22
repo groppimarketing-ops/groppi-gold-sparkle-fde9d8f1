@@ -178,7 +178,7 @@ const ChatWidget = () => {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-24 z-50 w-16 h-16 rounded-full flex items-center justify-center shadow-lg shadow-primary/30 transition-all duration-300 group max-md:bottom-[calc(4rem+env(safe-area-inset-bottom,0px))] max-md:right-24 animate-fade-up hover:scale-110"
+          className="fixed bottom-6 right-24 z-[9999] w-16 h-16 rounded-full flex items-center justify-center shadow-lg shadow-primary/30 transition-all duration-300 group max-md:bottom-[calc(4rem+env(safe-area-inset-bottom,0px))] max-md:right-24 animate-fade-up hover:scale-110"
           aria-label="Open chat"
         >
           <span className="absolute inset-0 rounded-full bg-primary/30 animate-ping opacity-40" aria-hidden="true" />
@@ -188,7 +188,7 @@ const ChatWidget = () => {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-6 right-6 z-50 w-[380px] max-w-[calc(100vw-2rem)] h-[520px] max-h-[calc(100vh-6rem)] rounded-2xl border border-primary/20 bg-background/98 backdrop-blur-xl shadow-2xl shadow-primary/10 flex flex-col overflow-hidden animate-fade-up max-md:bottom-[calc(4rem+env(safe-area-inset-bottom,0px))]">
+        <div className="fixed bottom-6 right-6 z-[9999] w-[380px] max-w-[calc(100vw-2rem)] h-[520px] max-h-[calc(100vh-6rem)] rounded-2xl border border-primary/20 bg-background/98 backdrop-blur-xl shadow-2xl shadow-primary/10 flex flex-col overflow-hidden animate-fade-up max-md:bottom-[calc(4rem+env(safe-area-inset-bottom,0px))]">
           {/* Header */}
           <div className="flex items-center justify-between px-4 py-3 border-b border-primary/15 bg-card/80">
             <div className="flex items-center gap-3">
