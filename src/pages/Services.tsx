@@ -108,7 +108,7 @@ const Services = () => {
       <GoalBasedEntry onGoalSelect={handleGoalSelect} />
 
       {/* ─── Filter Tabs — CSS transitions, no framer-motion ─── */}
-      <section className="py-8 border-b border-primary/10">
+      <section className="py-10 border-b border-primary/10">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap items-center justify-center gap-3">
             <Filter className="w-5 h-5 text-muted-foreground" />
