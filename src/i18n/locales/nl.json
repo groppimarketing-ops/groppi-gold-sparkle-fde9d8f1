@@ -2214,7 +2214,7 @@
     "company": "Bedrijf",
     "subject": "Onderwerp",
     "message": "Je bericht",
-    "send": "Stuur ons een bericht",
+    "send": "Verzenden",
     "sending": "Verzenden...",
     "success": "Bericht succesvol verzonden! We nemen zo snel mogelijk contact met je op.",
     "error": "Er ging iets mis. Probeer het opnieuw of neem telefonisch contact op.",
@@ -2223,7 +2223,8 @@
     "emailLabel": "E-mail",
     "landline": "Vaste lijn",
     "mobile": "Mobiel",
-    "rateLimited": "Te veel aanvragen. Probeer het later opnieuw."
+    "rateLimited": "Te veel aanvragen. Probeer het later opnieuw.",
+    "formHeading": "Stuur ons een bericht"
   },
   "franchise": {
     "title": "Partnernetwerk",

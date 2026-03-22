@@ -2230,7 +2230,7 @@
     "company": "Entreprise",
     "subject": "Sujet",
     "message": "Votre message",
-    "send": "Envoyez-nous un message",
+    "send": "Envoyer",
     "sending": "Envoi en cours...",
     "success": "Message envoyé avec succès ! Nous vous recontacterons dès que possible.",
     "error": "Une erreur s'est produite. Veuillez réessayer ou nous appeler.",
@@ -2239,7 +2239,8 @@
     "emailLabel": "E-mail",
     "landline": "Téléphone fixe",
     "mobile": "Mobile",
-    "rateLimited": "Trop de requêtes. Veuillez réessayer plus tard."
+    "rateLimited": "Trop de requêtes. Veuillez réessayer plus tard.",
+    "formHeading": "Envoyez-nous un message"
   },
   "franchise": {
     "title": "Partenariat",

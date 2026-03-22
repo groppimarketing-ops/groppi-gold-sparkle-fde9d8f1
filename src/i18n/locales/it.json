@@ -2225,7 +2225,7 @@
     "company": "Azienda",
     "subject": "Oggetto",
     "message": "Il tuo messaggio",
-    "send": "Inviaci un messaggio",
+    "send": "Invia",
     "sending": "Invio in corso...",
     "success": "Messaggio inviato con successo! Ti ricontatteremo il prima possibile.",
     "error": "Qualcosa è andato storto. Per favore riprova o chiamaci.",
@@ -2234,7 +2234,8 @@
     "emailLabel": "Email",
     "landline": "Fisso",
     "mobile": "Cellulare",
-    "rateLimited": "Troppe richieste. Riprova più tardi."
+    "rateLimited": "Troppe richieste. Riprova più tardi.",
+    "formHeading": "Inviaci un messaggio"
   },
   "franchise": {
     "title": "Franchising",

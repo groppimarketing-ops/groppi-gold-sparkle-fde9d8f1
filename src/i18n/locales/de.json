@@ -1485,7 +1485,7 @@
     "company": "Unternehmen",
     "subject": "Betreff",
     "message": "Ihre Nachricht",
-    "send": "Schreiben Sie uns",
+    "send": "Senden",
     "sending": "Wird gesendet...",
     "success": "Nachricht erfolgreich gesendet! Wir melden uns schnellstmöglich.",
     "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
@@ -1494,7 +1494,8 @@
     "emailLabel": "E-Mail",
     "landline": "Festnetz",
     "mobile": "Mobil",
-    "rateLimited": "Zu viele Anfragen. Bitte versuchen Sie es später erneut."
+    "rateLimited": "Zu viele Anfragen. Bitte versuchen Sie es später erneut.",
+    "formHeading": "Schreiben Sie uns"
   },
   "franchise": {
     "title": "Franchise",

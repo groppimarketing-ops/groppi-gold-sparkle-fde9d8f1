@@ -2214,7 +2214,7 @@
     "company": "Company",
     "subject": "Subject",
     "message": "Your Message",
-    "send": "Send us a message",
+    "send": "Send",
     "sending": "Sending...",
     "success": "Message sent successfully! We'll get back to you as soon as possible.",
     "error": "Something went wrong. Please try again or contact us by phone.",
@@ -2223,7 +2223,8 @@
     "emailLabel": "Email",
     "landline": "Landline",
     "mobile": "Mobile",
-    "rateLimited": "Too many requests. Please try again later."
+    "rateLimited": "Too many requests. Please try again later.",
+    "formHeading": "Send us a message"
   },
   "franchise": {
     "title": "Franchise",

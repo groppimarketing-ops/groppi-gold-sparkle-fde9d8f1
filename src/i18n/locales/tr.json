@@ -1399,7 +1399,7 @@
     "company": "Şirket",
     "subject": "Konu",
     "message": "Mesajınız",
-    "send": "Bize mesaj gönderin",
+    "send": "Gönder",
     "sending": "Gönderiliyor...",
     "success": "Mesaj başarıyla gönderildi! En kısa sürede size geri döneceğiz.",
     "error": "Bir şeyler yanlış gitti. Lütfen tekrar deneyin veya bizi arayın.",
@@ -1408,7 +1408,8 @@
     "emailLabel": "E-posta",
     "landline": "Sabit Hat",
     "mobile": "Mobil",
-    "rateLimited": "Çok fazla istek. Lütfen daha sonra tekrar deneyin."
+    "rateLimited": "Çok fazla istek. Lütfen daha sonra tekrar deneyin.",
+    "formHeading": "Bize mesaj gönderin"
   },
   "franchise": {
     "title": "Franchise",

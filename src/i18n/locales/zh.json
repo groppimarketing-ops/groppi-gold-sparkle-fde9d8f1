@@ -2241,7 +2241,7 @@
     "company": "公司",
     "subject": "主题",
     "message": "您的消息",
-    "send": "给我们留言",
+    "send": "发送",
     "sending": "发送中...",
     "success": "消息发送成功！我们将尽快与您联系。",
     "error": "出了点问题。请重试或致电联系。",
@@ -2272,7 +2272,8 @@
       "email": "直接电子邮件",
       "phone": "直接电话",
       "whatsapp": "WhatsApp"
-    }
+    },
+    "formHeading": "给我们留言"
   },
   "franchise": {
     "title": "特许经营",

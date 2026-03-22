@@ -2369,11 +2369,12 @@
     "company": "Firma",
     "subject": "Temat",
     "message": "Twoja wiadomość",
-    "send": "Napisz do nas",
+    "send": "Wyślij",
     "sending": "Wysyłanie...",
     "success": "Wiadomość wysłana pomyślnie! Skontaktujemy się z Tobą najszybciej, jak to możliwe.",
     "error": "Coś poszło nie tak. Spróbuj ponownie lub skontaktuj się z nami telefonicznie.",
-    "address": "Adres"
+    "address": "Adres",
+    "formHeading": "Napisz do nas"
   },
   "servicePage": {
     "defaultDescription": "{{service}} — Profesjonalna usługa od GROPPI Marketing Bureau.",
