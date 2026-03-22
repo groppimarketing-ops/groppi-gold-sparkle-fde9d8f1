@@ -83,7 +83,7 @@ const Initials = ({ name }: { name: string }) => (
 );
 
 /** Founder card — large dominant portrait */
-const FounderCard = ({ person, index, t }: { person: Person; index: number; t: (key: string, fallback?: string) => string }) => (
+const FounderCard = ({ person, index, t }: { person: Person; index: number; t: any }) => (
   <div className={`animate-fade-up-${index + 1} group flex-1`}>
     <div className="glass-card border border-primary/15 hover:border-primary/50 rounded-3xl overflow-hidden transition-all duration-500 hover:shadow-[0_0_50px_hsl(43_100%_50%/0.15)]">
       <div className="relative bg-gradient-to-b from-primary/[0.06] to-background flex items-center justify-center overflow-hidden py-10 md:py-14">
