@@ -255,7 +255,7 @@ const Services = () => {
       <GeneralFAQ />
 
       {/* ─── CTA Section ─── */}
-      <section className="py-20">
+      <section className="section-spacing">
         <div className="container mx-auto px-4">
           <div className="animate-fade-up max-w-3xl mx-auto text-center">
             <GlassCard className="p-8 md:p-12" hover3D={false} glowOnHover={false}>
