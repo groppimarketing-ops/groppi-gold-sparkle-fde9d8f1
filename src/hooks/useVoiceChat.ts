@@ -8,6 +8,29 @@ declare global {
   }
 }
 
+/** Map i18n locale codes to BCP-47 speech codes */
+const SPEECH_LANG_MAP: Record<string, string> = {
+  nl: 'nl-BE',
+  en: 'en-US',
+  fr: 'fr-FR',
+  de: 'de-DE',
+  ar: 'ar-SA',
+  es: 'es-ES',
+  it: 'it-IT',
+  pt: 'pt-PT',
+  pl: 'pl-PL',
+  tr: 'tr-TR',
+  zh: 'zh-CN',
+  hi: 'hi-IN',
+  bn: 'bn-BD',
+  ur: 'ur-PK',
+  ru: 'ru-RU',
+};
+
+export function getSpeechLang(locale: string): string {
+  return SPEECH_LANG_MAP[locale] || SPEECH_LANG_MAP.en;
+}
+
 interface UseVoiceChatOptions {
   onTranscript: (text: string) => void;
   lang?: string;
