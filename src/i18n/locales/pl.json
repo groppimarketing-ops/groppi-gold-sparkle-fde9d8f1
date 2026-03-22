@@ -3778,5 +3778,11 @@
       "subtitle": "Porozmawiajmy.",
       "button": "Skontaktuj się"
     }
+  },
+  "chat": {
+    "welcome": "Witamy w GROPPI! Jak mogę Ci pomóc? Zapytaj mnie o nasze usługi, ceny lub umów się na darmową konsultację.",
+    "placeholder": "Zadaj pytanie...",
+    "voiceHint": "Możesz też ze mną porozmawiać — kliknij mikrofon!",
+    "listening": "Słucham..."
   }
 }

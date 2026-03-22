@@ -3599,5 +3599,11 @@
       "subtitle": "Parlons-en.",
       "button": "Contactez-nous"
     }
+  },
+  "chat": {
+    "welcome": "Bienvenue chez GROPPI ! Comment puis-je vous aider ? Posez-moi vos questions sur nos services, tarifs ou réservez un appel gratuit.",
+    "placeholder": "Posez votre question...",
+    "voiceHint": "Vous pouvez aussi me parler — cliquez sur le micro !",
+    "listening": "Écoute en cours..."
   }
 }

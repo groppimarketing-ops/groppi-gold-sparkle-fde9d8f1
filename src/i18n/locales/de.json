@@ -3690,5 +3690,11 @@
       "subtitle": "Lassen Sie uns reden.",
       "button": "Kontaktieren Sie uns"
     }
+  },
+  "chat": {
+    "welcome": "Willkommen bei GROPPI! Wie kann ich Ihnen helfen? Fragen Sie mich alles über unsere Dienste, Preise oder buchen Sie ein kostenloses Gespräch.",
+    "placeholder": "Stellen Sie Ihre Frage...",
+    "voiceHint": "Sie können auch mit mir sprechen — klicken Sie auf das Mikrofon!",
+    "listening": "Zuhören..."
   }
 }

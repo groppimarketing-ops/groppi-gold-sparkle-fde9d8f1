@@ -3754,5 +3754,11 @@
       "subtitle": "Konuşalım.",
       "button": "Bize Ulaşın"
     }
+  },
+  "chat": {
+    "welcome": "GROPPI'ye hoş geldiniz! Size nasıl yardımcı olabilirim? Hizmetlerimiz, fiyatlarımız hakkında soru sorun veya ücretsiz bir görüşme ayarlayın.",
+    "placeholder": "Sorunuzu sorun...",
+    "voiceHint": "Benimle konuşabilirsiniz — mikrofona tıklayın!",
+    "listening": "Dinleniyor..."
   }
 }

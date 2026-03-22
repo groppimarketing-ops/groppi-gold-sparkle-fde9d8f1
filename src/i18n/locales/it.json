@@ -3615,5 +3615,11 @@
       "subtitle": "Parliamone.",
       "button": "Contattaci"
     }
+  },
+  "chat": {
+    "welcome": "Benvenuto su GROPPI! Come posso aiutarti? Chiedimi tutto sui nostri servizi, prezzi o prenota una consulenza gratuita.",
+    "placeholder": "Fai la tua domanda...",
+    "voiceHint": "Puoi anche parlarmi — clicca sul microfono!",
+    "listening": "In ascolto..."
   }
 }
