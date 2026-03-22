@@ -213,7 +213,7 @@ const ChatWidget = () => {
                     href={socialLinks.whatsapp}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-green-500/15 text-green-400 hover:bg-green-500/25 transition-colors border border-green-500/20"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-accent/15 text-accent hover:bg-accent/25 transition-colors border border-accent/20"
                   >
                     <Phone className="w-3 h-3" /> WhatsApp
                   </a>
