@@ -164,7 +164,7 @@ const Contact = () => {
       <BreadcrumbSchema items={[{ name: 'Home', path: '/' }, { name: t('nav.contact', 'Contact'), path: '/contact' }]} />
 
       {/* Hero Section */}
-      <section className="relative py-8 md:py-14 overflow-hidden">
+      <section className="relative py-16 md:py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
         <div className="neural-lines opacity-30" />
         
