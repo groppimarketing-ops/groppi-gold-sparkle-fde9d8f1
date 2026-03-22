@@ -17,7 +17,8 @@ export function useVoiceChat({ onTranscript, lang = 'nl-BE' }: UseVoiceChatOptio
   const [isListening, setIsListening] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [autoSpeak, setAutoSpeak] = useState(false);
-  const recognitionRef = useRef<SpeechRecognition | null>(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const recognitionRef = useRef<any>(null);
 
   const supportsSTT = typeof window !== 'undefined' && ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window);
   const supportsTTS = typeof window !== 'undefined' && 'speechSynthesis' in window;
