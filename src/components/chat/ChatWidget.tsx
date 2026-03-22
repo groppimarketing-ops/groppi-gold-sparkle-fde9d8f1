@@ -1,11 +1,11 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
-import { X, Send, Calendar, Phone, Mail, Mic, MicOff, Volume2, VolumeX } from 'lucide-react';
+import { X, Send, Calendar, Phone, Mail, Mic, MicOff, Volume2, VolumeX, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { socialLinks } from '@/utils/tracking';
 import ReactMarkdown from 'react-markdown';
 import chatIcon3d from '@/assets/chat-icon-3d.png';
-import { useVoiceChat } from '@/hooks/useVoiceChat';
+import { useVoiceChat, getSpeechLang } from '@/hooks/useVoiceChat';
 
 type Msg = { role: 'user' | 'assistant'; content: string };
 
@@ -18,13 +18,33 @@ const QUICK_REPLIES = [
   { label: '🌐 Website', message: 'I need a website for my business' },
 ];
 
+const CHAT_LANGS = [
+  { code: 'nl', flag: '🇳🇱', label: 'Nederlands' },
+  { code: 'en', flag: '🇬🇧', label: 'English' },
+  { code: 'fr', flag: '🇫🇷', label: 'Français' },
+  { code: 'de', flag: '🇩🇪', label: 'Deutsch' },
+  { code: 'ar', flag: '🇸🇦', label: 'العربية' },
+  { code: 'es', flag: '🇪🇸', label: 'Español' },
+  { code: 'it', flag: '🇮🇹', label: 'Italiano' },
+  { code: 'pt', flag: '🇵🇹', label: 'Português' },
+  { code: 'tr', flag: '🇹🇷', label: 'Türkçe' },
+  { code: 'pl', flag: '🇵🇱', label: 'Polski' },
+  { code: 'zh', flag: '🇨🇳', label: '中文' },
+  { code: 'ru', flag: '🇷🇺', label: 'Русский' },
+  { code: 'hi', flag: '🇮🇳', label: 'हिन्दी' },
+  { code: 'bn', flag: '🇧🇩', label: 'বাংলা' },
+  { code: 'ur', flag: '🇵🇰', label: 'اردو' },
+];
+
 async function streamChat({
   messages,
+  lang,
   onDelta,
   onDone,
   onError,
 }: {
   messages: Msg[];
+  lang: string;
   onDelta: (text: string) => void;
   onDone: () => void;
   onError: (err: string) => void;
@@ -36,7 +56,7 @@ async function streamChat({
         'Content-Type': 'application/json',
         Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
       },
-      body: JSON.stringify({ messages }),
+      body: JSON.stringify({ messages, lang }),
     });
 
     if (!resp.ok) {
@@ -84,15 +104,25 @@ async function streamChat({
 }
 
 const ChatWidget = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Msg[]>([]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [showQuickReplies, setShowQuickReplies] = useState(true);
+  const [showLangPicker, setShowLangPicker] = useState(false);
+  const [chatLang, setChatLang] = useState(i18n.language?.split('-')[0] || 'nl');
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const latestAssistantRef = useRef('');
+
+  // Sync chatLang when website language changes
+  useEffect(() => {
+    const websiteLang = i18n.language?.split('-')[0] || 'nl';
+    setChatLang(websiteLang);
+  }, [i18n.language]);
+
+  const speechLang = getSpeechLang(chatLang);
 
   const scrollToBottom = useCallback(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -134,6 +164,7 @@ const ChatWidget = () => {
 
     await streamChat({
       messages: [...messages, userMsg],
+      lang: chatLang,
       onDelta: upsertAssistant,
       onDone: () => {
         setIsLoading(false);
@@ -169,8 +200,10 @@ const ChatWidget = () => {
     supportsTTS,
   } = useVoiceChat({
     onTranscript: (text) => sendMessage(text),
-    lang: 'nl-BE',
+    lang: speechLang,
   });
+
+  const currentLangEntry = CHAT_LANGS.find(l => l.code === chatLang) || CHAT_LANGS[0];
 
   return (
     <>
@@ -199,11 +232,38 @@ const ChatWidget = () => {
                 <p className="text-sm font-semibold text-foreground">GROPPI Assistant</p>
                 <p className="text-xs text-muted-foreground flex items-center gap-1">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary inline-block" />
-                  {isListening ? 'Listening...' : isSpeaking ? 'Speaking...' : 'Online'}
+                  {isListening ? t('chat.listening', 'Listening...') : isSpeaking ? 'Speaking...' : 'Online'}
                 </p>
               </div>
             </div>
             <div className="flex items-center gap-1">
+              {/* Language picker */}
+              <div className="relative">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => setShowLangPicker(!showLangPicker)}
+                  className="h-8 w-8 text-muted-foreground hover:text-foreground"
+                  title="Change language"
+                >
+                  <Globe className="w-4 h-4" />
+                </Button>
+                {showLangPicker && (
+                  <div className="absolute top-full right-0 mt-1 bg-card border border-primary/20 rounded-lg shadow-xl z-50 max-h-48 overflow-y-auto w-40">
+                    {CHAT_LANGS.map((l) => (
+                      <button
+                        key={l.code}
+                        onClick={() => { setChatLang(l.code); setShowLangPicker(false); }}
+                        className={`w-full px-3 py-1.5 text-left text-xs hover:bg-primary/10 flex items-center gap-2 transition-colors ${
+                          chatLang === l.code ? 'bg-primary/15 text-primary font-medium' : 'text-foreground/80'
+                        }`}
+                      >
+                        <span>{l.flag}</span> {l.label}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
               {/* TTS toggle */}
               {supportsTTS && (
                 <Button
@@ -222,7 +282,7 @@ const ChatWidget = () => {
               <Button
                 variant="ghost"
                 size="icon"
-                onClick={() => { stopSpeaking(); setIsOpen(false); }}
+                onClick={() => { stopSpeaking(); setIsOpen(false); setShowLangPicker(false); }}
                 className="h-8 w-8 text-muted-foreground hover:text-foreground"
               >
                 <X className="w-4 h-4" />
@@ -231,13 +291,16 @@ const ChatWidget = () => {
           </div>
 
           {/* Messages */}
-          <div className="flex-1 overflow-y-auto px-4 py-3 space-y-3">
+          <div className="flex-1 overflow-y-auto px-4 py-3 space-y-3" onClick={() => setShowLangPicker(false)}>
             {/* Welcome message */}
             {messages.length === 0 && (
               <div className="space-y-3">
                 <div className="bg-card/60 border border-primary/10 rounded-2xl rounded-tl-sm px-4 py-3 text-sm text-foreground/90 max-w-[85%]">
                   <p>
                     👋 {t('chat.welcome', 'Welkom bij GROPPI! Hoe kan ik je helpen? Vraag me alles over onze diensten, prijzen of boek een gratis gesprek.')}
+                  </p>
+                  <p className="mt-1.5 text-xs text-muted-foreground flex items-center gap-1">
+                    {currentLangEntry.flag} {currentLangEntry.label}
                   </p>
                   {supportsSTT && (
                     <p className="mt-2 text-xs text-muted-foreground">
