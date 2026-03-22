@@ -11,7 +11,6 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import groppiLogo from '@/assets/groppi-logo.png?format=webp&quality=90';
-import { trackEvent, socialLinks as socialUrls } from '@/utils/tracking';
 import { getCurrentLangFromPath, getBasePath, getLangPath } from '@/utils/languageRouting';
 
 const languageOptions = languages.map(lang => ({
@@ -45,29 +44,21 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Grouped nav: 5 primary items + About dropdown
-  const aboutDropdownItems = [
-    { path: '/about',   label: t('nav.about') },
-    { path: '/team',    label: t('nav.team', 'Our Team') },
-    { path: '/careers', label: t('nav.careers') },
-  ];
-
-  const primaryNavItems = [
+  const navItems = [
+    { path: '/about',     label: t('nav.about') },
+    { path: '/team',      label: t('nav.team', 'Our Team') },
     { path: '/services',  label: t('nav.services') },
     { path: '/gallery',   label: t('nav.gallery') },
     { path: '/blog',      label: t('nav.blog') },
+    { path: '/careers',   label: t('nav.careers') },
     { path: '/franchise', label: t('nav.franchise') },
-  ];
-
-  // All items for mobile menu
-  const allNavItems = [
-    { path: '/',          label: t('nav.home') },
-    ...aboutDropdownItems,
-    ...primaryNavItems,
     { path: '/contact',   label: t('nav.contact') },
   ];
 
-  const isAboutActive = aboutDropdownItems.some(item => currentBasePath === item.path);
+  const allNavItems = [
+    { path: '/', label: t('nav.home') },
+    ...navItems,
+  ];
 
   const changeLanguage = (code: LanguageCode) => {
     i18n.changeLanguage(code);
@@ -97,47 +88,13 @@ const Header = () => {
             />
           </Link>
 
-          {/* Desktop Navigation — clean 5-item nav with About dropdown */}
+          {/* Desktop Navigation — flat nav */}
           <div className="hidden lg:flex items-center gap-1">
-            {/* About dropdown (About Us, Our Team, Careers) */}
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <button
-                  className={`flex items-center gap-1 px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg ${
-                    isAboutActive
-                      ? 'text-primary drop-shadow-[0_0_8px_hsl(43_76%_52%/0.6)] bg-white/5 border border-primary/40 shadow-[0_0_15px_hsl(43_76%_52%/0.25)]'
-                      : 'text-foreground/70 hover:text-foreground hover:text-primary/90 hover:drop-shadow-[0_0_6px_hsl(43_76%_52%/0.3)]'
-                  }`}
-                >
-                  {t('nav.about')}
-                  <ChevronDown className="h-3 w-3 opacity-60" />
-                </button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent
-                align={isRtl ? 'end' : 'start'}
-                className="z-[100] bg-background/98 backdrop-blur-md border-primary/20 shadow-xl min-w-[180px]"
-              >
-                {aboutDropdownItems.map((item) => (
-                  <DropdownMenuItem key={item.path} asChild>
-                    <Link
-                      to={getLangPath(item.path, currentUrlLang)}
-                      className={`flex items-center gap-2 cursor-pointer px-3 py-2 ${
-                        currentBasePath === item.path ? 'bg-primary/20 text-primary font-medium' : 'hover:bg-primary/10'
-                      }`}
-                    >
-                      {item.label}
-                    </Link>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
-
-            {/* Primary nav items */}
-            {primaryNavItems.map((item) => (
+            {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={getLangPath(item.path, currentUrlLang)}
-                className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg ${
+                className={`relative px-3 py-2 text-sm font-medium transition-all duration-300 rounded-lg ${
                   currentBasePath === item.path
                     ? 'text-primary drop-shadow-[0_0_8px_hsl(43_76%_52%/0.6)] bg-white/5 border border-primary/40 shadow-[0_0_15px_hsl(43_76%_52%/0.25)]'
                     : 'text-foreground/70 hover:text-foreground hover:text-primary/90 hover:drop-shadow-[0_0_6px_hsl(43_76%_52%/0.3)]'
@@ -148,7 +105,7 @@ const Header = () => {
             ))}
           </div>
 
-          {/* Right side — Language + CTA + Mobile toggle */}
+          {/* Right side — Language + Mobile toggle */}
           <div className="flex items-center gap-2 md:gap-3">
             {/* Language Switcher */}
             <DropdownMenu>
@@ -184,11 +141,6 @@ const Header = () => {
                 })}
               </DropdownMenuContent>
             </DropdownMenu>
-
-            {/* Contact CTA */}
-            <Button asChild size="sm" className="hidden sm:flex luxury-button text-primary-foreground">
-              <Link to={getLangPath('/contact', currentUrlLang)}>{t('nav.contact')}</Link>
-            </Button>
 
             {/* Mobile Menu Toggle */}
             <Button
