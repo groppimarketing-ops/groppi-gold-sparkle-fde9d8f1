@@ -219,7 +219,7 @@ const ChatWidget = () => {
                   </a>
                   <a
                     href={`mailto:${socialLinks.email.replace('mailto:', '')}`}
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-blue-500/15 text-blue-400 hover:bg-blue-500/25 transition-colors border border-blue-500/20"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-muted text-muted-foreground hover:bg-muted/80 transition-colors border border-primary/20"
                   >
                     <Mail className="w-3 h-3" /> Email
                   </a>
