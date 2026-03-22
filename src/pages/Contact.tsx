@@ -179,7 +179,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="pb-16 pt-0">
+      <section className="section-spacing pt-0">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
