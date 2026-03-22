@@ -6,7 +6,35 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
-const SYSTEM_PROMPT = `You are GROPPI's AI sales assistant — a smart, friendly, and professional chatbot for GROPPI Digital Marketing Bureau, a premium digital marketing agency based in Merksplas, Belgium.
+const LANG_NAMES: Record<string, string> = {
+  nl: "Dutch (Flemish Belgian)",
+  en: "English",
+  fr: "French",
+  de: "German",
+  ar: "Arabic",
+  es: "Spanish",
+  it: "Italian",
+  pt: "Portuguese",
+  pl: "Polish",
+  tr: "Turkish",
+  zh: "Chinese (Simplified)",
+  hi: "Hindi",
+  bn: "Bengali",
+  ur: "Urdu",
+  ru: "Russian",
+};
+
+function buildSystemPrompt(lang: string): string {
+  const langName = LANG_NAMES[lang] || LANG_NAMES.nl;
+
+  return `You are GROPPI's AI sales assistant — a smart, friendly, and professional chatbot for GROPPI Digital Marketing Bureau, a premium digital marketing agency based in Merksplas, Belgium.
+
+## LANGUAGE RULES (CRITICAL — FOLLOW STRICTLY)
+- The user's current language is: **${langName}**
+- You MUST reply in **${langName}** for this conversation.
+- If the user writes in a different language, switch to that language immediately.
+- NEVER mix languages in the same response.
+- All CTAs, greetings, and fallback messages must be in the active language.
 
 ## YOUR ROLE
 - Act as a trained sales assistant and customer support agent
@@ -84,18 +112,14 @@ After key answers, gently encourage:
 ## FALLBACK
 If you don't know something:
 - Do NOT hallucinate or invent information
-- Say: "Great question! Let me connect you with our team for the most accurate answer. You can reach us at info@groppi.be or +32 494 31 11 19."
+- Say (in the user's language): "Great question! Let me connect you with our team for the most accurate answer. You can reach us at info@groppi.be or +32 494 31 11 19."
 
 ## RESTRICTIONS
 - Never invent fake prices or make promises about results
 - Never give guarantees
 - Stay aligned with the brand
-- Do not discuss competitors negatively
-
-## LANGUAGE
-- Default: Dutch (Flemish Belgian)
-- If the user writes in another language, respond in that same language
-- Always be natural, never robotic`;
+- Do not discuss competitors negatively`;
+}
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -103,7 +127,7 @@ serve(async (req) => {
   }
 
   try {
-    const { messages } = await req.json();
+    const { messages, lang } = await req.json();
 
     if (!messages || !Array.isArray(messages) || messages.length === 0) {
       return new Response(
@@ -117,6 +141,8 @@ serve(async (req) => {
       throw new Error("LOVABLE_API_KEY is not configured");
     }
 
+    const detectedLang = typeof lang === "string" && lang in LANG_NAMES ? lang : "nl";
+
     const response = await fetch(
       "https://ai.gateway.lovable.dev/v1/chat/completions",
       {
@@ -128,7 +154,7 @@ serve(async (req) => {
         body: JSON.stringify({
           model: "google/gemini-2.5-flash",
           messages: [
-            { role: "system", content: SYSTEM_PROMPT },
+            { role: "system", content: buildSystemPrompt(detectedLang) },
             ...messages,
           ],
           stream: true,
