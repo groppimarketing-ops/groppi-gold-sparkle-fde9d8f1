@@ -188,8 +188,8 @@ const HeroSection = memo(() => {
       <div className="groppi-overlay" />
 
       {/* Hero Content — headline, subheadline, CTA */}
-      <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-4 pointer-events-none">
-        <div className="pointer-events-auto max-w-3xl mx-auto mb-20 md:mb-28 animate-fade-up">
+      <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-4 pointer-events-none md:static md:flex-1">
+        <div className="pointer-events-auto max-w-3xl mx-auto mb-6 md:mb-28 animate-fade-up">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-6 text-xs font-semibold uppercase tracking-[0.15em]"
             style={{
