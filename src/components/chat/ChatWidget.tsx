@@ -168,8 +168,8 @@ const ChatWidget = () => {
           {/* Header */}
           <div className="flex items-center justify-between px-4 py-3 border-b border-primary/15 bg-card/80">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-full bg-primary/20 flex items-center justify-center">
-                <MessageCircle className="w-4 h-4 text-primary" />
+              <div className="w-9 h-9 rounded-full flex items-center justify-center overflow-hidden">
+                <img src={chatIcon3d} alt="GROPPI" className="w-9 h-9 object-contain" />
               </div>
               <div>
                 <p className="text-sm font-semibold text-foreground">GROPPI Assistant</p>
