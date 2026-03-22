@@ -1002,12 +1002,12 @@
       },
       "stats": {
         "experience": "ans d'expérience",
-        "focus": "BE + UE + Mondial",
+        "focus": "Belgique, Europe et au-delà",
         "system": "structure plutôt que chaos",
         "premium": "image de marque + performance"
       },
       "statsValues": {
-        "focus": "BE + UE + Mondial",
+        "focus": "7 Pays",
         "system": "Systémique",
         "premium": "Premium"
       },
@@ -2230,7 +2230,7 @@
     "company": "Entreprise",
     "subject": "Sujet",
     "message": "Votre message",
-    "send": "Envoyer",
+    "send": "Envoyez-nous un message",
     "sending": "Envoi en cours...",
     "success": "Message envoyé avec succès ! Nous vous recontacterons dès que possible.",
     "error": "Une erreur s'est produite. Veuillez réessayer ou nous appeler.",

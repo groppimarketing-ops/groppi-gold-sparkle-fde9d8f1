@@ -561,12 +561,12 @@
       },
       "stats": {
         "experience": "yıl deneyim",
-        "focus": "BE + AB + Dünya",
+        "focus": "Belçika, Avrupa ve dünya",
         "system": "kaos yok, yapı var",
         "premium": "markalaşma + performans"
       },
       "statsValues": {
-        "focus": "BE + AB + Dünya",
+        "focus": "7 Ülke",
         "system": "Sistem odaklı",
         "premium": "Premium"
       },
@@ -1399,7 +1399,7 @@
     "company": "Şirket",
     "subject": "Konu",
     "message": "Mesajınız",
-    "send": "Gönder",
+    "send": "Bize mesaj gönderin",
     "sending": "Gönderiliyor...",
     "success": "Mesaj başarıyla gönderildi! En kısa sürede size geri döneceğiz.",
     "error": "Bir şeyler yanlış gitti. Lütfen tekrar deneyin veya bizi arayın.",

@@ -576,12 +576,12 @@
       },
       "stats": {
         "experience": "Jahre Erfahrung",
-        "focus": "BE + EU + Weltweit",
+        "focus": "Belgien, Europa & weltweit",
         "system": "kein Chaos, sondern Struktur",
         "premium": "Branding + Performance"
       },
       "statsValues": {
-        "focus": "BE + EU + Weltweit",
+        "focus": "7 Länder",
         "system": "Systemgestützt",
         "premium": "Premium"
       },
@@ -1485,7 +1485,7 @@
     "company": "Unternehmen",
     "subject": "Betreff",
     "message": "Ihre Nachricht",
-    "send": "Senden",
+    "send": "Schreiben Sie uns",
     "sending": "Wird gesendet...",
     "success": "Nachricht erfolgreich gesendet! Wir melden uns schnellstmöglich.",
     "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
