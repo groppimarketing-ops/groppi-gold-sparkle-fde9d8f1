@@ -3583,5 +3583,11 @@
       "subtitle": "Laten we praten.",
       "button": "Contacteer Ons"
     }
+  },
+  "chat": {
+    "welcome": "Welkom bij GROPPI! Hoe kan ik je helpen? Vraag me alles over onze diensten, prijzen of boek een gratis gesprek.",
+    "placeholder": "Stel je vraag...",
+    "voiceHint": "Je kunt ook met me praten — klik op de microfoon!",
+    "listening": "Luisteren..."
   }
 }

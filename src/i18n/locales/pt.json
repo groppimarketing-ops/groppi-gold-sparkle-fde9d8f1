@@ -3718,5 +3718,11 @@
       "subtitle": "Vamos conversar.",
       "button": "Entre em Contato"
     }
+  },
+  "chat": {
+    "welcome": "Bem-vindo à GROPPI! Como posso ajudá-lo? Pergunte-me sobre os nossos serviços, preços ou agende uma consulta gratuita.",
+    "placeholder": "Faça a sua pergunta...",
+    "voiceHint": "Também pode falar comigo — clique no microfone!",
+    "listening": "A ouvir..."
   }
 }

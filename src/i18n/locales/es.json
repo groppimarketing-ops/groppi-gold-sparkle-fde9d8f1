@@ -3763,5 +3763,11 @@
       "subtitle": "Hablemos.",
       "button": "Contáctanos"
     }
+  },
+  "chat": {
+    "welcome": "¡Bienvenido a GROPPI! ¿Cómo puedo ayudarte? Pregúntame sobre nuestros servicios, precios o reserva una consulta gratuita.",
+    "placeholder": "Haz tu pregunta...",
+    "voiceHint": "¡También puedes hablarme — haz clic en el micrófono!",
+    "listening": "Escuchando..."
   }
 }
