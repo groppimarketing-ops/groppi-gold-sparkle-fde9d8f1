@@ -1,10 +1,11 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
-import { X, Send, Calendar, Phone, Mail } from 'lucide-react';
+import { X, Send, Calendar, Phone, Mail, Mic, MicOff, Volume2, VolumeX } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { socialLinks } from '@/utils/tracking';
 import ReactMarkdown from 'react-markdown';
 import chatIcon3d from '@/assets/chat-icon-3d.png';
+import { useVoiceChat } from '@/hooks/useVoiceChat';
 
 type Msg = { role: 'user' | 'assistant'; content: string };
 
@@ -90,6 +91,7 @@ const ChatWidget = () => {
   const [showQuickReplies, setShowQuickReplies] = useState(true);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const latestAssistantRef = useRef('');
 
   const scrollToBottom = useCallback(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -113,26 +115,31 @@ const ChatWidget = () => {
     setInput('');
     setIsLoading(true);
     setShowQuickReplies(false);
-
-    let assistantSoFar = '';
+    latestAssistantRef.current = '';
 
     const upsertAssistant = (chunk: string) => {
-      assistantSoFar += chunk;
+      latestAssistantRef.current += chunk;
+      const full = latestAssistantRef.current;
       setMessages(prev => {
         const last = prev[prev.length - 1];
         if (last?.role === 'assistant') {
           return prev.map((m, i) =>
-            i === prev.length - 1 ? { ...m, content: assistantSoFar } : m
+            i === prev.length - 1 ? { ...m, content: full } : m
           );
         }
-        return [...prev, { role: 'assistant', content: assistantSoFar }];
+        return [...prev, { role: 'assistant', content: full }];
       });
     };
 
     await streamChat({
       messages: [...messages, userMsg],
       onDelta: upsertAssistant,
-      onDone: () => setIsLoading(false),
+      onDone: () => {
+        setIsLoading(false);
+        if (autoSpeak && latestAssistantRef.current) {
+          speak(latestAssistantRef.current);
+        }
+      },
       onError: (err) => {
         setMessages(prev => [
           ...prev,
@@ -147,6 +154,22 @@ const ChatWidget = () => {
     e.preventDefault();
     sendMessage(input);
   };
+
+  const {
+    isListening,
+    isSpeaking,
+    autoSpeak,
+    setAutoSpeak,
+    startListening,
+    stopListening,
+    speak,
+    stopSpeaking,
+    supportsSTT,
+    supportsTTS,
+  } = useVoiceChat({
+    onTranscript: (text) => sendMessage(text),
+    lang: 'nl-BE',
+  });
 
   return (
     <>
@@ -175,18 +198,35 @@ const ChatWidget = () => {
                 <p className="text-sm font-semibold text-foreground">GROPPI Assistant</p>
                 <p className="text-xs text-muted-foreground flex items-center gap-1">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary inline-block" />
-                  Online
+                  {isListening ? 'Listening...' : isSpeaking ? 'Speaking...' : 'Online'}
                 </p>
               </div>
             </div>
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setIsOpen(false)}
-              className="h-8 w-8 text-muted-foreground hover:text-foreground"
-            >
-              <X className="w-4 h-4" />
-            </Button>
+            <div className="flex items-center gap-1">
+              {/* TTS toggle */}
+              {supportsTTS && (
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => {
+                    if (isSpeaking) stopSpeaking();
+                    setAutoSpeak(!autoSpeak);
+                  }}
+                  className={`h-8 w-8 ${autoSpeak ? 'text-primary' : 'text-muted-foreground'} hover:text-foreground`}
+                  title={autoSpeak ? 'Mute voice replies' : 'Enable voice replies'}
+                >
+                  {autoSpeak ? <Volume2 className="w-4 h-4" /> : <VolumeX className="w-4 h-4" />}
+                </Button>
+              )}
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => { stopSpeaking(); setIsOpen(false); }}
+                className="h-8 w-8 text-muted-foreground hover:text-foreground"
+              >
+                <X className="w-4 h-4" />
+              </Button>
+            </div>
           </div>
 
           {/* Messages */}
@@ -198,6 +238,11 @@ const ChatWidget = () => {
                   <p>
                     👋 {t('chat.welcome', 'Welkom bij GROPPI! Hoe kan ik je helpen? Vraag me alles over onze diensten, prijzen of boek een gratis gesprek.')}
                   </p>
+                  {supportsSTT && (
+                    <p className="mt-2 text-xs text-muted-foreground">
+                      🎙️ {t('chat.voiceHint', 'Je kunt ook met me praten — klik op de microfoon!')}
+                    </p>
+                  )}
                 </div>
 
                 {/* Quick Action Buttons */}
@@ -243,6 +288,16 @@ const ChatWidget = () => {
                   {msg.role === 'assistant' ? (
                     <div className="prose prose-sm prose-invert max-w-none [&_p]:m-0 [&_ul]:my-1 [&_li]:my-0 [&_a]:text-primary [&_a]:underline">
                       <ReactMarkdown>{msg.content}</ReactMarkdown>
+                      {/* Play button for individual messages */}
+                      {supportsTTS && msg.content && !isLoading && (
+                        <button
+                          onClick={() => isSpeaking ? stopSpeaking() : speak(msg.content)}
+                          className="mt-1.5 inline-flex items-center gap-1 text-[10px] text-muted-foreground hover:text-primary transition-colors"
+                        >
+                          {isSpeaking ? <VolumeX className="w-3 h-3" /> : <Volume2 className="w-3 h-3" />}
+                          {isSpeaking ? 'Stop' : 'Listen'}
+                        </button>
+                      )}
                     </div>
                   ) : (
                     msg.content
@@ -286,14 +341,28 @@ const ChatWidget = () => {
             onSubmit={handleSubmit}
             className="px-3 py-2.5 border-t border-primary/15 bg-card/50 flex items-center gap-2"
           >
+            {/* Mic button */}
+            {supportsSTT && (
+              <Button
+                type="button"
+                size="icon"
+                variant={isListening ? 'default' : 'ghost'}
+                onClick={isListening ? stopListening : startListening}
+                disabled={isLoading}
+                className={`h-8 w-8 rounded-full shrink-0 ${isListening ? 'bg-red-500 hover:bg-red-600 text-white animate-pulse' : 'text-muted-foreground hover:text-foreground'}`}
+                title={isListening ? 'Stop listening' : 'Speak your question'}
+              >
+                {isListening ? <MicOff className="w-3.5 h-3.5" /> : <Mic className="w-3.5 h-3.5" />}
+              </Button>
+            )}
             <input
               ref={inputRef}
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder={t('chat.placeholder', 'Stel je vraag...')}
+              placeholder={isListening ? t('chat.listening', 'Luisteren...') : t('chat.placeholder', 'Stel je vraag...')}
               className="flex-1 bg-transparent text-sm text-foreground placeholder:text-muted-foreground outline-none"
-              disabled={isLoading}
+              disabled={isLoading || isListening}
             />
             <Button
               type="submit"
