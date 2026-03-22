@@ -195,7 +195,7 @@ const About = () => {
       </section>
 
       {/* ─── Growth & Timeline ─── */}
-      <section className="py-20 relative overflow-hidden">
+      <section className="section-spacing relative overflow-hidden">
         <div className="absolute inset-0 neural-lines opacity-20" />
 
         <div className="container mx-auto px-4 relative z-10">
