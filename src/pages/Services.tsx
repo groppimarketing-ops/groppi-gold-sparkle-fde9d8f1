@@ -130,7 +130,7 @@ const Services = () => {
       </section>
 
       {/* ─── Services Grid ─── */}
-      <section id="services-grid" ref={servicesGridRef} className="py-24">
+      <section id="services-grid" ref={servicesGridRef} className="section-spacing">
         <div className="container mx-auto px-4">
           <div className="animate-fade-up text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">{t('services.gridTitle')}</h2>
