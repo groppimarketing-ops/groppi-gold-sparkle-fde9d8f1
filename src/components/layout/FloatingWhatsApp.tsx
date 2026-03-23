@@ -15,7 +15,7 @@ const FloatingWhatsApp = () => {
       rel="noopener noreferrer"
       onClick={handleClick}
       aria-label={t('social.whatsappChat')}
-      className="floating-whatsapp fixed bottom-6 md:bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#128C7E] flex items-center justify-center shadow-lg shadow-[#25D366]/30 transition-all duration-300 group max-md:bottom-[calc(4rem+env(safe-area-inset-bottom,0px))]"
+      className="floating-whatsapp fixed z-[9998] w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#128C7E] flex items-center justify-center shadow-lg shadow-[#25D366]/30 transition-all duration-300 group bottom-6 right-6 max-md:bottom-[calc(4.5rem+env(safe-area-inset-bottom,0px))] max-md:right-4"
       style={{ animationDelay: '1s', animationFillMode: 'both' }}
     >
       {/* Pulse animation ring — pure CSS, zero JS */}

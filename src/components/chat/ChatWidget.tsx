@@ -211,17 +211,17 @@ const ChatWidget = () => {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-24 z-[9999] w-16 h-16 rounded-full flex items-center justify-center shadow-lg shadow-primary/30 transition-all duration-300 group max-md:bottom-[calc(4rem+env(safe-area-inset-bottom,0px))] max-md:right-24 animate-fade-up hover:scale-110"
+          className="fixed z-[9999] w-14 h-14 rounded-full flex items-center justify-center shadow-lg shadow-primary/30 transition-all duration-300 group animate-fade-up hover:scale-110 bottom-6 right-[5.5rem] md:right-24 md:w-16 md:h-16 max-md:bottom-[calc(4.5rem+env(safe-area-inset-bottom,0px))]"
           aria-label="Open chat"
         >
           <span className="absolute inset-0 rounded-full bg-primary/30 animate-ping opacity-40" aria-hidden="true" />
-          <img src={chatIcon3d} alt="Chat" className="w-14 h-14 object-contain relative z-10 drop-shadow-lg" />
+          <img src={chatIcon3d} alt="Chat" className="w-12 h-12 md:w-14 md:h-14 object-contain relative z-10 drop-shadow-lg" />
         </button>
       )}
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-6 right-6 z-[9999] w-[380px] max-w-[calc(100vw-2rem)] h-[520px] max-h-[calc(100vh-6rem)] rounded-2xl border border-primary/20 bg-background/98 backdrop-blur-xl shadow-2xl shadow-primary/10 flex flex-col overflow-hidden animate-fade-up max-md:bottom-[calc(4rem+env(safe-area-inset-bottom,0px))]">
+        <div className="fixed z-[9999] border border-primary/20 bg-background/98 backdrop-blur-xl shadow-2xl shadow-primary/10 flex flex-col overflow-hidden animate-fade-up rounded-2xl bottom-2 right-2 left-2 h-[calc(100vh-5rem-env(safe-area-inset-bottom,0px))] max-h-[520px] md:bottom-6 md:right-6 md:left-auto md:w-[380px] md:h-[520px] md:max-h-[calc(100vh-6rem)]">
           {/* Header */}
           <div className="flex items-center justify-between px-4 py-3 border-b border-primary/15 bg-card/80">
             <div className="flex items-center gap-3">
