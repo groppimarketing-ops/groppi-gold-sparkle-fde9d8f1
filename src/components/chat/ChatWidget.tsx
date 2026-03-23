@@ -211,11 +211,11 @@ const ChatWidget = () => {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-24 z-[9999] w-16 h-16 rounded-full flex items-center justify-center shadow-lg shadow-primary/30 transition-all duration-300 group max-md:bottom-[calc(4rem+env(safe-area-inset-bottom,0px))] max-md:right-24 animate-fade-up hover:scale-110"
+          className="fixed z-[9999] w-14 h-14 rounded-full flex items-center justify-center shadow-lg shadow-primary/30 transition-all duration-300 group animate-fade-up hover:scale-110 bottom-6 right-[5.5rem] md:right-24 md:w-16 md:h-16 max-md:bottom-[calc(4.5rem+env(safe-area-inset-bottom,0px))]"
           aria-label="Open chat"
         >
           <span className="absolute inset-0 rounded-full bg-primary/30 animate-ping opacity-40" aria-hidden="true" />
-          <img src={chatIcon3d} alt="Chat" className="w-14 h-14 object-contain relative z-10 drop-shadow-lg" />
+          <img src={chatIcon3d} alt="Chat" className="w-12 h-12 md:w-14 md:h-14 object-contain relative z-10 drop-shadow-lg" />
         </button>
       )}
 
