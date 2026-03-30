@@ -30,6 +30,7 @@ import tottiImg      from '@/assets/team/totti-franco.png?format=webp&quality=85
 import meeting1 from '@/assets/office/meeting-1.png?format=webp&quality=85';
 import meeting2 from '@/assets/office/meeting-2.png?format=webp&quality=85';
 import meeting3 from '@/assets/office/meeting-3.png?format=webp&quality=85';
+import meeting4 from '@/assets/office/meeting-4.jpg?format=webp&quality=85';
 
 /* ─── Data ─── */
 
@@ -60,7 +61,7 @@ const teamMembers: Person[] = [
   { name: 'Rohan Iyer',              roleKey: 'team.roles.backendDev',     taglineKey: 'team.taglines.rohan',     image: rohanImg     },
 ];
 
-const officePhotos = [meeting1, meeting2, meeting3];
+const officePhotos = [meeting1, meeting2, meeting3, meeting4];
 
 const howWeWorkKeys = [
   { icon: Target,     titleKey: 'team.howWeWork.strategy.title',     descKey: 'team.howWeWork.strategy.description' },
@@ -211,7 +212,7 @@ const OurTeam = () => {
           <p className="animate-fade-up text-center text-lg text-muted-foreground mb-12 max-w-xl mx-auto">
             {t('team.officeSubtitle', 'Real discussions. Real decisions. Real execution.')}
           </p>
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {officePhotos.map((img, i) => (
               <div
                 key={i}
