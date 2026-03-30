@@ -212,7 +212,7 @@ const OurTeam = () => {
           <p className="animate-fade-up text-center text-lg text-muted-foreground mb-12 max-w-xl mx-auto">
             {t('team.officeSubtitle', 'Real discussions. Real decisions. Real execution.')}
           </p>
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {officePhotos.map((img, i) => (
               <div
                 key={i}
