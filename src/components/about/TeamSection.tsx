@@ -33,7 +33,6 @@ const teamGroups: TeamGroup[] = [
     title: 'Leadership',
     icon: Crown,
     members: [
-      { name: 'Mohamed Salah', role: 'Head of Global Operations', image: mohamedImg },
       { name: 'Alexander Roth', role: 'Managing Director', image: alexanderImg },
       { name: 'Thomas De Wilde', role: 'Chief Operating Officer', image: thomasImg },
     ],

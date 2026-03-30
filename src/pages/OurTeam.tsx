@@ -193,11 +193,7 @@ const OurTeam = () => {
             <div className="section-divider" />
           </div>
 
-          <div className="max-w-sm mx-auto">
-            <ExecCard person={execOps} index={0} large t={t} />
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto mt-12">
+          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
             {directors.map((d, i) => <ExecCard key={d.name} person={d} index={i + 1} t={t} />)}
           </div>
         </div>
