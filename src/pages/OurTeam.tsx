@@ -9,7 +9,6 @@ import LangLink from '@/components/LangLink';
 import { ArrowRight, Target, Rocket, TrendingUp, Users } from 'lucide-react';
 
 // Team photos — WebP at 85% quality (~80-90% smaller than source PNG)
-import mohamedImg    from '@/assets/team/mohamed-salah.png?format=webp&quality=85';
 import alexanderImg  from '@/assets/team/alexander-roth.png?format=webp&quality=85';
 import thomasImg     from '@/assets/team/thomas-de-wilde.png?format=webp&quality=85';
 import eliseImg      from '@/assets/team/elise-verhaegen.png?format=webp&quality=85';
@@ -40,11 +39,6 @@ const founders: Person[] = [
   { name: 'Koen Van Gorp',  roleKey: 'team.roles.ceo',  taglineKey: 'team.taglines.koen', image: koenImg  },
   { name: 'Totti Franco',   roleKey: 'team.roles.cso',  taglineKey: 'team.taglines.totti', image: tottiImg },
 ];
-
-const execOps: Person = {
-  name: 'Mohamed Salah', roleKey: 'team.roles.headOps',
-  taglineKey: 'team.taglines.mohamed', image: mohamedImg,
-};
 
 const directors: Person[] = [
   { name: 'Lucas Vermeer', roleKey: 'team.roles.dirPerformance', taglineKey: 'team.taglines.lucas', image: lucasImg },
@@ -199,11 +193,7 @@ const OurTeam = () => {
             <div className="section-divider" />
           </div>
 
-          <div className="max-w-sm mx-auto">
-            <ExecCard person={execOps} index={0} large t={t} />
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto mt-12">
+          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
             {directors.map((d, i) => <ExecCard key={d.name} person={d} index={i + 1} t={t} />)}
           </div>
         </div>
