@@ -9,7 +9,6 @@ import LangLink from '@/components/LangLink';
 import { ArrowRight, Target, Rocket, TrendingUp, Users } from 'lucide-react';
 
 // Team photos — WebP at 85% quality (~80-90% smaller than source PNG)
-import mohamedImg    from '@/assets/team/mohamed-salah.png?format=webp&quality=85';
 import alexanderImg  from '@/assets/team/alexander-roth.png?format=webp&quality=85';
 import thomasImg     from '@/assets/team/thomas-de-wilde.png?format=webp&quality=85';
 import eliseImg      from '@/assets/team/elise-verhaegen.png?format=webp&quality=85';
