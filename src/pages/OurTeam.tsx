@@ -30,6 +30,7 @@ import tottiImg      from '@/assets/team/totti-franco.png?format=webp&quality=85
 import meeting1 from '@/assets/office/meeting-1.png?format=webp&quality=85';
 import meeting2 from '@/assets/office/meeting-2.png?format=webp&quality=85';
 import meeting3 from '@/assets/office/meeting-3.png?format=webp&quality=85';
+import meeting4 from '@/assets/office/meeting-4.jpg?format=webp&quality=85';
 
 /* ─── Data ─── */
 
