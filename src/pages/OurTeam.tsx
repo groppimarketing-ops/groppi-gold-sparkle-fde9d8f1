@@ -40,11 +40,6 @@ const founders: Person[] = [
   { name: 'Totti Franco',   roleKey: 'team.roles.cso',  taglineKey: 'team.taglines.totti', image: tottiImg },
 ];
 
-const execOps: Person = {
-  name: 'Mohamed Salah', roleKey: 'team.roles.headOps',
-  taglineKey: 'team.taglines.mohamed', image: mohamedImg,
-};
-
 const directors: Person[] = [
   { name: 'Lucas Vermeer', roleKey: 'team.roles.dirPerformance', taglineKey: 'team.taglines.lucas', image: lucasImg },
   { name: 'Sofia Laurent',  roleKey: 'team.roles.dirCreative',   taglineKey: 'team.taglines.sofia', image: sofiaImg },
