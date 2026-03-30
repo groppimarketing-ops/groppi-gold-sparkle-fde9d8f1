@@ -61,7 +61,7 @@ const teamMembers: Person[] = [
   { name: 'Rohan Iyer',              roleKey: 'team.roles.backendDev',     taglineKey: 'team.taglines.rohan',     image: rohanImg     },
 ];
 
-const officePhotos = [meeting1, meeting2, meeting3];
+const officePhotos = [meeting1, meeting2, meeting3, meeting4];
 
 const howWeWorkKeys = [
   { icon: Target,     titleKey: 'team.howWeWork.strategy.title',     descKey: 'team.howWeWork.strategy.description' },
