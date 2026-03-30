@@ -3,7 +3,6 @@ import SectionHeader from '@/components/ui/SectionHeader';
 import { Users, Crown, Briefcase } from 'lucide-react';
 
 // Team photos — WebP at 85% quality
-import mohamedImg from '@/assets/team/mohamed-salah.png?format=webp&quality=85';
 import alexanderImg from '@/assets/team/alexander-roth.png?format=webp&quality=85';
 import thomasImg from '@/assets/team/thomas-de-wilde.png?format=webp&quality=85';
 import eliseImg from '@/assets/team/elise-verhaegen.png?format=webp&quality=85';
